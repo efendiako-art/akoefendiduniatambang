@@ -1,0 +1,125 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { SITE, CATEGORIES } from '../consts';
+
+const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const latest = posts.slice(0, 6);
+const counts = Object.fromEntries(CATEGORIES.map((c) => [c.slug, posts.filter((p) => p.data.category === c.slug).length]));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: Astro.site?.toString(),
+  description: SITE.description,
+  inLanguage: 'id-ID',
+};
+---
+<BaseLayout jsonLd={jsonLd}>
+  <section class="hero">
+    <svg class="contours" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M-50 420 C150 360 260 470 470 400 S820 300 1250 380" />
+        <path d="M-50 380 C160 320 270 430 480 360 S820 255 1250 335" />
+        <path d="M-50 340 C170 280 280 390 490 320 S830 210 1250 290" />
+        <path d="M-50 300 C180 240 290 350 500 280 S840 165 1250 245" />
+        <path d="M-50 260 C190 200 300 310 510 240 S850 120 1250 200" />
+        <path d="M-50 220 C200 160 310 270 520 200 S860 75 1250 155" />
+        <path d="M-50 180 C210 120 320 230 530 160 S870 30 1250 110" />
+        <path d="M-50 140 C220 80 330 190 540 120 S880 -15 1250 65" />
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width="1.2" opacity=".7">
+        <ellipse cx="930" cy="250" rx="150" ry="70" />
+        <ellipse cx="930" cy="250" rx="105" ry="47" />
+        <ellipse cx="930" cy="250" rx="62" ry="26" />
+      </g>
+    </svg>
+    <div class="container hero-inner">
+      <p class="eyebrow">Portal edukasi pertambangan</p>
+      <h1>Ilmu tambang dari lapangan, <span>dijelaskan dengan sederhana.</span></h1>
+      <p class="lead">Rumus produksi, KPI alat berat, geologi, K3, dan karier tambang — ditulis praktisi, lengkap dengan kalkulator yang bisa langsung dipakai.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/artikel/">Baca artikel</a>
+        <a class="btn btn-ghost" href="/alat/">Coba kalkulator</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Terbaru</p><h2>Artikel pilihan</h2></div>
+        <a href="/artikel/">Lihat semua →</a>
+      </div>
+      <div class="grid">{latest.map((p) => <ArticleCard post={p} />)}</div>
+    </div>
+  </section>
+
+  <section class="section tools-band">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Alat gratis</p><h2>Kalkulator tambang</h2></div>
+        <a href="/alat/">Semua kalkulator →</a>
+      </div>
+      <div class="grid">
+        <a class="card tool" href="/alat/kpi-alat/">
+          <span class="tool-ic" aria-hidden="true">%</span>
+          <h3>KPI Alat: PA, UA, MA, EU</h3>
+          <p>Masukkan jam kerja, perbaikan, dan siaga — hasil availability muncul seketika.</p>
+        </a>
+        <a class="card tool" href="/alat/stripping-ratio/">
+          <span class="tool-ic" aria-hidden="true">SR</span>
+          <h3>Stripping Ratio & BESR</h3>
+          <p>Hitung SR aktual dan titik impas tambang dari harga jual dan biaya.</p>
+        </a>
+        <a class="card tool" href="/alat/produktivitas/">
+          <span class="tool-ic" aria-hidden="true">Q</span>
+          <h3>Produktivitas Excavator & Truk</h3>
+          <p>Produksi per jam, jumlah truk ideal, dan match factor armada.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">Topik</p><h2>Jelajahi kategori</h2></div></div>
+      <div class="cats">
+        {CATEGORIES.map((c) => (
+          <a class="card cat" href={`/kategori/${c.slug}/`}>
+            <h3>{c.name}</h3>
+            <p>{c.desc}</p>
+            <span class="count">{counts[c.slug]} artikel</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { position: relative; background: var(--hero); color: var(--hero-ink); overflow: hidden; }
+  .contours { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--accent); opacity: .35; }
+  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--hero) 30%, transparent); }
+  .hero-inner { position: relative; z-index: 1; padding-top: 72px; padding-bottom: 80px; }
+  .hero h1 { color: var(--hero-ink); font-size: clamp(36px, 6vw, 64px); font-weight: 800; max-width: 760px; margin: 14px 0 18px; letter-spacing: -0.025em; }
+  .hero h1 span { color: var(--accent); }
+  .hero .lead { color: var(--hero-ink-2); font-size: clamp(17px, 2vw, 20px); max-width: 580px; margin: 0 0 28px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero .btn-ghost { color: var(--hero-ink); }
+  .tools-band { background: var(--bg-sunk); }
+  .tool { display: block; padding: 22px; text-decoration: none; color: var(--ink); transition: transform .2s; }
+  .tool:hover { transform: translateY(-3px); color: var(--ink); }
+  .tool-ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font: 800 17px/1 var(--font-head); }
+  .tool h3 { margin: 16px 0 6px; font-size: 19px; }
+  .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+  .cats { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
+  .cat { padding: 20px; text-decoration: none; color: var(--ink); border-top: 3px solid var(--accent); }
+  .cat h3 { margin: 0 0 6px; font-size: 18px; }
+  .cat p { margin: 0 0 12px; color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
+  .count { font-size: 13px; color: var(--accent-ink); font-weight: 600; }
+</style>

@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+---
+<BaseLayout title="Disclaimer" description={`Disclaimer penggunaan informasi di ${SITE.name}.`}>
+  <section class="page container">
+    <p class="eyebrow">Legal</p>
+    <h1>Disclaimer</h1>
+    <div class="prose">
+      <p>Seluruh informasi di {SITE.name} disajikan untuk tujuan edukasi dan informasi umum.</p>
+      <ul>
+        <li>Rumus, contoh hitungan, dan kalkulator merupakan pendekatan umum. Hasilnya dapat berbeda dengan kondisi lapangan, spesifikasi alat, dan definisi di kontrak Anda.</li>
+        <li>Informasi K3 dan regulasi tidak menggantikan prosedur perusahaan, instruksi kerja, atau peraturan perundang-undangan yang berlaku. Selalu ikuti arahan pengawas dan Kepala Teknik Tambang di lokasi kerja.</li>
+        <li>Kami berusaha menjaga akurasi konten, tetapi tidak menjamin informasi selalu lengkap dan terbaru. Keputusan teknis, keuangan, atau bisnis yang diambil berdasarkan konten ini menjadi tanggung jawab pembaca.</li>
+        <li>Situs ini menampilkan iklan dari Google AdSense. Kami tidak bertanggung jawab atas produk atau layanan yang diiklankan.</li>
+      </ul>
+      <p>Jika menemukan kesalahan, mohon kabari kami lewat halaman <a href="/kontak/">Kontak</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

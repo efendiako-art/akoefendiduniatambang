@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+---
+<BaseLayout title="Kontak" description={`Hubungi redaksi ${SITE.name} untuk pertanyaan, koreksi, atau kerja sama.`}>
+  <section class="page container">
+    <p class="eyebrow">Kontak</p>
+    <h1>Hubungi kami</h1>
+    <p class="lead">Punya pertanyaan, koreksi artikel, usulan topik, atau tawaran kerja sama? Kirim email ke redaksi.</p>
+    <div class="card box">
+      <div>
+        <div class="k">Email redaksi</div>
+        <a class="mail" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </div>
+      <a class="btn btn-primary" href={`mailto:${SITE.email}?subject=Pertanyaan%20untuk%20${SITE.name}`}>Kirim email</a>
+    </div>
+    <p class="hint">Kami berusaha membalas dalam 2–3 hari kerja.</p>
+  </section>
+</BaseLayout>
+<style>
+  .box { margin-top: 28px; padding: 24px; display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; max-width: 720px; }
+  .k { font-size: 13px; color: var(--ink-3); }
+  .mail { font: 700 20px/1.3 var(--font-head); word-break: break-all; }
+  .hint { color: var(--ink-3); font-size: 15px; }
+</style>

@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categoryName } from '../consts';
+import { readingTime, formatDate } from '../utils';
+interface Props { post: CollectionEntry<'artikel'>; big?: boolean }
+const { post, big = false } = Astro.props;
+const { title, description, pubDate, category } = post.data;
+---
+<article class:list={['card', 'acard', { big }]} data-category={category} data-search={`${title} ${description}`.toLowerCase()}>
+  <div class="art" aria-hidden="true" data-cat={category}>
+    <svg viewBox="0 0 400 160" preserveAspectRatio="none">
+      <path d="M0 120 C80 90 120 130 200 100 S320 60 400 90" />
+      <path d="M0 140 C90 110 140 150 220 120 S330 85 400 110" />
+      <path d="M0 100 C70 70 130 110 190 80 S310 40 400 70" />
+      <path d="M0 80 C60 55 140 90 200 60 S300 25 400 50" />
+    </svg>
+  </div>
+  <div class="body">
+    <a class="chip" href={`/kategori/${category}/`}>{categoryName(category)}</a>
+    <h3><a href={`/artikel/${post.id}/`}>{title}</a></h3>
+    <p>{description}</p>
+    <div class="meta"><time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time> · {readingTime(post.body ?? '')} menit baca</div>
+  </div>
+</article>
+<style>
+  .acard { overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; position: relative; }
+  .acard:hover { transform: translateY(-3px); }
+  .art { height: 110px; background: var(--hero); position: relative; }
+  .art svg { width: 100%; height: 100%; display: block; }
+  .art path { fill: none; stroke: var(--accent); stroke-width: 1.4; opacity: .55; }
+  .art[data-cat='alat-berat'] path { stroke: #e0b04a; }
+  .art[data-cat='geologi-eksplorasi'] path { stroke: #7fb6a4; }
+  .art[data-cat='k3-tambang'] path { stroke: #e46a5a; }
+  .art[data-cat='karier-regulasi'] path { stroke: #9aa7e0; }
+  .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .body .chip { align-self: flex-start; position: relative; z-index: 2; }
+  h3 { margin: 4px 0 0; font-size: 20px; }
+  .big h3 { font-size: 26px; }
+  h3 a { color: var(--ink); text-decoration: none; }
+  h3 a::after { content: ''; position: absolute; inset: 0; }
+  p { margin: 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.6; flex: 1; }
+  .meta { font-size: 13px; color: var(--ink-3); }
+</style>

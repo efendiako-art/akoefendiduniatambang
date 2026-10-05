@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { AD_SLOTS } from '../../consts';
+---
+<BaseLayout title="Kalkulator PA, UA, MA, EU Alat Tambang" description="Kalkulator online untuk menghitung Physical Availability, Use of Availability, Mechanical Availability, dan Effective Utilization alat berat tambang.">
+  <section class="page container">
+    <p class="eyebrow">Kalkulator</p>
+    <h1>KPI alat: PA, UA, MA, EU</h1>
+    <p class="lead">Masukkan jam kerja (W), jam perbaikan (R), dan jam siaga (S) dalam satu periode. Hasil dihitung otomatis.</p>
+
+    <div class="calc">
+      <form class="card calc-in" id="f" onsubmit="return false">
+        <h2>Data jam alat</h2>
+        <div class="field"><label for="w">Working hours (W)</label><input id="w" type="number" min="0" step="0.1" value="468" inputmode="decimal" /><small>Jam alat benar-benar bekerja</small></div>
+        <div class="field"><label for="r">Repair hours (R)</label><input id="r" type="number" min="0" step="0.1" value="72" inputmode="decimal" /><small>Breakdown, servis, menunggu suku cadang</small></div>
+        <div class="field"><label for="s">Standby hours (S)</label><input id="s" type="number" min="0" step="0.1" value="180" inputmode="decimal" /><small>Siap pakai tapi tidak bekerja: hujan, istirahat, tidak ada operator</small></div>
+        <div class="field"><label for="p">Produktivitas (opsional)</label><input id="p" type="number" min="0" step="1" value="450" inputmode="decimal" /><small>bcm/jam atau ton/jam, untuk estimasi produksi</small></div>
+      </form>
+      <div class="card calc-out" aria-live="polite">
+        <h2>Hasil</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="k">PA · Physical Availability</div><div class="v hi" id="pa">–</div><div class="bar-track"><div class="bar-fill" id="pab"></div></div></div>
+          <div class="kpi"><div class="k">UA · Use of Availability</div><div class="v" id="ua">–</div><div class="bar-track"><div class="bar-fill" id="uab"></div></div></div>
+          <div class="kpi"><div class="k">MA · Mechanical Availability</div><div class="v" id="ma">–</div><div class="bar-track"><div class="bar-fill" id="mab"></div></div></div>
+          <div class="kpi"><div class="k">EU · Effective Utilization</div><div class="v" id="eu">–</div><div class="bar-track"><div class="bar-fill" id="eub"></div></div></div>
+        </div>
+        <p class="note" id="note"></p>
+      </div>
+    </div>
+
+    <AdSlot slot={AD_SLOTS.articleBottom} />
+
+    <div class="prose">
+      <h2>Rumus yang dipakai</h2>
+      <ul>
+        <li><strong>PA</strong> = (W + S) / (W + R + S)</li>
+        <li><strong>UA</strong> = W / (W + S)</li>
+        <li><strong>MA</strong> = W / (W + R)</li>
+        <li><strong>EU</strong> = W / (W + R + S) = PA × UA</li>
+      </ul>
+      <p>Penjelasan lengkap dan cara membaca hasilnya ada di artikel <a href="/artikel/kpi-alat-tambang-pa-ua-ma-eu/">PA, UA, MA, dan EU: Arti dan Rumus KPI Alat Tambang</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+<script is:inline>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var pct = function (x) { return isFinite(x) ? (x * 100).toFixed(1).replace('.', ',') + '%' : '–'; };
+    var num = function (x) { return Math.round(x).toLocaleString('id-ID'); };
+    function set(id, v) { $(id).textContent = pct(v); $(id + 'b').style.width = (isFinite(v) ? Math.min(100, v * 100) : 0) + '%'; }
+    function calc() {
+      var w = +$('w').value || 0, r = +$('r').value || 0, s = +$('s').value || 0, p = +$('p').value || 0, t = w + r + s;
+      var pa = (w + s) / t, ua = w / (w + s), ma = w / (w + r), eu = w / t;
+      set('pa', pa); set('ua', ua); set('ma', ma); set('eu', eu);
+      if (!t) { $('note').textContent = ''; return; }
+      var focus = ua < ma ? 'Kehilangan terbesar ada di sisi <strong>operasi</strong> (jam siaga tinggi). Cek hujan, ketersediaan operator, dan kesiapan front kerja.'
+                          : 'Kehilangan terbesar ada di sisi <strong>maintenance</strong> (jam perbaikan tinggi). Cek keandalan komponen dan waktu tunggu suku cadang.';
+      $('note').innerHTML = 'Total jam: <strong>' + num(t) + ' jam</strong>.' + (p ? ' Estimasi produksi: <strong>' + num(w * p) + '</strong> (W × produktivitas). ' : ' ') + focus;
+    }
+    $('f').addEventListener('input', calc); calc();
+  })();
+</script>

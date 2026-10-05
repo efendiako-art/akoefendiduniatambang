@@ -1,0 +1,167 @@
+---
+import '../styles/global.css';
+import { SITE, ADSENSE_CLIENT, CATEGORIES } from '../consts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  type?: 'website' | 'article';
+  publishedTime?: Date;
+  jsonLd?: Record<string, unknown>;
+  noindex?: boolean;
+}
+
+const { title, description = SITE.description, type = 'website', publishedTime, jsonLd, noindex = false } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: '/artikel/', label: 'Artikel' },
+  { href: '/alat/', label: 'Kalkulator' },
+  { href: '/tentang/', label: 'Tentang' },
+  { href: '/kontak/', label: 'Kontak' },
+];
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={SITE.locale} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#191714" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <script is:inline>
+      try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+    {ADSENSE_CLIENT && (
+      <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossorigin="anonymous"></script>
+    )}
+  </head>
+  <body>
+    <a class="skip" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="container bar">
+        <a class="brand" href="/" aria-label={`${SITE.name} beranda`}>
+          <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="var(--accent)" />
+            <path d="M5 23 L12 12 L16 17 L20 10 L27 23 Z" fill="#fff" opacity=".95" />
+            <path d="M5 23 H27" stroke="#fff" stroke-width="2" />
+          </svg>
+          <span>{SITE.name}</span>
+        </a>
+        <nav class="nav" aria-label="Navigasi utama">
+          {nav.map((n) => (
+            <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>
+          ))}
+        </nav>
+        <div class="tools">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang/gelap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+          <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav container" id="mobile-nav" aria-label="Navigasi seluler" hidden>
+        {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+      </nav>
+    </header>
+
+    <main id="main"><slot /></main>
+
+    <footer class="site-footer">
+      <div class="container foot-grid">
+        <div>
+          <a class="brand" href="/"><span>{SITE.name}</span></a>
+          <p class="muted">{SITE.description}</p>
+        </div>
+        <div>
+          <h3>Kategori</h3>
+          <ul>{CATEGORIES.map((c) => <li><a href={`/kategori/${c.slug}/`}>{c.name}</a></li>)}</ul>
+        </div>
+        <div>
+          <h3>Situs</h3>
+          <ul>
+            <li><a href="/tentang/">Tentang Kami</a></li>
+            <li><a href="/kontak/">Kontak</a></li>
+            <li><a href="/kebijakan-privasi/">Kebijakan Privasi</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+            <li><a href="/rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copy">© {year} {SITE.name}. Konten untuk edukasi; selalu ikuti prosedur dan regulasi di lokasi kerja Anda.</div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+          var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+          root.dataset.theme = dark ? 'light' : 'dark';
+          try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+        });
+        var btn = document.getElementById('menu-toggle'), m = document.getElementById('mobile-nav');
+        btn.addEventListener('click', function () {
+          m.hidden = !m.hidden; btn.setAttribute('aria-expanded', String(!m.hidden));
+        });
+      })();
+    </script>
+  </body>
+</html>
+
+<style>
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 12px; z-index: 50; background: var(--bg-elev); padding: 8px 12px; border-radius: 8px; }
+  .site-header {
+    position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar { display: flex; align-items: center; gap: 24px; height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 800 20px/1 var(--font-head); letter-spacing: -0.02em; }
+  .nav { display: none; gap: 4px; margin-left: auto; }
+  .nav a { padding: 8px 14px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 500; font-size: 15px; }
+  .nav a:hover, .nav a[aria-current='page'] { background: var(--bg-sunk); color: var(--ink); }
+  .tools { display: flex; gap: 6px; margin-left: auto; }
+  .icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); color: var(--ink); cursor: pointer; }
+  .mobile-nav { display: flex; flex-direction: column; padding-bottom: 12px; }
+  .mobile-nav[hidden] { display: none; }
+  .mobile-nav a { padding: 12px 4px; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 500; }
+  @media (min-width: 820px) {
+    .nav { display: flex; }
+    .tools { margin-left: 8px; }
+    .menu-btn, .mobile-nav { display: none !important; }
+  }
+  .site-footer { background: var(--hero); color: var(--hero-ink-2); margin-top: 40px; padding: 48px 0 24px; }
+  .site-footer .brand { color: var(--hero-ink); }
+  .foot-grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr; } }
+  .site-footer h3 { color: var(--hero-ink); font-size: 15px; margin: 0 0 12px; }
+  .site-footer ul { list-style: none; margin: 0; padding: 0; }
+  .site-footer li { margin: 6px 0; }
+  .site-footer a { color: var(--hero-ink-2); text-decoration: none; font-size: 15px; }
+  .site-footer a:hover { color: var(--accent); }
+  .muted { font-size: 15px; max-width: 420px; }
+  .copy { border-top: 1px solid #2f2b26; margin-top: 32px; padding-top: 20px; font-size: 13px; }
+</style>

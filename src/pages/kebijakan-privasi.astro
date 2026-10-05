@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+const site = Astro.site?.host;
+---
+<BaseLayout title="Kebijakan Privasi" description={`Kebijakan privasi ${SITE.name}, termasuk penggunaan cookie dan iklan Google AdSense.`}>
+  <section class="page container">
+    <p class="eyebrow">Legal</p>
+    <h1>Kebijakan privasi</h1>
+    <div class="prose">
+      <p>Terakhir diperbarui: 5 Oktober 2026.</p>
+      <p>Halaman ini menjelaskan bagaimana {SITE.name} ({site}) mengumpulkan dan menggunakan informasi pengunjung.</p>
+      <h2>Informasi yang kami kumpulkan</h2>
+      <p>Kami tidak meminta pendaftaran akun. Data yang mungkin tercatat secara otomatis meliputi alamat IP, jenis browser, halaman yang dikunjungi, dan waktu kunjungan. Data ini dipakai untuk statistik agregat dan menjaga keamanan situs.</p>
+      <p>Jika Anda menghubungi kami lewat email, kami menyimpan alamat email dan isi pesan hanya untuk membalas pesan tersebut.</p>
+      <h2>Cookie</h2>
+      <p>Situs ini menggunakan cookie, yaitu file kecil yang disimpan di browser Anda. Cookie dipakai untuk menyimpan preferensi tampilan (misalnya tema gelap) dan oleh pihak ketiga untuk analitik dan iklan. Anda dapat menolak atau menghapus cookie melalui pengaturan browser.</p>
+      <h2>Iklan Google AdSense</h2>
+      <ul>
+        <li>Vendor pihak ketiga, termasuk Google, menggunakan cookie untuk menayangkan iklan berdasarkan kunjungan Anda sebelumnya ke situs ini atau situs lain.</li>
+        <li>Penggunaan cookie iklan memungkinkan Google dan mitranya menayangkan iklan kepada Anda berdasarkan kunjungan Anda ke situs ini dan/atau situs lain di internet.</li>
+        <li>Anda dapat memilih untuk tidak menerima iklan yang dipersonalisasi melalui <a href="https://adssettings.google.com" rel="noopener" target="_blank">Setelan Iklan Google</a>, atau menolak cookie vendor pihak ketiga melalui <a href="https://www.aboutads.info/choices/" rel="noopener" target="_blank">aboutads.info</a>.</li>
+        <li>Informasi lebih lanjut: <a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">Cara Google menggunakan data dari situs mitra</a>.</li>
+      </ul>
+      <h2>Analitik</h2>
+      <p>Kami dapat menggunakan layanan analitik seperti Google Search Console dan Cloudflare Web Analytics untuk memahami cara pengunjung menemukan dan menggunakan situs ini.</p>
+      <h2>Tautan ke situs lain</h2>
+      <p>Artikel kami dapat berisi tautan ke situs lain. Kami tidak bertanggung jawab atas isi dan kebijakan privasi situs tersebut.</p>
+      <h2>Privasi anak</h2>
+      <p>Situs ini tidak ditujukan untuk anak di bawah 13 tahun dan tidak dengan sengaja mengumpulkan data dari mereka.</p>
+      <h2>Perubahan kebijakan</h2>
+      <p>Kebijakan ini dapat diperbarui sewaktu-waktu. Tanggal pembaruan terakhir tercantum di bagian atas halaman.</p>
+      <h2>Kontak</h2>
+      <p>Pertanyaan tentang kebijakan ini dapat dikirim ke <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+---
+<BaseLayout title="Tentang Kami" description={`Tentang ${SITE.name}: portal edukasi pertambangan yang ditulis oleh praktisi lapangan.`}>
+  <section class="page container">
+    <p class="eyebrow">Tentang</p>
+    <h1>Tentang {SITE.name}</h1>
+    <div class="prose">
+      <p class="lead">{SITE.name} adalah portal edukasi pertambangan berbahasa Indonesia. Kami menjelaskan ilmu tambang dengan bahasa sederhana, berdasarkan pengalaman nyata di lapangan.</p>
+      <h2>Siapa di balik situs ini</h2>
+      <p>TambangPedia dikelola oleh seorang engineer pertambangan yang saat ini menjabat Manager Operation di perusahaan jasa pertambangan, konstruksi, dan engineering. Kesehariannya diisi dengan urusan produksi: menyusun rencana kerja, memantau KPI alat seperti PA, UA, dan produktivitas, menganalisa kenapa target meleset, sampai menghitung kebutuhan armada untuk penawaran tender jasa pemindahan material.</p>
+      <p>Selain di lapangan, ia juga terbiasa dengan dunia software. Dari situ lahir kalkulator-kalkulator di situs ini: alat sederhana yang dulu dipakai sendiri untuk mengecek angka produksi, sekarang dibuka untuk siapa saja.</p>
+      <p>Situs ini dibuat karena satu alasan: banyak ilmu tambang yang dipakai sehari-hari di site, tapi sulit dicari penjelasannya dalam bahasa Indonesia yang mudah dipahami. Mahasiswa, operator yang baru naik jadi foreman, atau engineer junior sering harus belajar dari potongan catatan dan file Excel turun-temurun. TambangPedia ingin merapikan ilmu itu jadi satu tempat.</p>
+      <h2>Apa yang kami tulis</h2>
+      <ul>
+        <li>Operasi produksi: perencanaan, KPI alat, dan analisa kehilangan produksi.</li>
+        <li>Alat berat: produktivitas, cycle time, dan pemilihan armada.</li>
+        <li>Geologi dan eksplorasi, K3 tambang, serta karier dan regulasi pertambangan.</li>
+      </ul>
+      <h2>Komitmen kami</h2>
+      <p>Setiap artikel ditulis orisinal, dicek ulang rumus dan contoh hitungannya, serta diperbarui bila ada perubahan praktik atau regulasi. Jika menemukan kesalahan, silakan <a href="/kontak/">hubungi kami</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

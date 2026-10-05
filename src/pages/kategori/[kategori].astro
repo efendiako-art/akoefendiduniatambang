@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { CATEGORIES } from '../../consts';
+export function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { kategori: c.slug }, props: { cat: c } }));
+}
+const { cat } = Astro.props;
+const posts = (await getCollection('artikel', ({ data }) => !data.draft && data.category === cat.slug)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+<BaseLayout title={`Artikel ${cat.name}`} description={cat.desc} noindex={posts.length === 0}>
+  <section class="page container">
+    <p class="eyebrow">Kategori</p>
+    <h1>{cat.name}</h1>
+    <p class="lead">{cat.desc}</p>
+    {posts.length > 0
+      ? <div class="grid" style="margin-top:28px">{posts.map((p) => <ArticleCard post={p} />)}</div>
+      : <p>Artikel untuk kategori ini sedang disiapkan. Sementara itu, <a href="/artikel/">baca artikel lainnya</a>.</p>}
+  </section>
+</BaseLayout>

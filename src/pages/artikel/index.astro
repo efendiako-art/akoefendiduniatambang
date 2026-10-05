@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { CATEGORIES } from '../../consts';
+const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+<BaseLayout title="Semua Artikel Pertambangan" description="Kumpulan artikel pertambangan: operasi produksi, alat berat, geologi, K3, dan karier tambang.">
+  <section class="page container">
+    <p class="eyebrow">Pustaka</p>
+    <h1>Semua artikel</h1>
+    <p class="lead">Cari topik, atau saring berdasarkan kategori.</p>
+    <div class="filters">
+      <input id="q" type="search" placeholder="Cari artikel… (mis. stripping ratio)" aria-label="Cari artikel" />
+      <div class="pills" role="group" aria-label="Filter kategori">
+        <button type="button" class="pill on" data-cat="">Semua</button>
+        {CATEGORIES.map((c) => <button type="button" class="pill" data-cat={c.slug}>{c.name}</button>)}
+      </div>
+    </div>
+    <div class="grid" id="list">{posts.map((p) => <ArticleCard post={p} />)}</div>
+    <p id="empty" hidden>Belum ada artikel yang cocok.</p>
+  </section>
+</BaseLayout>
+<script is:inline>
+  (function () {
+    var q = document.getElementById('q'), cat = '', items = [].slice.call(document.querySelectorAll('#list > article'));
+    function run() {
+      var s = q.value.trim().toLowerCase(), n = 0;
+      items.forEach(function (el) {
+        var ok = (!cat || el.dataset.category === cat) && (!s || el.dataset.search.indexOf(s) > -1);
+        el.style.display = ok ? '' : 'none'; if (ok) n++;
+      });
+      document.getElementById('empty').hidden = n > 0;
+    }
+    q.addEventListener('input', run);
+    document.querySelectorAll('.pill').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.pill').forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on'); cat = b.dataset.cat; run();
+      });
+    });
+  })();
+</script>
+<style>
+  .filters { display: flex; flex-direction: column; gap: 14px; margin: 24px 0 28px; }
+  input { width: 100%; max-width: 520px; padding: 14px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); color: var(--ink); font: inherit; font-size: 16px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); color: var(--ink-2); font: 500 14px/1 var(--font-body); cursor: pointer; }
+  .pill.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  #empty { color: var(--ink-3); }
+</style>

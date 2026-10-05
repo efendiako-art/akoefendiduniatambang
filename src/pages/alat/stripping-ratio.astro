@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { AD_SLOTS } from '../../consts';
+---
+<BaseLayout title="Kalkulator Stripping Ratio & BESR" description="Hitung stripping ratio (bcm/ton) dan break even stripping ratio (BESR) tambang batubara secara online dan gratis.">
+  <section class="page container">
+    <p class="eyebrow">Kalkulator</p>
+    <h1>Stripping ratio & BESR</h1>
+    <p class="lead">Hitung SR dari volume overburden dan tonase batubara, lalu bandingkan dengan titik impas (BESR).</p>
+
+    <div class="calc">
+      <form class="card calc-in" id="f" onsubmit="return false">
+        <h2>Volume & tonase</h2>
+        <div class="row2">
+          <div class="field"><label for="ob">Overburden (bcm)</label><input id="ob" type="number" min="0" value="1200000" inputmode="decimal" /></div>
+          <div class="field"><label for="coal">Batubara (ton)</label><input id="coal" type="number" min="0" value="200000" inputmode="decimal" /></div>
+        </div>
+        <h2 style="margin-top:8px">Harga & biaya</h2>
+        <div class="field"><label for="price">Harga jual (USD/ton)</label><input id="price" type="number" min="0" step="0.1" value="60" inputmode="decimal" /></div>
+        <div class="field"><label for="cc">Biaya batubara selain OB (USD/ton)</label><input id="cc" type="number" min="0" step="0.1" value="24" inputmode="decimal" /><small>Gali batubara, angkut, olah, royalti, dll.</small></div>
+        <div class="field"><label for="oc">Biaya pengupasan OB (USD/bcm)</label><input id="oc" type="number" min="0" step="0.01" value="3" inputmode="decimal" /></div>
+      </form>
+      <div class="card calc-out" aria-live="polite">
+        <h2>Hasil</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="k">Stripping ratio</div><div class="v hi" id="sr">–</div><div class="k">bcm/ton</div></div>
+          <div class="kpi"><div class="k">BESR (titik impas)</div><div class="v" id="besr">–</div><div class="k">bcm/ton</div></div>
+          <div class="kpi"><div class="k">Biaya total per ton</div><div class="v" id="cost">–</div><div class="k">USD/ton</div></div>
+          <div class="kpi"><div class="k">Margin per ton</div><div class="v" id="margin">–</div><div class="k">USD/ton</div></div>
+        </div>
+        <div class="bar-track" style="margin-top:18px;height:10px"><div class="bar-fill" id="gauge"></div></div>
+        <p class="note" id="note"></p>
+      </div>
+    </div>
+
+    <AdSlot slot={AD_SLOTS.articleBottom} />
+
+    <div class="prose">
+      <h2>Rumus yang dipakai</h2>
+      <ul>
+        <li><strong>SR</strong> = Overburden (bcm) / Batubara (ton)</li>
+        <li><strong>BESR</strong> = (Harga jual − Biaya batubara) / Biaya pengupasan OB</li>
+        <li><strong>Biaya total per ton</strong> = Biaya batubara + SR × Biaya OB</li>
+      </ul>
+      <p>Pelajari konsepnya di artikel <a href="/artikel/cara-menghitung-stripping-ratio/">Stripping Ratio: Pengertian, Rumus, dan Cara Menghitungnya</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+<script is:inline>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var f = function (x, d) { return isFinite(x) ? x.toLocaleString('id-ID', { minimumFractionDigits: d, maximumFractionDigits: d }) : '–'; };
+    function calc() {
+      var ob = +$('ob').value || 0, c = +$('coal').value || 0, pr = +$('price').value || 0, cc = +$('cc').value || 0, oc = +$('oc').value || 0;
+      var sr = ob / c, besr = (pr - cc) / oc, cost = cc + sr * oc, m = pr - cost;
+      $('sr').textContent = f(sr, 2); $('besr').textContent = f(besr, 2);
+      $('cost').textContent = f(cost, 2); $('margin').textContent = f(m, 2);
+      $('margin').style.color = m < 0 ? '#ff8a7a' : '';
+      var ratio = isFinite(sr / besr) && besr > 0 ? sr / besr : 0;
+      $('gauge').style.width = Math.min(100, ratio * 100) + '%';
+      $('gauge').style.background = ratio > 1 ? '#e46a5a' : ratio > .85 ? '#e0b04a' : 'var(--accent)';
+      if (!isFinite(sr) || !isFinite(besr)) { $('note').textContent = ''; return; }
+      $('note').innerHTML = ratio > 1
+        ? 'SR <strong>melewati</strong> BESR: tambang merugi pada asumsi harga dan biaya ini.'
+        : 'SR memakai <strong>' + f(ratio * 100, 0) + '%</strong> dari batas impas. ' + (ratio > .85 ? 'Margin tipis — sensitif terhadap penurunan harga.' : 'Masih ada ruang margin yang sehat.');
+    }
+    $('f').addEventListener('input', calc); calc();
+  })();
+</script>

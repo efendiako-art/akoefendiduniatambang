@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { AD_SLOTS } from '../../consts';
+---
+<BaseLayout title="Kalkulator Produktivitas Excavator & Dump Truck" description="Hitung produktivitas excavator dan dump truck, jumlah truk yang dibutuhkan, dan match factor armada tambang secara online.">
+  <section class="page container">
+    <p class="eyebrow">Kalkulator</p>
+    <h1>Produktivitas excavator & dump truck</h1>
+    <p class="lead">Hitung produksi per jam, jumlah truk ideal untuk satu excavator, dan match factor armada.</p>
+
+    <div class="calc">
+      <form class="card calc-in" id="f" onsubmit="return false">
+        <h2>Excavator</h2>
+        <div class="row2">
+          <div class="field"><label for="q">Bucket (m³)</label><input id="q" type="number" min="0" step="0.1" value="6.5" inputmode="decimal" /></div>
+          <div class="field"><label for="k">Fill factor</label><input id="k" type="number" min="0" step="0.01" value="0.9" inputmode="decimal" /></div>
+          <div class="field"><label for="ct">Cycle time (detik)</label><input id="ct" type="number" min="1" step="1" value="30" inputmode="decimal" /></div>
+          <div class="field"><label for="e">Efisiensi kerja</label><input id="e" type="number" min="0" max="1" step="0.01" value="0.83" inputmode="decimal" /></div>
+        </div>
+        <div class="field"><label for="sf">Swell factor (bcm/lcm)</label><input id="sf" type="number" min="0" step="0.01" value="0.8" inputmode="decimal" /></div>
+        <h2 style="margin-top:8px">Dump truck</h2>
+        <div class="row2">
+          <div class="field"><label for="cap">Kapasitas (lcm)</label><input id="cap" type="number" min="0" step="0.5" value="29" inputmode="decimal" /></div>
+          <div class="field"><label for="dist">Jarak angkut (km)</label><input id="dist" type="number" min="0" step="0.1" value="2" inputmode="decimal" /></div>
+          <div class="field"><label for="vl">Kecepatan isi (km/jam)</label><input id="vl" type="number" min="1" step="1" value="20" inputmode="decimal" /></div>
+          <div class="field"><label for="ve">Kecepatan kosong (km/jam)</label><input id="ve" type="number" min="1" step="1" value="30" inputmode="decimal" /></div>
+          <div class="field"><label for="dump">Dumping (menit)</label><input id="dump" type="number" min="0" step="0.1" value="1" inputmode="decimal" /></div>
+          <div class="field"><label for="spot">Spotting & antre (menit)</label><input id="spot" type="number" min="0" step="0.1" value="1.5" inputmode="decimal" /></div>
+        </div>
+        <div class="field"><label for="nt">Jumlah truk yang dipakai</label><input id="nt" type="number" min="1" step="1" value="6" inputmode="numeric" /><small>Untuk menghitung match factor</small></div>
+      </form>
+      <div class="card calc-out" aria-live="polite">
+        <h2>Hasil</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="k">Produksi excavator</div><div class="v hi" id="qex">–</div><div class="k">bcm/jam</div></div>
+          <div class="kpi"><div class="k">Produksi per truk</div><div class="v" id="qtr">–</div><div class="k">bcm/jam</div></div>
+          <div class="kpi"><div class="k">Pass per truk</div><div class="v" id="pass">–</div><div class="k" id="loadt">–</div></div>
+          <div class="kpi"><div class="k">Cycle time truk</div><div class="v" id="cttr">–</div><div class="k">menit</div></div>
+          <div class="kpi"><div class="k">Truk ideal</div><div class="v hi" id="need">–</div><div class="k">unit per excavator</div></div>
+          <div class="kpi"><div class="k">Match factor</div><div class="v" id="mf">–</div><div class="k" id="mfn">–</div></div>
+        </div>
+        <p class="note" id="note"></p>
+      </div>
+    </div>
+
+    <AdSlot slot={AD_SLOTS.articleBottom} />
+
+    <div class="prose">
+      <h2>Rumus yang dipakai</h2>
+      <ul>
+        <li><strong>Produksi excavator</strong> = q × K × (3600 / CT) × E × SF</li>
+        <li><strong>Pass per truk</strong> = Kapasitas truk / (q × K), dibulatkan</li>
+        <li><strong>CT truk</strong> = waktu muat + angkut + dumping + kembali + spotting</li>
+        <li><strong>Produksi truk</strong> = (pass × q × K) × (60 / CT truk) × E × SF</li>
+        <li><strong>Match factor</strong> = (jumlah truk × waktu muat) / CT truk</li>
+      </ul>
+      <p>Contoh hitungan lengkap ada di artikel <a href="/artikel/produktivitas-excavator-dan-dump-truck/">Cara Menghitung Produktivitas Excavator dan Dump Truck</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+<script is:inline>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var v = function (id) { return +$(id).value || 0; };
+    var f = function (x, d) { return isFinite(x) ? x.toLocaleString('id-ID', { minimumFractionDigits: d, maximumFractionDigits: d }) : '–'; };
+    function calc() {
+      var q = v('q'), k = v('k'), ct = v('ct'), e = v('e'), sf = v('sf');
+      var bucket = q * k, qex = bucket * (3600 / ct) * e * sf;
+      var pass = Math.max(1, Math.round(v('cap') / bucket));
+      var loadMin = pass * ct / 60;
+      var cttr = loadMin + v('dist') / v('vl') * 60 + v('dump') + v('dist') / v('ve') * 60 + v('spot');
+      var qtr = pass * bucket * (60 / cttr) * e * sf;
+      var need = qex / qtr, nt = v('nt'), mf = nt * loadMin / cttr;
+      $('qex').textContent = f(qex, 0); $('qtr').textContent = f(qtr, 1);
+      $('pass').textContent = isFinite(pass) ? pass : '–'; $('loadt').textContent = 'muat ' + f(loadMin, 1) + ' menit';
+      $('cttr').textContent = f(cttr, 1); $('need').textContent = f(need, 1); $('mf').textContent = f(mf, 2);
+      $('mfn').textContent = mf < 0.95 ? 'truk kurang' : mf > 1.1 ? 'truk berlebih' : 'serasi';
+      $('mf').style.color = mf < 0.95 || mf > 1.1 ? '#e0b04a' : '';
+      $('note').innerHTML = isFinite(need)
+        ? 'Dengan ' + nt + ' truk, armada mengangkut sekitar <strong>' + f(Math.min(qex, qtr * nt), 0) + ' bcm/jam</strong>. ' +
+          (mf < 0.95 ? 'Excavator akan sering menunggu truk.' : mf > 1.1 ? 'Truk akan antre di loading point.' : 'Armada sudah seimbang.')
+        : '';
+    }
+    $('f').addEventListener('input', calc); calc();
+  })();
+</script>

@@ -1,0 +1,4 @@
+# Setelah AdSense disetujui:
+# 1. Ganti pub-0000000000000000 dengan ID penerbit Anda
+# 2. Ubah nama file ini menjadi ads.txt (tanpa .contoh)
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

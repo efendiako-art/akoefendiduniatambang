@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const tools = [
+  { href: '/alat/kpi-alat/', ic: '%', t: 'KPI Alat: PA, UA, MA, EU', d: 'Hitung availability dan utilisasi alat dari jam kerja, perbaikan, dan siaga.' },
+  { href: '/alat/stripping-ratio/', ic: 'SR', t: 'Stripping Ratio & BESR', d: 'Hitung SR aktual dan break even stripping ratio dari harga jual dan biaya.' },
+  { href: '/alat/produktivitas/', ic: 'Q', t: 'Produktivitas Excavator & Truk', d: 'Produksi per jam, jumlah truk ideal, dan match factor armada.' },
+];
+---
+<BaseLayout title="Kalkulator Tambang Gratis" description="Kalkulator tambang online gratis: KPI alat (PA, UA, MA, EU), stripping ratio dan BESR, produktivitas excavator dan dump truck.">
+  <section class="page container">
+    <p class="eyebrow">Alat gratis</p>
+    <h1>Kalkulator tambang</h1>
+    <p class="lead">Hitung angka-angka penting operasi tambang langsung di browser. Tanpa daftar, tanpa unduh.</p>
+    <div class="grid" style="margin-top:28px">
+      {tools.map((x) => (
+        <a class="card tool" href={x.href}>
+          <span class="tool-ic" aria-hidden="true">{x.ic}</span>
+          <h3>{x.t}</h3>
+          <p>{x.d}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .tool { display: block; padding: 22px; text-decoration: none; color: var(--ink); transition: transform .2s; }
+  .tool:hover { transform: translateY(-3px); color: var(--ink); }
+  .tool-ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font: 800 17px/1 var(--font-head); }
+  .tool h3 { margin: 16px 0 6px; font-size: 19px; }
+  .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+</style>
