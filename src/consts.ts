@@ -20,11 +20,13 @@ export const SITE = {
 export const ADSENSE_CLIENT = 'ca-pub-5609847039173018';
 
 // ID slot iklan (dibuat di dashboard AdSense > Iklan > Menurut unit iklan)
+// Kosongkan slot = AdSlot otomatis tidak menampilkan apa pun di posisi itu (aman).
 export const AD_SLOTS = {
-  articleTop: '',
-  articleMiddle: '',
-  articleBottom: '',
-  sidebar: '',
+  articleTop: '',      // di atas isi artikel, setelah judul
+  articleBottom: '',   // di bawah isi artikel, sebelum tombol share
+  sidebar: '',         // sidebar desktop di halaman artikel, di bawah daftar isi
+  homeBelowHero: '',   // di bawah hero beranda, sebelum "Artikel pilihan"
+  inFeed: '',          // native in-feed, disisipkan di antara kartu artikel (listing)
 };
 
 export const CATEGORIES = [

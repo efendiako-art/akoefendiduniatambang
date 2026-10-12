@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { CATEGORIES } from '../../consts';
+import AdSlot from '../../components/AdSlot.astro';
+import { CATEGORIES, AD_SLOTS } from '../../consts';
+const EVERY = 6;
 export function getStaticPaths() {
   return CATEGORIES.map((c) => ({ params: { kategori: c.slug }, props: { cat: c } }));
 }
@@ -17,7 +19,16 @@ const posts = (await getCollection('artikel', ({ data }) => !data.draft && data.
     <h1>{cat.name}</h1>
     <p class="lead">{cat.desc}</p>
     {posts.length > 0
-      ? <div class="grid" style="margin-top:28px">{posts.map((p) => <ArticleCard post={p} />)}</div>
+      ? <div class="grid" style="margin-top:28px">
+          {posts.map((p, i) => (
+            <>
+              <ArticleCard post={p} />
+              {AD_SLOTS.inFeed && (i + 1) % EVERY === 0 && i !== posts.length - 1 && (
+                <div style="grid-column:1/-1"><AdSlot slot={AD_SLOTS.inFeed} /></div>
+              )}
+            </>
+          ))}
+        </div>
       : <p>Artikel untuk kategori ini sedang disiapkan. Sementara itu, <a href="/artikel/">baca artikel lainnya</a>.</p>}
   </section>
 </BaseLayout>

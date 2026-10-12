@@ -2,10 +2,12 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { CATEGORIES } from '../../consts';
+import AdSlot from '../../components/AdSlot.astro';
+import { CATEGORIES, AD_SLOTS } from '../../consts';
 const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const EVERY = 6; // sisipkan 1 unit in-feed setiap 6 artikel
 ---
 <BaseLayout title="Semua Artikel Pertambangan" description="Kumpulan artikel pertambangan: operasi produksi, alat berat, geologi, K3, dan karier tambang.">
   <section class="page container">
@@ -19,7 +21,16 @@ const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
         {CATEGORIES.map((c) => <button type="button" class="pill" data-cat={c.slug}>{c.name}</button>)}
       </div>
     </div>
-    <div class="grid" id="list">{posts.map((p) => <ArticleCard post={p} />)}</div>
+    <div class="grid" id="list">
+      {posts.map((p, i) => (
+        <>
+          <ArticleCard post={p} />
+          {AD_SLOTS.inFeed && (i + 1) % EVERY === 0 && i !== posts.length - 1 && (
+            <div class="in-feed"><AdSlot slot={AD_SLOTS.inFeed} label="Iklan" /></div>
+          )}
+        </>
+      ))}
+    </div>
     <p id="empty" hidden>Belum ada artikel yang cocok.</p>
   </section>
 </BaseLayout>
@@ -50,4 +61,5 @@ const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
   .pill { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); color: var(--ink-2); font: 500 14px/1 var(--font-body); cursor: pointer; }
   .pill.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   #empty { color: var(--ink-3); }
+  .in-feed { grid-column: 1 / -1; }
 </style>

@@ -76,6 +76,7 @@ const share = encodeURIComponent(`${title} ${url}`);
             <ul>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
           </details>
         )}
+        <div class="sidebar-ad"><AdSlot slot={AD_SLOTS.sidebar} /></div>
       </aside>
 
       <div class="main">
@@ -131,9 +132,11 @@ const share = encodeURIComponent(`${title} ${url}`);
   .layout { display: grid; gap: 32px; grid-template-columns: minmax(0, 1fr); }
   @media (min-width: 1000px) {
     .layout { grid-template-columns: 250px minmax(0, 1fr); gap: 56px; }
-    .toc-wrap { order: 0; }
-    .toc { position: sticky; top: 88px; }
+    .toc-wrap { order: 0; position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+    .toc { position: static; }
   }
+  .sidebar-ad { display: none; }
+  @media (min-width: 1000px) { .sidebar-ad { display: block; } }
   .toc { padding: 16px 18px; font-size: 14.5px; }
   .toc summary { font: 700 14px/1 var(--font-head); cursor: pointer; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
   .toc ul { margin: 12px 0 0; padding: 0; list-style: none; }
