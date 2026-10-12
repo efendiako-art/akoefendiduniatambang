@@ -22,4 +22,18 @@ const artikel = defineCollection({
   }),
 });
 
-export const collections = { artikel };
+const sop = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/sop' }),
+  schema: z.object({
+    title: z.string(),
+    docCode: z.string(),
+    docType: z.enum(['SOP', 'IK']),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: z.enum(['operasional-tambang', 'k3-lingkungan', 'perawatan-alat', 'logistik-stockpile']),
+    pdfFile: z.string(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { artikel, sop };

@@ -27,7 +27,22 @@ export const AD_SLOTS = {
   sidebar: '',         // sidebar desktop di halaman artikel, di bawah daftar isi
   homeBelowHero: '',   // di bawah hero beranda, sebelum "Artikel pilihan"
   inFeed: '',          // native in-feed, disisipkan di antara kartu artikel (listing)
+  sopTop: '',          // di atas isi dokumen SOP/IK, setelah judul
+  sopBottom: '',       // di bawah isi dokumen SOP/IK, setelah tombol unduh
+  sopInFeed: '',       // native in-feed di daftar SOP & IK
 };
+
+export const SOP_CATEGORIES = [
+  { slug: 'operasional-tambang', name: 'Operasional Tambang', desc: 'Loading, hauling, dumping, dan pengoperasian unit tambang.' },
+  { slug: 'k3-lingkungan', name: 'K3 & Lingkungan', desc: 'APD, manajemen risiko, dan keselamatan kerja tambang.' },
+  { slug: 'perawatan-alat', name: 'Perawatan Alat Berat', desc: 'Pemeliharaan terjadwal dan keandalan unit tambang.' },
+  { slug: 'logistik-stockpile', name: 'Logistik & Stockpile', desc: 'Manajemen stockpile, jalan angkut, dan area penimbunan.' },
+] as const;
+
+export type SopCategorySlug = (typeof SOP_CATEGORIES)[number]['slug'];
+
+export const sopCategoryName = (slug: string) =>
+  SOP_CATEGORIES.find((c) => c.slug === slug)?.name ?? slug;
 
 export const CATEGORIES = [
   { slug: 'operasi-produksi', name: 'Operasi Produksi', desc: 'Perencanaan, produksi harian, dan KPI tambang.' },
