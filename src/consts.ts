@@ -17,7 +17,7 @@ export const SITE = {
 //  Isi setelah akun AdSense disetujui, contoh: 'ca-pub-1234567890123456'
 //  Selama masih kosong, tidak ada kode iklan yang dimuat.
 // ------------------------------------------------------------
-export const ADSENSE_CLIENT = '';
+export const ADSENSE_CLIENT = 'ca-pub-5609847039173018';
 
 // ID slot iklan (dibuat di dashboard AdSense > Iklan > Menurut unit iklan)
 export const AD_SLOTS = {

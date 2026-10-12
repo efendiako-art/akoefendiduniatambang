@@ -43,7 +43,10 @@ const year = new Date().getFullYear();
     {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#191714" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/logo-192.png" />
+    <meta property="og:image" content={new URL('/logo.png', Astro.site)} />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,11 +64,7 @@ const year = new Date().getFullYear();
     <header class="site-header">
       <div class="container bar">
         <a class="brand" href="/" aria-label={`${SITE.name} beranda`}>
-          <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-            <rect width="32" height="32" rx="8" fill="var(--accent)" />
-            <path d="M5 23 L12 12 L16 17 L20 10 L27 23 Z" fill="#fff" opacity=".95" />
-            <path d="M5 23 H27" stroke="#fff" stroke-width="2" />
-          </svg>
+          <img src="/logo.png" width="32" height="32" alt="" class="brand-logo" />
           <span>{SITE.name}</span>
         </a>
         <nav class="nav" aria-label="Navigasi utama">
@@ -92,7 +91,7 @@ const year = new Date().getFullYear();
     <footer class="site-footer">
       <div class="container foot-grid">
         <div>
-          <a class="brand" href="/"><span>{SITE.name}</span></a>
+          <a class="brand" href="/"><img src="/logo.png" width="32" height="32" alt="" class="brand-logo" /><span>{SITE.name}</span></a>
           <p class="muted">{SITE.description}</p>
         </div>
         <div>
@@ -141,6 +140,7 @@ const year = new Date().getFullYear();
   }
   .bar { display: flex; align-items: center; gap: 24px; height: 64px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 800 20px/1 var(--font-head); letter-spacing: -0.02em; }
+  .brand-logo { border-radius: 50%; display: block; }
   .nav { display: none; gap: 4px; margin-left: auto; }
   .nav a { padding: 8px 14px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 500; font-size: 15px; }
   .nav a:hover, .nav a[aria-current='page'] { background: var(--bg-sunk); color: var(--ink); }
