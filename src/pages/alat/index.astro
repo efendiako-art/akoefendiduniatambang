@@ -11,6 +11,7 @@ const tools = [
     <p class="eyebrow">Alat gratis</p>
     <h1>Kalkulator tambang</h1>
     <p class="lead">Hitung angka-angka penting operasi tambang langsung di browser. Tanpa daftar, tanpa unduh.</p>
+    <a class="card aplikasi" href="/aplikasi/"><b>📱 Aplikasi Android Eng-Calculation v2.6</b><span>Sim Mining Production, Sim Production Chute, Loader vs Hauler, ADT, dan Chute Filter Press — langsung di HP. Lihat fitur &amp; ikut uji coba →</span></a>
     <div class="grid" style="margin-top:28px">
       {tools.map((x) => (
         <a class="card tool" href={x.href}>
@@ -28,4 +29,7 @@ const tools = [
   .tool-ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font: 800 17px/1 var(--font-head); }
   .tool h3 { margin: 16px 0 6px; font-size: 19px; }
   .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+  .aplikasi { display: block; margin-top: 24px; padding: 18px 22px; text-decoration: none; color: var(--ink); border-left: 4px solid var(--accent); }
+  .aplikasi b { display: block; font-size: 17px; }
+  .aplikasi span { color: var(--ink-2); font-size: 15px; }
 </style>

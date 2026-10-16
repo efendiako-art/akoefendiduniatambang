@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const UJI = 'https://play.google.com/apps/testing/com.akoefendi.engcalc';
+const fitur = [
+  { ic: 'SM', t: 'Sim Mining Production', d: 'Simulasi produksi per fleet: pilih hauler, excavator, dan jarak angkut. Produksi = EWH × QTY × PTY, parameter mana pun bisa dikunci dan dihitung balik dari rumus.' },
+  { ic: 'SC', t: 'Sim Production Chute', d: 'Produksi chute per line (cycle 5/4/3 menit) dan jumlah dump truck tailing (MF) yang dibutuhkan sesuai jarak.' },
+  { ic: 'LH', t: 'Loader vs Hauler', d: 'Gabungan DT/ADT dan excavator: jumlah bucket, PTY hauler, dan match factor menyesuaikan unit, kondisi material, dan jarak.' },
+  { ic: 'AD', t: 'Articulated Dump Truck', d: 'ADT 40T dengan pilihan material (Top Soil, Limonite, Saprolite, Waste); densitas, tonase, dan produksi ikut berubah.' },
+  { ic: 'FP', t: 'Chute Filter Press', d: 'PTY dump truck 20/30/40 T dari chute filter press berdasarkan jarak angkut (dry tailing).' },
+  { ic: 'EX', t: 'Excavator 20T–50T & big digger', d: 'Exca 20T, 30T, 40T, 50T, excavator batubara, dan big digger (PC2000, EX2600), plus hauler HD785, Volvo A40G, CAT 745.' },
+  { ic: '🔒', t: 'Tombol aktif / kunci', d: 'Setiap parameter bisa dikunci agar mengikuti unit, material, atau rumus, atau dibuka untuk diisi manual.' },
+  { ic: '±', t: 'Kalkulator & konversi', d: 'Kalkulator ilmiah, konversi BCM · LCM · CCM · ton, massa, luas, panjang, dan volume tabung, kerucut, kubus, balok, bola.' },
+];
+---
+<BaseLayout title="Aplikasi Eng-Calculation: Alat Tambang" description="Eng-Calculation: aplikasi Android kalkulator produktivitas alat berat tambang — Sim Mining Production, Sim Production Chute, Loader vs Hauler, ADT, Chute Filter Press, dan konversi material.">
+  <section class="page container">
+    <p class="eyebrow">Aplikasi Android · v2.6</p>
+    <h1>Eng-Calculation: Alat Tambang</h1>
+    <p class="lead">Kalkulator produktivitas alat berat tambang di HP, dengan rumus yang sama dengan lembar kerja Excel praktisi. Bisa dipakai tanpa internet.</p>
+    <p style="margin-top:18px"><a class="btn" href={UJI} rel="noopener">Ikut uji coba di Google Play</a></p>
+    <p class="catatan">Saat ini aplikasi masih dalam pengujian tertutup. Buka tautan di atas dari HP Android dengan akun Gmail yang sudah terdaftar sebagai penguji, tekan “Jadi penguji”, lalu pasang aplikasinya.</p>
+    <h2 style="margin-top:36px">Yang baru di versi 2.6</h2>
+    <div class="grid" style="margin-top:18px">
+      {fitur.map((x) => (
+        <div class="card tool">
+          <span class="tool-ic" aria-hidden="true">{x.ic}</span>
+          <h3>{x.t}</h3>
+          <p>{x.d}</p>
+        </div>
+      ))}
+    </div>
+    <p class="catatan" style="margin-top:28px">Ingin menghitung langsung di browser? Coba <a href="/alat/">kalkulator tambang online</a> kami.</p>
+  </section>
+</BaseLayout>
+<style>
+  .tool { display: block; padding: 22px; color: var(--ink); }
+  .tool-ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font: 800 16px/1 var(--font-head); }
+  .tool h3 { margin: 16px 0 6px; font-size: 19px; }
+  .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+  .btn { display: inline-block; padding: 13px 22px; border-radius: 12px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+  .btn:hover { color: #fff; opacity: .92; }
+  .catatan { color: var(--ink-2); font-size: 14.5px; max-width: 62ch; margin-top: 10px; }
+</style>
