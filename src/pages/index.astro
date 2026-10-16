@@ -12,13 +12,29 @@ const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
 const latest = posts.slice(0, 6);
 const counts = Object.fromEntries(CATEGORIES.map((c) => [c.slug, posts.filter((p) => p.data.category === c.slug).length]));
 
+const siteUrl = Astro.site?.toString();
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: SITE.name,
-  url: Astro.site?.toString(),
-  description: SITE.description,
-  inLanguage: 'id-ID',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: SITE.name,
+      alternateName: ['Tambang Pedia', 'tambangpedia.com'],
+      url: siteUrl,
+      description: SITE.description,
+      inLanguage: 'id-ID',
+      publisher: { '@id': `${siteUrl}#organization` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}#organization`,
+      name: SITE.name,
+      url: siteUrl,
+      logo: { '@type': 'ImageObject', url: new URL('/logo.png', Astro.site).toString(), width: 512, height: 512 },
+      email: SITE.email,
+    },
+  ],
 };
 ---
 <BaseLayout jsonLd={jsonLd}>
