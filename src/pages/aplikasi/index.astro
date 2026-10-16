@@ -1,43 +1,83 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const UJI = 'https://play.google.com/apps/testing/com.akoefendi.engcalc';
-const fitur = [
-  { ic: 'SM', t: 'Sim Mining Production', d: 'Simulasi produksi per fleet: pilih hauler, excavator, dan jarak angkut. Produksi = EWH × QTY × PTY, parameter mana pun bisa dikunci dan dihitung balik dari rumus.' },
-  { ic: 'SC', t: 'Sim Chute Production', d: 'Produksi chute per line (cycle 5/4/3 menit) dan jumlah dump truck tailing (MF) yang dibutuhkan sesuai jarak.' },
-  { ic: 'LH', t: 'Loader vs Hauler', d: 'Gabungan DT/ADT dan excavator: jumlah bucket, PTY hauler, dan match factor menyesuaikan unit, kondisi material, dan jarak.' },
-  { ic: 'AD', t: 'Articulated Dump Truck', d: 'ADT 40T dengan pilihan material (Top Soil, Limonite, Saprolite, Waste); densitas, tonase, dan produksi ikut berubah.' },
-  { ic: 'FP', t: 'Chute Filter Press', d: 'PTY dump truck 20/30/40 T dari chute filter press berdasarkan jarak angkut (dry tailing).' },
-  { ic: 'EX', t: 'Excavator 20T–50T & big digger', d: 'Exca 20T, 30T, 40T, 50T, excavator batubara, dan big digger (PC2000, EX2600), plus hauler HD785, Volvo A40G, CAT 745.' },
-  { ic: '🔒', t: 'Tombol aktif / kunci', d: 'Setiap parameter bisa dikunci agar mengikuti unit, material, atau rumus, atau dibuka untuk diisi manual.' },
-  { ic: '±', t: 'Kalkulator & konversi', d: 'Kalkulator ilmiah, konversi BCM · LCM · CCM · ton, massa, luas, panjang, dan volume tabung, kerucut, kubus, balok, bola.' },
+import AppBanner from '../../components/AppBanner.astro';
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc';
+const layar = [
+  { src: '1_beranda', t: 'Beranda', d: 'Semua kategori alat dalam satu layar.' },
+  { src: '2_sim_mining', t: 'Sim Mining Production', d: 'Fleet hauler + excavator + jarak, produksi EWH × QTY × PTY.' },
+  { src: '3_adt', t: 'Articulated Dump Truck', d: 'Material, densitas, loader, dan match factor.' },
+  { src: '4_chute', t: 'Chute Filter Press', d: 'PTY dump truck dari chute berdasarkan jarak.' },
+  { src: '5_kalkulator', t: 'Kalkulator & konversi', d: 'Volume bangun ruang, BCM · LCM · CCM · ton, massa, luas.' },
 ];
+const fitur = [
+  { ic: 'SM', t: 'Sim Mining Production', d: 'Simulasi produksi per fleet: pilih hauler, excavator, dan jarak angkut. Parameter mana pun bisa dikunci lalu dihitung balik dari rumus.' },
+  { ic: 'SC', t: 'Sim Chute Production', d: 'Produksi chute per line (cycle 5/4/3 menit) dan jumlah dump truck tailing yang dibutuhkan.' },
+  { ic: 'LH', t: 'Loader vs Hauler', d: 'Jumlah bucket, PTY hauler, dan match factor menyesuaikan excavator, kondisi material, dan jarak.' },
+  { ic: 'AD', t: 'Articulated Dump Truck', d: 'Pilih material (Top Soil, Limonite, Saprolite, Waste); densitas, tonase, dan produksi ikut berubah.' },
+  { ic: 'FP', t: 'Chute Filter Press', d: 'PTY dump truck 20/30/40 T dari chute filter press berdasarkan jarak angkut (dry tailing).' },
+  { ic: 'EX', t: 'Excavator 20T–50T & big digger', d: 'Exca 20–50T, batubara, PC2000, EX2600, plus hauler HD785, Volvo A40G, CAT 745.' },
+  { ic: '🔒', t: 'Tombol aktif / kunci', d: 'Setiap parameter bisa dikunci agar mengikuti unit, material, atau rumus — atau dibuka untuk diisi manual.' },
+  { ic: '⚙', t: 'Tema, suara & saran', d: 'Lima tema warna, ukuran tulisan, suara klik, dan kirim saran langsung ke pengembang.' },
+];
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Eng-Calculation: Alat Tambang',
+  operatingSystem: 'Android 7.0+', applicationCategory: 'BusinessApplication', softwareVersion: '2.6',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' }, downloadUrl: PLAY_URL, inLanguage: 'id-ID',
+};
 ---
-<BaseLayout title="Aplikasi Eng-Calculation: Alat Tambang" description="Eng-Calculation: aplikasi Android kalkulator produktivitas alat berat tambang — Sim Mining Production, Sim Chute Production, Loader vs Hauler, ADT, Chute Filter Press, dan konversi material.">
-  <section class="page container">
-    <p class="eyebrow">Aplikasi Android · v2.6</p>
-    <h1>Eng-Calculation: Alat Tambang</h1>
-    <p class="lead">Kalkulator produktivitas alat berat tambang di HP, dengan rumus yang sama dengan lembar kerja Excel praktisi. Bisa dipakai tanpa internet.</p>
-    <p style="margin-top:18px"><a class="btn" href={UJI} rel="noopener">Ikut uji coba di Google Play</a></p>
-    <p class="catatan">Saat ini aplikasi masih dalam pengujian tertutup. Buka tautan di atas dari HP Android dengan akun Gmail yang sudah terdaftar sebagai penguji, tekan “Jadi penguji”, lalu pasang aplikasinya.</p>
-    <h2 style="margin-top:36px">Yang baru di versi 2.6</h2>
-    <div class="grid" style="margin-top:18px">
-      {fitur.map((x) => (
-        <div class="card tool">
-          <span class="tool-ic" aria-hidden="true">{x.ic}</span>
-          <h3>{x.t}</h3>
-          <p>{x.d}</p>
-        </div>
-      ))}
+<BaseLayout title="Aplikasi Eng-Calculation: Alat Tambang" description="Eng-Calculation: aplikasi Android gratis untuk menghitung produktivitas alat berat tambang — Sim Mining Production, Sim Chute Production, Loader vs Hauler, ADT, Chute Filter Press, kalkulator dan konversi." jsonLd={jsonLd}>
+  <AppBanner judulTag="h1" tautanDetail={false} />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">Tampilan aplikasi</p><h2>Seperti ini di HP Anda</h2></div></div>
+      <div class="galeri" tabindex="0" aria-label="Galeri tangkapan layar">
+        {layar.map((s) => (
+          <figure>
+            <img src={`/aplikasi/${s.src}.webp`} width="540" height="1168" alt={`Tangkapan layar ${s.t}`} loading="lazy" />
+            <figcaption><b>{s.t}</b><span>{s.d}</span></figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
-    <p class="catatan" style="margin-top:28px">Ingin menghitung langsung di browser? Coba <a href="/alat/">kalkulator tambang online</a> kami.</p>
+  </section>
+
+  <section class="section tools-band">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">Versi 2.6</p><h2>Fitur utama</h2></div></div>
+      <div class="grid">
+        {fitur.map((x) => (
+          <div class="card tool"><span class="tool-ic" aria-hidden="true">{x.ic}</span><h3>{x.t}</h3><p>{x.d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container tanya">
+      <div class="section-head"><div><p class="eyebrow">Pertanyaan</p><h2>Unduh & pembaruan</h2></div></div>
+      <details open><summary>Bagaimana cara mengunduh?</summary><p>Tekan tombol <b>Unduh di Google Play</b>. Selama masa uji tertutup, hanya penguji terdaftar yang bisa memasang; setelah rilis publik, semua pengguna Android bisa langsung memasang dari Google Play.</p></details>
+      <details><summary>Bagaimana aplikasi diperbarui?</summary><p>Aplikasi dipasang dan diperbarui lewat Google Play. Setiap versi baru (misalnya 2.6 → 2.7) datang otomatis, atau tekan <b>Update</b> di halaman aplikasi di Play Store.</p></details>
+      <details><summary>Apakah perlu internet?</summary><p>Tidak. Semua perhitungan berjalan di HP. Internet hanya dipakai untuk iklan dan cek pembaruan.</p></details>
+      <details><summary>Apakah gratis?</summary><p>Ya, gratis dengan iklan. Anda bisa menonton satu iklan video untuk bebas iklan selama 2 jam.</p></details>
+      <p class="kecil">Ingin menghitung langsung di browser? Coba <a href="/alat/">kalkulator tambang online</a> kami.</p>
+    </div>
   </section>
 </BaseLayout>
 <style>
+  .galeri { display: flex; gap: 18px; overflow-x: auto; padding: 6px 2px 18px; scroll-snap-type: x mandatory; }
+  .galeri figure { flex: none; width: 220px; margin: 0; scroll-snap-align: start; }
+  .galeri img { width: 100%; height: auto; border-radius: 22px; border: 5px solid #1d2632; background: #090d12; box-shadow: var(--shadow); }
+  .galeri figcaption { margin-top: 10px; }
+  .galeri figcaption b { display: block; font-family: var(--font-head); }
+  .galeri figcaption span { color: var(--ink-2); font-size: 14px; }
   .tool { display: block; padding: 22px; color: var(--ink); }
   .tool-ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font: 800 16px/1 var(--font-head); }
   .tool h3 { margin: 16px 0 6px; font-size: 19px; }
   .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
-  .btn { display: inline-block; padding: 13px 22px; border-radius: 12px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
-  .btn:hover { color: #fff; opacity: .92; }
-  .catatan { color: var(--ink-2); font-size: 14.5px; max-width: 62ch; margin-top: 10px; }
+  .tanya { max-width: 820px; }
+  .tanya details { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 10px; background: var(--bg-elev); }
+  .tanya summary { cursor: pointer; font-weight: 700; }
+  .tanya p { color: var(--ink-2); margin: 10px 0 0; }
+  .kecil { color: var(--ink-2); font-size: 15px; }
 </style>

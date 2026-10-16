@@ -1,0 +1,69 @@
+---
+/* Banner aplikasi Android Eng-Calculation.
+   PLAY_URL = halaman resmi di Google Play: saat aplikasi sudah rilis publik, semua orang mengunduh
+   dan menerima update otomatis dari sini. Selama pengujian tertutup hanya penguji terdaftar yang bisa membukanya. */
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc';
+const UJI_URL = 'https://play.google.com/apps/testing/com.akoefendi.engcalc';
+interface Props { judulTag?: 'h1' | 'h2'; tautanDetail?: boolean }
+const { judulTag = 'h2', tautanDetail = true } = Astro.props;
+const Judul = judulTag;
+---
+<section class="app-banner" aria-label="Aplikasi Android Eng-Calculation">
+  <div class="container app-grid">
+    <div class="app-teks">
+      <div class="app-merek">
+        <img src="/aplikasi/ikon.webp" width="64" height="64" alt="Ikon Eng-Calculation" loading="lazy" />
+        <div><p class="app-eyebrow">Aplikasi Android · v2.6</p><span class="app-nama">Eng-<b>Calculation</b></span></div>
+      </div>
+      <Judul class="app-judul">Kalkulator alat tambang di saku Anda</Judul>
+      <p class="app-lead">Hitung produktivitas excavator, dump truck, ADT, chute filter press, dan simulasi produksi fleet — rumus sama dengan lembar kerja Excel praktisi, bisa dipakai tanpa internet.</p>
+      <ul class="app-chip">
+        <li>Sim Mining Production</li><li>Sim Chute Production</li><li>Loader vs Hauler</li><li>Chute Filter Press</li><li>Kalkulator & konversi</li>
+      </ul>
+      <div class="app-aksi">
+        <a class="app-play" href={PLAY_URL} rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6 13.6 12l-9.4 9.4a1.6 1.6 0 0 1-.7-1.3V3.9c0-.5.3-1 .7-1.3z" fill="#34A853"/><path d="m16.8 8.8-3.2 3.2-9.4-9.4c.4-.3 1-.3 1.5 0z" fill="#4285F4"/><path d="m16.8 15.2-11.1 6.2c-.5.3-1.1.3-1.5 0l9.4-9.4z" fill="#EA4335"/><path d="m20.3 10.7-3.5-1.9-3.2 3.2 3.2 3.2 3.5-1.9c1-.6 1-2 0-2.6z" fill="#FBBC04"/></svg>
+          <span><small>Unduh di</small>Google Play</span>
+        </a>
+        {tautanDetail && <a class="app-detail" href="/aplikasi/">Lihat fitur & tampilan →</a>}
+      </div>
+      <p class="app-catatan">Masih tahap uji tertutup: penguji terdaftar bisa <a href={UJI_URL} rel="noopener">bergabung di sini</a>. Setelah rilis publik, tombol di atas langsung membuka Google Play dan update aplikasi datang otomatis.</p>
+    </div>
+    <div class="app-hp" aria-hidden="true">
+      <img class="hp hp-1" src="/aplikasi/2_sim_mining.webp" width="540" height="1168" alt="" loading="lazy" />
+      <img class="hp hp-2" src="/aplikasi/1_beranda.webp" width="540" height="1168" alt="" loading="lazy" />
+      <img class="hp hp-3" src="/aplikasi/3_adt.webp" width="540" height="1168" alt="" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .app-banner { background: radial-gradient(120% 120% at 100% 0%, rgba(63,217,201,.16), transparent 55%), radial-gradient(90% 120% at 0% 100%, rgba(255,122,26,.20), transparent 55%), #0b0f14; color: #eaf0f6; overflow: hidden; }
+  .app-grid { display: grid; gap: 28px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
+  @media (min-width: 900px) { .app-grid { grid-template-columns: 1.05fr .95fr; padding-top: 64px; padding-bottom: 64px; } }
+  .app-merek { display: flex; align-items: center; gap: 14px; }
+  .app-merek img { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 8px 24px rgba(255,140,20,.3); }
+  .app-eyebrow { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #3fd9c9; }
+  .app-nama { font: 800 26px/1.1 var(--font-head); letter-spacing: -.02em; }
+  .app-nama b { background: linear-gradient(90deg, #f5b400, #ff7a1a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .app-judul { color: #fff; font-size: clamp(28px, 4.4vw, 44px); font-weight: 800; letter-spacing: -.02em; margin: 22px 0 12px; max-width: 18ch; }
+  .app-lead { color: #b7c2cf; font-size: 17px; line-height: 1.6; max-width: 56ch; margin: 0; }
+  .app-chip { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .app-chip li { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 99px; background: rgba(245,180,0,.12); color: #ffd46b; border: 1px solid rgba(245,180,0,.25); }
+  .app-aksi { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 26px; }
+  .app-play { display: inline-flex; align-items: center; gap: 12px; padding: 10px 20px 10px 16px; border-radius: 14px; background: #000; border: 1px solid #5f6b78; color: #fff; text-decoration: none; transition: transform .15s, border-color .15s; }
+  .app-play:hover { color: #fff; transform: translateY(-2px); border-color: #fff; }
+  .app-play svg { width: 30px; height: 30px; }
+  .app-play span { display: flex; flex-direction: column; font: 700 20px/1.05 var(--font-head); }
+  .app-play small { font: 500 11px/1.2 var(--font-body); letter-spacing: .04em; text-transform: uppercase; color: #c9d2dc; }
+  .app-detail { color: #ffb45a; font-weight: 600; text-decoration: none; }
+  .app-detail:hover { color: #ffd08f; }
+  .app-catatan { color: #8d9aab; font-size: 13.5px; margin: 16px 0 0; max-width: 58ch; }
+  .app-catatan a { color: #3fd9c9; }
+  .app-hp { position: relative; height: 440px; }
+  .hp { position: absolute; width: 190px; height: auto; border-radius: 26px; border: 6px solid #1d2632; box-shadow: 0 24px 60px rgba(0,0,0,.55); background: #090d12; }
+  .hp-2 { left: 50%; top: 0; transform: translateX(-50%); z-index: 2; width: 205px; }
+  .hp-1 { left: 50%; top: 40px; transform: translateX(-118%) rotate(-6deg); opacity: .92; }
+  .hp-3 { left: 50%; top: 40px; transform: translateX(18%) rotate(6deg); opacity: .92; }
+  @media (max-width: 520px) { .app-hp { height: 360px; } .hp { width: 150px; } .hp-2 { width: 165px; } }
+</style>
