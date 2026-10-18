@@ -1,0 +1,51 @@
+{
+  "atas": [
+    {
+      "label": "Artikel",
+      "href": "/artikel/"
+    },
+    {
+      "label": "Kalkulator",
+      "href": "/alat/"
+    },
+    {
+      "label": "Aplikasi",
+      "href": "/aplikasi/"
+    },
+    {
+      "label": "SOP & IK",
+      "href": "/sop/"
+    },
+    {
+      "label": "Tentang",
+      "href": "/tentang/"
+    },
+    {
+      "label": "Kontak",
+      "href": "/kontak/"
+    }
+  ],
+  "bawahJudul": "Situs",
+  "bawah": [
+    {
+      "label": "Tentang Kami",
+      "href": "/tentang/"
+    },
+    {
+      "label": "Kontak",
+      "href": "/kontak/"
+    },
+    {
+      "label": "Kebijakan Privasi",
+      "href": "/kebijakan-privasi/"
+    },
+    {
+      "label": "Disclaimer",
+      "href": "/disclaimer/"
+    },
+    {
+      "label": "RSS",
+      "href": "/rss.xml"
+    }
+  ]
+}

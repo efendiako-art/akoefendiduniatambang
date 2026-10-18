@@ -1,3 +1,6 @@
+// Daftar kategori disimpan di src/data/kategori.json (diatur lewat aplikasi TambangPedia)
+import kategori from './data/kategori.json';
+
 // ============================================================
 //  PENGATURAN UTAMA WEBSITE — cukup ubah file ini
 // ============================================================
@@ -35,27 +38,16 @@ export const AD_SLOTS = {
 // Kunci tata letak untuk unit Dalam Feed (dari kode iklan AdSense unit "inFeed")
 export const IN_FEED_LAYOUT_KEY = '-6t+ed+2i-1n-4w';
 
-export const SOP_CATEGORIES = [
-  { slug: 'operasional-tambang', name: 'Operasional Tambang', desc: 'Loading, hauling, dumping, dan pengoperasian unit tambang.' },
-  { slug: 'k3-lingkungan', name: 'K3 & Lingkungan', desc: 'APD, manajemen risiko, dan keselamatan kerja tambang.' },
-  { slug: 'perawatan-alat', name: 'Perawatan Alat Berat', desc: 'Pemeliharaan terjadwal dan keandalan unit tambang.' },
-  { slug: 'logistik-stockpile', name: 'Logistik & Stockpile', desc: 'Manajemen stockpile, jalan angkut, dan area penimbunan.' },
-] as const;
+export const SOP_CATEGORIES: { slug: string; name: string; desc: string }[] = kategori.sop;
 
-export type SopCategorySlug = (typeof SOP_CATEGORIES)[number]['slug'];
+export type SopCategorySlug = string;
 
 export const sopCategoryName = (slug: string) =>
   SOP_CATEGORIES.find((c) => c.slug === slug)?.name ?? slug;
 
-export const CATEGORIES = [
-  { slug: 'operasi-produksi', name: 'Operasi Produksi', desc: 'Perencanaan, produksi harian, dan KPI tambang.' },
-  { slug: 'alat-berat', name: 'Alat Berat', desc: 'Excavator, dump truck, dozer, dan produktivitasnya.' },
-  { slug: 'geologi-eksplorasi', name: 'Geologi & Eksplorasi', desc: 'Endapan, cadangan, dan pemboran eksplorasi.' },
-  { slug: 'k3-tambang', name: 'K3 Tambang', desc: 'Keselamatan kerja dan regulasi K3 pertambangan.' },
-  { slug: 'karier-regulasi', name: 'Karier & Regulasi', desc: 'Sertifikasi, lowongan, dan aturan pertambangan.' },
-] as const;
+export const CATEGORIES: { slug: string; name: string; desc: string }[] = kategori.artikel;
 
-export type CategorySlug = (typeof CATEGORIES)[number]['slug'];
+export type CategorySlug = string;
 
 export const categoryName = (slug: string) =>
   CATEGORIES.find((c) => c.slug === slug)?.name ?? slug;

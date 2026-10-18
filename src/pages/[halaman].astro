@@ -1,0 +1,25 @@
+---
+// Halaman umum (Tentang, Kebijakan Privasi, Disclaimer, dan halaman baru dari aplikasi TambangPedia).
+// Isinya ada di src/content/halaman/*.md
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('halaman', ({ data }) => !data.draft);
+  return pages.map((page) => ({ params: { halaman: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const { title, metaTitle, description, eyebrow, lead } = page.data;
+---
+<BaseLayout title={metaTitle ?? title} description={description}>
+  <section class="page container">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <div class="prose">
+      {lead && <p class="lead">{lead}</p>}
+      <Content />
+    </div>
+  </section>
+</BaseLayout>

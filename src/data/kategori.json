@@ -1,0 +1,51 @@
+{
+  "artikel": [
+    {
+      "slug": "operasi-produksi",
+      "name": "Operasi Produksi",
+      "desc": "Perencanaan, produksi harian, dan KPI tambang."
+    },
+    {
+      "slug": "alat-berat",
+      "name": "Alat Berat",
+      "desc": "Excavator, dump truck, dozer, dan produktivitasnya."
+    },
+    {
+      "slug": "geologi-eksplorasi",
+      "name": "Geologi & Eksplorasi",
+      "desc": "Endapan, cadangan, dan pemboran eksplorasi."
+    },
+    {
+      "slug": "k3-tambang",
+      "name": "K3 Tambang",
+      "desc": "Keselamatan kerja dan regulasi K3 pertambangan."
+    },
+    {
+      "slug": "karier-regulasi",
+      "name": "Karier & Regulasi",
+      "desc": "Sertifikasi, lowongan, dan aturan pertambangan."
+    }
+  ],
+  "sop": [
+    {
+      "slug": "operasional-tambang",
+      "name": "Operasional Tambang",
+      "desc": "Loading, hauling, dumping, dan pengoperasian unit tambang."
+    },
+    {
+      "slug": "k3-lingkungan",
+      "name": "K3 & Lingkungan",
+      "desc": "APD, manajemen risiko, dan keselamatan kerja tambang."
+    },
+    {
+      "slug": "perawatan-alat",
+      "name": "Perawatan Alat Berat",
+      "desc": "Pemeliharaan terjadwal dan keandalan unit tambang."
+    },
+    {
+      "slug": "logistik-stockpile",
+      "name": "Logistik & Stockpile",
+      "desc": "Manajemen stockpile, jalan angkut, dan area penimbunan."
+    }
+  ]
+}
