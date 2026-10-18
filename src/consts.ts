@@ -22,15 +22,18 @@ export const ADSENSE_CLIENT = 'ca-pub-5609847039173018';
 // ID slot iklan (dibuat di dashboard AdSense > Iklan > Menurut unit iklan)
 // Kosongkan slot = AdSlot otomatis tidak menampilkan apa pun di posisi itu (aman).
 export const AD_SLOTS = {
-  articleTop: '',      // di atas isi artikel, setelah judul
-  articleBottom: '',   // di bawah isi artikel, sebelum tombol share
-  sidebar: '',         // sidebar desktop di halaman artikel, di bawah daftar isi
-  homeBelowHero: '',   // di bawah hero beranda, sebelum "Artikel pilihan"
-  inFeed: '',          // native in-feed, disisipkan di antara kartu artikel (listing)
-  sopTop: '',          // di atas isi dokumen SOP/IK, setelah judul
-  sopBottom: '',       // di bawah isi dokumen SOP/IK, setelah tombol unduh
-  sopInFeed: '',       // native in-feed di daftar SOP & IK
+  articleTop: '4572537844',      // di atas isi artikel, setelah judul
+  articleBottom: '6148334234',   // di bawah isi artikel, sebelum tombol share
+  sidebar: '9577452516',         // sidebar desktop di halaman artikel, di bawah daftar isi
+  homeBelowHero: '2209089229',   // di bawah hero beranda, sebelum "Artikel pilihan"
+  inFeed: '1754802819',          // native in-feed, disisipkan di antara kartu artikel (listing)
+  sopTop: '4572537844',          // di atas isi dokumen SOP/IK (memakai unit yang sama dengan articleTop)
+  sopBottom: '6148334234',       // di bawah isi dokumen SOP/IK (memakai unit yang sama dengan articleBottom)
+  sopInFeed: '1754802819',       // native in-feed di daftar SOP & IK (memakai unit yang sama dengan inFeed)
 };
+
+// Kunci tata letak untuk unit Dalam Feed (dari kode iklan AdSense unit "inFeed")
+export const IN_FEED_LAYOUT_KEY = '-6t+ed+2i-1n-4w';
 
 export const SOP_CATEGORIES = [
   { slug: 'operasional-tambang', name: 'Operasional Tambang', desc: 'Loading, hauling, dumping, dan pengoperasian unit tambang.' },
