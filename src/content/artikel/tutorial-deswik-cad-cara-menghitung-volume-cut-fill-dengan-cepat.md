@@ -4,10 +4,10 @@ description: 'Cara Menghitung Volume Cut & fill Deswik CAd'
 pubDate: 2026-10-19
 category: tutorial-software-tambang
 tags: []
-draft: false
+draft: true
 ---
 
-Tulis paragraf pembuka di sini. Sebutkan kata kunci utama di kalimat pertama.
+Bagaimaa caranya menghitung Cut & Fill melalui software Deswik Cad Dengan 2 singkat tampa menunggu lama
 
 ## Subjudul pertama
 
