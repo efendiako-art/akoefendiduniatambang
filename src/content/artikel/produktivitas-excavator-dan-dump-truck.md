@@ -44,6 +44,8 @@ Q = 582,7 × 0,8 = 466 bcm/jam
 
 > Cycle time paling besar pengaruhnya. Turun 3 detik saja (dari 30 ke 27 detik) menaikkan produksi lebih dari 10%. Posisi truk yang tepat dan tinggi jenjang yang ideal adalah cara termurah untuk memangkasnya.
 
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-material-tanah.jpg" alt="Excavator memuat dump truck" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Excavator memuat dump truck dengan beberapa pass bucket. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## 2. Jumlah bucket (pass) per truk
 
 ```
@@ -105,6 +107,8 @@ Q truk (lcm/jam) = (n × q × K) × (60 / CT menit) × E
 Q truk = (5 × 6,5 × 0,9) × (60 / 15) × 0,83 = 97,1 lcm/jam
        = 97,1 × 0,8 = 77,7 bcm/jam
 ```
+
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-jalan-tambang.jpg" alt="Excavator dan truk di jalan tambang" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Pasangan excavator dan truk di tepi jalan tambang. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 5. Jumlah truk yang dibutuhkan
 
@@ -184,3 +188,5 @@ Perbandingan volume material yang benar-benar terisi di bucket dengan kapasitas 
 ### Perlukah match factor tepat 1?
 
 Tidak harus. Dalam praktik, perusahaan sering memilih sedikit di bawah atau di atas 1 sesuai prioritas, apakah ingin excavator selalu sibuk atau ingin menghemat jumlah truk.
+
+Baca juga: [teknik memuat dump truck di lapangan](/artikel/teknik-memuat-dump-truck-loading-tambang/).

@@ -22,19 +22,27 @@ Ukurannya disebut berdasarkan kelas berat operasi, misalnya kelas 20, 40, 70, 10
 
 **Wheel loader** juga dipakai untuk memuat, terutama di stockpile batubara dan area crusher.
 
+<figure class="photo"><img src="/images/dokumentasi/excavator-membongkar-material-batuan.jpg" alt="Excavator membongkar tumpukan batuan" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Excavator membongkar material batuan hasil peledakan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## 2. Alat angkut (hauling)
 
 **Dump truck** mengangkut material dari front ke disposal atau stockpile. Jenisnya beragam, dari truk on-highway yang dimodifikasi sampai off-highway truck raksasa. Pembahasan lengkapnya ada di artikel [mengenal dump truck tambang](/artikel/mengenal-jenis-dump-truck-tambang/).
 
 **Coal hauler** atau truk trailer dipakai untuk angkutan batubara jarak jauh dari ROM ke pelabuhan.
 
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-material-tanah.jpg" alt="Excavator memuat dump truck" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Excavator memuat dump truck pada pasangan alat gali dan alat angkut. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## 3. Alat dorong dan gusur
 
 **Bulldozer** mungkin alat paling serbaguna di tambang. Fungsinya mulai dari land clearing, ripping batuan keras, merapikan disposal, menyiapkan front kerja, sampai menarik alat yang terjebak. Penjelasan detailnya ada di artikel [fungsi bulldozer di tambang](/artikel/fungsi-bulldozer-di-tambang/).
 
+<figure class="photo"><img src="/images/dokumentasi/dozer-membuka-lahan-land-clearing.jpg" alt="Dozer membuka lahan" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Dozer membuka dan meratakan lahan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## 4. Alat bor
 
 **Drill rig** membuat lubang ledak untuk peledakan overburden yang keras. Ada juga alat bor eksplorasi yang dipakai tim geologi untuk mengambil sampel dan memetakan lapisan batubara, tapi biasanya dikelola terpisah dari operasi produksi.
+
+<figure class="photo"><img src="/images/dokumentasi/vibratory-roller-memadatkan-jalan-tambang.jpg" alt="Vibratory roller memadatkan jalan" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Vibratory roller memadatkan lapisan jalan tambang. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 5. Alat perawatan jalan
 
@@ -88,3 +96,5 @@ Alat gali yang terlalu besar untuk truk menyebabkan bucket tidak pas dan tumpaha
 ### Apakah semua tambang memakai alat yang sama?
 
 Tidak. Pilihan alat bergantung pada jenis tambang, kondisi material, produksi yang dituju, jarak angkut, dan anggaran.
+
+Pembahasan lebih dalam: [excavator dan attachment-nya](/artikel/excavator-tambang-bagian-ukuran-dan-attachment/), [hydraulic breaker](/artikel/hydraulic-breaker-excavator-tambang/), dan [compactor](/artikel/compactor-pemadatan-tanah-di-tambang/).

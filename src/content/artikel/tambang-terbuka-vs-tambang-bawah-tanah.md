@@ -11,6 +11,8 @@ Pertanyaan ini sering muncul dari mahasiswa semester awal, tapi jawabannya tidak
 
 Di Indonesia, sebagian besar tambang batubara memakai metode terbuka. Tambang bawah tanah lebih banyak ditemui di tambang mineral seperti emas dan tembaga, misalnya di Papua dan beberapa tambang emas di Jawa dan Sumatra.
 
+<figure class="photo"><img src="/images/dokumentasi/area-tambang-terbuka-dozer-dan-dump-truck.jpg" alt="Area tambang terbuka dengan dozer dan dump truck" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Area tambang terbuka bertingkat dengan dozer dan dump truck di lantai kerja. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## Tambang terbuka (surface mining)
 
 Material berharga digali dari permukaan setelah lapisan tanah penutup (overburden) dikupas. Ada beberapa variasi yang umum:

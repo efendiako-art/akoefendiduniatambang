@@ -80,6 +80,8 @@ Di akhir shift, catat realisasi dan penyebab selisihnya. Data inilah bahan untuk
 3. **Mengejar volume, lupa urutan.** Produksi bulan ini aman, bulan depan bermasalah.
 4. **Rencana tidak sampai ke operator.** Hanya berhenti di grup WhatsApp para supervisor.
 
+<figure class="photo"><img src="/images/dokumentasi/dozer-dan-excavator-bekerja-di-front.jpg" alt="Dozer dan excavator bekerja di front" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Beberapa unit bekerja bersamaan di satu front, yang perlu diatur dalam rencana harian. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## Contoh format daily plan satu halaman
 
 Rencana yang baik bisa dibaca dalam satu menit oleh supervisor dan operator. Susunan berikut cukup umum dan mudah disesuaikan:

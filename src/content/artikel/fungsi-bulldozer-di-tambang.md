@@ -21,6 +21,8 @@ Kalau excavator adalah jantung produksi, bulldozer adalah tangan yang mengurus s
 
 Mendorong pohon, semak, dan tunggul sebelum lahan dibuka. Biasanya ini pekerjaan pertama di area baru.
 
+<figure class="photo"><img src="/images/dokumentasi/dozer-membuka-lahan-land-clearing.jpg" alt="Dozer meratakan lahan yang baru dibuka" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Dozer meratakan lahan yang telah dibuka. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ### 2. Dozing material
 
 Mendorong tanah dalam jarak pendek. Contohnya mengumpulkan material supaya mudah dimuat excavator, atau mendorong topsoil ke tempat penyimpanan. Untuk jarak jauh, dozer tidak efisien; lebih murah dimuat ke truk.
@@ -29,9 +31,13 @@ Mendorong tanah dalam jarak pendek. Contohnya mengumpulkan material supaya mudah
 
 Untuk batuan yang terlalu keras untuk digali langsung tapi belum perlu diledakkan, dozer membongkarnya dengan ripper. Ripping bisa menjadi alternatif peledakan yang lebih murah dan lebih aman di dekat permukiman, selama batuannya masih bisa di-rip. Kemampuan ripping biasanya diperkirakan dari kecepatan gelombang seismik batuan dan ukuran dozer.
 
+<figure class="photo"><img src="/images/dokumentasi/dozer-meratakan-timbunan-tanah.jpg" alt="Dozer meratakan timbunan tanah" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Dozer menghampar dan meratakan material timbunan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ### 4. Perapian disposal
 
 Di disposal, truk membuang material di tepi timbunan, lalu dozer mendorongnya dan meratakan permukaan. Dozer juga menjaga tanggul pengaman di tepi disposal agar truk punya batas berhenti yang jelas saat mundur untuk membuang. Disposal yang tidak dirapikan membuat truk antre dan berbahaya.
+
+<figure class="photo"><img src="/images/dokumentasi/dozer-dan-excavator-bekerja-di-front.jpg" alt="Dozer dan excavator bekerja bersama di front" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Dozer menyiapkan front sementara excavator bekerja di sisi lain. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ### 5. Persiapan front kerja dan jalan
 
@@ -44,6 +50,8 @@ Membentuk ulang permukaan timbunan sesuai desain kemiringan, lalu menyebarkan to
 ### 7. Pekerjaan darurat
 
 Menarik alat atau truk yang terjebak lumpur, membuka akses saat longsor kecil, dan membantu saat ada genangan.
+
+<figure class="photo"><img src="/images/dokumentasi/dozer-bekerja-di-atas-timbunan.jpg" alt="Dozer bekerja di atas timbunan" width="1280" height="876" loading="lazy" decoding="async"><figcaption>Dozer mendorong material di atas timbunan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## Menghitung produktivitas dozing secara sederhana
 
@@ -113,3 +121,5 @@ Jika batuan cukup lunak sampai sedang dan bisa dibongkar ripper secara ekonomis,
 ### Mengapa operator dozer harus memahami kontur lahan?
 
 Karena pekerjaannya membentuk permukaan. Kesalahan kemiringan di disposal atau jalan bisa menimbulkan genangan atau lereng yang tidak stabil.
+
+Baca juga: [compactor dan pemadatan tanah di tambang](/artikel/compactor-pemadatan-tanah-di-tambang/).

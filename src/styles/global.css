@@ -159,3 +159,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; letter-spacing
 .diagram .coal { fill: #3b342e; stroke: var(--line); stroke-width: 1.2; }
 .diagram .dash { stroke-dasharray: 5 4; }
 .diagram .head { fill: var(--ink-3); }
+
+/* Foto dokumentasi lapangan di dalam artikel */
+.prose figure.photo { margin: 1.8em 0; }
+.prose figure.photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--bg-sunk); }
+.prose figure.photo figcaption { margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--ink-3); }

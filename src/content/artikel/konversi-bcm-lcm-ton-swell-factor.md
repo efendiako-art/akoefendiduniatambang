@@ -90,6 +90,8 @@ Densitas lepas = Densitas asli × SF
 
 Contoh: OB dengan densitas asli 2,2 ton/bcm dan SF 0,8 punya densitas lepas 2,2 × 0,8 = 1,76 ton/lcm. Truk berkapasitas 29 lcm berarti membawa sekitar 29 × 1,76 = 51 ton. Angka ini penting untuk memastikan truk tidak kelebihan muatan dari batas payload pabrikan.
 
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-batuan-di-lereng.jpg" alt="Material batuan yang sudah dibongkar dan mengembang" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Material yang sudah dibongkar mengembang dan lebih longgar daripada kondisi insitu. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## Nilai SF tidak boleh asal ambil
 
 Nilai swell factor berbeda untuk tiap material: tanah lempung, pasir, batu pasir, batuan hasil peledakan, semuanya berbeda. Bahkan di satu pit, nilai SF bisa berubah ketika formasi batuannya berganti.

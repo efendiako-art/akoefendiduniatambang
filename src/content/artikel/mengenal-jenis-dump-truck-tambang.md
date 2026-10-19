@@ -53,6 +53,8 @@ Ini truk tambang sesungguhnya: dirancang khusus untuk angkutan tambang, tidak bo
 - Butuh jalan angkut yang lebar dan terawat baik.
 - Kalau satu unit rusak, kehilangan produksinya besar.
 
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-jalan-tambang.jpg" alt="Dump truck dimuat excavator di jalan tambang" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Dump truck on-highway dimuat excavator di tepi jalan tambang. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## Perbandingan ringkas
 
 | Aspek | On-highway | ADT | Off-highway (OHT) |
@@ -62,6 +64,8 @@ Ini truk tambang sesungguhnya: dirancang khusus untuk angkutan tambang, tidak bo
 | Biaya beli | Rendah | Menengah | Tinggi |
 | Biaya per ton (jalan baik) | Menengah | Tinggi | Terendah |
 | Pasangan excavator | Kelas kecil | Kelas kecil sampai menengah | Kelas besar |
+
+<figure class="photo"><img src="/images/dokumentasi/persimpangan-jalan-angkut-dozer-dan-truk.jpg" alt="Persimpangan jalan tambang dengan dozer dan truk" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Persimpangan jalan tambang tempat truk dan alat lain berbagi ruang. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## Memilih truk yang tepat
 
@@ -103,3 +107,5 @@ Karena sambungan artikulasinya membuat roda bisa mengikuti kontur dan sering men
 ### Siapa yang menentukan jenis truk yang dipakai?
 
 Tim perencanaan dan manajemen berdasarkan kajian teknis dan biaya. Dalam kontrak jasa, kontraktor memilih alat yang memenuhi spesifikasi yang disepakati dengan pemilik tambang.
+
+Baca juga: [teknik memuat dump truck](/artikel/teknik-memuat-dump-truck-loading-tambang/).

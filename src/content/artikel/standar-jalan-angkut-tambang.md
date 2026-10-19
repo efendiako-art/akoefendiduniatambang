@@ -38,9 +38,13 @@ Grade (%) = Beda tinggi / Jarak mendatar × 100%
 
 Dalam praktik, banyak tambang memilih kemiringan yang lebih landai untuk jalan utama karena tanjakan curam memperlambat truk bermuatan dan menambah konsumsi BBM. Dampaknya terhadap biaya dibahas di artikel [menghemat BBM alat berat](/artikel/cara-menghemat-bbm-alat-berat/).
 
+<figure class="photo"><img src="/images/dokumentasi/vibratory-roller-memadatkan-jalan-tambang.jpg" alt="Vibratory roller memadatkan jalan" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Pemadatan lapisan jalan angkut. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## 3. Kemiringan melintang (cross slope)
 
 Permukaan jalan dibuat sedikit miring dari tengah ke tepi agar air hujan cepat mengalir ke saluran. Kemiringan melintang **paling kurang 2%**. Jalan tanpa cross slope akan menahan air, menjadi lunak, berlubang, dan licin.
+
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-jalan-tambang.jpg" alt="Jalan tambang di tepi tebing" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Jalan tambang di tepi tebing yang membutuhkan tanggul pengaman. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 4. Tanggul pengaman (safety berm)
 
@@ -57,6 +61,8 @@ Tanggul bukan dinding yang mampu menahan truk berkecepatan tinggi. Fungsinya mem
 ## 5. Pemisah jalur (median) di tikungan
 
 Pada tikungan jalan dua arah, pemisah jalur dibuat dengan tinggi **paling kurang setengah diameter roda kendaraan terbesar**. Tujuannya mencegah truk dari arah berlawanan saling memotong jalur di tikungan.
+
+<figure class="photo"><img src="/images/dokumentasi/persimpangan-jalan-angkut-dozer-dan-truk.jpg" alt="Persimpangan jalan angkut tambang" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Pertigaan jalan angkut dengan rambu di sisi jalan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 6. Sudut pertigaan
 

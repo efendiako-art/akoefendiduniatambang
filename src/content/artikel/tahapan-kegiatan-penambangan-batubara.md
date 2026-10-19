@@ -17,6 +17,8 @@ Pembersihan lahan dari pohon, semak, dan tunggul. Biasanya memakai bulldozer dan
 
 Satu hal yang sering dilupakan: land clearing sebaiknya tidak terlalu jauh di depan kebutuhan. Lahan terbuka yang terlalu lama dibiarkan akan tererosi saat hujan dan menambah lumpur di sump.
 
+<figure class="photo"><img src="/images/dokumentasi/excavator-di-lahan-yang-baru-dibuka.jpg" alt="Excavator di lahan yang baru dibuka" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Excavator di lahan yang baru dibuka dari vegetasi. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
 ## 2. Pengupasan topsoil
 
 Lapisan tanah pucuk (topsoil) yang subur dikupas dan disimpan terpisah. Tanah ini sangat berharga untuk reklamasi nanti, jadi jangan sampai tercampur dengan overburden. Idealnya topsoil langsung dipakai menutup area reklamasi yang sudah siap, supaya tidak terlalu lama tersimpan.
@@ -24,6 +26,8 @@ Lapisan tanah pucuk (topsoil) yang subur dikupas dan disimpan terpisah. Tanah in
 ## 3. Pengeboran dan peledakan
 
 Jika overburden terlalu keras untuk digali langsung atau di-ripping dengan dozer, dilakukan pengeboran dan peledakan. Tujuannya memecah batuan supaya mudah digali excavator. Kualitas peledakan berpengaruh besar ke produktivitas alat gali dan keausan bucket.
+
+<figure class="photo"><img src="/images/dokumentasi/excavator-membongkar-material-batuan.jpg" alt="Excavator membongkar material overburden" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Excavator membongkar material di area pengupasan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 4. Pengupasan overburden (OB removal)
 
@@ -38,6 +42,8 @@ Setelah batubara tersingkap, permukaannya dibersihkan dari sisa tanah (coal clea
 ## 6. Coal hauling
 
 Batubara diangkut ke ROM stockpile (run of mine), lalu ke crusher dan port atau langsung ke pembeli. Jarak hauling batubara bisa puluhan kilometer, sehingga kondisi jalan angkut sangat menentukan biaya.
+
+<figure class="photo"><img src="/images/dokumentasi/excavator-merapikan-timbunan-tanah.jpg" alt="Excavator merapikan timbunan tanah" width="1280" height="876" loading="lazy" decoding="async"><figcaption>Excavator merapikan material timbunan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 7. Penimbunan kembali (backfilling)
 
@@ -92,6 +98,8 @@ Permukaan timbunan dirapikan, dibentuk kemiringannya agar stabil dan aman dari e
 </svg>
 <figcaption>Urutan kegiatan tambang batubara terbuka. Dua kotak berwarna menandai pekerjaan terbesar: pengupasan overburden dan penggalian batubara.</figcaption>
 </figure>
+
+<figure class="photo"><img src="/images/dokumentasi/roller-memadatkan-lereng-timbunan-tanah.jpg" alt="Roller memadatkan lereng timbunan" width="1280" height="876" loading="lazy" decoding="async"><figcaption>Roller memadatkan lereng timbunan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## Pekerjaan pendukung yang berjalan terus
 
