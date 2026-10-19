@@ -1,25 +1,116 @@
 ---
+// Halaman Kontak: formulir saran/koreksi/pertanyaan.
+// Pesan dikirim lewat Web3Forms ke Gmail pemilik; alamat Gmail tidak pernah tampil di halaman ini.
+// Kunci formulir: CONTACT_FORM_KEY di src/consts.ts (diatur lewat aplikasi: Info Website & Iklan).
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE } from '../consts';
+import { SITE, CONTACT_FORM_KEY } from '../consts';
+const topics = ['Saran', 'Koreksi artikel', 'Pertanyaan', 'Usulan topik', 'Kerja sama'];
 ---
-<BaseLayout title="Kontak" description={`Hubungi redaksi ${SITE.name} untuk pertanyaan, koreksi, atau kerja sama.`}>
+<BaseLayout title="Kontak" description={`Kirim saran, koreksi artikel, pertanyaan, atau tawaran kerja sama ke redaksi ${SITE.name}.`}>
   <section class="page container">
     <p class="eyebrow">Kontak</p>
     <h1>Hubungi kami</h1>
-    <p class="lead">Punya pertanyaan, koreksi artikel, usulan topik, atau tawaran kerja sama? Kirim email ke redaksi.</p>
-    <div class="card box">
-      <div>
-        <div class="k">Email redaksi</div>
-        <a class="mail" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+    <p class="lead">Punya saran, koreksi artikel, usulan topik, atau tawaran kerja sama? Tulis pesan Anda di bawah ini, langsung masuk ke redaksi.</p>
+
+    <form class="card box" id="kontak" data-key={CONTACT_FORM_KEY} data-mail={SITE.email} novalidate>
+      <input type="hidden" name="from_name" value={`Website ${SITE.name}`} />
+      <input type="hidden" name="subject" value={`Pesan baru dari ${SITE.name}`} />
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="to">
+        <span class="to-ic" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        <div><div class="k">Dikirim ke</div><div class="to-name">Redaksi {SITE.name}.com</div></div>
       </div>
-      <a class="btn btn-primary" href={`mailto:${SITE.email}?subject=Pertanyaan%20untuk%20${SITE.name}`}>Kirim email</a>
-    </div>
+
+      <div class="row2">
+        <label class="fld"><span>Nama</span><input name="name" required maxlength="80" autocomplete="name" placeholder="Nama Anda" /></label>
+        <label class="fld"><span>Email Anda <em>untuk balasan</em></span><input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="nama@email.com" /></label>
+      </div>
+      <fieldset class="fld">
+        <legend>Jenis pesan</legend>
+        <div class="chips">
+          {topics.map((t, i) => <label class="chipr"><input type="radio" name="jenis" value={t} checked={i === 0} /><span>{t}</span></label>)}
+        </div>
+      </fieldset>
+      <label class="fld"><span>Pesan</span><textarea name="message" required rows="6" minlength="10" maxlength="4000" placeholder="Tulis saran atau komentar Anda. Untuk koreksi, sebutkan judul artikelnya."></textarea></label>
+
+      <div class="foot">
+        <button class="btn btn-primary" type="submit" id="kirim">Kirim pesan</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+      <p class="note">Data Anda hanya dipakai untuk membalas pesan ini. Lihat <a href="/kebijakan-privasi/">Kebijakan Privasi</a>.</p>
+    </form>
     <p class="hint">Kami berusaha membalas dalam 2–3 hari kerja.</p>
   </section>
 </BaseLayout>
+
+<script is:inline>
+  (function () {
+    var f = document.getElementById('kontak');
+    if (!f) return;
+    var st = document.getElementById('status'), btn = document.getElementById('kirim');
+    function say(t, kind) { st.textContent = t; st.className = 'status ' + (kind || ''); }
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (f.botcheck.checked) return;
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      var data = Object.fromEntries(new FormData(f));
+      data.subject = '[' + data.jenis + '] Pesan dari ' + data.name + ' — TambangPedia';
+      data.replyto = data.email;
+      var key = f.dataset.key;
+      if (!key) {
+        // cadangan: buka aplikasi email pengunjung
+        var body = 'Nama: ' + data.name + '\nEmail: ' + data.email + '\nJenis: ' + data.jenis + '\n\n' + data.message;
+        location.href = 'mailto:' + f.dataset.mail + '?subject=' + encodeURIComponent(data.subject) + '&body=' + encodeURIComponent(body);
+        return;
+      }
+      data.access_key = key;
+      delete data.botcheck;
+      btn.disabled = true; say('Mengirim…');
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data),
+      }).then(function (r) { return r.json().then(function (j) { return { ok: r.status === 200 && j.success !== false, j: j }; }); })
+        .then(function (res) {
+          if (res.ok) { f.reset(); say('Terima kasih! Pesan Anda sudah terkirim ke redaksi.', 'ok'); }
+          else { say('Pesan belum terkirim: ' + ((res.j && res.j.message) || 'coba lagi sebentar lagi.'), 'err'); }
+        })
+        .catch(function () { say('Pesan belum terkirim. Periksa koneksi internet lalu coba lagi.', 'err'); })
+        .finally(function () { btn.disabled = false; });
+    });
+  })();
+</script>
+
 <style>
-  .box { margin-top: 28px; padding: 24px; display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; max-width: 720px; }
+  .box { margin-top: 28px; padding: 24px; max-width: 720px; display: flex; flex-direction: column; gap: 18px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .to { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+  .to-ic { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink); flex: none; }
   .k { font-size: 13px; color: var(--ink-3); }
-  .mail { font: 700 20px/1.3 var(--font-head); word-break: break-all; }
+  .to-name { font: 700 19px/1.3 var(--font-head); }
+  .row2 { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 620px) { .row2 { grid-template-columns: 1fr 1fr; } }
+  .fld { display: flex; flex-direction: column; gap: 6px; border: 0; margin: 0; padding: 0; min-width: 0; }
+  .fld > span, .fld legend { font-weight: 600; font-size: 14.5px; padding: 0; margin-bottom: 6px; }
+  .fld em { font-style: normal; font-weight: 400; color: var(--ink-3); font-size: 13px; }
+  .fld input, .fld textarea {
+    width: 100%; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line);
+    background: var(--bg); color: var(--ink); font: 400 16px/1.5 var(--font-body);
+  }
+  .fld textarea { resize: vertical; min-height: 140px; }
+  .fld input:focus, .fld textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chipr { position: relative; }
+  .chipr input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
+  .chipr span { display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink-2); font: 500 14px/1 var(--font-body); cursor: pointer; }
+  .chipr input:checked + span { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .chipr input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .foot { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .foot .btn:disabled { opacity: .6; cursor: wait; }
+  .status { margin: 0; font-size: 15px; color: var(--ink-2); }
+  .status.ok { color: var(--good); font-weight: 600; }
+  .status.err { color: #c0392b; }
+  .note { margin: 0; font-size: 13.5px; color: var(--ink-3); }
   .hint { color: var(--ink-3); font-size: 15px; }
 </style>

@@ -13,7 +13,7 @@ Halaman ini menjelaskan bagaimana TambangPedia (tambangpedia.com) mengumpulkan d
 
 Kami tidak meminta pendaftaran akun. Data yang mungkin tercatat secara otomatis meliputi alamat IP, jenis browser, halaman yang dikunjungi, dan waktu kunjungan. Data ini dipakai untuk statistik agregat dan menjaga keamanan situs.
 
-Jika Anda menghubungi kami lewat email, kami menyimpan alamat email dan isi pesan hanya untuk membalas pesan tersebut.
+Jika Anda menghubungi kami lewat email atau formulir di halaman Kontak, kami menyimpan nama, alamat email, dan isi pesan hanya untuk membalas pesan tersebut. Pesan dari formulir dikirim ke kotak masuk redaksi melalui layanan Web3Forms.
 
 ## Cookie
 
@@ -44,4 +44,4 @@ Kebijakan ini dapat diperbarui sewaktu-waktu. Tanggal pembaruan terakhir tercant
 
 ## Kontak
 
-Pertanyaan tentang kebijakan ini dapat dikirim ke [efendiako@gmail.com](mailto:efendiako@gmail.com).
+Pertanyaan tentang kebijakan ini dapat dikirim lewat [halaman Kontak](/kontak/).

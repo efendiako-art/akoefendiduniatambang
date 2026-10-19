@@ -11,9 +11,18 @@ export const SITE = {
   description:
     'Panduan praktis pertambangan berbahasa Indonesia: operasi produksi, KPI alat berat, geologi, K3, dan karier tambang — ditulis oleh praktisi lapangan.',
   author: 'Redaksi TambangPedia',
-  email: 'efendiako@gmail.com',
+  // email yang TAMPIL di website (alamat domain, diteruskan ke Gmail lewat Cloudflare Email Routing)
+  email: 'redaksi@tambangpedia.com',
   locale: 'id_ID',
 };
+
+// ------------------------------------------------------------
+//  FORMULIR KONTAK (Web3Forms, gratis)
+//  Isi dengan "Access Key" dari web3forms.com (didaftarkan memakai Gmail pemilik).
+//  Pesan dari formulir di /kontak/ dikirim ke Gmail itu, tanpa menampilkan alamat Gmail di website.
+//  Selama masih kosong, tombol formulir membuka aplikasi email pengunjung ke alamat SITE.email.
+// ------------------------------------------------------------
+export const CONTACT_FORM_KEY = '8026f4c9-fe5e-4fde-bfdb-8adffe54e5a8';
 
 // ------------------------------------------------------------
 //  GOOGLE ADSENSE
