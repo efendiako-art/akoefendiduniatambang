@@ -1,0 +1,51 @@
+---
+// Kartu sub-kategori (dipakai di halaman pintu kategori & halaman kategori).
+import type { CollectionEntry } from 'astro:content';
+import { subCategories, subUrl } from '../consts';
+import { monogram } from '../lib/nav';
+interface Props { cat: string; posts: CollectionEntry<'artikel'>[]; current?: string }
+const { cat, posts, current } = Astro.props;
+const subs = subCategories(cat).map((s) => {
+  const list = posts.filter((p) => p.data.subcategory === s.slug).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return { ...s, list };
+});
+---
+{subs.length > 0 && (
+  <div class="subs">
+    {subs.map((s) => (
+      <section class:list={['card', 'sub', { on: s.slug === current }]}>
+        <a class="sub-top" href={subUrl(cat, s.slug)}>
+          <span class="sub-ic" aria-hidden="true">{monogram(s.name)}</span>
+          <span class="sub-txt">
+            <span class="sub-name">{s.name}</span>
+            <span class="sub-count">{s.list.length > 0 ? `${s.list.length} artikel` : 'Segera hadir'}</span>
+          </span>
+        </a>
+        {s.desc && <p class="sub-desc">{s.desc}</p>}
+        {s.list.length > 0 && (
+          <ul class="sub-list">
+            {s.list.slice(0, 3).map((p) => <li><a href={`/artikel/${p.id}/`}>{p.data.title}</a></li>)}
+          </ul>
+        )}
+        <a class="sub-more" href={subUrl(cat, s.slug)}>{s.list.length > 3 ? `Lihat ${s.list.length} artikel` : 'Buka topik'} <span aria-hidden="true">→</span></a>
+      </section>
+    ))}
+  </div>
+)}
+<style>
+  .subs { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); margin: 28px 0 8px; }
+  .sub { padding: 18px; display: flex; flex-direction: column; gap: 10px; border-top: 3px solid var(--accent); transition: transform .2s; }
+  .sub:hover { transform: translateY(-2px); }
+  .sub.on { outline: 2px solid var(--accent); }
+  .sub-top { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+  .sub-ic { flex: none; width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--accent); color: #fff; font: 800 15px/1 var(--font-head); }
+  .sub-txt { display: flex; flex-direction: column; }
+  .sub-name { font: 700 17px/1.3 var(--font-head); }
+  .sub-count { font-size: 13px; color: var(--accent-ink); font-weight: 600; }
+  .sub-desc { margin: 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
+  .sub-list { margin: 0; padding: 10px 0 0; list-style: none; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+  .sub-list a { font-size: 14px; line-height: 1.45; color: var(--ink); text-decoration: none; display: block; }
+  .sub-list a::before { content: '›'; color: var(--accent); margin-right: 6px; font-weight: 700; }
+  .sub-list a:hover { color: var(--accent); }
+  .sub-more { margin-top: auto; font-size: 14px; font-weight: 600; text-decoration: none; }
+</style>

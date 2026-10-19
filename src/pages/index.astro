@@ -5,6 +5,7 @@ import ArticleCard from '../components/ArticleCard.astro';
 import AdSlot from '../components/AdSlot.astro';
 import AppBanner from '../components/AppBanner.astro';
 import { SITE, CATEGORIES, AD_SLOTS } from '../consts';
+import { categoryHubs, categoryHref } from '../lib/nav';
 
 const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -12,6 +13,7 @@ const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
 const latest = posts.slice(0, 6);
 const counts = Object.fromEntries(CATEGORIES.map((c) => [c.slug, posts.filter((p) => p.data.category === c.slug).length]));
 
+const hubs = await categoryHubs();
 const siteUrl = Astro.site?.toString();
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -119,7 +121,7 @@ const jsonLd = {
       <div class="section-head"><div><p class="eyebrow">Topik</p><h2>Jelajahi kategori</h2></div></div>
       <div class="cats">
         {CATEGORIES.map((c) => (
-          <a class="card cat" href={`/kategori/${c.slug}/`}>
+          <a class="card cat" href={categoryHref(hubs, c.slug)}>
             <h3>{c.name}</h3>
             <p>{c.desc}</p>
             <span class="count">{counts[c.slug]} artikel</span>

@@ -3,7 +3,8 @@ title: 'Cara Menganalisa Loss Produksi Tambang: Dari Jam Hilang ke Angka Rupiah'
 description: 'Langkah praktis menganalisa kehilangan produksi tambang: memecah loss ke availability, utilisasi, dan produktivitas, lalu menghitung dampaknya dan menentukan prioritas.'
 pubDate: 2026-10-05
 updatedDate: 2026-10-19
-category: operasi-produksi
+category: tutorial-analisa-produksi
+subcategory: analisa-loss-produksi
 tags: ['loss produksi', 'analisa produksi', 'KPI', 'losstime']
 ---
 

@@ -13,6 +13,11 @@ const artikel = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     category: z.enum(slugs(kategori.artikel)),
+    // sub-kategori (opsional), harus salah satu "sub" milik kategori di src/data/kategori.json
+    subcategory: z.string().optional(),
+    // gambar utama / sampul artikel (alamat di folder public, contoh /images/artikel/slug/sampul.webp)
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
@@ -41,6 +46,8 @@ const halaman = defineCollection({
     description: z.string(),
     eyebrow: z.string().default('Info'),
     lead: z.string().optional(),
+    // bila diisi slug kategori, halaman ini menjadi "pintu" kategori: menampilkan sub-kategori & artikelnya
+    kategori: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

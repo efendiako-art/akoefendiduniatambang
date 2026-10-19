@@ -3,6 +3,8 @@ import '../styles/global.css';
 import { SITE, ADSENSE_CLIENT, CATEGORIES } from '../consts';
 // Menu atas & bawah diatur di src/data/menu.json (lewat aplikasi TambangPedia)
 import menu from '../data/menu.json';
+// Menu atas + sub-menu (dropdown) dirakit dari menu.json & kategori.json
+import { buildNav } from '../lib/nav';
 
 interface Props {
   title?: string;
@@ -11,16 +13,22 @@ interface Props {
   publishedTime?: Date;
   jsonLd?: Record<string, unknown>;
   noindex?: boolean;
+  /** gambar untuk pratinjau di WhatsApp/Facebook/Google (alamat di folder public) */
+  image?: string;
+  /** alamat utama halaman ini bila isinya sama dengan halaman lain */
+  canonicalPath?: string;
 }
 
-const { title, description = SITE.description, type = 'website', publishedTime, jsonLd, noindex = false } = Astro.props;
+const { title, description = SITE.description, type = 'website', publishedTime, jsonLd, noindex = false, image, canonicalPath } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
+const ogImage = new URL(image || '/logo.png', Astro.site);
 const path = Astro.url.pathname;
 
-const nav = menu.atas;
+const nav = await buildNav();
 const ext = (href: string) => /^https?:/.test(href);
 const isActive = (href: string) => href !== '/' && !ext(href) && path.startsWith(href);
+const navActive = (n: { href: string; children: { href: string }[] }) => isActive(n.href) || n.children.some((c) => isActive(c.href));
 const year = new Date().getFullYear();
 ---
 <!doctype html>
@@ -49,7 +57,7 @@ const year = new Date().getFullYear();
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta property="og:image" content={new URL('/logo.png', Astro.site)} />
+    <meta property="og:image" content={ogImage} />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,8 +79,32 @@ const year = new Date().getFullYear();
           <span>{SITE.name}</span>
         </a>
         <nav class="nav" aria-label="Navigasi utama">
-          {nav.map((n) => (
-            <a href={n.href} aria-current={isActive(n.href) ? 'page' : undefined} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
+          {nav.map((n) => n.children.length === 0 ? (
+            <a class="nav-link" href={n.href} aria-current={isActive(n.href) ? 'page' : undefined} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
+          ) : (
+            <div class="nav-dd">
+              <a class="nav-link" href={n.href} aria-current={navActive(n) ? 'page' : undefined} aria-haspopup="true">
+                {n.label}
+                <svg class="caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </a>
+              <div class="dd">
+                <div class="dd-panel">
+                  <div class="dd-head">{n.label}</div>
+                  <ul class="dd-list">
+                    {n.children.map((c) => (
+                      <li>
+                        <a href={c.href} aria-current={isActive(c.href) ? 'page' : undefined} target={ext(c.href) ? '_blank' : undefined} rel={ext(c.href) ? 'noopener' : undefined}>
+                          <span class="dd-ic" aria-hidden="true">{c.mono}</span>
+                          <span class="dd-txt"><b>{c.label}</b>{c.desc && <small>{c.desc}</small>}</span>
+                          {c.count !== undefined && <span class="dd-n">{c.count > 0 ? `${c.count} artikel` : 'segera'}</span>}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <a class="dd-all" href={n.href}>Lihat semua {n.label} <span aria-hidden="true">→</span></a>
+                </div>
+              </div>
+            </div>
           ))}
         </nav>
         <div class="tools">
@@ -85,7 +117,21 @@ const year = new Date().getFullYear();
         </div>
       </div>
       <nav class="mobile-nav container" id="mobile-nav" aria-label="Navigasi seluler" hidden>
-        {nav.map((n) => <a href={n.href} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>)}
+        {nav.map((n, i) => n.children.length === 0 ? (
+          <a class="m-link" href={n.href} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
+        ) : (
+          <div class="m-group">
+            <div class="m-row">
+              <a class="m-link" href={n.href}>{n.label}</a>
+              <button class="m-toggle" type="button" aria-expanded="false" aria-controls={`m-sub-${i}`} aria-label={`Buka sub-menu ${n.label}`}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </div>
+            <ul class="m-sub" id={`m-sub-${i}`} hidden>
+              {n.children.map((c) => <li><a href={c.href}>{c.label}{c.count ? <span class="m-n">{c.count}</span> : null}</a></li>)}
+            </ul>
+          </div>
+        ))}
       </nav>
     </header>
 
@@ -123,6 +169,30 @@ const year = new Date().getFullYear();
         btn.addEventListener('click', function () {
           m.hidden = !m.hidden; btn.setAttribute('aria-expanded', String(!m.hidden));
         });
+        // sub-menu di HP: ketuk panah untuk membuka/menutup
+        document.querySelectorAll('.m-toggle').forEach(function (t) {
+          t.addEventListener('click', function () {
+            var sub = document.getElementById(t.getAttribute('aria-controls'));
+            var open = t.getAttribute('aria-expanded') !== 'true';
+            t.setAttribute('aria-expanded', String(open)); sub.hidden = !open;
+          });
+        });
+        // layar sentuh lebar (tablet): ketukan pertama membuka sub-menu, ketukan kedua membuka halamannya
+        var dds = [].slice.call(document.querySelectorAll('.nav-dd'));
+        dds.forEach(function (dd) {
+          dd.querySelector('.nav-link').addEventListener('click', function (e) {
+            if (matchMedia('(hover: hover)').matches || dd.classList.contains('open')) return;
+            e.preventDefault();
+            dds.forEach(function (x) { x.classList.remove('open'); });
+            dd.classList.add('open');
+          });
+        });
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest || !e.target.closest('.nav-dd')) dds.forEach(function (x) { x.classList.remove('open'); });
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { dds.forEach(function (x) { x.classList.remove('open'); }); if (document.activeElement && document.activeElement.closest && document.activeElement.closest('.dd')) document.activeElement.closest('.nav-dd').querySelector('.nav-link').focus(); }
+        });
       })();
     </script>
   </body>
@@ -138,17 +208,66 @@ const year = new Date().getFullYear();
     border-bottom: 1px solid var(--line);
   }
   .bar { display: flex; align-items: center; gap: 24px; height: 64px; }
+  .site-header .bar { max-width: 1360px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 800 20px/1 var(--font-head); letter-spacing: -0.02em; }
   .brand-logo { border-radius: 50%; display: block; }
-  .nav { display: none; gap: 4px; margin-left: auto; }
-  .nav a { padding: 8px 14px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 500; font-size: 15px; }
-  .nav a:hover, .nav a[aria-current='page'] { background: var(--bg-sunk); color: var(--ink); }
+  .nav { display: none; gap: 2px; margin-left: auto; align-items: center; }
+  .nav-link { display: inline-flex; align-items: center; gap: 5px; padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 500; font-size: 15px; white-space: nowrap; }
+  .nav-link:hover, .nav-link[aria-current='page'], .nav-dd:hover > .nav-link, .nav-dd:focus-within > .nav-link, .nav-dd.open > .nav-link { background: var(--bg-sunk); color: var(--ink); }
+  .caret { transition: transform .2s; opacity: .7; }
+  .nav-dd { position: relative; }
+  .nav-dd:hover .caret, .nav-dd:focus-within .caret, .nav-dd.open .caret { transform: rotate(180deg); }
+
+  /* panel sub-menu (dropdown) */
+  .dd {
+    position: absolute; top: 100%; left: 50%; padding-top: 12px; z-index: 45;
+    opacity: 0; visibility: hidden; transform: translate(-50%, 6px);
+    transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+  }
+  .nav-dd:hover .dd, .nav-dd:focus-within .dd, .nav-dd.open .dd {
+    opacity: 1; visibility: visible; transform: translate(-50%, 0);
+    transition: opacity .18s ease .06s, transform .18s ease .06s, visibility 0s;
+  }
+  .dd-panel {
+    width: 400px; max-width: calc(100vw - 32px); background: var(--bg-elev); border: 1px solid var(--line);
+    border-radius: 16px; box-shadow: 0 18px 48px rgba(0, 0, 0, .18), 0 2px 6px rgba(0, 0, 0, .06); padding: 10px;
+  }
+  .dd-panel::before { content: ''; position: absolute; top: 6px; left: 50%; width: 12px; height: 12px; background: var(--bg-elev); border-left: 1px solid var(--line); border-top: 1px solid var(--line); transform: translateX(-50%) rotate(45deg); }
+  .dd-head { font: 600 11.5px/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); padding: 8px 10px 10px; }
+  .dd-list { list-style: none; margin: 0; padding: 0; }
+  .dd-list a { display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; text-decoration: none; color: var(--ink); }
+  .dd-list a:hover, .dd-list a:focus-visible, .dd-list a[aria-current='page'] { background: var(--bg-sunk); }
+  .dd-ic { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink); font: 800 13px/1 var(--font-head); letter-spacing: .02em; transition: background .15s, color .15s; }
+  .dd-list a:hover .dd-ic { background: var(--accent); color: #fff; }
+  .dd-txt { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+  .dd-txt b { font-weight: 600; font-size: 14.5px; line-height: 1.3; }
+  .dd-txt small { font-size: 12.5px; line-height: 1.4; color: var(--ink-3); margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .dd-n { flex: none; font-size: 11.5px; font-weight: 600; color: var(--ink-3); background: var(--bg-sunk); padding: 3px 8px; border-radius: 999px; }
+  .dd-list a:hover .dd-n { background: var(--bg-elev); }
+  .dd-all { display: flex; justify-content: space-between; margin: 6px 0 0; padding: 12px 10px 6px; border-top: 1px solid var(--line); font-size: 13.5px; font-weight: 600; text-decoration: none; color: var(--accent-ink); }
+  .dd-all:hover { color: var(--accent); }
+  @media (prefers-reduced-motion: reduce) { .dd, .caret { transition: none !important; } }
+
   .tools { display: flex; gap: 6px; margin-left: auto; }
   .icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); color: var(--ink); cursor: pointer; }
-  .mobile-nav { display: flex; flex-direction: column; padding-bottom: 12px; }
+  .mobile-nav { display: flex; flex-direction: column; padding-bottom: 12px; max-height: calc(100vh - 64px); overflow-y: auto; }
   .mobile-nav[hidden] { display: none; }
-  .mobile-nav a { padding: 12px 4px; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 500; }
-  @media (min-width: 820px) {
+  .m-link { display: block; padding: 12px 4px; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 500; }
+  .m-group { border-top: 1px solid var(--line); }
+  .m-row { display: flex; align-items: center; }
+  .m-row .m-link { border-top: 0; flex: 1; }
+  .m-toggle { width: 44px; height: 44px; display: grid; place-items: center; border: 0; background: none; color: var(--ink-2); cursor: pointer; border-radius: 10px; }
+  .m-toggle svg { transition: transform .2s; }
+  .m-toggle[aria-expanded='true'] svg { transform: rotate(180deg); }
+  .m-sub { list-style: none; margin: 0 0 10px; padding: 4px 0 4px 14px; border-left: 2px solid var(--accent-soft); }
+  .m-sub[hidden] { display: none; }
+  .m-sub a { display: flex; justify-content: space-between; gap: 8px; padding: 9px 4px; text-decoration: none; color: var(--ink-2); font-size: 15px; }
+  .m-n { font-size: 12px; color: var(--ink-3); background: var(--bg-sunk); padding: 1px 8px; border-radius: 999px; align-self: center; }
+  @media (min-width: 1240px) and (max-width: 1439px) {
+    .bar { gap: 16px; }
+    .nav-link { padding: 8px 9px; font-size: 14px; gap: 3px; }
+  }
+  @media (min-width: 1240px) {
     .nav { display: flex; }
     .tools { margin-left: 8px; }
     .menu-btn, .mobile-nav { display: none !important; }

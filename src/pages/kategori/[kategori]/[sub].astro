@@ -1,0 +1,68 @@
+---
+// Halaman sub-kategori, contoh /kategori/tutorial-software-tambang/deswik-cad/
+// Daftar sub-kategori ada di src/data/kategori.json (field "sub"), diatur lewat aplikasi TambangPedia.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import { CATEGORIES, AD_SLOTS, subUrl } from '../../../consts';
+import { categoryHubs, categoryHref } from '../../../lib/nav';
+const EVERY = 6;
+export function getStaticPaths() {
+  return CATEGORIES.flatMap((c) => (c.sub ?? []).map((s) => ({ params: { kategori: c.slug, sub: s.slug }, props: { cat: c, sub: s } })));
+}
+const { cat, sub } = Astro.props;
+const posts = (await getCollection('artikel', ({ data }) => !data.draft && data.category === cat.slug && data.subcategory === sub.slug)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const catHref = categoryHref(await categoryHubs(), cat.slug);
+const url = new URL(Astro.url.pathname, Astro.site).toString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: cat.name, item: new URL(catHref, Astro.site).toString() },
+    { '@type': 'ListItem', position: 3, name: sub.name, item: url },
+  ],
+};
+---
+<BaseLayout title={sub.name} description={sub.desc || `Kumpulan artikel ${sub.name} di TambangPedia.`} noindex={posts.length === 0} jsonLd={jsonLd}>
+  <section class="page container">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Beranda</a> / <a href={catHref}>{cat.name}</a></nav>
+    <p class="eyebrow">{cat.name}</p>
+    <h1>{sub.name}</h1>
+    {sub.desc && <p class="lead">{sub.desc}</p>}
+    <div class="sibs" role="list" aria-label={`Topik lain di ${cat.name}`}>
+      {(cat.sub ?? []).map((s) => (
+        <a role="listitem" class:list={['pill', { on: s.slug === sub.slug }]} href={subUrl(cat.slug, s.slug)} aria-current={s.slug === sub.slug ? 'page' : undefined}>{s.name}</a>
+      ))}
+    </div>
+    {posts.length > 0
+      ? <div class="grid" style="margin-top:28px">
+          {posts.map((p, i) => (
+            <>
+              <ArticleCard post={p} />
+              {AD_SLOTS.inFeed && (i + 1) % EVERY === 0 && i !== posts.length - 1 && (
+                <div style="grid-column:1/-1"><AdSlot slot={AD_SLOTS.inFeed} /></div>
+              )}
+            </>
+          ))}
+        </div>
+      : <div class="card soon">
+          <b>Artikel {sub.name} sedang disiapkan.</b>
+          <p>Sementara itu, lihat topik lain di <a href={catHref}>{cat.name}</a> atau <a href="/artikel/">semua artikel</a>.</p>
+        </div>}
+  </section>
+</BaseLayout>
+<style>
+  .crumbs { font-size: 14px; color: var(--ink-3); margin-bottom: 10px; }
+  .crumbs a { color: var(--ink-3); text-decoration: none; }
+  .crumbs a:hover { color: var(--accent); }
+  .sibs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .pill { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); color: var(--ink-2); font: 500 14px/1 var(--font-body); text-decoration: none; }
+  .pill:hover { color: var(--ink); border-color: var(--ink-3); }
+  .pill.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .soon { padding: 22px; margin-top: 28px; max-width: var(--readw); }
+  .soon p { margin: 6px 0 0; color: var(--ink-2); }
+</style>

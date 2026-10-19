@@ -2,11 +2,18 @@
   "atas": [
     {
       "label": "Artikel",
-      "href": "/artikel/"
+      "href": "/artikel/",
+      "dropdown": "semua-kategori"
     },
     {
       "label": "Tutorial Software Pertambangan",
-      "href": "/tutorial-software-pertambangan/"
+      "href": "/tutorial-software-pertambangan/",
+      "dropdown": "kategori:tutorial-software-tambang"
+    },
+    {
+      "label": "Tutorial Analisa Produksi",
+      "href": "/tutorial-analisa-produksi/",
+      "dropdown": "kategori:tutorial-analisa-produksi"
     },
     {
       "label": "Kalkulator",

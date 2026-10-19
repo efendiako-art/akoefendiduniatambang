@@ -1,8 +1,13 @@
 ---
 // Halaman umum (Tentang, Kebijakan Privasi, Disclaimer, dan halaman baru dari aplikasi TambangPedia).
 // Isinya ada di src/content/halaman/*.md
+// Bila frontmatter berisi "kategori: <slug>", halaman ini menjadi pintu kategori:
+// isi tulisan + kartu sub-kategori + artikel terbaru di kategori itu.
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import SubCategoryCards from '../components/SubCategoryCards.astro';
+import { CATEGORIES } from '../consts';
 
 export async function getStaticPaths() {
   const pages = await getCollection('halaman', ({ data }) => !data.draft);
@@ -11,7 +16,12 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
-const { title, metaTitle, description, eyebrow, lead } = page.data;
+const { title, metaTitle, description, eyebrow, lead, kategori } = page.data;
+const cat = kategori ? CATEGORIES.find((c) => c.slug === kategori) : undefined;
+const posts = cat
+  ? (await getCollection('artikel', ({ data }) => !data.draft && data.category === cat.slug)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  : [];
+const hasSubs = !!cat && (cat.sub ?? []).length > 0;
 ---
 <BaseLayout title={metaTitle ?? title} description={description}>
   <section class="page container">
@@ -21,5 +31,21 @@ const { title, metaTitle, description, eyebrow, lead } = page.data;
       {lead && <p class="lead">{lead}</p>}
       <Content />
     </div>
+    {cat && (
+      <>
+        {hasSubs && <h2 class="hub-h">Pilih topik</h2>}
+        <SubCategoryCards cat={cat.slug} posts={posts} />
+        {posts.length > 0 && (
+          <>
+            <h2 class="hub-h">Artikel terbaru</h2>
+            <div class="grid">{posts.slice(0, 9).map((p) => <ArticleCard post={p} />)}</div>
+          </>
+        )}
+      </>
+    )}
   </section>
 </BaseLayout>
+<style>
+  .hub-h { font-size: clamp(22px, 2.6vw, 28px); margin: 40px 0 0; }
+  .hub-h + .grid { margin-top: 20px; }
+</style>

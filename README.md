@@ -46,7 +46,8 @@ Paragraf pembuka...
 Isi artikel...
 ```
 
-Kategori yang tersedia: `operasi-produksi`, `alat-berat`, `geologi-eksplorasi`, `k3-tambang`, `karier-regulasi`.
+Daftar kategori & sub-kategori ada di `src/data/kategori.json` (diatur lewat aplikasi TambangPedia).
+Sub-kategori ditulis di `subcategory:` (contoh `deswik-cad`), gambar utama di `image:` + `imageAlt:`.
 Tambahkan `draft: true` untuk menyembunyikan artikel yang belum selesai.
 
 ## 3. Online gratis di Cloudflare Pages

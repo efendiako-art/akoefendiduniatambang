@@ -3,32 +3,86 @@
     {
       "slug": "operasi-produksi",
       "name": "Operasi Produksi",
-      "desc": "Perencanaan, produksi harian, dan KPI tambang."
+      "desc": "Perencanaan, produksi harian, dan KPI tambang.",
+      "sub": []
     },
     {
       "slug": "tutorial-software-tambang",
       "name": "Tutorial Software Tambang",
-      "desc": ""
+      "desc": "Panduan langkah demi langkah memakai software tambang: Deswik CAD, Surpac, MineSched, dan ArcGIS.",
+      "sub": [
+        {
+          "slug": "deswik-cad",
+          "name": "Tutorial Software Deswik CAD",
+          "desc": "Desain pit, volume cut & fill, dan pengolahan data survei dengan Deswik CAD."
+        },
+        {
+          "slug": "surpac",
+          "name": "Tutorial Software Surpac",
+          "desc": "Pemodelan geologi, block model, dan desain tambang dengan GEOVIA Surpac."
+        },
+        {
+          "slug": "minesched",
+          "name": "Tutorial Software MineSched",
+          "desc": "Penjadwalan produksi tambang harian hingga tahunan dengan GEOVIA MineSched."
+        },
+        {
+          "slug": "arcgis",
+          "name": "Tutorial Software ArcGIS",
+          "desc": "Peta wilayah IUP, analisis spasial, dan layout peta tambang dengan ArcGIS."
+        }
+      ]
+    },
+    {
+      "slug": "tutorial-analisa-produksi",
+      "name": "Tutorial Analisa Produksi",
+      "desc": "Cara menganalisa produksi tambang: loss produksi, KPI alat, produktivitas, dan laporan harian.",
+      "sub": [
+        {
+          "slug": "analisa-loss-produksi",
+          "name": "Analisa Loss Produksi",
+          "desc": "Memecah selisih plan vs aktual ke availability, utilisasi, dan produktivitas."
+        },
+        {
+          "slug": "kpi-alat",
+          "name": "KPI Alat (PA, UA, EU)",
+          "desc": "Menghitung dan membaca PA, UA, MA, dan EU alat berat dari data jam."
+        },
+        {
+          "slug": "produktivitas-alat",
+          "name": "Produktivitas & Match Factor",
+          "desc": "Produktivitas excavator dan dump truck, cycle time, dan match factor armada."
+        },
+        {
+          "slug": "laporan-produksi",
+          "name": "Laporan & Dashboard Produksi",
+          "desc": "Menyusun laporan produksi harian, mingguan, dan bulanan yang mudah dibaca."
+        }
+      ]
     },
     {
       "slug": "alat-berat",
       "name": "Alat Berat",
-      "desc": "Excavator, dump truck, dozer, dan produktivitasnya."
+      "desc": "Excavator, dump truck, dozer, dan produktivitasnya.",
+      "sub": []
     },
     {
       "slug": "geologi-eksplorasi",
       "name": "Geologi & Eksplorasi",
-      "desc": "Endapan, cadangan, dan pemboran eksplorasi."
+      "desc": "Endapan, cadangan, dan pemboran eksplorasi.",
+      "sub": []
     },
     {
       "slug": "k3-tambang",
       "name": "K3 Tambang",
-      "desc": "Keselamatan kerja dan regulasi K3 pertambangan."
+      "desc": "Keselamatan kerja dan regulasi K3 pertambangan.",
+      "sub": []
     },
     {
       "slug": "karier-regulasi",
       "name": "Karier & Regulasi",
-      "desc": "Sertifikasi, lowongan, dan aturan pertambangan."
+      "desc": "Sertifikasi, lowongan, dan aturan pertambangan.",
+      "sub": []
     }
   ],
   "sop": [

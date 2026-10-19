@@ -38,16 +38,29 @@ export const AD_SLOTS = {
 // Kunci tata letak untuk unit Dalam Feed (dari kode iklan AdSense unit "inFeed")
 export const IN_FEED_LAYOUT_KEY = '-6t+ed+2i-1n-4w';
 
-export const SOP_CATEGORIES: { slug: string; name: string; desc: string }[] = kategori.sop;
+export type SubCategory = { slug: string; name: string; desc: string };
+export type Category = { slug: string; name: string; desc: string; sub?: SubCategory[] };
+
+export const SOP_CATEGORIES: Category[] = kategori.sop;
 
 export type SopCategorySlug = string;
 
 export const sopCategoryName = (slug: string) =>
   SOP_CATEGORIES.find((c) => c.slug === slug)?.name ?? slug;
 
-export const CATEGORIES: { slug: string; name: string; desc: string }[] = kategori.artikel;
+// Kategori artikel. Setiap kategori boleh punya sub-kategori (field "sub"),
+// contoh: Tutorial Software Tambang -> Deswik CAD, Surpac, MineSched, ArcGIS.
+export const CATEGORIES: Category[] = kategori.artikel;
 
 export type CategorySlug = string;
 
 export const categoryName = (slug: string) =>
   CATEGORIES.find((c) => c.slug === slug)?.name ?? slug;
+
+export const subCategories = (cat: string): SubCategory[] =>
+  CATEGORIES.find((c) => c.slug === cat)?.sub ?? [];
+
+export const findSub = (cat: string, sub?: string): SubCategory | undefined =>
+  sub ? subCategories(cat).find((s) => s.slug === sub) : undefined;
+
+export const subUrl = (cat: string, sub: string) => `/kategori/${cat}/${sub}/`;

@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import SubCategoryCards from '../../components/SubCategoryCards.astro';
 import { CATEGORIES, AD_SLOTS } from '../../consts';
+import { categoryHubs } from '../../lib/nav';
 const EVERY = 6;
 export function getStaticPaths() {
   return CATEGORIES.map((c) => ({ params: { kategori: c.slug }, props: { cat: c } }));
@@ -12,12 +14,17 @@ const { cat } = Astro.props;
 const posts = (await getCollection('artikel', ({ data }) => !data.draft && data.category === cat.slug)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+// bila kategori punya halaman pintu (mis. /tutorial-software-pertambangan/), halaman itulah alamat utamanya
+const hub = (await categoryHubs())[cat.slug];
 ---
-<BaseLayout title={`Artikel ${cat.name}`} description={cat.desc} noindex={posts.length === 0}>
+<BaseLayout title={`Artikel ${cat.name}`} description={cat.desc || `Kumpulan artikel ${cat.name} di TambangPedia.`} noindex={posts.length === 0} canonicalPath={hub}>
   <section class="page container">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Beranda</a> / <a href="/artikel/">Artikel</a></nav>
     <p class="eyebrow">Kategori</p>
     <h1>{cat.name}</h1>
     <p class="lead">{cat.desc}</p>
+    {hub && <p><a href={hub}>Buka halaman {cat.name} →</a></p>}
+    <SubCategoryCards cat={cat.slug} posts={posts} />
     {posts.length > 0
       ? <div class="grid" style="margin-top:28px">
           {posts.map((p, i) => (
@@ -32,3 +39,8 @@ const posts = (await getCollection('artikel', ({ data }) => !data.draft && data.
       : <p>Artikel untuk kategori ini sedang disiapkan. Sementara itu, <a href="/artikel/">baca artikel lainnya</a>.</p>}
   </section>
 </BaseLayout>
+<style>
+  .crumbs { font-size: 14px; color: var(--ink-3); margin-bottom: 10px; }
+  .crumbs a { color: var(--ink-3); text-decoration: none; }
+  .crumbs a:hover { color: var(--accent); }
+</style>
