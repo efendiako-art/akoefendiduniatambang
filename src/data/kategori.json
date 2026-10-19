@@ -6,6 +6,11 @@
       "desc": "Perencanaan, produksi harian, dan KPI tambang."
     },
     {
+      "slug": "tutorial-software-tambang",
+      "name": "Tutorial Software Tambang",
+      "desc": ""
+    },
+    {
       "slug": "alat-berat",
       "name": "Alat Berat",
       "desc": "Excavator, dump truck, dozer, dan produktivitasnya."
