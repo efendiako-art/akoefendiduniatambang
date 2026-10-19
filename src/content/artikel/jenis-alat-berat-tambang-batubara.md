@@ -2,6 +2,7 @@
 title: 'Jenis Alat Berat di Tambang Batubara dan Fungsinya'
 description: 'Daftar alat berat yang dipakai di tambang batubara terbuka: alat gali, alat angkut, alat dorong, alat bor, dan alat pendukung, beserta fungsi masing-masing.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: alat-berat
 tags: ['alat berat', 'excavator', 'dump truck', 'bulldozer', 'grader']
 ---
@@ -54,3 +55,36 @@ Jalan angkut yang buruk memperlambat semua truk. Karena itu ada satu kelompok al
 ## Pasangan yang harus seimbang
 
 Di lapangan, alat-alat ini bekerja sebagai satu sistem. Excavator besar tanpa truk yang cukup akan banyak menunggu. Truk yang banyak tanpa jalan yang baik akan lambat. Disposal tanpa dozer akan penuh dan truk antre untuk membuang. Mengatur keseimbangan ini adalah pekerjaan sehari-hari tim produksi, dan dasar hitungannya bisa dipelajari di artikel [produktivitas excavator dan dump truck](/artikel/produktivitas-excavator-dan-dump-truck/).
+
+## Contoh susunan satu fleet pengupasan overburden
+
+Satu fleet overburden tidak hanya berisi excavator dan truk. Susunan berikut gambaran umum (jumlah ilustrasi):
+
+| Peran | Alat | Jumlah ilustrasi | Fungsi |
+| --- | --- | --- | --- |
+| Alat gali | Excavator | 1 | Menggali dan memuat ke truk |
+| Alat angkut | Dump truck | 8 sampai 12 | Mengangkut ke disposal |
+| Penata disposal | Bulldozer | 1 sampai 2 | Meratakan material di disposal |
+| Perawat jalan | Grader | 1 | Meratakan jalan angkut |
+| Pengendali debu | Water truck | 1 sampai 2 | Menyiram jalan |
+| Pendukung | Light tower, fuel truck, mobil pengawas | Sesuai kebutuhan | Penerangan, pengisian BBM, pengawasan |
+
+Jika salah satu alat pendukung tidak ada, alat utama ikut terganggu. Itulah sebabnya perencana menghitung fleet sebagai satu sistem.
+
+## Pertanyaan yang sering diajukan
+
+### Alat apa yang paling mahal di tambang?
+
+Alat angkat dan gali berukuran besar, serta dump truck kelas besar, termasuk yang termahal. Namun biaya terbesar sepanjang umur alat sering justru berasal dari BBM, perawatan, dan operator.
+
+### Apa bedanya excavator dan wheel loader?
+
+Excavator menggali dengan lengan dan bucket dari posisi tetap, cocok untuk menggali dan memuat di bidang kerja. Wheel loader berpindah dengan roda dan menyendok material, cocok untuk memuat material lepas atau stockpile.
+
+### Mengapa ukuran alat gali dan alat angkut harus serasi?
+
+Alat gali yang terlalu besar untuk truk menyebabkan bucket tidak pas dan tumpahan. Alat gali terlalu kecil membuat truk menunggu terlalu lama dan produktivitas turun.
+
+### Apakah semua tambang memakai alat yang sama?
+
+Tidak. Pilihan alat bergantung pada jenis tambang, kondisi material, produksi yang dituju, jarak angkut, dan anggaran.

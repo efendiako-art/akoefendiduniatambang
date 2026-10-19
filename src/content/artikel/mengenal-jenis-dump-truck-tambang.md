@@ -2,6 +2,7 @@
 title: 'Mengenal Jenis Dump Truck Tambang: On-Highway, ADT, dan Off-Highway Truck'
 description: 'Perbedaan dump truck on-highway, articulated dump truck (ADT), dan off-highway truck (OHT) di tambang, beserta kelebihan, kekurangan, dan kapan dipakai.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: alat-berat
 tags: ['dump truck', 'OHT', 'ADT', 'hauling', 'alat berat']
 ---
@@ -72,3 +73,33 @@ Beberapa pertanyaan yang biasanya menentukan:
 4. **Lebar jalan yang tersedia.** Regulasi mensyaratkan lebar jalan angkut dihitung dari lebar truk terbesar. Lihat artikel [standar jalan angkut tambang](/artikel/standar-jalan-angkut-tambang/).
 
 Hitung kebutuhan jumlah truk per excavator dengan [kalkulator produktivitas](/alat/produktivitas/).
+
+## Contoh pertimbangan memilih: dua situasi berbeda
+
+| Situasi | Pilihan yang masuk akal | Alasan |
+| --- | --- | --- |
+| Tambang kecil, jalan tanah sempit dan sering becek, produksi moderat | ADT atau on-highway | ADT lebih tahan jalan lunak, on-highway murah dan mudah didapat |
+| Tambang besar, produksi tinggi, jalan angkut lebar dan terawat | Off-highway truck | Kapasitas besar menurunkan biaya per bcm |
+| Jarak angkut panjang ke pelabuhan atau stockpile melalui jalan umum | On-highway | Boleh melaju di jalan umum sesuai aturan |
+
+## Hal yang dinilai selain kapasitas
+
+1. **Kondisi jalan**: truk berkapasitas besar menuntut jalan yang lebar dan kuat.
+2. **Ketersediaan suku cadang dan teknisi** di wilayah itu.
+3. **Biaya total per bcm**, bukan hanya harga beli.
+4. **Keserasian dengan alat gali** supaya jumlah pass pas.
+5. **Regulasi dan keselamatan**, termasuk standar jalan dan kesiapan operator.
+
+## Pertanyaan yang sering diajukan
+
+### Apakah truk yang lebih besar selalu lebih hemat?
+
+Tidak selalu. Truk besar menurunkan biaya per bcm bila jalan, alat gali, dan volume produksinya mendukung. Bila tidak, truk besar justru menganggur atau merusak jalan.
+
+### Mengapa ADT bagus di tanah lunak?
+
+Karena sambungan artikulasinya membuat roda bisa mengikuti kontur dan sering menggunakan penggerak semua roda, sehingga traksinya lebih baik pada jalan licin.
+
+### Siapa yang menentukan jenis truk yang dipakai?
+
+Tim perencanaan dan manajemen berdasarkan kajian teknis dan biaya. Dalam kontrak jasa, kontraktor memilih alat yang memenuhi spesifikasi yang disepakati dengan pemilik tambang.

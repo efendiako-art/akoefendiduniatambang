@@ -2,6 +2,7 @@
 title: 'Cara Menghemat BBM Alat Berat Tambang dan Menghitung Fuel Ratio'
 description: 'Cara menghitung fuel ratio (liter per bcm) dan konsumsi BBM per jam alat berat tambang, serta langkah praktis menekan pemakaian solar.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: alat-berat
 tags: ['BBM', 'fuel ratio', 'efisiensi', 'biaya produksi', 'alat berat']
 ---
@@ -65,3 +66,42 @@ Kalau harga solar industri Rp15.000 per liter, biaya BBM per bcm sekitar Rp6.550
 ## Hati-hati dengan data
 
 Fuel ratio yang terlihat bagus bisa menipu kalau produksi dihitung dari ritase dengan asumsi bak penuh, sementara kenyataannya truk sering tidak penuh. Bandingkan juga dengan volume hasil survei bulanan. Konversi yang benar antara bcm dan lcm dibahas di artikel [BCM, LCM, dan ton](/artikel/konversi-bcm-lcm-ton-swell-factor/).
+
+## Simulasi: berapa rupiah dari penurunan 0,02 liter per bcm
+
+Memakai fleet pada contoh di atas: produksi 7.900 bcm per hari dengan fuel ratio 0,44 liter/bcm. Misalkan serangkaian perbaikan, seperti perawatan jalan dan pengurangan idle, menurunkannya menjadi 0,42 liter/bcm, atau sekitar 4,5%.
+
+```
+Produksi sebulan = 7.900 × 30 = 237.000 bcm
+Liter yang dihemat = 237.000 × 0,02 = 4.740 liter
+Nilai = 4.740 × Rp15.000 = Rp71.100.000 per bulan, untuk satu fleet
+```
+
+Jika perusahaan punya 10 fleet dengan kondisi serupa, penghematannya sekitar Rp711 juta per bulan, atau lebih dari Rp8,5 miliar per tahun. Angka ini ilustrasi dengan harga solar rekaan, tetapi pelajarannya nyata: selisih sangat kecil per bcm menjadi besar karena volumenya.
+
+## Daftar periksa audit BBM mingguan
+
+1. **Rekonsiliasi stok tangki.** Stok awal ditambah penerimaan dikurangi pengeluaran harus sama dengan stok fisik akhir. Telusuri setiap selisih.
+2. **Bandingkan liter per jam** tiap unit dengan rata-rata unit sejenis, lalu tandai yang menyimpang.
+3. **Cek jam idle** dari data hour meter dibanding jam produktif.
+4. **Bandingkan fuel ratio per fleet** pada jarak angkut yang serupa, bukan pada jarak yang berbeda.
+5. **Periksa penyebab teknis** pada unit yang boros: kebocoran, filter kotor, tekanan ban, dan kondisi injektor.
+6. **Bahas hasilnya** di rapat produksi dan tetapkan tindak lanjut dengan penanggung jawab.
+
+## Pertanyaan yang sering diajukan
+
+### Berapa fuel ratio yang bagus?
+
+Tidak ada angka tunggal yang berlaku untuk semua tambang. Nilainya bergantung pada jarak angkut, tanjakan, jenis alat, dan material. Bandingkan dengan histori fleet sendiri pada jarak angkut yang serupa dan dengan target yang disepakati di kontrak.
+
+### Apakah mematikan mesin saat menunggu merusak mesin?
+
+Untuk mesin diesel modern, idle terlalu lama justru boros dan tidak baik untuk mesin. Ikuti panduan pabrikan. Setelah bekerja berat, biasanya ada anjuran waktu pendinginan (cool down) sebelum mesin dimatikan, terutama pada mesin bertenaga turbo.
+
+### Apakah tekanan ban memengaruhi pemakaian BBM?
+
+Ya. Ban yang kurang angin dan jalan yang buruk menaikkan hambatan gulir sehingga mesin bekerja lebih berat pada kecepatan yang sama. Tekanan ban dan kondisi jalan layak dipantau bersama konsumsi BBM.
+
+### Bagaimana mengetahui BBM yang dikonsumsi dicatat dengan benar?
+
+Cocokkan tiga data: BBM yang keluar dari tangki, BBM yang tercatat diisi ke tiap unit, dan jam kerja unit. Jika ketiganya konsisten, pencatatan bisa dipercaya. Jika tidak, telusuri prosesnya terlebih dulu sebelum menyimpulkan penyebabnya.

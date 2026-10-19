@@ -47,6 +47,19 @@ Berlaku bagi seluruh karyawan, kontraktor, subkontraktor, dan tamu yang memasuki
 | Ketersediaan stok APD dasar | Tidak terjadi kekosongan stok |
 | Cedera akibat APD tidak dipakai | Nol kejadian |
 
+## Catatan Penerapan
+
+Contoh ini dapat dipakai sebagai kerangka untuk menyusun SOP APD di perusahaan Anda. Jenis APD wajib per area harus mengikuti hasil IBPR dan peraturan yang berlaku.
+
+**Hal yang sering terlewat saat menerapkan SOP APD**
+
+- Pemeriksaan kondisi APD sebelum dipakai, bukan hanya kewajiban memakainya.
+- Prosedur penggantian APD rusak yang cepat dan tanpa biaya bagi pekerja.
+- Pengaturan APD untuk tamu dan kontraktor yang masuk sebentar ke area kerja.
+- Penyimpanan dan pembersihan APD yang dipakai bersama, seperti respirator atau full body harness.
+
+Artikel [APD wajib di tambang](/artikel/apd-wajib-di-tambang/) memberi penjelasan lebih luas mengenai fungsi tiap perlengkapan.
+
 ## 8. Referensi
 - UU No. 1 Tahun 1970 tentang Keselamatan Kerja
 - Permenakertrans No. PER.08/MEN/VII/2010 tentang Alat Pelindung Diri

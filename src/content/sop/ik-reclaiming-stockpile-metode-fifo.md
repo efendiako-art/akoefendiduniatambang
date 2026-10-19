@@ -46,6 +46,18 @@ Berlaku untuk seluruh aktivitas reclaiming di stockpile produk maupun stockpile 
 
 Potensi bahaya utama: longsoran material akibat undercutting, dan unit terperosok pada tumpukan yang tidak stabil.
 
+## Catatan Penerapan
+
+Dokumen ini adalah contoh untuk dipelajari dan disesuaikan, bukan dokumen resmi siap pakai. Setiap stockpile punya bentuk, kapasitas, dan pola pengiriman yang berbeda, jadi langkah dan angka perlu disesuaikan.
+
+**Mengapa FIFO?** Batubara yang lama tertimbun lebih lama terkena panas, hujan, dan oksidasi. Mengambil yang masuk lebih dulu menjaga kualitas, mengurangi risiko pemanasan spontan, dan membuat data kualitas per tumpukan tetap sesuai dengan yang keluar.
+
+**Pertanyaan yang sering muncul**
+
+- *Bagaimana jika tumpukan bercampur kualitas?* Tandai dan catat sesuai prosedur blending. Jangan mengambil tanpa mengetahui kualitasnya.
+- *Bagaimana jika ada tanda panas atau asap di tumpukan?* Hentikan pekerjaan di area tersebut, laporkan ke pengawas, dan ikuti prosedur penanganan pemanasan spontan perusahaan.
+- *Siapa yang memutuskan urutan pengambilan?* Perencana pengiriman bersama pengawas stockpile, berdasarkan catatan tanggal dan kualitas tiap tumpukan.
+
 ## 7. Referensi
 - Kepmen ESDM No. 1827 K/30/MEM/2018 (Kaidah Teknik Pertambangan yang Baik)
 - UU No. 1 Tahun 1970 tentang Keselamatan Kerja

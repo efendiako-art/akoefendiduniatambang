@@ -51,6 +51,18 @@ Berlaku pada seluruh aktivitas loading di front penambangan (pit) dan di area pe
 
 Potensi bahaya utama: tertabrak bucket/alat saat swing, tertimpa material akibat longsoran dinding front, dan tabrakan saat spotting dump truck.
 
+## Catatan Penerapan
+
+Walaupun judul file merujuk material nikel, prinsip pemuatan di dokumen ini berlaku umum untuk tambang terbuka. Sesuaikan dengan jenis material, alat gali, dan kondisi front.
+
+**Pertanyaan yang sering muncul**
+
+- *Dari sisi mana truk boleh dimuat?* Posisi pemuatan ditentukan oleh rencana front dan kondisi lokasi. Yang penting operator excavator dan pengemudi truk punya komunikasi jelas dan tidak ada orang di radius ayunan alat.
+- *Bagaimana mencegah muatan berlebih?* Gunakan jumlah pass yang disepakati, pantau secara visual atau dengan sistem timbang, dan latih operator.
+- *Bagaimana jika front bergelombang atau becek?* Minta dozer atau grader merapikan sebelum truk masuk.
+
+Hitungan jumlah pass dan kapasitas ada di artikel [produktivitas excavator dan dump truck](/artikel/produktivitas-excavator-dan-dump-truck/).
+
 ## 8. Referensi
 - UU No. 3 Tahun 2020 tentang Minerba
 - Kepmen ESDM No. 1827 K/30/MEM/2018

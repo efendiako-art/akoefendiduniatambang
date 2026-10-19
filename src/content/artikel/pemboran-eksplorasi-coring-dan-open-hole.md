@@ -2,6 +2,7 @@
 title: 'Pemboran Eksplorasi Batubara: Perbedaan Coring dan Open Hole'
 description: 'Perbedaan pemboran coring dan open hole di eksplorasi batubara, fungsi masing-masing, core recovery, logging geofisika, dan tips agar data bor bisa dipercaya.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: geologi-eksplorasi
 tags: ['pemboran', 'eksplorasi', 'coring', 'core recovery', 'logging geofisika']
 ---
@@ -77,3 +78,35 @@ Gabungan keduanya membuat batas atas dan bawah seam terlihat jelas, sehingga ket
 5. **Cocokkan deskripsi dengan logging.** Selisih kedalaman di antara keduanya harus ditelusuri dan dikoreksi.
 
 Data yang rapi dari tahap ini menjadi dasar estimasi [sumberdaya dan cadangan](/artikel/perbedaan-sumberdaya-dan-cadangan/).
+
+## Contoh keputusan: berapa titik coring, berapa open hole
+
+Misalkan ada 40 titik bor rencana pada area eksplorasi. Rancangan yang umum adalah sebagian titik di-coring untuk mendapat sampel batubara dan batuan, sementara titik lain dibuat open hole yang lebih murah dan cepat lalu dilengkapi logging geofisika. Titik coring disebar pada lokasi kunci supaya hasil logging di titik open hole bisa dikoreksi dan dikorelasikan. Proporsi pastinya ditentukan geolog sesuai kompleksitas geologi dan tujuan eksplorasi.
+
+## Perbandingan ringkas
+
+| Aspek | Open hole | Coring |
+| --- | --- | --- |
+| Hasil | Serbuk dan serpihan (cutting) | Batang inti (core) |
+| Kecepatan dan biaya | Lebih cepat dan murah | Lebih lambat dan mahal |
+| Untuk analisa kualitas | Terbatas | Baik, sampel utuh |
+| Untuk struktur dan ketebalan | Dibantu logging | Langsung dari core |
+| Penggunaan | Mengetahui posisi lapisan, kerapatan titik | Analisa laboratorium dan deskripsi detail |
+
+## Pertanyaan yang sering diajukan
+
+### Apa itu core recovery dan berapa yang baik?
+
+Core recovery adalah persentase panjang core yang berhasil diambil dibanding panjang yang dibor. Semakin tinggi semakin baik. Banyak standar menentukan batas penerimaan tertentu pada lapisan batubara. Rujuk standar proyek masing-masing.
+
+### Mengapa logging geofisika penting?
+
+Logging merekam sifat fisik batuan (misalnya densitas dan gamma ray) sepanjang lubang, sehingga posisi dan ketebalan batubara dapat ditentukan walau core hilang sebagian.
+
+### Apa penyebab core recovery rendah?
+
+Batubara yang rapuh, rekahan, teknik pemboran yang kurang tepat, atau alat dan lumpur bor yang tidak sesuai.
+
+### Siapa yang mendeskripsikan core?
+
+Geolog atau teknisi geologi terlatih, dengan dokumentasi foto dan pengambilan sampel yang rapi.

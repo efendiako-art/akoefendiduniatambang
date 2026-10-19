@@ -52,6 +52,16 @@ Berlaku untuk seluruh operator dan unit yang beroperasi di pit, jalan angkut, st
 
 Potensi bahaya utama: tabrakan antar-unit, unit terperosok/terbalik di tepi jenjang, dan tertimpa material longsoran jika zona eksklusi tidak dipatuhi.
 
+## Catatan Penerapan
+
+Dokumen ini adalah contoh SOP umum untuk operasi unit di tambang terbuka. Isinya perlu disesuaikan dengan jenis unit, kondisi lokasi, dan aturan lalu lintas internal.
+
+**Pertanyaan yang sering muncul**
+
+- *Apakah SOP ini menggantikan induksi dan pelatihan operator?* Tidak. Dokumen tertulis melengkapi, bukan menggantikan, pelatihan dan penilaian kompetensi.
+- *Bagaimana jika kondisi di lapangan tidak sesuai SOP?* Hentikan pekerjaan, laporkan ke pengawas, dan jangan memaksakan. SOP harus diperbarui bila kondisi berubah.
+- *Apa kaitan SOP dengan P2H?* P2H memastikan unit layak operasi sebelum dipakai. Lihat artikel [P2H](/artikel/p2h-inspeksi-alat-sebelum-dipakai/).
+
 ## 8. Referensi
 - UU No. 3 Tahun 2020 tentang Perubahan UU No. 4 Tahun 2009 (Minerba)
 - UU No. 1 Tahun 1970 tentang Keselamatan Kerja

@@ -2,6 +2,7 @@
 title: 'Cara Melamar Kerja di Perusahaan Tambang (dan Menghindari Lowongan Palsu)'
 description: 'Panduan melamar kerja di tambang: posisi yang sering dibuka, dokumen dan sertifikat yang dibutuhkan, tips CV dan wawancara, serta ciri lowongan tambang palsu.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: karier-regulasi
 tags: ['lowongan tambang', 'karier', 'CV', 'wawancara', 'SIM operator']
 ---
@@ -64,3 +65,50 @@ Perusahaan tambang resmi umumnya tidak memungut biaya dari pelamar. Cek lowongan
 ## Mulai dari mana
 
 Banyak orang yang sekarang menjadi supervisor atau manajer di tambang memulai dari posisi operator, mekanik, atau helper. Pengalaman lapangan sangat dihargai di industri ini. Masuk dulu, belajar dengan sungguh-sungguh, jaga catatan keselamatan, lalu ikuti jenjang sertifikasi seperti [POP, POM, dan POU](/artikel/sertifikasi-pop-pom-pou/).
+
+## Contoh alur seleksi dari lamaran sampai induksi
+
+Setiap perusahaan punya urutan sendiri, tetapi pola berikut cukup umum:
+
+| Tahap | Yang terjadi | Persiapan |
+| --- | --- | --- |
+| 1. Seleksi administrasi | CV, ijazah, SIM, dan sertifikat diperiksa | Dokumen lengkap, rapi, dan konsisten |
+| 2. Tes tertulis atau psikotes | Logika, pemahaman K3 dasar, atau soal teknis sesuai posisi | Latihan soal dan pahami dasar K3 |
+| 3. Wawancara HR dan user | Motivasi, pengalaman, dan kesiapan menjalani roster | Siapkan cerita pengalaman nyata dengan angka |
+| 4. Tes praktik | Untuk operator dan mekanik, menunjukkan keterampilan langsung | Terbiasa dengan jenis unit yang dilamar |
+| 5. Medical check up | Pemeriksaan kesehatan, termasuk penglihatan dan pendengaran | Jaga kondisi dan jawab riwayat kesehatan dengan jujur |
+| 6. Penawaran dan kontrak | Gaji, roster, masa percobaan | Baca teliti dan tanyakan hal yang belum jelas |
+| 7. Induksi dan pelatihan | K3, aturan lokasi, orientasi area | Datang tepat waktu dan ikuti dengan sungguh-sungguh |
+
+Lama prosesnya beragam, dari beberapa minggu sampai lebih. Wajar jika kabar datang bertahap.
+
+## Contoh memperbaiki kalimat di CV
+
+Kalimat yang spesifik lebih mudah dinilai oleh rekruter. Contoh perbaikannya:
+
+| Kurang kuat | Lebih kuat |
+| --- | --- |
+| Berpengalaman sebagai operator excavator | Operator excavator kelas 20 sampai 40 ton selama 4 tahun di tambang batubara, tanpa insiden berat selama bertugas |
+| Mekanik alat berat | Mekanik hidrolik dump truck, menangani periodic service 250 sampai 2.000 jam dan perbaikan komponen utama |
+| Lulusan teknik pertambangan, menguasai Excel | Tugas akhir tentang analisa stripping ratio; membuat spreadsheet untuk menghitung KPI alat dan produktivitas |
+| Mampu bekerja dalam tim | Memimpin 8 orang dalam kerja praktik, menyusun laporan harian produksi |
+
+Pakai hanya fakta yang benar dan bisa dibuktikan. Wawancara hampir selalu menguji klaim di CV.
+
+## Pertanyaan yang sering diajukan
+
+### Apakah lulusan SMA atau SMK bisa melamar?
+
+Bisa. Banyak posisi operator, mekanik, helper, dan pendukung dibuka untuk lulusan SMA atau SMK. Posisi engineer biasanya mensyaratkan S1 atau D3 sesuai bidangnya.
+
+### Apakah harus punya sertifikat sebelum melamar?
+
+Tidak selalu. Untuk operator, banyak perusahaan menguji dan melatih sendiri di lokasi, tetapi SIM yang sesuai dan pengalaman nyata sangat membantu. Sertifikat kompetensi menambah nilai, terutama untuk posisi pengawas dan K3.
+
+### Bagaimana memastikan lowongan itu asli?
+
+Cek lowongan lewat situs atau akun resmi perusahaan, perhatikan domain email pengirim, dan hubungi bagian HR lewat nomor yang tercantum di situs resmi. Jika diminta membayar apa pun sebelum diterima, anggap itu tanda bahaya.
+
+### Apakah perempuan bisa bekerja di tambang?
+
+Bisa. Banyak perusahaan membuka kesempatan bagi perempuan di berbagai posisi, termasuk operator, engineer, K3, laboratorium, dan administrasi produksi.

@@ -141,3 +141,21 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; letter-spacing
 .bar-fill { height: 100%; background: var(--accent); border-radius: 6px; transition: width .25s; }
 .note { margin-top: 16px; font-size: 14.5px; color: var(--hero-ink-2); line-height: 1.6; }
 .note strong { color: var(--hero-ink); }
+
+/* ---------- Diagram di dalam artikel ---------- */
+.prose figure.diagram { margin: 1.8em 0; padding: 16px 14px 12px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); }
+.prose figure.diagram svg { width: 100%; height: auto; display: block; }
+.prose figure.diagram figcaption { margin-top: 10px; font-size: 14px; line-height: 1.5; color: var(--ink-3); }
+.diagram text { fill: var(--ink); font-family: var(--font-body); font-size: 14px; }
+.diagram text.s { font-size: 12.5px; }
+.diagram text.m { fill: var(--ink-2); }
+.diagram text.b { font-weight: 700; font-family: var(--font-head); }
+.diagram text.w { fill: #f3eee6; }
+.diagram text.ac { fill: var(--accent-ink); }
+.diagram .ln { stroke: var(--ink-3); stroke-width: 1.5; fill: none; }
+.diagram .ac-ln { stroke: var(--accent); stroke-width: 2; fill: none; }
+.diagram .box { fill: var(--bg-sunk); stroke: var(--line); stroke-width: 1.2; }
+.diagram .acf { fill: var(--accent); fill-opacity: .35; stroke: var(--accent); stroke-width: 1.4; }
+.diagram .coal { fill: #3b342e; stroke: var(--line); stroke-width: 1.2; }
+.diagram .dash { stroke-dasharray: 5 4; }
+.diagram .head { fill: var(--ink-3); }

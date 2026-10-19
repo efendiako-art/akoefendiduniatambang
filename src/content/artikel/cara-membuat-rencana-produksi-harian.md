@@ -2,6 +2,7 @@
 title: 'Cara Menyusun Rencana Produksi Harian di Tambang'
 description: 'Panduan menyusun daily plan tambang terbuka: dari target bulanan, pembagian per fleet, kebutuhan alat, hingga kontrol realisasi per shift.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: operasi-produksi
 tags: ['rencana produksi', 'daily plan', 'short term planning', 'fleet']
 ---
@@ -78,3 +79,48 @@ Di akhir shift, catat realisasi dan penyebab selisihnya. Data inilah bahan untuk
 2. **Semua fleet diberi target sama.** Padahal ukuran alat dan jarak angkut berbeda.
 3. **Mengejar volume, lupa urutan.** Produksi bulan ini aman, bulan depan bermasalah.
 4. **Rencana tidak sampai ke operator.** Hanya berhenti di grup WhatsApp para supervisor.
+
+## Contoh format daily plan satu halaman
+
+Rencana yang baik bisa dibaca dalam satu menit oleh supervisor dan operator. Susunan berikut cukup umum dan mudah disesuaikan:
+
+| Bagian | Isi |
+| --- | --- |
+| Header | Tanggal, shift, kondisi cuaca, penanggung jawab |
+| Target | Total bcm overburden, ton batubara, dan ritase per fleet |
+| Fleet dan alat | Excavator, truk, dozer, grader, dan water truck, lengkap dengan status siap atau tidak siap |
+| Lokasi kerja | Blok atau pit, elevasi, lokasi disposal, dan rute angkut |
+| Peledakan | Jadwal, area terlarang, dan waktu area aman kembali |
+| Jalan dan disposal | Area yang diperbaiki, kondisi tanggul, dan area yang dibatasi |
+| Risiko hari ini | Hujan, jalan licin, pekerjaan dekat lereng, atau pekerjaan kritis lain |
+| Catatan serah terima | Masalah yang belum selesai dari shift sebelumnya |
+
+## Skenario: hujan turun di jam ketiga
+
+Rencana hari itu 34.330 bcm. Di jam ketiga, hujan lebat turun selama dua jam dan jalan tanah menjadi licin. Langkah yang masuk akal bagi supervisor:
+
+1. Tentukan jalan mana yang masih aman dilalui. Jangan memaksa truk melewati jalan yang licin.
+2. Pindahkan fleet ke front dengan jalan paling pendek dan paling kuat, misalnya yang sudah dilapisi material keras.
+3. Kerahkan grader dan dozer untuk memperbaiki jalan dan drainase yang kritis.
+4. Hitung ulang target sisa shift dan informasikan ke atasan sejak dini, bukan di akhir shift.
+5. Catat jam hujan dengan kode delay yang benar supaya analisa loss di akhir bulan akurat.
+
+Keselamatan selalu lebih tinggi daripada target produksi. Target yang meleset karena hujan bisa dijelaskan. Kecelakaan di jalan licin tidak bisa dikembalikan.
+
+## Pertanyaan yang sering diajukan
+
+### Apa bedanya rencana harian, mingguan, dan bulanan?
+
+Rencana bulanan menetapkan target dan urutan penambangan besar. Rencana mingguan menetapkan area kerja dan kebutuhan alat. Rencana harian menetapkan eksekusi per shift. Ketiganya harus konsisten supaya pekerjaan hari ini tidak merusak rencana bulan depan.
+
+### Siapa yang menyusun rencana harian?
+
+Umumnya perencana jangka pendek atau engineer produksi bersama supervisor, dan disetujui oleh superintendent. Hal yang menyangkut keselamatan, seperti area peledakan, mengikuti persetujuan penanggung jawab keselamatan di lokasi.
+
+### Bagaimana menentukan jam kerja efektif per hari?
+
+Gunakan data historis PA dan UA pada bulan dengan cuaca serupa, lalu kurangi waktu pergantian shift, istirahat, dan P5M. Jam efektif hampir selalu lebih rendah dari jam kalender yang terasa.
+
+### Apa itu exposed coal dan berapa idealnya?
+
+Exposed coal adalah batubara yang sudah tersingkap dan siap digali. Tidak ada angka ideal yang berlaku umum. Biasanya perencana menentukannya dalam satuan hari atau minggu produksi, sesuai kemampuan alat gali batubara dan risiko hujan.

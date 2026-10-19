@@ -2,6 +2,7 @@
 title: 'Sistem Roster Kerja di Tambang: Pola, Shift, dan Tips Bertahan'
 description: 'Penjelasan sistem roster kerja tambang, pola shift siang dan malam, jenis status penduduk lokal dan non-lokal, serta tips menjaga kesehatan dan keluarga selama roster.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: karier-regulasi
 tags: ['roster', 'shift kerja', 'karier tambang', 'cuti', 'site']
 ---
@@ -52,3 +53,41 @@ Karyawan yang menjalani roster biasanya tinggal di mess atau camp yang disediaka
 ## Cocokkah sistem roster untuk Anda?
 
 Roster memberi penghasilan yang baik dan waktu cuti panjang yang bisa dipakai penuh untuk keluarga. Tapi harga yang dibayar adalah berminggu-minggu jauh dari rumah. Pertimbangkan dengan matang bersama keluarga sebelum memutuskan. Jika sudah mantap, panduan memulai karier ada di artikel [cara melamar kerja di perusahaan tambang](/artikel/cara-melamar-kerja-di-perusahaan-tambang/).
+
+## Contoh membaca roster
+
+Tabel berikut menggambarkan dua pola yang sering ditemui. Pola persis ditentukan masing-masing perusahaan.
+
+| Pola | Artinya | Dampak pada kehidupan |
+| --- | --- | --- |
+| 6 minggu kerja, 2 minggu cuti | Enam minggu di site, lalu dua minggu di rumah | Waktu di rumah lebih panjang tetapi jarang pulang |
+| 8 minggu kerja, 2 minggu cuti | Lebih lama di site | Penghasilan stabil, jauh dari keluarga lebih lama |
+| 4 minggu kerja, 1 minggu cuti | Siklus lebih pendek | Lebih sering pulang, ongkos perjalanan lebih sering |
+
+Selama bekerja, hari libur mingguan juga diatur perusahaan. Biaya perjalanan dan fasilitas cuti mengikuti kontrak.
+
+## Daftar persiapan sebelum berangkat roster
+
+1. Atur keuangan keluarga dan komunikasi rutin dengan keluarga.
+2. Siapkan obat pribadi dan dokumen kesehatan yang dibutuhkan, sesuai aturan perusahaan.
+3. Siapkan perlengkapan pribadi karena fasilitas mess terbatas.
+4. Bangun rutinitas tidur dan olahraga ringan agar kebugaran terjaga.
+5. Bicarakan ekspektasi dengan pasangan dan keluarga sebelum menerima pekerjaan.
+
+## Pertanyaan yang sering diajukan
+
+### Apakah gaji roster lebih besar?
+
+Tidak bisa digeneralisasi. Gaji dan tunjangan bergantung pada posisi, perusahaan, dan lokasi. Pastikan membaca penawaran dengan teliti.
+
+### Bagaimana jika ada urusan keluarga mendesak saat bekerja?
+
+Bicarakan dengan atasan dan HR. Banyak perusahaan punya prosedur cuti darurat, tetapi aturannya berbeda-beda.
+
+### Apakah pola roster bisa berubah?
+
+Bisa, mengikuti kebijakan perusahaan, kebutuhan operasi, atau kondisi tertentu. Karena itu baca klausul roster di kontrak.
+
+### Apa bedanya status lokal dan non-lokal?
+
+Status ini terkait asal tempat tinggal dan hak fasilitas tertentu, seperti transportasi atau akomodasi. Ketentuannya ada di kebijakan perusahaan.

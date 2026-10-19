@@ -49,6 +49,19 @@ Berlaku untuk seluruh unit alat berat dan kendaraan pendukung di site, mencakup 
 | Physical Availability (PA) | Sesuai target kontrak/perusahaan |
 | Backlog terselesaikan tepat waktu | ≥ 85% |
 
+## Catatan Penerapan
+
+Contoh SOP ini menjelaskan alur umum perawatan terjadwal. Interval service, jenis pekerjaan, dan suku cadang harus mengacu pada buku manual pabrikan (OMM) untuk tiap model unit.
+
+**Yang menentukan keberhasilan perawatan terjadwal**
+
+1. Jadwal yang dihormati: unit dilepas dari produksi pada waktu yang disepakati.
+2. Ketersediaan suku cadang dan bahan sebelum service dimulai.
+3. Pencatatan hasil service dan temuan tambahan sebagai backlog.
+4. Verifikasi setelah pekerjaan selesai sebelum unit kembali beroperasi.
+
+Konsep periodic service dan backlog dibahas di artikel [perawatan alat berat: PM dan backlog](/artikel/perawatan-alat-berat-pm-backlog/).
+
 ## 8. Referensi
 - Operation & Maintenance Manual (OMM) pabrikan unit
 - Kepmen ESDM No. 1827 K/30/MEM/2018

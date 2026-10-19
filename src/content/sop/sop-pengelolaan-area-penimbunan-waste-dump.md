@@ -50,6 +50,19 @@ Berlaku untuk seluruh aktivitas pembentukan jenjang timbunan (dump lift), pemada
 
 Potensi bahaya utama: longsoran global akibat lift terlalu tinggi/lereng terlalu terjal, dan pencemaran air larian jika sistem drainase tidak berfungsi.
 
+## Catatan Penerapan
+
+Pengelolaan waste dump sangat bergantung pada kondisi tanah dasar, curah hujan, dan tinggi timbunan. Contoh SOP ini perlu dilengkapi hasil kajian geoteknik dan rencana tambang di lokasi Anda.
+
+**Hal yang perlu diperhatikan**
+
+1. Kondisi tanah dasar sebelum penimbunan dimulai.
+2. Drainase supaya air tidak menggenang di badan atau kaki timbunan.
+3. Pemantauan retakan, penurunan, dan pergerakan setelah hujan lebat.
+4. Pemisahan material sesuai rencana, termasuk material yang berpotensi menimbulkan air asam tambang.
+
+Pengelolaan lingkungan terkait ketentuan perundangan yang berlaku, seperti baku mutu air limbah, harus ditangani bersama bagian lingkungan.
+
 ## 8. Referensi
 - UU No. 3 Tahun 2020 tentang Minerba
 - Kepmen ESDM No. 1827 K/30/MEM/2018

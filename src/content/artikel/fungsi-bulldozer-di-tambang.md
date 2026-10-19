@@ -2,6 +2,7 @@
 title: 'Fungsi Bulldozer di Tambang: Dozing, Ripping, dan Pekerjaan Pendukung'
 description: 'Peran bulldozer di tambang terbuka: land clearing, dozing, ripping batuan keras, perapian disposal, dan tips menghitung produktivitas dozer.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: alat-berat
 tags: ['bulldozer', 'ripping', 'dozing', 'disposal', 'alat berat']
 ---
@@ -75,3 +76,40 @@ Komponen paling mahal di bulldozer adalah undercarriage. Keausannya dipercepat o
 - kecepatan mundur tinggi yang tidak perlu.
 
 Inspeksi harian sebelum operasi atau P2H membantu mendeteksi masalah lebih awal. Baca juga [P2H: inspeksi alat sebelum dipakai](/artikel/p2h-inspeksi-alat-sebelum-dipakai/).
+
+## Contoh hitungan: berapa lama dozer meratakan disposal
+
+Misalkan sebuah dozer memiliki produktivitas dozing 180 lcm per jam pada jarak dorong tertentu, dan area disposal yang harus dirapikan setiap hari menerima 9.000 lcm material dari truk.
+
+```
+Waktu = 9.000 / 180 = 50 jam dozer per hari
+```
+
+Satu dozer hanya bekerja sekitar 20 jam per hari pada dua shift, jadi dibutuhkan sekitar dua sampai tiga dozer di disposal itu, bergantung pada jam efektif. Angka ini ilustrasi. Hitungan nyata memakai produktivitas dari data lapangan dan jam efektif yang realistis.
+
+## Kapan dozer menjadi hambatan produksi
+
+| Gejala | Kemungkinan penyebab | Tindakan |
+| --- | --- | --- |
+| Truk antre di disposal | Dozer kurang atau sedang rusak | Tambah dozer, atur titik tumpahan truk |
+| Jalan angkut bergelombang | Dozer dan grader tidak cukup merawat jalan | Atur ulang prioritas perawatan jalan |
+| Front gali becek | Dozer tidak sempat membersihkan dan membuat drainase | Sisihkan dozer khusus penyiapan front |
+| Ban truk cepat rusak | Permukaan disposal atau front kasar dan tajam | Rapikan permukaan sebelum truk masuk |
+
+## Pertanyaan yang sering diajukan
+
+### Apa bedanya dozer track dan dozer wheel?
+
+Dozer track memakai roda rantai, sehingga lebih kuat di permukaan lunak dan tanjakan. Dozer wheel lebih cepat berpindah tempat dan cocok di permukaan keras, tetapi cengkeramannya lebih rendah di tanah lunak.
+
+### Apa itu ripper?
+
+Ripper adalah gigi besar di belakang dozer yang dipakai membongkar batuan lapuk atau keras tanpa peledakan, sehingga material bisa digali alat gali.
+
+### Kapan dipilih ripping dan kapan blasting?
+
+Jika batuan cukup lunak sampai sedang dan bisa dibongkar ripper secara ekonomis, ripping lebih sederhana. Untuk batuan yang lebih keras, peledakan umumnya lebih efisien. Keputusannya berdasarkan uji coba dan perhitungan biaya.
+
+### Mengapa operator dozer harus memahami kontur lahan?
+
+Karena pekerjaannya membentuk permukaan. Kesalahan kemiringan di disposal atau jalan bisa menimbulkan genangan atau lereng yang tidak stabil.

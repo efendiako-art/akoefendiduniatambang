@@ -2,6 +2,7 @@
 title: 'Cara Menganalisa Loss Produksi Tambang: Dari Jam Hilang ke Angka Rupiah'
 description: 'Langkah praktis menganalisa kehilangan produksi tambang: memecah loss ke availability, utilisasi, dan produktivitas, lalu menghitung dampaknya dan menentukan prioritas.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: operasi-produksi
 tags: ['loss produksi', 'analisa produksi', 'KPI', 'losstime']
 ---
@@ -88,3 +89,42 @@ Contohnya: "Tambah 1 unit truk di fleet 3 mulai minggu depan, PIC supervisor dis
 Analisa ini hanya sebaik data jam yang dicatat. Kode delay yang tidak konsisten, jam breakdown yang tercatat sebagai standby, atau timesheet yang diisi di akhir shift dari ingatan, semuanya membuat kesimpulan jadi salah arah. Investasi terbaik sebelum analisa adalah merapikan pencatatan di sumbernya.
 
 Untuk menghitung KPI per alat dengan cepat, gunakan [kalkulator KPI alat](/alat/kpi-alat/).
+
+## Contoh: dua fleet dengan selisih sama, penyebab berbeda
+
+Bayangkan dua fleet sama-sama kehilangan 20.000 bcm dari rencana bulan ini. Setelah loss dipecah, hasilnya berbeda (angka ilustrasi):
+
+| Sumber loss | Fleet A (bcm) | Fleet B (bcm) |
+| --- | --- | --- |
+| Loss karena PA | 12.000 | 2.000 |
+| Loss karena UA | 5.000 | 15.000 |
+| Loss karena produktivitas | 3.000 | 3.000 |
+| **Total** | **20.000** | **20.000** |
+
+Totalnya sama, tetapi tindakannya bertolak belakang. Fleet A kehilangan produksi karena alatnya sering tidak siap, jadi fokusnya ke maintenance: kepatuhan periodic service, backlog, dan ketersediaan suku cadang. Fleet B alatnya sehat tetapi banyak menganggur, jadi fokusnya ke operasi: jumlah truk, kesiapan front, dan disiplin pergantian shift. Kalau hanya melihat total, bantuan bisa dikirim ke tempat yang salah.
+
+## Daftar periksa sebelum analisa dimulai
+
+1. Jam tiap alat sudah dibagi ke working, repair, dan standby, dan jumlahnya sama dengan jam kalender.
+2. Kode delay konsisten, dan satu kejadian hanya punya satu penyebab utama.
+3. Produksi dari dispatch atau ritase sudah direkonsiliasi dengan survei terakhir.
+4. Rencana memakai asumsi yang sama dengan rencana bulanan dan kontrak.
+5. Kejadian luar biasa seperti banjir, longsor, atau akses terblokir ditandai terpisah supaya tidak mengaburkan tren.
+
+## Pertanyaan yang sering diajukan
+
+### Kenapa urutan penggantian faktor memengaruhi hasil?
+
+Karena PA, UA, dan produktivitas saling dikalikan, selisih gabungannya tidak bisa dipisahkan dengan sempurna. Selisih kecil yang muncul akibat interaksi antarfaktor akan dibagi berbeda jika urutannya diubah. Pilih satu urutan baku, misalnya PA, UA, lalu produktivitas, dan pakai terus agar perbandingan antarbulan adil.
+
+### Hujan masuk ke PA atau UA?
+
+Alat yang sehat tetapi tidak bisa bekerja karena hujan dicatat sebagai standby, jadi memengaruhi UA, bukan PA. Alat yang rusak karena terendam banjir baru masuk repair dan memengaruhi PA.
+
+### Seberapa sering analisa dilakukan?
+
+Ringkasan harian atau per shift berguna untuk koreksi cepat. Analisa mingguan dipakai untuk tindakan yang lebih besar, misalnya penambahan truk atau perbaikan jalan. Analisa bulanan dipakai untuk laporan manajemen dan melihat tren.
+
+### Bagaimana jika data dispatch dan timesheet berbeda?
+
+Tetapkan satu sumber sebagai acuan resmi, lalu telusuri penyebab selisihnya. Selisih yang berulang biasanya menunjuk masalah di proses pencatatan, bukan di lapangan.

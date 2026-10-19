@@ -2,6 +2,7 @@
 title: 'Kepala Teknik Tambang (KTT): Tugas, Tanggung Jawab, dan Syaratnya'
 description: 'Siapa Kepala Teknik Tambang (KTT), tugas dan tanggung jawabnya dalam keselamatan dan kaidah teknik pertambangan yang baik, serta hubungannya dengan pengawas operasional dan kontraktor.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: karier-regulasi
 tags: ['KTT', 'Kepala Teknik Tambang', 'regulasi', 'kaidah teknik pertambangan']
 ---
@@ -51,3 +52,32 @@ Salah satu wewenang penting KTT adalah menghentikan sebagian atau seluruh kegiat
 Jalur menuju KTT biasanya panjang: pengalaman lapangan bertahun-tahun, jenjang pengawas dari POP sampai POU, pemahaman regulasi yang kuat, serta kemampuan memimpin organisasi. Yang membedakan KTT yang dihormati bukan hanya pengetahuan teknisnya, tetapi konsistensinya dalam menegakkan keselamatan bahkan ketika target produksi sedang tertekan.
 
 Ketentuan resmi dapat berubah, jadi selalu rujuk dokumen regulasi terbaru dari Kementerian ESDM.
+
+## Contoh keputusan harian seorang KTT
+
+KTT jarang terlihat dalam pekerjaan lapangan yang rutin, tetapi keputusannya menentukan. Contohnya:
+
+| Situasi | Tindakan KTT |
+| --- | --- |
+| Retakan muncul di crest lereng setelah hujan deras | Menghentikan pekerjaan di area terdampak, meminta kajian geoteknik, menentukan kapan kerja boleh dilanjutkan |
+| Kontraktor meminta menambah target produksi dengan menaikkan intensitas kerja | Menilai dampak keselamatan, kondisi jalan, dan kemampuan pengawasan sebelum menyetujui |
+| Laporan near miss berulang di satu area | Memerintahkan investigasi dan tindakan perbaikan |
+| Rencana tambang tahunan akan diajukan | Memastikan rencana sesuai kaidah teknik dan peraturan |
+
+## Pertanyaan yang sering diajukan
+
+### Apakah KTT sama dengan manajer tambang?
+
+Tidak selalu. KTT adalah penanggung jawab teknis dan keselamatan menurut peraturan. Manajer operasi bisa jabatan struktural yang berbeda. Dalam beberapa organisasi, peran dirangkap oleh orang yang sama jika memenuhi syarat.
+
+### Apakah KTT boleh menghentikan produksi?
+
+Ya, KTT berwenang menghentikan pekerjaan jika dinilai membahayakan keselamatan atau melanggar kaidah teknik pertambangan yang baik.
+
+### Apakah ada KTT untuk kontraktor?
+
+Tanggung jawab teknis utama berada pada KTT pemegang izin. Kontraktor memiliki penanggung jawab operasional sendiri yang bekerja di bawah koordinasinya, sesuai peraturan.
+
+### Bagaimana mempersiapkan diri menjadi KTT?
+
+Bangun pengalaman operasional yang luas, lengkapi sertifikasi pengawas, pahami peraturan secara mendalam, dan latih kemampuan mengambil keputusan di bawah tekanan.

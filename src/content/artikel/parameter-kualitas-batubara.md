@@ -2,6 +2,7 @@
 title: 'Parameter Kualitas Batubara: Kalori, Total Moisture, Abu, dan Sulfur'
 description: 'Arti parameter kualitas batubara (TM, IM, ash, VM, FC, TS, CV, HGI) dan basis analisa AR, ADB, DB, DAF, serta pengaruhnya pada harga jual.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: geologi-eksplorasi
 tags: ['kualitas batubara', 'kalori', 'GAR', 'total moisture', 'analisa batubara']
 ---
@@ -61,3 +62,51 @@ Langkah sederhana seperti membersihkan permukaan seam dengan baik, menggali deng
 Kualitas dikendalikan lewat pengambilan sampel di beberapa titik: dari inti bor saat eksplorasi, dari muka seam sebelum digali, di ROM stockpile, sampai saat pemuatan ke tongkang. Data ini dipakai untuk mencampur (blending) batubara dari beberapa seam supaya hasilnya sesuai spesifikasi kontrak penjualan.
 
 Asal-usul perbedaan kualitas antar seam dijelaskan di artikel [proses terbentuknya batubara](/artikel/proses-terbentuknya-batubara/).
+
+## Contoh membaca sertifikat analisa
+
+Cuplikan berikut hanya contoh (angka ilustrasi) untuk melatih cara membaca laporan laboratorium:
+
+| Parameter | Basis | Hasil |
+| --- | --- | --- |
+| Total Moisture | ar | 34,0% |
+| Inherent Moisture | adb | 15,5% |
+| Ash | adb | 4,2% |
+| Volatile Matter | adb | 40,0% |
+| Fixed Carbon | adb | 40,3% |
+| Total Sulfur | adb | 0,35% |
+| Calorific Value | gar | 3.900 kkal/kg |
+| Calorific Value | adb | 5.100 kkal/kg |
+
+Perhatikan bahwa kalori adb jauh lebih tinggi daripada gar. Itu bukan kesalahan, melainkan akibat perbedaan basis kelembaban. Pembeli dan penjual harus sepakat basis mana yang dipakai di kontrak.
+
+## Kapan penalti dan bonus muncul
+
+Kontrak penjualan biasanya menentukan batas penerimaan setiap parameter. Pola umum:
+
+| Parameter | Kecenderungan | Alasan |
+| --- | --- | --- |
+| Kalori | Lebih tinggi lebih baik | Energi per kg lebih besar |
+| Total moisture | Lebih rendah lebih baik | Moisture mengurangi kalori efektif dan menambah ongkos angkut |
+| Abu | Lebih rendah lebih baik | Mengurangi kalori dan menambah limbah |
+| Sulfur | Lebih rendah lebih baik | Terkait emisi dan korosi |
+
+Rentang pasti dan skema penalti berbeda antar kontrak.
+
+## Pertanyaan yang sering diajukan
+
+### Kenapa kalori hasil lab dan kalori yang saya terima berbeda?
+
+Mungkin basisnya berbeda (adb, gar, dsb.), kadar moisture berubah selama penyimpanan dan pengangkutan, atau sampelnya tidak mewakili seluruh muatan.
+
+### Apa bedanya lab internal dan surveyor independen?
+
+Lab internal dipakai untuk kontrol operasional. Surveyor independen dipakai sebagai pihak netral untuk analisa yang menjadi dasar pembayaran, sesuai kesepakatan di kontrak.
+
+### Bagaimana tim tambang menjaga kualitas?
+
+Dengan memisahkan batubara berkualitas berbeda, menghindari kontaminasi dari lapisan atas atau bawah saat penggalian, dan melakukan blending terencana.
+
+### Apa itu HGI?
+
+HGI (Hardgrove Grindability Index) menunjukkan seberapa mudah batubara digiling. Nilai ini penting bagi pembangkit yang memakai pulverizer.

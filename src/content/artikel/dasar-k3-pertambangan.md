@@ -2,6 +2,7 @@
 title: 'Dasar K3 Pertambangan untuk Pekerja Baru'
 description: 'Hal-hal dasar keselamatan dan kesehatan kerja (K3) di tambang yang wajib dipahami pekerja baru: aturan, bahaya utama, induksi, briefing, dan hak menolak pekerjaan tidak aman.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: k3-tambang
 tags: ['K3', 'keselamatan tambang', 'induksi', 'SMKP', 'pekerja baru']
 ---
@@ -53,3 +54,31 @@ Setiap pekerja berhak, bahkan wajib, menghentikan pekerjaan jika menilai kondisi
 ## Pegangan sederhana untuk pekerja baru
 
 Kalau ragu, tanya. Kalau belum dilatih, jangan coba sendiri. Kalau terlihat berbahaya, berhenti dan laporkan. Tiga kebiasaan ini sederhana, tapi sudah menyelamatkan banyak orang di tambang.
+
+## Contoh situasi: apa yang dilakukan pekerja baru
+
+Pengetahuan K3 baru berguna kalau bisa dipakai. Tiga situasi berikut sering dialami pekerja baru:
+
+| Situasi | Tindakan yang tepat | Yang sebaiknya dihindari |
+| --- | --- | --- |
+| Diminta masuk area yang belum pernah diinduksi | Berhenti, tanyakan izin dan syarat masuk ke pengawas | Ikut saja karena sungkan |
+| Melihat kabel terkelupas di workshop | Jauhi, beri tanda, lapor ke pengawas atau K3 | Menganggap itu urusan orang lain |
+| Hampir terpeleset di tangga unit, tidak ada cedera | Laporkan sebagai near miss agar tangga diperbaiki | Diam karena tidak ada yang luka |
+
+## Pertanyaan yang sering diajukan
+
+### Apakah induksi K3 hanya sekali?
+
+Induksi awal wajib sebelum bekerja, tetapi pembelajaran K3 berlanjut lewat briefing harian, pelatihan penyegaran, dan induksi ulang saat pindah area atau ada perubahan bahaya.
+
+### Apa itu near miss dan kenapa harus dilaporkan?
+
+Near miss adalah kejadian yang hampir menyebabkan cedera atau kerusakan tetapi tidak jadi. Kejadian ini adalah peringatan gratis. Dengan melaporkannya, perbaikan bisa dilakukan sebelum ada korban.
+
+### Bolehkah pekerja baru menolak pekerjaan?
+
+Pekerja berhak menghentikan pekerjaan yang menurut penilaiannya tidak aman dan melaporkannya ke pengawas. Aturan teknisnya mengikuti kebijakan perusahaan, tetapi prinsipnya sama: keselamatan didahulukan.
+
+### Bagaimana jika saya salah paham aturan?
+
+Bertanya tidak pernah dianggap bodoh. Pengawas lebih menghargai pekerja yang bertanya daripada yang menebak.

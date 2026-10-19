@@ -2,6 +2,7 @@
 title: 'Owner dan Kontraktor Tambang: Pembagian Peran dan Cara Kerja Kontrak Jasa'
 description: 'Perbedaan perusahaan pemilik izin tambang (owner) dan kontraktor jasa pertambangan, model kontrak berbasis tarif per bcm dan per ton, KPI kontrak, serta proses tender.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: karier-regulasi
 tags: ['kontraktor tambang', 'owner', 'jasa pertambangan', 'tender', 'IUJP']
 ---
@@ -66,3 +67,44 @@ Perhitungan kebutuhan armada dalam dokumen teknis sangat menentukan apakah tarif
 ## Hubungan yang sehat
 
 Owner dan kontraktor punya kepentingan yang tidak selalu sama. Owner ingin biaya serendah mungkin dan produksi sesuai rencana; kontraktor ingin margin yang sehat dan rencana yang realistis. Hubungan terbaik terbentuk ketika keduanya berbagi data secara terbuka, membahas masalah di lapangan bersama, dan memandang keselamatan sebagai tanggung jawab bersama, bukan urusan satu pihak.
+
+## Contoh perhitungan sederhana tagihan kontraktor
+
+Misalkan kontrak pengupasan overburden memakai tarif Rp28.000 per bcm, dengan volume hasil survei bulan itu 300.000 bcm.
+
+```
+Tagihan = 300.000 × Rp28.000 = Rp8.400.000.000
+```
+
+Angka ini ilustrasi. Pada kontrak nyata biasanya ada penyesuaian, misalnya formula kenaikan BBM, bonus atau penalti KPI, dan potongan tertentu. Perhatikan bahwa volume yang ditagih adalah volume hasil survei bersama, bukan ritase yang dihitung sepihak.
+
+## Siapa menanggung apa
+
+| Hal | Umumnya ditanggung |
+| --- | --- |
+| Izin usaha pertambangan | Owner |
+| Penyediaan alat dan operator | Kontraktor |
+| BBM | Bergantung kontrak, bisa owner atau kontraktor |
+| Rencana tambang dan target | Owner, dibahas bersama |
+| Keselamatan di wilayah kerja kontraktor | Kontraktor, di bawah tanggung jawab KTT owner |
+| Reklamasi | Pemegang izin, pelaksanaannya bisa dikontrakkan |
+
+Pembagian di atas gambaran umum. Detailnya ada di kontrak masing-masing.
+
+## Pertanyaan yang sering diajukan
+
+### Mana yang lebih baik dikerjakan sendiri atau dikontrakkan?
+
+Tidak ada jawaban tunggal. Mengerjakan sendiri memberi kendali lebih tetapi menuntut modal alat dan organisasi. Mengontrakkan mengurangi beban modal dan memberi fleksibilitas, tetapi bergantung pada kinerja kontraktor.
+
+### Apa itu survei bersama?
+
+Survei topografi yang dilakukan atau disaksikan kedua pihak untuk menghitung volume pekerjaan. Hasilnya menjadi dasar penagihan.
+
+### Mengapa kontrak sering memakai KPI?
+
+Agar kualitas kerja terukur, bukan hanya volume. KPI umum meliputi ketersediaan alat, keselamatan, dan kepatuhan jadwal.
+
+### Siapa yang bertanggung jawab jika terjadi kecelakaan di area kontraktor?
+
+Keduanya memiliki tanggung jawab sesuai peran. Dalam kerangka peraturan, KTT dan pengawas operasional memegang tanggung jawab teknis di wilayah izin.

@@ -49,6 +49,18 @@ Berlaku untuk seluruh kegiatan rutin dan non-rutin, perubahan proses/peralatan, 
 | IBPR ditinjau sesuai jadwal | 100% |
 | Tindakan pengendalian selesai tepat waktu | ≥ 90% |
 
+## Catatan Penerapan
+
+SOP IBPR efektif hanya jika dijalankan oleh orang yang paham pekerjaannya. Dokumen contoh ini memberi kerangka, sedangkan isi penilaian harus berasal dari kondisi nyata di lokasi.
+
+**Kesalahan yang sering terjadi**
+
+- IBPR dibuat sekali lalu disimpan tanpa ditinjau saat pekerjaan atau area berubah.
+- Pengendalian yang ditulis hanya APD dan "hati-hati", tanpa pengendalian yang lebih kuat.
+- Penilaian dilakukan sendirian oleh staf K3 tanpa melibatkan pelaksana pekerjaan.
+
+Penjelasan langkah dan hirarki pengendalian ada di artikel [IBPR dan hirarki pengendalian risiko](/artikel/ibpr-dan-hirarki-pengendalian-risiko/).
+
 ## 8. Referensi
 - PP No. 50 Tahun 2012 tentang SMK3
 - Permen ESDM No. 26 Tahun 2018

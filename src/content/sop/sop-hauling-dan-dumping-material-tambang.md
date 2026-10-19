@@ -51,6 +51,19 @@ Berlaku untuk seluruh unit dump truck/articulated dump truck yang mengangkut bij
 
 Potensi bahaya utama: unit terbalik/longsor di tepi dumping, longsoran material timbunan, dan tertimpa material saat vessel diturunkan tidak sempurna.
 
+## Catatan Penerapan
+
+Contoh SOP ini menggambarkan alur umum pengangkutan dan penimbunan. Kecepatan maksimum, jarak aman, dan aturan spesifik lain perlu disesuaikan dengan kondisi jalan, jenis unit, dan hasil IBPR di lokasi.
+
+**Titik rawan yang sebaiknya dinilai tersendiri**
+
+1. Persimpangan dan tikungan dengan jarak pandang terbatas.
+2. Area tumpahan (dumping point) dan risiko unit tergelincir ke tepi.
+3. Jalan saat hujan atau malam hari.
+4. Interaksi antara unit besar dan kendaraan ringan.
+
+Standar geometri jalan dijelaskan lebih jauh di artikel [standar jalan angkut tambang](/artikel/standar-jalan-angkut-tambang/).
+
 ## 8. Referensi
 - Kepmen ESDM No. 1827 K/30/MEM/2018 (Kaidah Teknik Pertambangan yang Baik)
 - UU No. 3 Tahun 2020 tentang Minerba

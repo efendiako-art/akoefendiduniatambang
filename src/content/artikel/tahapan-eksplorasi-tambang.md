@@ -2,6 +2,7 @@
 title: 'Tahapan Eksplorasi Tambang: Survei Tinjau sampai Eksplorasi Rinci'
 description: 'Urutan kegiatan eksplorasi pertambangan: survei tinjau, prospeksi, eksplorasi umum, eksplorasi rinci, hingga studi kelayakan, beserta metode yang dipakai di setiap tahap.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: geologi-eksplorasi
 tags: ['eksplorasi', 'geologi', 'pemboran', 'studi kelayakan']
 ---
@@ -65,3 +66,35 @@ Studi kelayakan menyatukan semuanya: desain tambang, jadwal produksi, kebutuhan 
 ## Kenapa orang produksi perlu paham eksplorasi
 
 Model geologi yang dipakai untuk rencana tambang berasal dari tahap-tahap ini. Ketika di lapangan seam ternyata lebih tipis, bergeser, atau tiba-tiba hilang, penyebabnya sering kali adalah titik bor yang terlalu jarang di area itu. Diskusi yang baik antara tim geologi dan tim produksi, termasuk melaporkan temuan lapangan yang berbeda dari model, membuat rencana jangka pendek jauh lebih akurat.
+
+## Contoh perjalanan sebuah prospek
+
+Berikut gambaran bagaimana prospek bergerak lewat tahapan (jumlah dan biaya ilustrasi):
+
+| Tahap | Kegiatan | Keputusan di akhir tahap |
+| --- | --- | --- |
+| Survei tinjau | Studi peta, citra, dan kunjungan lapangan | Apakah ada indikasi cukup untuk dilanjutkan? |
+| Prospeksi | Pemetaan geologi, singkapan, parit uji | Apakah ada lapisan batubara yang menjanjikan? |
+| Eksplorasi umum | Pemboran jarak lebar, estimasi awal | Apakah potensi cukup besar? |
+| Eksplorasi rinci | Pemboran rapat, logging, sampel | Apakah sumberdaya cukup yakin untuk dikaji kelayakan? |
+| Studi kelayakan | Kajian teknis, ekonomi, lingkungan | Dikembangkan atau dihentikan? |
+
+Banyak prospek berhenti di tengah jalan karena hasilnya tidak mendukung. Itu normal. Eksplorasi memang mengurangi ketidakpastian sebelum investasi besar dikeluarkan.
+
+## Pertanyaan yang sering diajukan
+
+### Berapa lama eksplorasi berlangsung?
+
+Bervariasi, dari beberapa bulan sampai beberapa tahun, tergantung luas area, kondisi medan, cuaca, dan ketersediaan dana.
+
+### Siapa saja yang terlibat?
+
+Geolog, teknisi geologi, surveyor, tim pemboran, analis laboratorium, dan sering kali engineer perencana tambang pada tahap lanjut.
+
+### Mengapa titik bor makin rapat di tahap lanjut?
+
+Karena semakin rapat data, semakin tinggi keyakinan geologi, dan estimasi sumberdaya bisa naik kategori dari tereka ke tertunjuk atau terukur.
+
+### Apakah eksplorasi boleh dilakukan tanpa izin?
+
+Tidak. Kegiatan eksplorasi harus dilakukan berdasarkan izin yang berlaku, sesuai peraturan.

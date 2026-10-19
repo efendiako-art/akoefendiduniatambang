@@ -2,6 +2,7 @@
 title: 'Perawatan Alat Berat Tambang: Periodic Service, Backlog, dan MTBF'
 description: 'Dasar manajemen perawatan alat berat tambang: jenis maintenance, periodic service, pengelolaan backlog, serta indikator MTBF dan MTTR.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: alat-berat
 tags: ['maintenance', 'periodic service', 'backlog', 'MTBF', 'MTTR']
 ---
@@ -68,3 +69,45 @@ Hubungannya dengan MA cukup langsung. Semakin tinggi MTBF dan semakin rendah MTT
 Operator adalah orang pertama yang tahu kalau alat mulai tidak normal: bunyi aneh, tenaga berkurang, suhu naik. P2H yang diisi dengan jujur dan laporan gejala sejak awal bisa mencegah kerusakan besar. Budaya "jalan terus selama masih bisa jalan" adalah salah satu penyebab biaya perawatan membengkak.
 
 Komunikasi yang baik antara tim produksi dan tim maintenance juga menentukan. Produksi butuh alat sebanyak mungkin hari ini; maintenance butuh waktu supaya alat tetap sehat bulan depan. Jadwal perawatan yang disepakati bersama di awal minggu adalah jalan tengah yang paling sehat.
+
+## Contoh: mengelola backlog dengan prioritas
+
+Backlog yang dibiarkan menumpuk akhirnya menjadi kerusakan besar. Cara sederhana mengelolanya adalah memberi prioritas:
+
+| Prioritas | Contoh pekerjaan | Batas waktu umum |
+| --- | --- | --- |
+| 1 (kritis) | Rem, kemudi, sistem keselamatan | Segera, unit tidak dioperasikan |
+| 2 (penting) | Kebocoran oli, bunyi tidak normal | Dalam beberapa hari atau pada jadwal service terdekat |
+| 3 (biasa) | Kaca retak, jok sobek | Dijadwalkan bersama pekerjaan lain |
+| 4 (kosmetik) | Cat, stiker | Saat ada waktu |
+
+Batas waktu pastinya ditentukan kebijakan perusahaan. Yang penting, tiap temuan punya prioritas, penanggung jawab, dan target selesai.
+
+## Contoh menghitung MTBF dan MTTR
+
+Sebuah unit bekerja 600 jam dalam sebulan dan mengalami 4 kali kerusakan dengan total waktu perbaikan 48 jam.
+
+```
+MTBF = 600 / 4 = 150 jam
+MTTR = 48 / 4 = 12 jam
+```
+
+MTBF 150 jam berarti rata-rata unit bekerja 150 jam di antara dua kerusakan. MTTR 12 jam berarti rata-rata satu kerusakan diperbaiki dalam 12 jam. MTBF naik dan MTTR turun adalah arah yang diinginkan.
+
+## Pertanyaan yang sering diajukan
+
+### Apa bedanya preventive dan predictive maintenance?
+
+Preventive dilakukan berdasarkan jadwal tetap, misalnya setiap 250 jam. Predictive dilakukan berdasarkan kondisi aktual, misalnya hasil uji oli atau pemantauan getaran.
+
+### Kenapa periodic service tidak boleh ditunda?
+
+Penundaan membuat oli dan filter bekerja melewati batas, sehingga keausan meningkat. Biaya perbaikan akibat menunda biasanya jauh lebih besar daripada waktu service.
+
+### Apa itu uji oli (oil sampling)?
+
+Sampel oli dikirim ke laboratorium untuk mengetahui kandungan logam aus dan kontaminan. Hasilnya memberi sinyal awal kerusakan komponen sebelum terjadi.
+
+### Apakah operator terlibat dalam perawatan?
+
+Ya. Operator adalah orang pertama yang merasakan perubahan suara, getaran, dan performa. Laporan operator lewat P2H dan komunikasi langsung sangat berharga.

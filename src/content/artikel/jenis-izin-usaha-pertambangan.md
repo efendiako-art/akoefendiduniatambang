@@ -2,6 +2,7 @@
 title: 'Jenis Izin Usaha Pertambangan Menurut UU Minerba: IUP, IUPK, IPR, sampai IUJP'
 description: 'Ringkasan jenis perizinan berusaha di sektor pertambangan mineral dan batubara menurut UU Nomor 3 Tahun 2020: IUP, IUPK, IPR, SIPB, izin penugasan, IUJP, dan lainnya.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: karier-regulasi
 tags: ['IUP', 'IUPK', 'IPR', 'IUJP', 'UU Minerba', 'regulasi']
 ---
@@ -52,3 +53,37 @@ Pemegang izin tidak hanya mendapat hak menambang, tetapi juga memikul kewajiban,
 ## Catatan penting
 
 Aturan pelaksana UU Minerba diatur lebih lanjut dalam peraturan pemerintah dan peraturan menteri, dan dapat berubah dari waktu ke waktu. Kewenangan pemberian izin juga mengalami perubahan antara pemerintah pusat dan daerah. Untuk keperluan resmi, selalu rujuk teks regulasi terbaru dari situs JDIH Kementerian ESDM atau konsultasikan dengan ahli hukum pertambangan.
+
+## Cara cepat memilih izin yang tepat
+
+Tabel berikut memberi gambaran umum untuk pembaca awam. Syarat rinci selalu mengikuti peraturan yang berlaku dan penjelasan dari instansi berwenang.
+
+| Kegiatan | Jenis izin yang relevan |
+| --- | --- |
+| Mencari dan memastikan cadangan, belum berproduksi | Tahap eksplorasi pada IUP |
+| Menambang, mengolah, mengangkut, dan menjual | Tahap operasi produksi pada IUP |
+| Usaha pertambangan rakyat dalam wilayah tertentu | IPR |
+| Menjual hasil tambang yang diperoleh dari izin tertentu | Izin terkait pengangkutan dan penjualan |
+| Memberikan jasa, seperti pengupasan, hauling, atau pemboran | IUJP |
+
+## Contoh alur sederhana: dari wilayah ke produksi
+
+1. Wilayah ditetapkan dan izin tahap eksplorasi diberikan.
+2. Pemegang izin melakukan eksplorasi dan menghasilkan data sumberdaya dan cadangan.
+3. Studi kelayakan, dokumen lingkungan, dan persyaratan lain disusun.
+4. Setelah persyaratan terpenuhi, izin tahap operasi produksi dapat diperoleh.
+5. Penambangan dilaksanakan bersama kewajiban lingkungan, reklamasi, pascatambang, dan pembayaran kepada negara.
+
+## Pertanyaan yang sering diajukan
+
+### Apa bedanya pemegang IUP dan kontraktor?
+
+Pemegang IUP adalah pemilik izin dan penanggung jawab utama atas kegiatan di wilayahnya. Kontraktor yang memiliki IUJP memberikan jasa berdasarkan kontrak dan tetap berada di bawah tanggung jawab pemegang izin sesuai ketentuan.
+
+### Apakah izin bisa dipindahtangankan?
+
+Pemindahan izin diatur ketat dalam peraturan dan memerlukan persetujuan. Karena aturannya dapat berubah, rujuk peraturan terbaru atau instansi yang berwenang sebelum mengambil keputusan bisnis.
+
+### Mengapa aturan perizinan sering berubah?
+
+Karena undang-undang dan peraturan turunannya diperbarui, dan sebagian kewenangan perizinan berpindah antar tingkat pemerintahan. Selalu periksa sumber resmi terbaru.

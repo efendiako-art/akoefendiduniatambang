@@ -2,6 +2,7 @@
 title: 'P2H: Pemeriksaan Alat dan Kendaraan Sebelum Dipakai'
 description: 'Apa itu P2H (pemeriksaan dan perawatan harian), item yang wajib dicek pada alat berat dan kendaraan tambang, serta cara mengisi P2H yang benar.'
 pubDate: 2026-10-05
+updatedDate: 2026-10-19
 category: k3-tambang
 tags: ['P2H', 'inspeksi', 'pre-start check', 'K3', 'alat berat']
 ---
@@ -64,3 +65,40 @@ Daftar pastinya berbeda untuk setiap jenis alat dan perusahaan, tapi secara umum
 Temuan P2H yang ditindaklanjuti dengan baik masuk ke daftar backlog maintenance dan dijadwalkan perbaikannya. Inilah cara paling murah mencegah breakdown. Penjelasan tentang pengelolaan backlog ada di artikel [perawatan alat berat](/artikel/perawatan-alat-berat-pm-backlog/).
 
 Bagi pengawas, kualitas P2H bisa dicek dengan sederhana: bandingkan formulir P2H dengan kondisi unit yang sebenarnya saat inspeksi mendadak. Jika jauh berbeda, itu tanda P2H sudah menjadi formalitas dan perlu dibenahi lewat pembinaan, bukan sekadar teguran.
+
+## Contoh pengisian P2H yang baik dan yang buruk
+
+| Aspek | P2H yang baik | P2H yang buruk |
+| --- | --- | --- |
+| Pengisian | Setelah benar-benar memeriksa tiap item | Mencentang semua "baik" tanpa memeriksa |
+| Temuan | Menulis temuan jelas, misalnya "oli rembes di sambungan hidrolik kiri" | Menulis "ada masalah" tanpa detail |
+| Tindak lanjut | Melapor ke pengawas dan menunggu keputusan | Mengabaikan dan tetap mengoperasikan |
+| Waktu | Dilakukan sebelum unit dipakai | Diisi di akhir shift |
+
+## Contoh temuan P2H dan tindakannya
+
+| Temuan | Tingkat tindakan |
+| --- | --- |
+| Lampu belakang mati satu | Perbaiki segera, unit tidak boleh operasi malam sebelum diperbaiki |
+| Rem tidak responsif | Unit dilarang beroperasi sampai diperbaiki |
+| Kaca spion retak | Perbaiki sesuai aturan perusahaan, hentikan jika mengganggu pandangan |
+| Oli mesin agak berkurang | Tambah sesuai prosedur dan catat, selidiki penyebabnya |
+| Ban kempis | Perbaiki sebelum operasi |
+
+## Pertanyaan yang sering diajukan
+
+### Siapa yang wajib melakukan P2H?
+
+Operator atau pengemudi unit yang akan dipakai. Pengawas atau mekanik biasanya memverifikasi dan menindaklanjuti temuan.
+
+### Berapa lama P2H dilakukan?
+
+Biasanya beberapa menit sampai belasan menit, tergantung jenis unit. Waktu ini kecil dibanding kerugian akibat kerusakan di tengah shift.
+
+### Apa yang dilakukan jika P2H menemukan kerusakan serius?
+
+Hentikan penggunaan, laporkan, dan tunggu keputusan pengawas atau mekanik. Jangan mengoperasikan unit yang tidak aman.
+
+### Apakah P2H pengganti periodic service?
+
+Bukan. P2H adalah pemeriksaan harian oleh operator, sedangkan periodic service adalah perawatan terjadwal berdasarkan jam pakai oleh mekanik.
