@@ -1,23 +1,173 @@
 ---
-title: 'Tutorial Deswik CAD - Cara Menghitung Volume Cut & Fill dengan Cepat'
-description: 'Cara Menghitung Volume Cut & fill Deswik CAd'
+title: 'Tutorial Deswik CAD - Cara Menghitung Volume Cut & Fill'
+description: 'Cara Menghitung dengan mudah dan cepat  Volume desain/design Cut & fill menggunakan software pertambangan Deswik Cad dengan dua kali Klik'
 pubDate: 2026-10-19
 category: tutorial-software-tambang
 subcategory: deswik-cad
-tags: []
+tags: ['#tambangpedia', '#belajar_software_pertambangan', '#Belajar_Deswik_Cad', '#cara menghitung volume dengan cepat', '#metode_perhitungan_Volume_Dengan_Cepat']
+image: '/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/sampul.webp'
+imageAlt: 'Tutorial Deswik CAD_Menghitung Volume Design Solid dengan Topografi'
 draft: true
 ---
 
-Bagaimaa caranya menghitung Cut & Fill melalui software Deswik Cad Dengan 2 singkat tampa menunggu lama
+# Perhitungan Volume Solid Deswik Cad
 
-## Subjudul pertama
+![Perhitungan Cut & Fill Deswik Cad](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/screenshot-2026-10-20-222646.webp)
 
-Isi bagian pertama.
+## Pendahuluan
 
-## Subjudul kedua
+Cut & Fill adalah istilah dalam teknik sipil dan pertambangan yang mengacu pada perhitungan volume tanah yang digali (cut) dan ditimbun (fill) dalam suatu proyek desain. Deswik CAD adalah perangkat lunak khusus yang digunakan untuk merancang operasi penambangan, termasuk perhitungan volume cut & fill secara presisi.
 
-Isi bagian kedua.
+***
+
+## Pengertian Cut & Fill
+
+### Apa itu Cut?
+
+Cut adalah volume material yang perlu digali atau dibuang dari permukaan asli tanah untuk mencapai desain final yang direncanakan. Cut terjadi ketika desain final berada di bawah kondisi ground asli.
+
+### Apa itu Fill?
+
+Fill adalah volume material yang perlu ditambahkan atau diisi ke area tertentu untuk mencapai elevasi desain yang direncanakan. Fill terjadi ketika desain final berada di atas kondisi ground asli.
+
+***
+
+## Langkah-Langkah Menghitung Volume Cut & Fill di Deswik CAD
+
+### 1\. Persiapan Data
+
+Sebelum memulai perhitungan, pastikan Anda memiliki:
+
+* Data Topografi (Solid )
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-3.webp)
+* Data Design ( Solid )
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-4.webp)
+* 
+
+### 2\. Import Data ke Deswik CAD
+
+* Buka Deswik CAD dan buat project baru
+* Pilih menu File → Import untuk memasukkan surface data asli (original ground surface) data ini bisa di ambil dari berbagai sumber software seperti surpac, vulcan, minescape dan software pertambangan lainnya, atau bisa juga langsung di drag dari data explorer di komputer.
+* Import design surface yang akan dianalisis
+    Setelah data sudah sudah tersedia, sudah bisa melangkah ke stip selanjutnya
+<br>
+
+### 3\. Mengakses Tools Cut & Fill
+
+Langkah-langkah mengakses fitur cut & fill:
+
+* masuk ke tools menu pada **SURVEY** seperti pada gambar berikut
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-5.webp)
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-6.webp)
+* Pilih sub menu drop down querry seperti pada gambar di bawah ini
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-7.webp)
+<br>
+* selanjutnya pilih menu surface cut and fill volumes seperti pada gambar di bawah ini
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-8.webp)
+<br>
+* Maka muncul jendela top up seperti pada gambar di bawah ini
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-9.webp)
+<br>
+* kemudian pilih Pick star surface ( dalam melakukan klik disini yang di klik adalah surfacenya atau topo solidnya seperti pada gambar di bawa. Jadi bebas di klik di area manapun selama masih di dalam area topo, tanda bahwa porses klik sudah berhasila dengan adanya code yang sudah tertera seperti di gambar kedua di bawah ini
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-10.webp)
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-11.webp)
+<br>
+* langkah selanjutnya sama dengan yang di atas yang dipilih adalah solid dari desain yang sebelumnya sudah di buat atau data solid desain yang ingin dihitung cut & fillnya seperti pada langakah sebelumnya
+* ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-12.webp)
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-13.webp)
+<br>
+* selanjutnya klik calculate, tunggu beberapa menu sampai jendela top up keluar sebagai hasil dari perhitungan volume tersebut
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-14.webp)
+<br>
+
+### 4\. Hasil Perhiutngan data
+
+Atur parameter berikut:
+
+* Klik Calculate atau Run Analysis
+* Software akan memproses perbedaan antara original surface dan design surface
+* Hasilnya akan menampilkan volume cut dan fill
+* hasil data hiutngan Cut & Fill
+<br>
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-15.webp)
+<br>
+* Cut volume ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-16.webp)
+<br>
+* fill volume ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-17.webp)
+<br>
+
+### 5\. Interpretasi Hasil
+
+Deswik CAD akan memberikan output:
+
+| Parameter | Penjelasan |
+| --------- | ---------- |
+| Total Cut Volume | Volume total material yang perlu digali (dalam m³) |
+| Total Fill Volume | Volume total material yang perlu ditambahkan (dalam m³) |
+| Balance | Selisih antara cut dan fill (positif = surplus, negatif = deficit) |
+| Cut-Fill Ratio | Perbandingan volume cut terhadap fill |
+
+***
+
+## Tips dan Best Practices
+
+### 1\. Validasi Data Input
+
+* Selalu verifikasi bahwa data survey akurat sebelum perhitungan
+* Pastikan unit measurement konsisten (meter atau feet)
+* Cek untuk outliers atau data yang tidak logis
+
+### 2\. Cross\-Check Hasil
+
+* Bandingkan hasil dengan perhitungan manual sederhana sebagai sanity check
+* Gunakan formula dasar: Volume ≈ (Area × Average Height)
+* Jika ada perbedaan signifikan, periksa kembali input data
+
+### 3\. Dokumentasi
+
+* Simpan screenshot hasil perhitungan
+* Catat parameter dan setting yang digunakan
+* Buat laporan tertulis dengan breakdown volume per zona jika diperlukan
+
+### 4\. Optimisasi Design
+
+* Jika cut-fill ratio tidak ideal (terlalu banyak cut atau fill), pertimbangkan adjust design
+* Tujuannya adalah mencapai keseimbangan optimal antara cut dan fill
+* Kurangi biaya transportasi material dengan meminimalkan borrow atau waste
+
+***
+
+## Troubleshooting Umum
+
+Masalah: Hasil perhitungan tidak muncul
+
+* Pastikan boundary sudah didefinisikan dengan benar
+* Verifikasi bahwa kedua surface valid dan tidak ada missing data
+
+Masalah: Angka volume terlihat tidak realistis
+
+* Periksa unit measurement (m³ vs km³)
+* Validasi akurasi survey data original surface
+* Cek apakah design surface sudah final dan benar
+
+Masalah: Software hang atau crash
+
+* Kurangi jumlah points dalam surface (simplify mesh jika terlalu padat)
+* Tutup program lain yang sedang berjalan
+* Update software ke versi terbaru
+
+***
 
 ## Kesimpulan
 
-Ringkas poin pentingnya.
+Perhitungan volume cut & fill di Deswik CAD adalah proses sistematis yang menghasilkan data presisi untuk perencanaan pertambangan . Dengan mengikuti langkah-langkah di atas dan melakukan validasi yang teliti, Anda dapat memastikan hasil perhitungan yang akurat dan dapat diandalkan untuk pengambilan keputusan proyek.
