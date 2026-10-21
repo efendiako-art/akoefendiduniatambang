@@ -2,6 +2,7 @@
 title: 'Tutorial Deswik CAD - Cara Menghitung Volume Cut & Fill'
 description: 'Cara Menghitung dengan mudah dan cepat  Volume desain/design Cut & fill menggunakan software pertambangan Deswik Cad dengan dua kali Klik'
 pubDate: 2026-10-19
+updatedDate: 2026-10-21
 category: tutorial-software-tambang
 subcategory: deswik-cad
 tags: ['#tambangpedia', '#belajar_software_pertambangan', '#Belajar_Deswik_Cad', '#cara menghitung volume dengan cepat', '#metode_perhitungan_Volume_Dengan_Cepat']
