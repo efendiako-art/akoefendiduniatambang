@@ -7,7 +7,8 @@ subcategory: deswik-cad
 tags: ['#tambangpedia', '#belajar_software_pertambangan', '#Belajar_Deswik_Cad', '#cara menghitung volume dengan cepat', '#metode_perhitungan_Volume_Dengan_Cepat']
 image: '/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/sampul.webp'
 imageAlt: 'Tutorial Deswik CAD_Menghitung Volume Design Solid dengan Topografi'
-draft: true
+featured: true
+draft: false
 ---
 
 # Perhitungan Volume Solid Deswik Cad
