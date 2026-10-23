@@ -1,61 +1,70 @@
 ---
-title: 'Compactor dan Pemadatan Tanah di Tambang: Fungsi, Jenis, dan Cara Kerjanya'
-description: 'Penjelasan compactor (vibratory roller) di tambang: kenapa timbunan dan jalan harus dipadatkan, jenis drum halus dan padfoot, tebal lapisan, kadar air, jumlah lintasan, dan keselamatan di lereng.'
+title: 'Apa Itu Compactor : Fungsi, Jenis, dan Cara Kerjanya'
+description: 'Penjelasan compactor di area tambang: kenapa timbunan dan jalan harus dipadatkan, jenis drum halus dan padfoot, tebal lapisan, kadar air, jumlah lintasan dst'
 pubDate: 2026-10-19
+updatedDate: 2026-10-22
 category: alat-berat
-tags: ['compactor', 'vibratory roller', 'pemadatan', 'timbunan', 'alat berat']
+tags: [compactor, 'vibratory roller', pemadatan, timbunan, 'alat berat']
+image: '/images/artikel/compactor-pemadatan-tanah-di-tambang/sampul.webp'
+imageAlt: 'Compactor dan Pemadatan Tanah di Tambang: Fungsi, Jenis, dan Cara Kerjanya'
+draft: false
 ---
 
-Pada pekerjaan tambang, tanah yang sekadar ditumpuk belum tentu kuat. Timbunan yang tidak dipadatkan bisa turun, retak, atau longsor saat hujan. Alat yang menyelesaikan masalah ini adalah **compactor**, atau yang sering disebut roller atau vibro.
+Di area tambang, asal numpuk tanah saja tidak cukup. Timbunan yang cuma diratakan tanpa dipadatkan itu ibarat bom waktu—rawan ambles, retak, bahkan bisa langsung longsor begitu diguyur hujan deras. Di sinilah peran vital *compactor* (yang sering kita sebut *vibro roller* atau *smooth drum roller*). Alat berat ini bertugas memastikan struktur tanah benar-benar padat dan siap menahan beban kerja operasional tambang yang berat.
 
-<figure class="photo"><img src="/images/dokumentasi/vibratory-roller-memadatkan-jalan-tambang.jpg" alt="Vibratory roller berdrum halus memadatkan permukaan jalan tambang" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Vibratory roller berdrum halus memadatkan lapisan jalan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+Dokumentasi lapangan TambangPedia.
+![Roller memadatkan lereng timbunan dilihat dari atas](/images/dokumentasi/roller-memadatkan-lereng-timbunan-e1.webp)
 
-## Mengapa tanah harus dipadatkan
+## Mengapa Tanah Timbunan Wajib Dipadatkan?
 
-Tanah yang baru ditimbun penuh dengan rongga udara. Pemadatan mengeluarkan udara itu dan merapatkan butiran tanah, sehingga:
+Tanah hasil *dumping* yang baru dihampar pada dasarnya masih longgar dan menyimpan banyak rongga udara. Tanpa proses *compaction* yang benar, rongga ini membuat struktur tanah rentan bergeser dan ketika hujan air gampang masuk kedalam pori pori tanah yang nantinya akan membuat jalan berlubang atau platform area kerja yang menjadi aktivitas. Pemadatan berfungsi mengeluar air dan udara trapped tersebut sekaligus merapatkan antar-butiran tanah.
 
-1. **Daya dukung naik.** Jalan dan platform mampu menahan beban alat berat.
-2. **Penurunan (settlement) berkurang.** Timbunan tidak ambles perlahan setelah dibebani.
-3. **Resapan air berkurang.** Air hujan lebih sulit masuk ke tubuh timbunan yang padat.
-4. **Kestabilan lereng timbunan meningkat.** Ini sangat penting pada waste dump yang tinggi.
+Manfaat utamanya meliputi:
 
-Pekerjaan yang biasanya membutuhkan pemadatan: lapisan dasar jalan angkut, timbunan di lokasi yang akan dilewati alat, tanggul dan bendungan kecil, pengisian kembali (backfilling) pada area yang akan direklamasi, serta platform untuk bangunan penunjang.
+* **Daya Dukung (*Bearing Capacity*) Naik:** Jalan angkut (*hauling road*) dan *pit stop* jadi sanggup menahan lalu lalang *hauler* beban ratusan ton.
+* **Mencegah Penurunan (*Settlement*):** Timbunan tidak akan ambles secara perlahan (*differential settlement*) setelah dibebani unit operasional.
+* **Menekan Infiltrasi Air:** Struktur yang padat menyulitkan air hujan meresap masuk, sehingga mengurangi risiko tanah melunak (*spongy*).
+* **Menjaga Kestabilan Lereng (*Slope Stability*):** Faktor ini krusial untuk mencegah kelongsoran pada area *waste dump* atau *disposal* yang tinggi.
+
+Pekerjaan yang mutlak membutuhkan pemadatan antara lain: subgrade jalan angkut, *pad* fasilitas penunjang, tanggul *settling pond*, area *backfilling* reklamasi, hingga *bench* operasional.
 
 ## Jenis compactor yang umum
 
 | Jenis | Ciri | Cocok untuk |
-| --- | --- | --- |
+| ----- | ---- | ----------- |
 | Roller drum halus bergetar | Drum baja licin, dapat bergetar | Material berbutir seperti pasir, kerikil, dan batuan pecah; lapisan jalan |
 | Roller padfoot (kaki kambing) | Drum bertonjolan | Tanah berbutir halus dan lempung (kohesif) |
 | Roller ban karet (pneumatic) | Roda ban berjajar | Penyelesaian permukaan dan lapisan tipis |
 
+Untuk gambar sebagai berikut
+![image.png](/images/artikel/compactor-pemadatan-tanah-di-tambang/image-e2.webp)
 Roller drum halus dan padfoot pada foto di artikel ini sama-sama dipakai di tambang. Drum halus menekan dan bergetar sehingga butiran saling mengunci. Padfoot menekan dari bawah ke atas lewat tonjolan-tonjolan drum, sehingga efektif pada tanah lempung.
 
-<figure class="photo"><img src="/images/dokumentasi/padfoot-roller-memadatkan-tanah.jpg" alt="Roller padfoot dengan drum bertonjolan memadatkan tanah di area timbunan" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Roller padfoot memadatkan tanah merah di area timbunan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+Roller padfoot memadatkan tanah merah di area timbunan. Dokumentasi lapangan TambangPedia.
 
 ## Faktor yang menentukan hasil pemadatan
 
-### 1. Tebal lapisan
+### 1\. Tebal lapisan
 
 Tanah harus dihamparkan tipis dan merata sebelum dipadatkan, karena energi pemadatan hanya menembus kedalaman tertentu. Tebal lapisan lepas yang dianjurkan bergantung pada jenis material dan alat. Banyak spesifikasi menetapkan kisaran puluhan sentimeter. Angka pastinya ditentukan oleh spesifikasi proyek atau uji coba lapangan.
 
-### 2. Kadar air
+### 2\. Kadar air
 
 Tanah yang terlalu kering sulit dipadatkan, tanah yang terlalu basah menjadi lembek dan "bergelombang" di bawah roller. Ada kadar air optimum di mana tanah paling mudah mencapai kepadatan tertinggi. Nilainya ditentukan di laboratorium melalui uji pemadatan (misalnya uji Proctor). Di lapangan, water truck dipakai untuk menambah air bila tanah terlalu kering.
 
-### 3. Jumlah lintasan
+### 3\. Jumlah lintasan
 
 Kepadatan naik seiring jumlah lintasan, tetapi sampai titik tertentu. Setelah itu tambahan lintasan hanya membuang waktu dan bahan bakar. Cara menentukan jumlah lintasan yang tepat adalah dengan uji coba (trial strip) pada material nyata, lalu mengukur kepadatan.
 
-### 4. Kecepatan dan getaran
+### 4\. Kecepatan dan getaran
 
 Roller bekerja pada kecepatan rendah dan konstan. Getaran biasanya dipakai pada lintasan awal untuk memadatkan, dan dimatikan pada lintasan akhir untuk merapikan permukaan. Aturan rinci mengikuti petunjuk pabrikan alat.
 
-### 5. Jenis material
+### 5\. Jenis material
 
 Material berbutir bersih mudah dipadatkan dengan getaran. Lempung memerlukan roller padfoot dan kendali kadar air yang lebih hati-hati. Batuan besar yang tidak terpecah menyisakan rongga dan sulit dipadatkan.
 
-<figure class="photo"><img src="/images/dokumentasi/dozer-menyiapkan-lahan-timbunan.jpg" alt="Dozer menghampar tanah sebelum dipadatkan" width="1280" height="872" loading="lazy" decoding="async"><figcaption>Dozer menghampar dan meratakan tanah sebelum dipadatkan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+Dozer menghampar dan meratakan tanah sebelum dipadatkan. Dokumentasi lapangan TambangPedia.
 
 ## Urutan kerja di lapangan
 
@@ -66,11 +75,10 @@ Material berbutir bersih mudah dipadatkan dengan getaran. Lempung memerlukan rol
 5. **Pemeriksaan kepadatan** oleh tim terkait.
 6. **Lapisan berikutnya** dimulai di atas lapisan yang sudah lulus.
 
-<figure class="photo"><img src="/images/dokumentasi/roller-memadatkan-lereng-timbunan-tanah.jpg" alt="Roller memadatkan lereng timbunan tanah di area penimbunan" width="1280" height="876" loading="lazy" decoding="async"><figcaption>Roller memadatkan lereng timbunan. Jejak roda dari lintasan sebelumnya terlihat di permukaan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
-
+Roller memadatkan lereng timbunan. Jejak roda dari lintasan sebelumnya terlihat di permukaan. Dokumentasi lapangan TambangPedia.
 Peran dozer dalam tahap hamparan dibahas di artikel [fungsi bulldozer di tambang](/artikel/fungsi-bulldozer-di-tambang/).
 
-<figure class="photo"><img src="/images/dokumentasi/roller-memadatkan-lereng-timbunan.jpg" alt="Roller memadatkan lereng timbunan dilihat dari atas" width="614" height="1400" loading="lazy" decoding="async"><figcaption>Roller memadatkan lereng timbunan, tampak dari bagian atas lereng. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+Roller memadatkan lereng timbunan, tampak dari bagian atas lereng. Dokumentasi lapangan TambangPedia.
 
 ## Cara memeriksa kepadatan
 
@@ -79,7 +87,7 @@ Kepadatan lapangan dibandingkan dengan kepadatan maksimum dari uji laboratorium.
 ## Aspek keselamatan
 
 | Bahaya | Pengendalian |
-| --- | --- |
+| ------ | ------------ |
 | Alat terguling di tepi timbunan atau lereng | Jaga jarak dari tepi, kenali kondisi tepi, hindari memadatkan terlalu dekat tepi tanpa tanggul pengaman |
 | Alat tergelincir pada tanah basah | Hentikan kerja pada kondisi licin, hindari melintang tanjakan curam |
 | Tabrakan dengan alat lain | Rambu, komunikasi radio, jalur terpisah, dan penjaga bila perlu |
