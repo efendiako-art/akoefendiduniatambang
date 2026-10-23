@@ -2,7 +2,7 @@
 title: 'Tutorial Deswik CAD - Cara Menghitung Volume Cut & Fill'
 description: 'Cara Menghitung dengan mudah dan cepat  Volume desain/design Cut & fill menggunakan software pertambangan Deswik Cad dengan dua kali Klik'
 pubDate: 2026-10-19
-updatedDate: 2026-10-21
+updatedDate: 2026-10-23
 category: tutorial-software-tambang
 subcategory: deswik-cad
 tags: ['#tambangpedia', '#belajar_software_pertambangan', '#Belajar_Deswik_Cad', '#cara menghitung volume dengan cepat', '#metode_perhitungan_Volume_Dengan_Cepat']
@@ -11,8 +11,6 @@ imageAlt: 'Tutorial Deswik CAD_Menghitung Volume Design Solid dengan Topografi'
 featured: true
 draft: false
 ---
-
-# Perhitungan Volume Solid Deswik Cad
 
 ![Perhitungan Cut & Fill Deswik Cad](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/screenshot-2026-10-20-222646.webp)
 
@@ -55,7 +53,6 @@ Sebelum memulai perhitungan, pastikan Anda memiliki:
 * Import design surface yang akan dianalisis
     Setelah data sudah sudah tersedia, sudah bisa melangkah ke stip selanjutnya
 
-
 ### 3\. Mengakses Tools Cut & Fill
 
 Langkah-langkah mengakses fitur cut & fill:
@@ -80,22 +77,20 @@ Langkah-langkah mengakses fitur cut & fill:
 
 * kemudian pilih Pick star surface ( dalam melakukan klik disini yang di klik adalah surfacenya atau topo solidnya seperti pada gambar di bawa. Jadi bebas di klik di area manapun selama masih di dalam area topo, tanda bahwa porses klik sudah berhasila dengan adanya code yang sudah tertera seperti di gambar kedua di bawah ini
 
-
-
 ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-10.webp)
 
-    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-11.webp)
+```
+![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-11.webp)
+```
 
 * langkah selanjutnya sama dengan yang di atas yang dipilih adalah solid dari desain yang sebelumnya sudah di buat atau data solid desain yang ingin dihitung cut & fillnya seperti pada langakah sebelumnya
 
     ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-12.webp)
 
     ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-13.webp)
-
 * selanjutnya klik calculate, tunggu beberapa menu sampai jendela top up keluar sebagai hasil dari perhitungan volume tersebut
 
     ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-14.webp)
-
 
 ### 4\. Hasil Perhiutngan data
 
@@ -107,13 +102,10 @@ Atur parameter berikut:
 * hasil data hiutngan Cut & Fill
 
     ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-15.webp)
-
 * Cut volume
-     ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-16.webp)
-
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-16.webp)
 * fill volume
-     ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-17.webp)
-
+    ![image.png](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/image-17.webp)
 
 ### 5\. Interpretasi Hasil
 
