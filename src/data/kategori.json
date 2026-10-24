@@ -30,6 +30,11 @@
           "slug": "arcgis",
           "name": "Tutorial Software ArcGIS",
           "desc": "Peta wilayah IUP, analisis spasial, dan layout peta tambang dengan ArcGIS."
+        },
+        {
+          "slug": "belajar-deswik",
+          "name": "Belajar Deswik",
+          "desc": "Cara Menghitung Volume Cut & Fill"
         }
       ]
     },

@@ -2,17 +2,17 @@
 title: 'Tutorial Deswik CAD - Cara Menghitung Volume Cut & Fill'
 description: 'Cara Menghitung dengan mudah dan cepat  Volume desain/design Cut & fill menggunakan software pertambangan Deswik Cad dengan dua kali Klik'
 pubDate: 2026-10-19
-updatedDate: 2026-10-23
+updatedDate: 2026-10-24
 category: tutorial-software-tambang
-subcategory: deswik-cad
-tags: ['#tambangpedia', '#belajar_software_pertambangan', '#Belajar_Deswik_Cad', '#cara menghitung volume dengan cepat', '#metode_perhitungan_Volume_Dengan_Cepat']
+subcategory: belajar-deswik
+tags: ['#Tutorial Deswik CAD', '#Cara Menghitung Volume Cut & Fill', '#tambangpedia', '#tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat']
 image: '/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/sampul.webp'
 imageAlt: 'Tutorial Deswik CAD_Menghitung Volume Design Solid dengan Topografi'
 featured: true
 draft: false
 ---
 
-![Perhitungan Cut & Fill Deswik Cad](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/screenshot-2026-10-20-222646.webp)
+![Perhitungan Cut & Fill Deswik Cad](/images/artikel/tutorial-deswik-cad-cara-menghitung-volume-cut-fill-dengan-cepat/screenshot-2026-10-20-222646-e1.webp)
 
 ## Pendahuluan
 
@@ -24,11 +24,11 @@ Cut & Fill adalah istilah dalam teknik sipil dan pertambangan yang mengacu pada 
 
 ### Apa itu Cut?
 
-Cut adalah volume material yang perlu digali atau dibuang dari permukaan asli tanah untuk mencapai desain final yang direncanakan. Cut terjadi ketika desain final berada di bawah kondisi ground asli.
+Cut adalah volume material yang harus digali dan dipindahkan dari permukaan tanah asli agar elevasi lapangan sesuai dengan desain akhir yang direncanakan. Cut terjadi ketika permukaan desain berada di bawah kondisi ground asli, sehingga kelebihan tanah, batuan, atau material lain perlu dibuang. Volume cut dihitung dari selisih antara elevasi tanah asli dan elevasi desain pada setiap area. Hasilnya menjadi dasar perencanaan alat gali, jarak angkut, lokasi disposal, serta perkiraan biaya pekerjaan tanah.
 
 ### Apa itu Fill?
 
-Fill adalah volume material yang perlu ditambahkan atau diisi ke area tertentu untuk mencapai elevasi desain yang direncanakan. Fill terjadi ketika desain final berada di atas kondisi ground asli.
+Fill adalah volume material yang harus ditambahkan atau diurug ke suatu area agar elevasi lapangan mencapai desain yang direncanakan. Fill terjadi ketika permukaan desain berada di atas kondisi ground asli, sehingga diperlukan material timbunan untuk menutup kekurangan elevasi. Material fill dapat berasal dari hasil cut di area lain pada proyek yang sama, atau didatangkan dari sumber luar apabila volume cut tidak mencukupi. Perhitungan volume fill menentukan kebutuhan material, pemadatan, serta urutan kerja agar permukaan akhir stabil dan sesuai gambar desain.
 
 ***
 
@@ -171,4 +171,8 @@ Masalah: Software hang atau crash
 
 ## Kesimpulan
 
-Perhitungan volume cut & fill di Deswik CAD adalah proses sistematis yang menghasilkan data presisi untuk perencanaan pertambangan . Dengan mengikuti langkah-langkah di atas dan melakukan validasi yang teliti, Anda dapat memastikan hasil perhitungan yang akurat dan dapat diandalkan untuk pengambilan keputusan proyek.
+Volume cut dan fill di Deswik CAD pada dasarnya membandingkan permukaan tanah asli dengan permukaan desain di dalam batas area yang ditentukan. Angka yang keluar mengikuti data yang dimasukkan. Kalau surface-nya tertukar, batas hitungannya melebar ke luar area kerja, atau faktor pemadatan belum dimasukkan, volumenya tetap tampil rapi di laporan padahal tidak bisa dipakai.
+
+Sebelum angka itu dibawa ke rencana gali, kebutuhan alat, atau perkiraan material timbunan, cek dulu secara kasar. Kalikan luas area dengan beda elevasi rata-rata, lalu bandingkan dengan total cut dan fill dari Deswik. Lihat juga peta zonanya. Area yang harusnya digali jangan sampai terbaca sebagai timbunan, dan sebaliknya. Selisih yang besar biasanya datang dari situ, bukan dari rumus perhitungannya.
+
+1. Kalau kedua cek itu masuk akal, volume tersebut sudah cukup untuk perencanaan. Catat surface mana yang dipakai, batas areanya, dan asumsi pemadatan atau pengembangan materialnya. Orang yang membuka file yang sama bulan depan tidak perlu mengulang hitungan dari awal hanya karena asumsinya tidak tertulis.
