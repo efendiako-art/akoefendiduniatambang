@@ -3,20 +3,25 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppBanner from '../../components/AppBanner.astro';
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc';
 const layar = [
-  { src: '1_beranda', t: 'Beranda', d: 'Semua kategori alat dalam satu layar.' },
-  { src: '2_sim_mining', t: 'Sim Mining Production', d: 'Fleet hauler + excavator + jarak, produksi EWH × QTY × PTY.' },
-  { src: '3_adt', t: 'Articulated Dump Truck', d: 'Material, densitas, loader, dan match factor.' },
-  { src: '4_chute', t: 'Chute Filter Press', d: 'PTY dump truck dari chute berdasarkan jarak.' },
-  { src: '5_kalkulator', t: 'Kalkulator & konversi', d: 'Volume bangun ruang, BCM · LCM · CCM · ton, massa, luas.' },
+  { src: 'ps_1', t: 'Beranda', d: 'Favorit, pencarian unit, dan riwayat perhitungan dalam satu layar.' },
+  { src: 'ps_2', t: 'Excavator', d: 'Produksi bcm, lcm dan ton berubah seketika, lengkap dengan rumusnya.' },
+  { src: 'ps_3', t: 'Loader vs Hauler', d: 'Match factor dan jumlah dump truck dihitung otomatis.' },
+  { src: 'ps_4', t: 'Sim Mining Production', d: 'Produksi seluruh armada: EWH × QTY × PTY, total harian & bulanan.' },
+  { src: 'ps_5', t: 'Peta lapangan', d: 'Citra satelit, impor DXF/STR/SHP/KML/PDF, ukur luas, patok & GPS.' },
+  { src: 'ps_6', t: 'Topografi 3D', d: 'Surpac, Vulcan, DXF 3D & LandXML — volume cut & fill.' },
+  { src: 'ps_7', t: 'Eksplorasi IUP', d: 'Cek wilayah izin tambang dari data publik ESDM, ekspor batas izin.' },
+  { src: 'ps_8', t: 'Simpan & bagikan', d: 'Skenario tersimpan di HP, bagikan ke tim, tema gelap & terang.' },
 ];
 const fitur = [
+  { ic: 'PT', t: 'Peta lapangan', d: 'Citra satelit terbaru, impor DXF, STR, SHP, KML, CSV dan PDF georeferensi. Ukur jarak & luas, pasang patok, navigasi GPS, rekam jalur.' },
+  { ic: '3D', t: 'Topografi 3D & cut fill', d: 'Buka Surpac DTM, Vulcan .00t, DXF 3D, LandXML, STL, OBJ. Cek elevasi & slope, grade jalan, dan volume galian–timbunan.' },
+  { ic: 'IU', t: 'Eksplorasi IUP', d: 'Peta wilayah izin tambang dari data publik ESDM: tahapan, komoditas, SK & masa berlaku. Cek koordinat dan ekspor batas izin.' },
   { ic: 'SM', t: 'Sim Mining Production', d: 'Simulasi produksi per fleet: pilih hauler, excavator, dan jarak angkut. Parameter mana pun bisa dikunci lalu dihitung balik dari rumus.' },
   { ic: 'SC', t: 'Sim Chute Production', d: 'Produksi chute per line (cycle 5/4/3 menit) dan jumlah dump truck tailing yang dibutuhkan.' },
   { ic: 'LH', t: 'Loader vs Hauler', d: 'Jumlah bucket, PTY hauler, dan match factor menyesuaikan excavator, kondisi material, dan jarak.' },
   { ic: 'AD', t: 'Articulated Dump Truck', d: 'Pilih material (Top Soil, Limonite, Saprolite, Waste); densitas, tonase, dan produksi ikut berubah.' },
   { ic: 'FP', t: 'Chute Filter Press', d: 'PTY dump truck 20/30/40 T dari chute filter press berdasarkan jarak angkut (dry tailing).' },
   { ic: 'EX', t: 'Excavator 20T–50T & big digger', d: 'Exca 20–50T, batubara, PC2000, EX2600, plus hauler HD785, Volvo A40G, CAT 745.' },
-  { ic: '🔒', t: 'Tombol aktif / kunci', d: 'Setiap parameter bisa dikunci agar mengikuti unit, material, atau rumus — atau dibuka untuk diisi manual.' },
   { ic: '⚙', t: 'Tema, suara & saran', d: 'Lima tema warna, ukuran tulisan, suara klik, dan kirim saran langsung ke pengembang.' },
 ];
 const jsonLd = {
@@ -25,7 +30,7 @@ const jsonLd = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' }, downloadUrl: PLAY_URL, inLanguage: 'id-ID',
 };
 ---
-<BaseLayout title="Aplikasi Eng-Calculation: Alat Tambang" description="Eng-Calculation: aplikasi Android gratis untuk menghitung produktivitas alat berat tambang — Sim Mining Production, Sim Chute Production, Loader vs Hauler, ADT, Chute Filter Press, kalkulator dan konversi." jsonLd={jsonLd}>
+<BaseLayout title="Aplikasi Eng-Calculation: Alat Tambang" description="Eng-Calculation: aplikasi Android untuk menghitung produktivitas alat berat tambang — excavator, Loader vs Hauler, Sim Mining Production, peta satelit, topografi 3D cut & fill, dan cek wilayah IUP." jsonLd={jsonLd}>
   <AppBanner judulTag="h1" tautanDetail={false} />
 
   <section class="section">
@@ -34,7 +39,7 @@ const jsonLd = {
       <div class="galeri" tabindex="0" aria-label="Galeri tangkapan layar">
         {layar.map((s) => (
           <figure>
-            <img src={`/aplikasi/${s.src}.webp`} width="540" height="1168" alt={`Tangkapan layar ${s.t}`} loading="lazy" />
+            <img src={`/aplikasi/${s.src}.webp`} width="540" height="960" alt={`Tampilan ${s.t}`} loading="lazy" />
             <figcaption><b>{s.t}</b><span>{s.d}</span></figcaption>
           </figure>
         ))}
@@ -44,7 +49,7 @@ const jsonLd = {
 
   <section class="section tools-band">
     <div class="container">
-      <div class="section-head"><div><p class="eyebrow">Versi 2.6</p><h2>Fitur utama</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Versi terbaru</p><h2>Fitur utama</h2></div></div>
       <div class="grid">
         {fitur.map((x) => (
           <div class="card tool"><span class="tool-ic" aria-hidden="true">{x.ic}</span><h3>{x.t}</h3><p>{x.d}</p></div>
@@ -58,16 +63,16 @@ const jsonLd = {
       <div class="section-head"><div><p class="eyebrow">Pertanyaan</p><h2>Unduh & pembaruan</h2></div></div>
       <details open><summary>Bagaimana cara mengunduh?</summary><p>Tekan tombol <b>Unduh di Google Play</b>. Selama masa uji tertutup, hanya penguji terdaftar yang bisa memasang; setelah rilis publik, semua pengguna Android bisa langsung memasang dari Google Play.</p></details>
       <details><summary>Bagaimana aplikasi diperbarui?</summary><p>Aplikasi dipasang dan diperbarui lewat Google Play. Setiap versi baru (misalnya 2.6 → 2.7) datang otomatis, atau tekan <b>Update</b> di halaman aplikasi di Play Store.</p></details>
-      <details><summary>Apakah perlu internet?</summary><p>Tidak. Semua perhitungan berjalan di HP. Internet hanya dipakai untuk iklan dan cek pembaruan.</p></details>
-      <details><summary>Apakah gratis?</summary><p>Ya, gratis dengan iklan. Anda bisa menonton satu iklan video untuk bebas iklan selama 2 jam.</p></details>
+      <details><summary>Apakah perlu internet?</summary><p>Kalkulator dan simulasi produksi berjalan di HP tanpa internet. Peta (citra satelit), cari tempat, dan Eksplorasi IUP memakai internet; area peta dan data IUP bisa disimpan untuk dipakai offline.</p></details>
+      <details><summary>Apakah gratis?</summary><p>Kalkulator gratis dengan iklan. Fitur Peta, 3D, dan Eksplorasi dibuka dengan menonton satu video (akses 30 menit) atau berlangganan Premium tanpa iklan.</p></details>
       <p class="kecil">Ingin menghitung langsung di browser? Coba <a href="/alat/">kalkulator tambang online</a> kami.</p>
     </div>
   </section>
 </BaseLayout>
 <style>
   .galeri { display: flex; gap: 18px; overflow-x: auto; padding: 6px 2px 18px; scroll-snap-type: x mandatory; }
-  .galeri figure { flex: none; width: 220px; margin: 0; scroll-snap-align: start; }
-  .galeri img { width: 100%; height: auto; border-radius: 22px; border: 5px solid #1d2632; background: #090d12; box-shadow: var(--shadow); }
+  .galeri figure { flex: none; width: 240px; margin: 0; scroll-snap-align: start; }
+  .galeri img { width: 100%; height: auto; border-radius: 18px; border: 1px solid rgba(255,255,255,.08); background: #090d12; box-shadow: var(--shadow); }
   .galeri figcaption { margin-top: 10px; }
   .galeri figcaption b { display: block; font-family: var(--font-head); }
   .galeri figcaption span { color: var(--ink-2); font-size: 14px; }

@@ -16,9 +16,9 @@ const Judul = judulTag;
         <div><p class="app-eyebrow">Aplikasi Android · v2.6</p><span class="app-nama">Eng-<b>Calculation</b></span></div>
       </div>
       <Judul class="app-judul">Kalkulator alat tambang di saku Anda</Judul>
-      <p class="app-lead">Hitung produktivitas excavator, dump truck, ADT, chute filter press, dan simulasi produksi fleet — rumus sama dengan lembar kerja Excel praktisi, bisa dipakai tanpa internet.</p>
+      <p class="app-lead">Hitung produktivitas excavator, dump truck, ADT, dan simulasi produksi fleet — rumus sama dengan lembar kerja Excel praktisi. Dilengkapi peta citra satelit, topografi 3D cut & fill, dan cek wilayah IUP.</p>
       <ul class="app-chip">
-        <li>Sim Mining Production</li><li>Sim Chute Production</li><li>Loader vs Hauler</li><li>Chute Filter Press</li><li>Kalkulator & konversi</li>
+        <li>PTY & Match Factor</li><li>Sim Mining Production</li><li>Peta Satelit</li><li>3D Cut & Fill</li><li>Cek IUP</li>
       </ul>
       <div class="app-aksi">
         <a class="app-play" href={PLAY_URL} rel="noopener">
@@ -30,9 +30,9 @@ const Judul = judulTag;
       <p class="app-catatan">Masih tahap uji tertutup: penguji terdaftar bisa <a href={UJI_URL} rel="noopener">bergabung di sini</a>. Setelah rilis publik, tombol di atas langsung membuka Google Play dan update aplikasi datang otomatis.</p>
     </div>
     <div class="app-hp" aria-hidden="true">
-      <img class="hp hp-1" src="/aplikasi/2_sim_mining.webp" width="540" height="1168" alt="" loading="lazy" />
-      <img class="hp hp-2" src="/aplikasi/1_beranda.webp" width="540" height="1168" alt="" loading="lazy" />
-      <img class="hp hp-3" src="/aplikasi/3_adt.webp" width="540" height="1168" alt="" loading="lazy" />
+      <img class="hp hp-1" src="/aplikasi/ps_5.webp" width="540" height="960" alt="" loading="lazy" />
+      <img class="hp hp-2" src="/aplikasi/ps_1.webp" width="540" height="960" alt="" loading="lazy" />
+      <img class="hp hp-3" src="/aplikasi/ps_6.webp" width="540" height="960" alt="" loading="lazy" />
     </div>
   </div>
 </section>
@@ -61,8 +61,8 @@ const Judul = judulTag;
   .app-catatan { color: #8d9aab; font-size: 13.5px; margin: 16px 0 0; max-width: 58ch; }
   .app-catatan a { color: #3fd9c9; }
   .app-hp { position: relative; height: 440px; }
-  .hp { position: absolute; width: 190px; height: auto; border-radius: 26px; border: 6px solid #1d2632; box-shadow: 0 24px 60px rgba(0,0,0,.55); background: #090d12; }
-  .hp-2 { left: 50%; top: 0; transform: translateX(-50%); z-index: 2; width: 205px; }
+  .hp { position: absolute; width: 200px; height: auto; border-radius: 18px; border: 1px solid rgba(255,255,255,.1); box-shadow: 0 24px 60px rgba(0,0,0,.55); background: #090d12; }
+  .hp-2 { left: 50%; top: 0; transform: translateX(-50%); z-index: 2; width: 225px; }
   .hp-1 { left: 50%; top: 40px; transform: translateX(-118%) rotate(-6deg); opacity: .92; }
   .hp-3 { left: 50%; top: 40px; transform: translateX(18%) rotate(6deg); opacity: .92; }
   @media (max-width: 520px) { .app-hp { height: 360px; } .hp { width: 150px; } .hp-2 { width: 165px; } }
