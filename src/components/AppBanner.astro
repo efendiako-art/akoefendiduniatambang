@@ -1,5 +1,5 @@
 ---
-/* Banner aplikasi Android Eng-Calculation.
+/* Banner aplikasi Android Eng 3D Calculation.
    PLAY_URL = halaman resmi di Google Play: saat aplikasi sudah rilis publik, semua orang mengunduh
    dan menerima update otomatis dari sini. Selama pengujian tertutup hanya penguji terdaftar yang bisa membukanya. */
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc';
@@ -8,12 +8,12 @@ interface Props { judulTag?: 'h1' | 'h2'; tautanDetail?: boolean }
 const { judulTag = 'h2', tautanDetail = true } = Astro.props;
 const Judul = judulTag;
 ---
-<section class="app-banner" aria-label="Aplikasi Android Eng-Calculation">
+<section class="app-banner" aria-label="Aplikasi Android Eng 3D Calculation">
   <div class="container app-grid">
     <div class="app-teks">
       <div class="app-merek">
-        <img src="/aplikasi/ikon.webp" width="64" height="64" alt="Ikon Eng-Calculation" loading="lazy" />
-        <div><p class="app-eyebrow">Aplikasi Android · v2.6</p><span class="app-nama">Eng-<b>Calculation</b></span></div>
+        <img src="/aplikasi/ikon.webp" width="64" height="64" alt="Ikon Eng 3D Calculation" loading="lazy" />
+        <div><p class="app-eyebrow">Aplikasi Android · v2.6.5</p><span class="app-nama">Eng 3D <b>Calculation</b></span></div>
       </div>
       <Judul class="app-judul">Kalkulator alat tambang di saku Anda</Judul>
       <p class="app-lead">Hitung produktivitas excavator, dump truck, ADT, dan simulasi produksi fleet — rumus sama dengan lembar kerja Excel praktisi. Dilengkapi peta citra satelit, topografi 3D cut & fill, dan cek wilayah IUP.</p>
@@ -31,7 +31,7 @@ const Judul = judulTag;
     </div>
     <div class="app-hp" aria-hidden="true">
       <img class="hp hp-1" src="/aplikasi/ps_5.webp" width="540" height="960" alt="" loading="lazy" />
-      <img class="hp hp-2" src="/aplikasi/ps_1.webp" width="540" height="960" alt="" loading="lazy" />
+      <img class="hp hp-2" src="/aplikasi/ps_1_3d.webp" width="540" height="960" alt="" loading="lazy" />
       <img class="hp hp-3" src="/aplikasi/ps_6.webp" width="540" height="960" alt="" loading="lazy" />
     </div>
   </div>

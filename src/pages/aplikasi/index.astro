@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppBanner from '../../components/AppBanner.astro';
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc';
 const layar = [
-  { src: 'ps_1', t: 'Beranda', d: 'Favorit, pencarian unit, dan riwayat perhitungan dalam satu layar.' },
+  { src: 'ps_1_3d', t: 'Beranda', d: 'Favorit, pencarian unit, dan riwayat perhitungan dalam satu layar.' },
   { src: 'ps_2', t: 'Excavator', d: 'Produksi bcm, lcm dan ton berubah seketika, lengkap dengan rumusnya.' },
   { src: 'ps_3', t: 'Loader vs Hauler', d: 'Match factor dan jumlah dump truck dihitung otomatis.' },
   { src: 'ps_4', t: 'Sim Mining Production', d: 'Produksi seluruh armada: EWH × QTY × PTY, total harian & bulanan.' },
@@ -25,12 +25,12 @@ const fitur = [
   { ic: '⚙', t: 'Tema, suara & saran', d: 'Lima tema warna, ukuran tulisan, suara klik, dan kirim saran langsung ke pengembang.' },
 ];
 const jsonLd = {
-  '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Eng-Calculation: Alat Tambang',
-  operatingSystem: 'Android 7.0+', applicationCategory: 'BusinessApplication', softwareVersion: '2.6',
+  '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Eng 3D Calculation: Alat Tambang',
+  operatingSystem: 'Android 7.0+', applicationCategory: 'BusinessApplication', softwareVersion: '2.6.5',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' }, downloadUrl: PLAY_URL, inLanguage: 'id-ID',
 };
 ---
-<BaseLayout title="Aplikasi Eng-Calculation: Alat Tambang" description="Eng-Calculation: aplikasi Android untuk menghitung produktivitas alat berat tambang — excavator, Loader vs Hauler, Sim Mining Production, peta satelit, topografi 3D cut & fill, dan cek wilayah IUP." jsonLd={jsonLd}>
+<BaseLayout title="Aplikasi Eng 3D Calculation: Alat Tambang" description="Eng 3D Calculation: aplikasi Android untuk menghitung produktivitas alat berat tambang — excavator, Loader vs Hauler, Sim Mining Production, peta satelit, topografi 3D cut & fill, dan cek wilayah IUP." jsonLd={jsonLd}>
   <AppBanner judulTag="h1" tautanDetail={false} />
 
   <section class="section">
