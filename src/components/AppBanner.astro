@@ -1,9 +1,8 @@
 ---
 /* Banner aplikasi Android Eng 3D Calculation.
    PLAY_URL = halaman resmi di Google Play: saat aplikasi sudah rilis publik, semua orang mengunduh
-   dan menerima update otomatis dari sini. Selama pengujian tertutup hanya penguji terdaftar yang bisa membukanya. */
+   dan menerima update otomatis dari sini. */
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc';
-const UJI_URL = 'https://play.google.com/apps/testing/com.akoefendi.engcalc';
 interface Props { judulTag?: 'h1' | 'h2'; tautanDetail?: boolean }
 const { judulTag = 'h2', tautanDetail = true } = Astro.props;
 const Judul = judulTag;
@@ -13,7 +12,7 @@ const Judul = judulTag;
     <div class="app-teks">
       <div class="app-merek">
         <img src="/aplikasi/ikon.webp" width="64" height="64" alt="Ikon Eng 3D Calculation" loading="lazy" />
-        <div><p class="app-eyebrow">Aplikasi Android · v2.6.5</p><span class="app-nama">Eng 3D <b>Calculation</b></span></div>
+        <div><p class="app-eyebrow">Aplikasi Android · v2.6.6</p><span class="app-nama">Eng 3D <b>Calculation</b></span></div>
       </div>
       <Judul class="app-judul">Kalkulator alat tambang di saku Anda</Judul>
       <p class="app-lead">Hitung produktivitas excavator, dump truck, ADT, dan simulasi produksi fleet — rumus sama dengan lembar kerja Excel praktisi. Dilengkapi peta citra satelit, topografi 3D cut & fill, dan cek wilayah IUP.</p>
@@ -27,7 +26,7 @@ const Judul = judulTag;
         </a>
         {tautanDetail && <a class="app-detail" href="/aplikasi/">Lihat fitur & tampilan →</a>}
       </div>
-      <p class="app-catatan">Masih tahap uji tertutup: penguji terdaftar bisa <a href={UJI_URL} rel="noopener">bergabung di sini</a>. Setelah rilis publik, tombol di atas langsung membuka Google Play dan update aplikasi datang otomatis.</p>
+      <p class="app-catatan">Tersedia di Google Play untuk semua pengguna Android 7.0 ke atas. Pembaruan aplikasi datang otomatis lewat Play Store.</p>
     </div>
     <div class="app-hp" aria-hidden="true">
       <img class="hp hp-1" src="/aplikasi/ps_5.webp" width="540" height="960" alt="" loading="lazy" />
