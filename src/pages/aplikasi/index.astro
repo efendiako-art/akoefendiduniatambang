@@ -10,9 +10,10 @@ const layar = [
   { src: 'ps_5', t: 'Peta lapangan', d: 'Citra satelit, impor DXF/STR/SHP/KML/PDF, ukur luas, patok & GPS.' },
   { src: 'ps_6', t: 'Topografi 3D', d: 'Surpac, Vulcan, DXF 3D & LandXML — volume cut & fill.' },
   { src: 'ps_7', t: 'Eksplorasi IUP', d: 'Cek wilayah izin tambang dari data publik ESDM, ekspor batas izin.' },
-  { src: 'ps_8', t: 'Simpan & bagikan', d: 'Skenario tersimpan di HP, bagikan ke tim, tema gelap & terang.' },
+  { src: 'ps_8', t: 'Simpan & bagikan', d: 'Hitungan, patok & rekaman GPS di menu SIMPAN, bagikan ke tim lewat WhatsApp/email.' },
 ];
 const fitur = [
+  { ic: 'GP', t: 'Rekam jalur GPS (baru di v2.6.7)', d: 'Menu SIMPAN baru: rekaman GPS otomatis tersimpan sebagai DXF 3D dengan titik & label tiap 100 m, siap dibuka di software CAD/tambang. Ekspor juga ke CSV, GPX & KML.' },
   { ic: 'PT', t: 'Peta lapangan', d: 'Citra satelit terbaru, impor DXF, STR, SHP, KML, CSV dan PDF georeferensi. Ukur jarak & luas, pasang patok, navigasi GPS, rekam jalur.' },
   { ic: '3D', t: 'Topografi 3D & cut fill', d: 'Buka Surpac DTM, Vulcan .00t, DXF 3D, LandXML, STL, OBJ. Cek elevasi & slope, grade jalan, dan volume galian–timbunan.' },
   { ic: 'IU', t: 'Eksplorasi IUP', d: 'Peta wilayah izin tambang dari data publik ESDM: tahapan, komoditas, SK & masa berlaku. Cek koordinat dan ekspor batas izin.' },
@@ -26,7 +27,7 @@ const fitur = [
 ];
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Eng 3D Calculation: Alat Tambang',
-  operatingSystem: 'Android 7.0+', applicationCategory: 'BusinessApplication', softwareVersion: '2.6.5',
+  operatingSystem: 'Android 7.0+', applicationCategory: 'BusinessApplication', softwareVersion: '2.6.7',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' }, downloadUrl: PLAY_URL, inLanguage: 'id-ID',
 };
 ---
@@ -61,8 +62,8 @@ const jsonLd = {
   <section class="section">
     <div class="container tanya">
       <div class="section-head"><div><p class="eyebrow">Pertanyaan</p><h2>Unduh & pembaruan</h2></div></div>
-      <details open><summary>Bagaimana cara mengunduh?</summary><p>Tekan tombol <b>Unduh di Google Play</b>. Selama masa uji tertutup, hanya penguji terdaftar yang bisa memasang; setelah rilis publik, semua pengguna Android bisa langsung memasang dari Google Play.</p></details>
-      <details><summary>Bagaimana aplikasi diperbarui?</summary><p>Aplikasi dipasang dan diperbarui lewat Google Play. Setiap versi baru (misalnya 2.6 → 2.7) datang otomatis, atau tekan <b>Update</b> di halaman aplikasi di Play Store.</p></details>
+      <details open><summary>Bagaimana cara mengunduh?</summary><p>Tekan tombol <b>Unduh di Google Play</b>, lalu <b>Instal</b>. Aplikasi sudah tersedia untuk semua pengguna Android 7.0 ke atas, atau cari <b>Eng 3D Calculation</b> di Play Store.</p></details>
+      <details><summary>Bagaimana aplikasi diperbarui?</summary><p>Aplikasi dipasang dan diperbarui lewat Google Play. Setiap versi baru (misalnya 2.6.7 → 2.7) datang otomatis, atau tekan <b>Update</b> di halaman aplikasi di Play Store.</p></details>
       <details><summary>Apakah perlu internet?</summary><p>Kalkulator dan simulasi produksi berjalan di HP tanpa internet. Peta (citra satelit), cari tempat, dan Eksplorasi IUP memakai internet; area peta dan data IUP bisa disimpan untuk dipakai offline.</p></details>
       <details><summary>Apakah gratis?</summary><p>Kalkulator gratis dengan iklan. Fitur Peta, 3D, dan Eksplorasi dibuka dengan menonton satu video (akses 30 menit) atau berlangganan Premium tanpa iklan.</p></details>
       <p class="kecil">Ingin menghitung langsung di browser? Coba <a href="/alat/">kalkulator tambang online</a> kami.</p>
