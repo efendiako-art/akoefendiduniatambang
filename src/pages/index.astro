@@ -56,6 +56,7 @@ const jsonLd = {
       '@type': 'Organization',
       '@id': `${siteUrl}#organization`,
       name: SITE.name,
+      alternateName: 'Tambang Pedia',
       url: siteUrl,
       logo: { '@type': 'ImageObject', url: new URL('/logo.png', Astro.site).toString(), width: 512, height: 512 },
       email: SITE.email,
@@ -63,7 +64,7 @@ const jsonLd = {
   ],
 };
 ---
-<BaseLayout jsonLd={jsonLd}>
+<BaseLayout jsonLd={jsonLd} description="Tambang Pedia (tambangpedia.com) — ilmu tambang dari lapangan, dijelaskan sederhana: rumus produksi, KPI alat berat, tutorial software tambang, geologi, K3, dan karier, lengkap dengan kalkulator gratis.">
   <!-- ===== HERO ===== -->
   <section class="hero">
     <svg class="net" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">

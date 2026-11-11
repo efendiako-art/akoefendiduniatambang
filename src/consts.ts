@@ -7,6 +7,8 @@ import kategori from './data/kategori.json';
 
 export const SITE = {
   name: 'TambangPedia',
+  /** nama dengan spasi, agar ketemu saat orang mencari "tambang pedia" */
+  altName: 'Tambang Pedia',
   tagline: 'Ilmu tambang dari lapangan, untuk semua',
   description:
     'Panduan praktis pertambangan berbahasa Indonesia: operasi produksi, KPI alat berat, geologi, K3, dan karier tambang — ditulis oleh praktisi lapangan.',
