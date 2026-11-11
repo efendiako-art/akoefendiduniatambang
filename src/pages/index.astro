@@ -5,7 +5,8 @@ import ArticleCard from '../components/ArticleCard.astro';
 import AdSlot from '../components/AdSlot.astro';
 import AppBanner from '../components/AppBanner.astro';
 import { SITE, CATEGORIES, AD_SLOTS } from '../consts';
-import { categoryHubs, categoryHref } from '../lib/nav';
+import { categoryHubs, categoryHref, monogram } from '../lib/nav';
+import { getCollection as getAll } from 'astro:content';
 
 const posts = (await getCollection('artikel', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -14,6 +15,13 @@ const latest = posts.slice(0, 6);
 const counts = Object.fromEntries(CATEGORIES.map((c) => [c.slug, posts.filter((p) => p.data.category === c.slug).length]));
 
 const hubs = await categoryHubs();
+const sopCount = (await getAll('sop', ({ data }) => !data.draft)).length;
+// kode kartu topik, contoh OP-01, TS-02 (dari huruf awal nama kategori)
+const topics = CATEGORIES.map((c, i) => ({
+  ...c, href: categoryHref(hubs, c.slug), count: counts[c.slug] ?? 0, subs: (c.sub ?? []).length,
+  code: `${monogram(c.name)}-${String(i + 1).padStart(2, '0')}`,
+}));
+const tags = ['Operasi Produksi', 'Alat Berat', 'K3 Tambang', 'Geologi & Eksplorasi', 'Software Tambang'];
 const siteUrl = Astro.site?.toString();
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -40,46 +48,115 @@ const jsonLd = {
 };
 ---
 <BaseLayout jsonLd={jsonLd}>
+  <!-- ===== HERO ===== -->
   <section class="hero">
-    <svg class="contours" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="1.2">
-        <path d="M-50 420 C150 360 260 470 470 400 S820 300 1250 380" />
-        <path d="M-50 380 C160 320 270 430 480 360 S820 255 1250 335" />
-        <path d="M-50 340 C170 280 280 390 490 320 S830 210 1250 290" />
-        <path d="M-50 300 C180 240 290 350 500 280 S840 165 1250 245" />
-        <path d="M-50 260 C190 200 300 310 510 240 S850 120 1250 200" />
-        <path d="M-50 220 C200 160 310 270 520 200 S860 75 1250 155" />
-        <path d="M-50 180 C210 120 320 230 530 160 S870 30 1250 110" />
-        <path d="M-50 140 C220 80 330 190 540 120 S880 -15 1250 65" />
+    <svg class="net" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M60 120 L260 60 L420 170 L640 90 L820 200 L1040 70 L1260 160 L1400 80" />
+        <path d="M260 60 L330 300 L560 260 L640 90" />
+        <path d="M1040 70 L980 320 L1180 390 L1260 160" />
+        <path d="M120 520 L330 300 L460 600 L700 690 L560 260" />
+        <path d="M1180 390 L1380 520 L1220 700 L980 620 L980 320" />
       </g>
-      <g fill="none" stroke="currentColor" stroke-width="1.2">
-        <ellipse cx="930" cy="250" rx="150" ry="70" opacity=".5" />
-        <ellipse cx="930" cy="250" rx="105" ry="47" opacity=".65" />
-        <ellipse cx="930" cy="250" rx="62" ry="26" opacity=".8" />
+      <g fill="currentColor">
+        <circle cx="260" cy="60" r="2.5" /><circle cx="420" cy="170" r="2" /><circle cx="640" cy="90" r="2.5" /><circle cx="1040" cy="70" r="2.5" />
+        <circle cx="1260" cy="160" r="2" /><circle cx="330" cy="300" r="2.5" /><circle cx="560" cy="260" r="2" /><circle cx="980" cy="320" r="2.5" />
+        <circle cx="1180" cy="390" r="2" /><circle cx="460" cy="600" r="2" /><circle cx="1380" cy="520" r="2.5" /><circle cx="1220" cy="700" r="2" />
       </g>
-      <path class="ramp" d="M1080 250 L948 228 L1033 250 L945 268 L992 250 L930 250" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" stroke-linejoin="round" />
-      <circle class="pit-mark" cx="930" cy="250" r="5" fill="currentColor" />
     </svg>
-    <div class="container hero-inner">
-      <p class="eyebrow">Portal edukasi pertambangan</p>
-      <h1>Ilmu tambang dari lapangan, <span>dijelaskan dengan sederhana.</span></h1>
-      <p class="lead">Rumus produksi, KPI alat berat, geologi, K3, dan karier tambang — ditulis praktisi, lengkap dengan kalkulator yang bisa langsung dipakai.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="/artikel/">Baca artikel</a>
-        <a class="btn btn-ghost" href="/alat/">Coba kalkulator</a>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="pill-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z" /></svg>
+          Portal edukasi pertambangan
+        </span>
+        <h1>Ilmu Tambang dari Lapangan</h1>
+        <p class="sub">Dijelaskan sederhana. Bisa langsung dihitung.</p>
+        <p class="lead">Rumus produksi, KPI alat berat, tutorial software tambang, geologi, K3, dan karier — ditulis praktisi, lengkap dengan kalkulator yang bisa dipakai di lapangan.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="/artikel/">Baca artikel <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          <a class="btn btn-ghost" href="/alat/">Coba kalkulator</a>
+          <a class="btn btn-line" href="/aplikasi/">Unduh aplikasi</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>{posts.length}</b><span>Artikel praktis</span></div>
+          <div class="stat"><b>{sopCount}</b><span>Contoh SOP &amp; IK</span></div>
+          <div class="stat"><b>3</b><span>Kalkulator online</span></div>
+          <div class="stat"><b>Gratis</b><span>Web &amp; Android</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="kpi"><span class="k">Artikel</span><span class="v">{posts.length}</span></div>
-        <div class="kpi"><span class="k">Kategori</span><span class="v">{CATEGORIES.length}</span></div>
-        <div class="kpi"><span class="k">Kalkulator</span><span class="v">3</span></div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 560 520">
+          <defs>
+            <radialGradient id="pitglow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#F7A43A" stop-opacity=".55" /><stop offset=".55" stop-color="#E2401B" stop-opacity=".18" /><stop offset="1" stop-color="#070B12" stop-opacity="0" /></radialGradient>
+          </defs>
+          <ellipse cx="280" cy="300" rx="270" ry="150" fill="url(#pitglow)" />
+          <g fill="none" stroke="#F7A43A" stroke-width="1.4">
+            <ellipse cx="280" cy="300" rx="250" ry="138" stroke-opacity=".35" />
+            <ellipse cx="280" cy="305" rx="205" ry="112" stroke-opacity=".45" />
+            <ellipse cx="280" cy="310" rx="160" ry="87" stroke-opacity=".55" />
+            <ellipse cx="280" cy="315" rx="115" ry="62" stroke-opacity=".7" />
+            <ellipse cx="280" cy="320" rx="70" ry="37" stroke-opacity=".85" />
+          </g>
+          <path d="M530 300 L370 270 L470 315 L330 330 L400 322 L280 322" fill="none" stroke="#FFD08F" stroke-width="2" stroke-linejoin="round" stroke-opacity=".85" />
+          <g stroke="#5FE3D5" stroke-width="1" stroke-opacity=".55"><line x1="120" y1="215" x2="120" y2="120" /><line x1="440" y1="215" x2="440" y2="95" /><line x1="280" y1="320" x2="280" y2="180" /><line x1="200" y1="395" x2="200" y2="460" /></g>
+          <g fill="#5FE3D5"><circle class="dot" cx="120" cy="215" r="4" /><circle class="dot" cx="440" cy="215" r="4" /><circle class="dot" cx="280" cy="320" r="5" /><circle class="dot" cx="200" cy="395" r="4" /></g>
+        </svg>
+        <div class="tag t1"><b>PA · UA · EU</b><span>KPI alat berat</span></div>
+        <div class="tag t2"><b>SR 1 : 6,4</b><span>Stripping ratio</span></div>
+        <div class="tag t3 hot"><b>EWH × QTY × PTY</b><span>Simulasi produksi</span></div>
+        <div class="tag t4"><b>CUT &amp; FILL</b><span>Tutorial Deswik CAD</span></div>
+      </div>
+    </div>
+    <div class="container chips-row">
+      {tags.map((t, i) => <span class:list={['htag', { warm: i === 2 }]}>{t}</span>)}
+    </div>
+  </section>
+
+  <div class="container"><AdSlot slot={AD_SLOTS.homeBelowHero} /></div>
+
+  <!-- ===== TOPIK ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Jelajahi topik</p><h2>Satu portal. Semua topik tambang.</h2></div>
+        <a href="/artikel/">Semua artikel →</a>
+      </div>
+      <div class="topics">
+        {topics.map((c) => (
+          <a class="card topic" href={c.href}>
+            <div class="topic-top"><span class="code">{c.code}</span><span class="topic-n">{c.subs > 0 ? `${c.subs} sub-topik · ${c.count} artikel` : `${c.count} artikel`}</span></div>
+            <h3>{c.name}</h3>
+            <p>{c.desc}</p>
+            <span class="more">Buka topik →</span>
+          </a>
+        ))}
+        <a class="topic topic-all" href="/artikel/">
+          <h3>Semua artikel</h3>
+          <p>Cari topik atau saring per kategori.</p>
+          <span class="more">Lihat pustaka →</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <AppBanner />
+  <!-- ===== KALKULATOR ===== -->
+  <section class="section tools-band">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow">Alat gratis</p><h2>Hitung langsung di browser</h2></div>
+        <a href="/alat/">Semua kalkulator →</a>
+      </div>
+      <div class="grid">
+        <a class="card tool" href="/alat/kpi-alat/"><span class="num">01</span><h3>KPI Alat: PA, UA, MA, EU</h3><p>Masukkan jam kerja, perbaikan, dan siaga — availability muncul seketika.</p><span class="more">Buka kalkulator →</span></a>
+        <a class="card tool" href="/alat/stripping-ratio/"><span class="num">02</span><h3>Stripping Ratio &amp; BESR</h3><p>Hitung SR aktual dan titik impas tambang dari harga jual dan biaya.</p><span class="more">Buka kalkulator →</span></a>
+        <a class="card tool" href="/alat/produktivitas/"><span class="num">03</span><h3>Produktivitas Excavator &amp; Truk</h3><p>Produksi per jam, jumlah truk ideal, dan match factor armada.</p><span class="more">Buka kalkulator →</span></a>
+      </div>
+    </div>
+  </section>
 
-  <div class="container"><AdSlot slot={AD_SLOTS.homeBelowHero} /></div>
-
+  <!-- ===== ARTIKEL TERBARU ===== -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -90,74 +167,76 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section tools-band">
-    <div class="container">
-      <div class="section-head">
-        <div><p class="eyebrow">Alat gratis</p><h2>Kalkulator tambang</h2></div>
-        <a href="/alat/">Semua kalkulator →</a>
-      </div>
-      <div class="grid">
-        <a class="card tool" href="/alat/kpi-alat/">
-          <span class="tool-ic" aria-hidden="true">%</span>
-          <h3>KPI Alat: PA, UA, MA, EU</h3>
-          <p>Masukkan jam kerja, perbaikan, dan siaga — hasil availability muncul seketika.</p>
-        </a>
-        <a class="card tool" href="/alat/stripping-ratio/">
-          <span class="tool-ic" aria-hidden="true">SR</span>
-          <h3>Stripping Ratio & BESR</h3>
-          <p>Hitung SR aktual dan titik impas tambang dari harga jual dan biaya.</p>
-        </a>
-        <a class="card tool" href="/alat/produktivitas/">
-          <span class="tool-ic" aria-hidden="true">Q</span>
-          <h3>Produktivitas Excavator & Truk</h3>
-          <p>Produksi per jam, jumlah truk ideal, dan match factor armada.</p>
-        </a>
-      </div>
-    </div>
-  </section>
+  <AppBanner />
 
-  <section class="section">
+  <!-- ===== AJAKAN ===== -->
+  <section class="section cta-band">
     <div class="container">
-      <div class="section-head"><div><p class="eyebrow">Topik</p><h2>Jelajahi kategori</h2></div></div>
-      <div class="cats">
-        {CATEGORIES.map((c) => (
-          <a class="card cat" href={categoryHref(hubs, c.slug)}>
-            <h3>{c.name}</h3>
-            <p>{c.desc}</p>
-            <span class="count">{counts[c.slug]} artikel</span>
-          </a>
-        ))}
+      <h2>Punya pertanyaan, koreksi, atau usulan topik?</h2>
+      <p>Tulis ke redaksi — kami balas dalam 2–3 hari kerja.</p>
+      <div class="cta center">
+        <a class="btn btn-primary" href="/kontak/">Kirim pesan ke redaksi</a>
+        <a class="btn btn-ghost" href="/tentang/">Tentang TambangPedia</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero { position: relative; background: var(--hero); color: var(--hero-ink); overflow: hidden; }
-  .contours { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--accent); opacity: .35; }
-  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--hero) 30%, transparent); }
-  .hero-inner { position: relative; z-index: 1; padding-top: 72px; padding-bottom: 80px; }
-  .hero h1 { color: var(--hero-ink); font-size: clamp(36px, 6vw, 64px); font-weight: 800; max-width: 760px; margin: 14px 0 18px; letter-spacing: -0.025em; }
-  .hero h1 span { color: var(--accent); }
-  .hero .lead { color: var(--hero-ink-2); font-size: clamp(17px, 2vw, 20px); max-width: 580px; margin: 0 0 28px; }
-  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-  .hero .btn-ghost { color: var(--hero-ink); }
-  .hero-stats { display: flex; gap: 28px; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); max-width: 460px; }
-  .hero-stats .kpi { padding: 0; background: none; border: none; }
-  .hero-stats .k { color: var(--hero-ink-2); }
-  .hero-stats .v { color: var(--hero-ink); font-size: 26px; }
-  .pit-mark { transform-origin: 930px 250px; animation: pit-pulse 2.2s ease-out 1; }
-  @keyframes pit-pulse { 0% { opacity: 0; transform: scale(.3); } 55% { opacity: 1; transform: scale(1.3); } 100% { opacity: .9; transform: scale(1); } }
-  @media (prefers-reduced-motion: reduce) { .pit-mark { animation: none; opacity: .9; } }
-  .tools-band { background: var(--bg-sunk); }
-  .tool { display: block; padding: 22px; text-decoration: none; color: var(--ink); transition: transform .2s; }
-  .tool:hover { transform: translateY(-3px); color: var(--ink); }
-  .tool-ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font: 800 17px/1 var(--font-head); }
-  .tool h3 { margin: 16px 0 6px; font-size: 19px; }
-  .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
-  .cats { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
-  .cat { padding: 20px; text-decoration: none; color: var(--ink); border-top: 3px solid var(--accent); }
-  .cat h3 { margin: 0 0 6px; font-size: 18px; }
-  .cat p { margin: 0 0 12px; color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
-  .count { font-size: 13px; color: var(--accent-ink); font-weight: 600; }
+  .hero { position: relative; overflow: hidden; color: var(--hero-ink); background: radial-gradient(60% 70% at 85% 30%, rgba(47,184,172,.14), transparent 70%), radial-gradient(50% 60% at 10% 90%, rgba(226,64,27,.16), transparent 70%), var(--hero); padding: 64px 0 56px; }
+  .net { position: absolute; inset: 0; width: 100%; height: 100%; color: #5FE3D5; opacity: .2; }
+  .hero-grid { position: relative; display: grid; gap: 40px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .hero-grid { grid-template-columns: 1.1fr .9fr; } }
+  .hero h1 { color: #fff; font: 800 clamp(40px, 6vw, 66px)/1.03 var(--font-head); letter-spacing: -0.03em; margin: 22px 0 14px; }
+  .hero .sub { font: 700 clamp(19px, 2.2vw, 24px)/1.3 var(--font-head); color: #5FE3D5; margin: 0 0 16px; }
+  .hero .lead { font-size: clamp(16px, 1.8vw, 18px); line-height: 1.65; color: #B4BFCC; margin: 0 0 28px; max-width: 560px; }
+  .hero .pill-badge { color: #FFB067; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .cta.center { justify-content: center; }
+  .hero .btn { padding: 15px 22px; }
+  .hero .btn-ghost { color: #fff; border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.04); }
+  .hero .btn-line { border-color: #2FB8AC; color: #5FE3D5; }
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 34px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.09); }
+  @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .stat { padding: 16px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); display: flex; flex-direction: column; gap: 6px; }
+  .stat b { font: 800 26px/1 var(--font-head); color: #fff; }
+  .stat span { font-size: 13px; line-height: 1.35; color: #9AA6B5; }
+  .hero-visual { position: relative; height: 480px; }
+  @media (max-width: 999px) { .hero-visual { display: none; } }
+  .hero-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .dot { animation: blink 2.8s ease-in-out infinite; }
+  @keyframes blink { 50% { opacity: .35; } }
+  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+  .tag { position: absolute; padding: 11px 14px; border-radius: 12px; background: rgba(7,11,18,.82); border: 1px solid rgba(95,227,213,.4); display: flex; flex-direction: column; gap: 4px; }
+  .tag b { font: 700 13px/1 var(--font-brand); letter-spacing: .06em; color: #5FE3D5; }
+  .tag span { font-size: 12.5px; color: #B4BFCC; }
+  .tag.hot { border-color: rgba(247,164,58,.55); }
+  .tag.hot b { color: #FFB067; }
+  .t1 { left: 18px; top: 56px; } .t2 { right: 6px; top: 28px; } .t3 { left: 50%; top: 112px; transform: translateX(-50%); } .t4 { left: 104px; bottom: 24px; }
+  .chips-row { position: relative; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+  .htag { padding: 9px 14px; border-radius: 999px; border: 1px solid rgba(95,227,213,.35); color: #8FF0E6; font: 600 12px/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; }
+  .htag.warm { border-color: rgba(247,164,58,.45); color: #FFB067; }
+
+  .section-head a { font-weight: 600; text-decoration: none; }
+  .topics { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); }
+  .topic { padding: 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: var(--ink); transition: transform .2s, border-color .2s; }
+  .topic:hover { transform: translateY(-3px); border-color: rgba(247,164,58,.5); color: var(--ink); }
+  .topic-top { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+  .code { font: 800 13px/1 var(--font-brand); letter-spacing: .08em; color: var(--cyan); }
+  .topic-n { font-size: 12.5px; color: var(--ink-3); text-align: right; }
+  .topic h3 { margin: 0; font-size: 19px; }
+  .topic p { margin: 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.55; flex: 1; }
+  .more { color: var(--accent-ink); font: 600 14px/1 var(--font-body); }
+  .topic-all { border-radius: var(--radius); border: 1px dashed rgba(247,164,58,.5); justify-content: center; }
+
+  .tools-band { background: linear-gradient(180deg, var(--cyan-soft), transparent 70%); border-top: 1px solid var(--line); }
+  .tool { padding: 26px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: var(--ink); transition: transform .2s, border-color .2s; }
+  .tool:hover { transform: translateY(-3px); border-color: rgba(95,227,213,.45); color: var(--ink); }
+  .num { font: 800 13px/1 var(--font-brand); color: var(--cyan); }
+  .tool h3 { margin: 4px 0 0; font-size: 21px; }
+  .tool p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; flex: 1; }
+
+  .cta-band { text-align: center; border-top: 1px solid var(--line); }
+  .cta-band h2 { font-size: clamp(26px, 3.4vw, 38px); margin: 0 auto 12px; max-width: 760px; }
+  .cta-band p { color: var(--ink-2); font-size: 17px; margin: 0 0 26px; }
 </style>

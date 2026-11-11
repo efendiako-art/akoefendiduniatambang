@@ -49,7 +49,7 @@ const year = new Date().getFullYear();
     <meta property="og:locale" content={SITE.locale} />
     {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#191714" />
+    <meta name="theme-color" content="#070B12" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="icon" type="image/png" sizes="144x144" href="/favicon-144.png" />
@@ -61,7 +61,7 @@ const year = new Date().getFullYear();
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Orbitron:wght@800;900&display=swap" rel="stylesheet" />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <script is:inline>
       try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -76,8 +76,8 @@ const year = new Date().getFullYear();
     <header class="site-header">
       <div class="container bar">
         <a class="brand" href="/" aria-label={`${SITE.name} beranda`}>
-          <img src="/logo.png" width="32" height="32" alt="" class="brand-logo" />
-          <span>{SITE.name}</span>
+          <img src="/logo-192.png" width="44" height="44" alt="" class="brand-logo" />
+          <span class="wordmark" aria-hidden="true"><span class="wm-1">TAMBANG</span><span class="wm-2"><span>P</span><span>E</span><span>D</span><span>I</span><span>A</span></span></span>
         </a>
         <nav class="nav" aria-label="Navigasi utama">
           {nav.map((n) => n.children.length === 0 ? (
@@ -141,7 +141,7 @@ const year = new Date().getFullYear();
     <footer class="site-footer">
       <div class="container foot-grid">
         <div>
-          <a class="brand" href="/"><img src="/logo.png" width="32" height="32" alt="" class="brand-logo" /><span>{SITE.name}</span></a>
+          <a class="brand" href="/" aria-label={`${SITE.name} beranda`}><img src="/logo-192.png" width="44" height="44" alt="" class="brand-logo" /><span class="wordmark" aria-hidden="true"><span class="wm-1">TAMBANG</span><span class="wm-2"><span>P</span><span>E</span><span>D</span><span>I</span><span>A</span></span></span></a>
           <p class="muted">{SITE.description}</p>
         </div>
         <div>
@@ -162,7 +162,8 @@ const year = new Date().getFullYear();
       (function () {
         var root = document.documentElement;
         document.getElementById('theme-toggle').addEventListener('click', function () {
-          var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+          // tampilan bawaan gelap; tombol ini beralih ke terang dan sebaliknya
+          var dark = root.dataset.theme !== 'light';
           root.dataset.theme = dark ? 'light' : 'dark';
           try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
         });
@@ -208,10 +209,12 @@ const year = new Date().getFullYear();
     backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
     border-bottom: 1px solid var(--line);
   }
-  .bar { display: flex; align-items: center; gap: 24px; height: 64px; }
+  .bar { display: flex; align-items: center; gap: 24px; height: 72px; }
   .site-header .bar { max-width: 1360px; }
-  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 800 20px/1 var(--font-head); letter-spacing: -0.02em; }
-  .brand-logo { border-radius: 50%; display: block; }
+  .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); flex: none; }
+  .brand:hover { color: var(--ink); }
+  .brand-logo { border-radius: 50%; display: block; width: 44px; height: 44px; }
+  @media (max-width: 520px) { .brand-logo { width: 38px; height: 38px; } .brand .wm-1 { font-size: 18px; } .brand .wm-2 { font-size: 11px; margin-top: 5px; } }
   .nav { display: none; gap: 2px; margin-left: auto; align-items: center; }
   .nav-link { display: inline-flex; align-items: center; gap: 5px; padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 500; font-size: 15px; white-space: nowrap; }
   .nav-link:hover, .nav-link[aria-current='page'], .nav-dd:hover > .nav-link, .nav-dd:focus-within > .nav-link, .nav-dd.open > .nav-link { background: var(--bg-sunk); color: var(--ink); }
@@ -273,7 +276,9 @@ const year = new Date().getFullYear();
     .tools { margin-left: 8px; }
     .menu-btn, .mobile-nav { display: none !important; }
   }
-  .site-footer { background: var(--hero); color: var(--hero-ink-2); margin-top: 40px; padding: 48px 0 24px; }
+  .site-footer { background: #04070C; border-top: 1px solid rgba(255,255,255,.07); color: var(--hero-ink-2); margin-top: 40px; padding: 56px 0 24px; }
+  .site-footer .wordmark { --brand-1: #FF5A00; --brand-2: #FFC400; --brand-glow: 1; }
+  .site-footer .muted { margin-top: 16px; }
   .site-footer .brand { color: var(--hero-ink); }
   .foot-grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
   @media (min-width: 720px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr; } }
@@ -283,5 +288,5 @@ const year = new Date().getFullYear();
   .site-footer a { color: var(--hero-ink-2); text-decoration: none; font-size: 15px; }
   .site-footer a:hover { color: var(--accent); }
   .muted { font-size: 15px; max-width: 420px; }
-  .copy { border-top: 1px solid #2f2b26; margin-top: 32px; padding-top: 20px; font-size: 13px; }
+  .copy { border-top: 1px solid rgba(255,255,255,.08); margin-top: 32px; padding-top: 20px; font-size: 13px; }
 </style>

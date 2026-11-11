@@ -1,47 +1,49 @@
 /* ============================================================
-   TambangPedia — design tokens
-   Palet: kertas hangat, tinta arang, aksen "bijih" amber-tembaga
+   TambangPedia — design tokens (tampilan baru, Nov 2026)
+   Bawaan: GELAP biru-hitam, aksen oranye menyala + cyan.
+   Tema terang tetap tersedia lewat tombol matahari/bulan (data-theme="light").
    ============================================================ */
 :root {
-  --bg: #f6f3ee;
-  --bg-elev: #ffffff;
-  --bg-sunk: #ece7df;
-  --ink: #1d1b18;
-  --ink-2: #4a453e;
-  --ink-3: #7a7369;
-  --line: #ddd5c9;
-  --accent: #c4661f;
-  --accent-ink: #8f4512;
-  --accent-soft: #f6e3d2;
-  --hero: #191714;
-  --hero-ink: #f3eee6;
-  --hero-ink-2: #b9b0a3;
-  --good: #2f7d4f;
-  --radius: 14px;
-  --radius-sm: 8px;
-  --shadow: 0 1px 2px rgba(29, 27, 24, .06), 0 8px 24px rgba(29, 27, 24, .06);
-  --font-head: 'Archivo', system-ui, sans-serif;
+  --bg: #070B12;
+  --bg-elev: #0E1520;
+  --bg-sunk: #0A1019;
+  --ink: #EAF0F6;
+  --ink-2: #B4BFCC;
+  --ink-3: #8C98A7;
+  --line: #1E2836;
+  --accent: #FF7A1A;
+  --accent-ink: #FFB067;
+  --accent-soft: #2A1A10;
+  --cyan: #5FE3D5;
+  --cyan-soft: rgba(95, 227, 213, .12);
+  --grad: linear-gradient(90deg, #E2401B, #F7A43A);
+  --brand-1: #FF5A00;
+  --brand-2: #FFC400;
+  --brand-glow: 1;
+  --hero: #070B12;
+  --hero-ink: #FFFFFF;
+  --hero-ink-2: #B4BFCC;
+  --good: #4ADE80;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 0 rgba(255, 255, 255, .03) inset, 0 12px 32px rgba(0, 0, 0, .35);
+  --font-head: 'Sora', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
-  --maxw: 1180px;
-  --readw: 720px;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --bg: #141311; --bg-elev: #1c1a17; --bg-sunk: #0f0e0c;
-    --ink: #efe9df; --ink-2: #c3baad; --ink-3: #8d857a; --line: #2f2b26;
-    --accent: #e58a3e; --accent-ink: #f0a76a; --accent-soft: #3a2616;
-    --hero: #0d0c0b; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
-    color-scheme: dark;
-  }
-}
-:root[data-theme='dark'] {
-  --bg: #141311; --bg-elev: #1c1a17; --bg-sunk: #0f0e0c;
-  --ink: #efe9df; --ink-2: #c3baad; --ink-3: #8d857a; --line: #2f2b26;
-  --accent: #e58a3e; --accent-ink: #f0a76a; --accent-soft: #3a2616;
-  --hero: #0d0c0b; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+  --font-brand: 'Orbitron', 'Sora', system-ui, sans-serif;
+  --maxw: 1240px;
+  --readw: 740px;
   color-scheme: dark;
+}
+:root[data-theme='light'] {
+  --bg: #F5F3EF; --bg-elev: #FFFFFF; --bg-sunk: #ECE8E1;
+  --ink: #12161D; --ink-2: #3F4752; --ink-3: #66707C; --line: #DCD6CC;
+  --accent: #D9540B; --accent-ink: #A8410A; --accent-soft: #FBE6D6;
+  --cyan: #0F7F75; --cyan-soft: rgba(15, 127, 117, .1);
+  --brand-1: #D93D00; --brand-2: #A86400; --brand-glow: 0;
+  --hero: #0B1018; --hero-ink: #FFFFFF; --hero-ink-2: #B4BFCC;
+  --good: #2F7D4F;
+  --shadow: 0 1px 2px rgba(18, 22, 29, .06), 0 8px 24px rgba(18, 22, 29, .07);
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -61,17 +63,39 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; letter-spacing
 @media (min-width: 720px) { .container { padding: 0 28px; } }
 
 .eyebrow {
-  font: 600 12px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase;
-  color: var(--accent);
+  font: 600 12px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent-ink);
 }
+/* label kapsul di atas judul */
+.pill-badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
+  border: 1px solid rgba(247, 164, 58, .45); background: rgba(226, 64, 27, .12); color: var(--accent-ink);
+  font: 600 12px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase;
+}
+/* tulisan TAMBANG / PEDIA di samping logo */
+.wordmark { display: inline-flex; flex-direction: column; text-decoration: none; }
+.wordmark .wm-1 {
+  font: 900 22px/1 var(--font-brand); letter-spacing: .03em; color: var(--brand-1);
+  -webkit-text-stroke: 1px var(--brand-1);
+  filter: drop-shadow(0 0 calc(10px * var(--brand-glow)) rgba(255, 90, 0, calc(.55 * var(--brand-glow))));
+}
+.wordmark .wm-2 {
+  display: flex; justify-content: space-between; font: 900 13.5px/1 var(--font-brand); margin-top: 6px;
+  color: var(--brand-2); -webkit-text-stroke: .7px var(--brand-2);
+  filter: drop-shadow(0 0 calc(8px * var(--brand-glow)) rgba(255, 196, 0, calc(.45 * var(--brand-glow))));
+}
+.wordmark.sm .wm-1 { font-size: 17px; -webkit-text-stroke-width: .8px; }
+.wordmark.sm .wm-2 { font-size: 10.5px; margin-top: 5px; -webkit-text-stroke-width: .5px; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px;
   border-radius: 999px; font: 600 15px/1 var(--font-body); text-decoration: none;
   border: 1px solid transparent; cursor: pointer; transition: transform .15s, background .15s;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-ink); color: #fff; }
+.btn-primary { background: var(--grad); color: #fff; box-shadow: 0 10px 28px rgba(226, 64, 27, .3); }
+.btn-primary:hover { color: #fff; filter: brightness(1.08); }
+.btn-line { border-color: var(--cyan); color: var(--cyan); background: transparent; }
+.btn-line:hover { color: var(--cyan); background: var(--cyan-soft); }
 .btn-ghost { border-color: currentColor; color: inherit; background: transparent; }
 
 .chip {
@@ -90,6 +114,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; letter-spacing
   background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+:root:not([data-theme='light']) .card { background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015)), var(--bg-elev); }
 
 /* Konten artikel (Markdown) */
 .prose { max-width: var(--readw); font-size: 18px; }
@@ -130,7 +155,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; letter-spacing
 }
 .field input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
 .row2 { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
-.calc-out { background: var(--hero); color: var(--hero-ink); border-color: var(--hero); }
+.calc-out { background: radial-gradient(90% 80% at 100% 0%, rgba(95,227,213,.14), transparent 60%), radial-gradient(80% 80% at 0% 100%, rgba(226,64,27,.16), transparent 60%), #0B111A; color: var(--hero-ink); border-color: rgba(95,227,213,.25); }
 .calc-out h2 { color: var(--hero-ink); }
 .kpis { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 .kpi { padding: 16px; border-radius: var(--radius-sm); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); }
@@ -156,7 +181,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; letter-spacing
 .diagram .ac-ln { stroke: var(--accent); stroke-width: 2; fill: none; }
 .diagram .box { fill: var(--bg-sunk); stroke: var(--line); stroke-width: 1.2; }
 .diagram .acf { fill: var(--accent); fill-opacity: .35; stroke: var(--accent); stroke-width: 1.4; }
-.diagram .coal { fill: #3b342e; stroke: var(--line); stroke-width: 1.2; }
+.diagram .coal { fill: #2a2f38; stroke: var(--line); stroke-width: 1.2; }
 .diagram .dash { stroke-dasharray: 5 4; }
 .diagram .head { fill: var(--ink-3); }
 
