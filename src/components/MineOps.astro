@@ -1,0 +1,157 @@
+---
+// Animasi operasi tambang tampak atas: loading, hauling (dengan batas kecepatan), dumping, dozing.
+// Dozer bergerak sinkron dengan truk yang membuang muatan (siklus 6 detik).
+---
+<div class="mine-ops">
+<svg role="img" aria-label="Animasi tampak atas operasi tambang: excavator memuat dump truck di pit, truk mengangkut lewat jalan angkut dengan batas kecepatan, membuang di disposal, dozer meratakan timbunan" viewBox="640 0 800 760" preserveAspectRatio="xMidYMid meet" class="mo-svg">
+      <defs>
+        <pattern id="mo-grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity=".035"/></pattern>
+        <radialGradient id="mo-pitg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#3A2414"/><stop offset="1" stop-color="#0B0F15"/></radialGradient>
+        <radialGradient id="mo-dispg" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#4A3220"/><stop offset="1" stop-color="#18120C"/></radialGradient>
+      </defs>
+      <rect x="640" width="800" height="760" fill="url(#mo-grid)"/>
+
+      <!-- PIT (jenjang) -->
+      <ellipse cx="900" cy="575" rx="245" ry="165" fill="url(#mo-pitg)"/>
+      <g fill="none" stroke="#F7A43A">
+        <ellipse cx="900" cy="575" rx="245" ry="165" stroke-opacity=".6" stroke-width="1.6"/>
+        <ellipse cx="905" cy="582" rx="195" ry="130" stroke-opacity=".45"/>
+        <ellipse cx="910" cy="589" rx="145" ry="96" stroke-opacity=".38"/>
+        <ellipse cx="915" cy="596" rx="95" ry="62" stroke-opacity=".3"/>
+      </g>
+      <path d="M800 580 Q825 625 875 625 Q855 670 805 655 Z" fill="#2B2F38" stroke="#5FE3D5" stroke-opacity=".45"/>
+      <text x="745" y="610" fill="#8C98A7" font-family="Inter" font-size="11" letter-spacing="1.5">FRONT GALIAN</text>
+
+      <!-- DISPOSAL -->
+      <path d="M1185 40 L1428 28 L1434 410 L1290 420 L1238 268 L1180 190 Z" fill="url(#mo-dispg)" stroke="#FFC400" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="8 6"/>
+      <g fill="#7A5230" stroke="#C88A4A" stroke-opacity=".6">
+        <ellipse cx="1300" cy="105" rx="62" ry="32"/><ellipse cx="1385" cy="300" rx="38" ry="40"/><ellipse cx="1370" cy="380" rx="50" ry="24"/>
+      </g>
+      <ellipse cx="1392" cy="196" rx="36" ry="26" fill="#7A5230" stroke="#C88A4A" stroke-opacity=".6"/>
+      <text x="1250" y="70" fill="#FFD25A" font-family="Orbitron, sans-serif" font-weight="700" font-size="13" letter-spacing="2">DISPOSAL</text>
+
+      <!-- JALAN ANGKUT -->
+      <path d="M943.0 553.0 L1020.0 553.0 L1080.0 515.0 L1105.0 440.0 L1150.0 370.0 L1195.0 300.0 L1222.0 240.0" fill="none" stroke="#2A3240" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M943.0 553.0 L1020.0 553.0 L1080.0 515.0 L1105.0 440.0 L1150.0 370.0 L1195.0 300.0 L1222.0 240.0" fill="none" stroke="#3A4456" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M943.0 553.0 L1020.0 553.0 L1080.0 515.0 L1105.0 440.0 L1150.0 370.0 L1195.0 300.0 L1222.0 240.0" fill="none" stroke="#FFD08F" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="10 12"/>
+      <path class="mo-flow" d="M943.0 544.0 L1017.6 544.3 L1072.8 509.6 L1096.9 436.1 L1142.4 365.1 L1187.1 295.6 L1213.8 236.3" fill="none" stroke="#FFB067" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="4 24"/>
+      <path class="mo-flowback" d="M943.0 562.0 L1022.4 561.7 L1087.2 520.4 L1113.1 443.9 L1157.6 374.9 L1202.9 304.4 L1230.2 243.7" fill="none" stroke="#5FE3D5" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="4 24"/>
+      <!-- tanggul jalan -->
+      <path d="M943.0 527.0 L1013.1 527.9 L1059.2 499.4 L1081.6 428.7 L1128.1 355.9 L1172.3 287.4 L1198.3 229.3" fill="none" stroke="#F7A43A" stroke-opacity=".35" stroke-width="2" stroke-dasharray="2 5"/>
+      <path d="M943.0 579.0 L1026.9 578.1 L1100.8 530.6 L1128.4 451.3 L1171.9 384.1 L1217.7 312.6 L1245.7 250.7" fill="none" stroke="#F7A43A" stroke-opacity=".35" stroke-width="2" stroke-dasharray="2 5"/>
+
+      <!-- RAMBU KECEPATAN -->
+      <g transform="translate(1035 595)"><circle r="13" fill="#0B111A" stroke="#E2401B" stroke-width="3"/><text y="4.5" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="11" fill="#fff">20</text></g>
+      <g transform="translate(1062 470)"><circle r="13" fill="#0B111A" stroke="#E2401B" stroke-width="3"/><text y="4.5" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="11" fill="#fff">15</text></g>
+      <g transform="translate(1130 330)"><circle r="13" fill="#0B111A" stroke="#E2401B" stroke-width="3"/><text y="4.5" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="800" font-size="11" fill="#fff">40</text></g>
+      
+
+      <!-- DUMP TRUCK (4 unit, bergiliran) -->
+      <g>
+        <animateMotion dur="24s" begin="0.0s" repeatCount="indefinite" rotate="auto" path="M943.0 544.0 L1017.6 544.3 L1072.8 509.6 L1096.9 436.1 L1142.4 365.1 L1187.1 295.6 L1213.8 236.3 L1230.2 243.7 L1202.9 304.4 L1157.6 374.9 L1113.1 443.9 L1087.2 520.4 L1022.4 561.7 L943.0 562.0 Z" keyPoints="0;0;0.4799;0.4799;1" keyTimes="0;0.12;0.48;0.58;1" calcMode="linear"/>
+        <g transform="scale(1)">
+          <rect x="-15" y="-8" width="30" height="16" rx="3" fill="#0E1520" stroke="#FFB067" stroke-width="1.6"/>
+          <rect x="-13" y="-6" width="19" height="12" rx="2" fill="#1A2230" stroke="#FFB067" stroke-opacity=".6" stroke-width="1"/>
+          <rect x="-12" y="-5" width="17" height="10" rx="3" fill="#A86A33">
+            <animate attributeName="opacity" dur="24s" begin="0.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.07;0.12;0.5;0.53;1"/>
+          </rect>
+          <rect x="8" y="-7" width="7" height="14" rx="2" fill="#5FE3D5" fill-opacity=".55" stroke="#5FE3D5" stroke-width="1.2"/>
+          <circle cx="16" cy="-5" r="1.4" fill="#FFF3C4"/><circle cx="16" cy="5" r="1.4" fill="#FFF3C4"/>
+        </g>
+      </g>
+      <g>
+        <animateMotion dur="24s" begin="-6.0s" repeatCount="indefinite" rotate="auto" path="M943.0 544.0 L1017.6 544.3 L1072.8 509.6 L1096.9 436.1 L1142.4 365.1 L1187.1 295.6 L1213.8 236.3 L1230.2 243.7 L1202.9 304.4 L1157.6 374.9 L1113.1 443.9 L1087.2 520.4 L1022.4 561.7 L943.0 562.0 Z" keyPoints="0;0;0.4799;0.4799;1" keyTimes="0;0.12;0.48;0.58;1" calcMode="linear"/>
+        <g transform="scale(1)">
+          <rect x="-15" y="-8" width="30" height="16" rx="3" fill="#0E1520" stroke="#FFB067" stroke-width="1.6"/>
+          <rect x="-13" y="-6" width="19" height="12" rx="2" fill="#1A2230" stroke="#FFB067" stroke-opacity=".6" stroke-width="1"/>
+          <rect x="-12" y="-5" width="17" height="10" rx="3" fill="#A86A33">
+            <animate attributeName="opacity" dur="24s" begin="-6.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.07;0.12;0.5;0.53;1"/>
+          </rect>
+          <rect x="8" y="-7" width="7" height="14" rx="2" fill="#5FE3D5" fill-opacity=".55" stroke="#5FE3D5" stroke-width="1.2"/>
+          <circle cx="16" cy="-5" r="1.4" fill="#FFF3C4"/><circle cx="16" cy="5" r="1.4" fill="#FFF3C4"/>
+        </g>
+      </g>
+      <g>
+        <animateMotion dur="24s" begin="-12.0s" repeatCount="indefinite" rotate="auto" path="M943.0 544.0 L1017.6 544.3 L1072.8 509.6 L1096.9 436.1 L1142.4 365.1 L1187.1 295.6 L1213.8 236.3 L1230.2 243.7 L1202.9 304.4 L1157.6 374.9 L1113.1 443.9 L1087.2 520.4 L1022.4 561.7 L943.0 562.0 Z" keyPoints="0;0;0.4799;0.4799;1" keyTimes="0;0.12;0.48;0.58;1" calcMode="linear"/>
+        <g transform="scale(1)">
+          <rect x="-15" y="-8" width="30" height="16" rx="3" fill="#0E1520" stroke="#FFB067" stroke-width="1.6"/>
+          <rect x="-13" y="-6" width="19" height="12" rx="2" fill="#1A2230" stroke="#FFB067" stroke-opacity=".6" stroke-width="1"/>
+          <rect x="-12" y="-5" width="17" height="10" rx="3" fill="#A86A33">
+            <animate attributeName="opacity" dur="24s" begin="-12.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.07;0.12;0.5;0.53;1"/>
+          </rect>
+          <rect x="8" y="-7" width="7" height="14" rx="2" fill="#5FE3D5" fill-opacity=".55" stroke="#5FE3D5" stroke-width="1.2"/>
+          <circle cx="16" cy="-5" r="1.4" fill="#FFF3C4"/><circle cx="16" cy="5" r="1.4" fill="#FFF3C4"/>
+        </g>
+      </g>
+      <g>
+        <animateMotion dur="24s" begin="-18.0s" repeatCount="indefinite" rotate="auto" path="M943.0 544.0 L1017.6 544.3 L1072.8 509.6 L1096.9 436.1 L1142.4 365.1 L1187.1 295.6 L1213.8 236.3 L1230.2 243.7 L1202.9 304.4 L1157.6 374.9 L1113.1 443.9 L1087.2 520.4 L1022.4 561.7 L943.0 562.0 Z" keyPoints="0;0;0.4799;0.4799;1" keyTimes="0;0.12;0.48;0.58;1" calcMode="linear"/>
+        <g transform="scale(1)">
+          <rect x="-15" y="-8" width="30" height="16" rx="3" fill="#0E1520" stroke="#FFB067" stroke-width="1.6"/>
+          <rect x="-13" y="-6" width="19" height="12" rx="2" fill="#1A2230" stroke="#FFB067" stroke-opacity=".6" stroke-width="1"/>
+          <rect x="-12" y="-5" width="17" height="10" rx="3" fill="#A86A33">
+            <animate attributeName="opacity" dur="24s" begin="-18.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.07;0.12;0.5;0.53;1"/>
+          </rect>
+          <rect x="8" y="-7" width="7" height="14" rx="2" fill="#5FE3D5" fill-opacity=".55" stroke="#5FE3D5" stroke-width="1.2"/>
+          <circle cx="16" cy="-5" r="1.4" fill="#FFF3C4"/><circle cx="16" cy="5" r="1.4" fill="#FFF3C4"/>
+        </g>
+      </g>
+
+      <!-- EXCAVATOR (tampak atas) -->
+      <g transform="translate(930 610) scale(1.35)">
+        <rect x="-26" y="-30" width="11" height="60" rx="4" fill="#0E1520" stroke="#5FE3D5" stroke-width="1.6"/>
+        <rect x="15" y="-30" width="11" height="60" rx="4" fill="#0E1520" stroke="#5FE3D5" stroke-width="1.6"/>
+        <g class="mo-swing">
+          <rect x="-22" y="-20" width="44" height="40" rx="6" fill="#2A1A10" stroke="#F7A43A" stroke-width="2"/>
+          <rect x="6" y="-18" width="12" height="13" rx="2" fill="#5FE3D5" fill-opacity=".5"/>
+          <path d="M0 -4 L0 -64 L6 -64 L6 -4 Z" fill="#F7A43A" fill-opacity=".35" stroke="#F7A43A" stroke-width="1.6" transform="rotate(10)"/>
+          <rect x="-8" y="-82" width="22" height="16" rx="3" fill="#5FE3D5" fill-opacity=".25" stroke="#5FE3D5" stroke-width="1.6" transform="rotate(10)"/>
+          <circle r="200" fill="none" stroke="none"/>
+        </g>
+        <circle r="4" fill="#5FE3D5" class="mo-pulse"/>
+      </g>
+      <text x="860" y="715" fill="#8FF0E6" font-family="Orbitron, sans-serif" font-weight="700" font-size="13" letter-spacing="2">LOADING POINT</text>
+
+      <!-- TUMPUKAN BARU dari truk (muncul saat dumping, lalu didorong dozer) -->
+      <g class="mo-dpile"><ellipse rx="18" ry="15" fill="#A86A33" stroke="#E0A060" stroke-opacity=".7"/><ellipse cx="-4" cy="-3" rx="8" ry="6" fill="#C88A4A"/></g>
+      <!-- DOZER (tampak atas): menunggu truk selesai dumping, lalu langsung mendorong -->
+      <g class="mo-dozer">
+        <rect class="mo-blade" x="26" y="-22" width="22" height="44" rx="9" fill="#A86A33"/>
+        <rect x="-24" y="-22" width="9" height="44" rx="3" fill="#0E1520" stroke="#CBBEFF" stroke-width="1.5"/>
+        <rect x="11" y="-22" width="9" height="44" rx="3" fill="#0E1520" stroke="#CBBEFF" stroke-width="1.5"/>
+        <rect x="-16" y="-16" width="28" height="32" rx="4" fill="#1D1830" stroke="#CBBEFF" stroke-width="1.8"/>
+        <rect x="-12" y="-9" width="11" height="18" rx="2" fill="#CBBEFF" fill-opacity=".45"/>
+        <rect x="21" y="-26" width="7" height="52" rx="2" fill="#CBBEFF" fill-opacity=".45" stroke="#CBBEFF" stroke-width="1.8"/>
+      </g>
+      <text x="1270" y="350" fill="#CBBEFF" font-family="Orbitron, sans-serif" font-weight="700" font-size="12" letter-spacing="2">DOZER</text>
+
+      <!-- LABEL KECEPATAN LAJUR -->
+      <g font-family="Inter, sans-serif" font-size="12" font-weight="600">
+        <g transform="translate(1172 512)"><rect x="-6" y="-17" width="200" height="26" rx="13" fill="#0B111A" stroke="#FFB067" stroke-opacity=".6"/><circle cx="8" cy="-4" r="4" fill="#FFB067"/><text x="18" y="0" fill="#FFB067">Bermuatan · 30 km/jam</text></g>
+        <g transform="translate(1172 548)"><rect x="-6" y="-17" width="186" height="26" rx="13" fill="#0B111A" stroke="#5FE3D5" stroke-opacity=".6"/><circle cx="8" cy="-4" r="4" fill="#5FE3D5"/><text x="18" y="0" fill="#8FF0E6">Kosong · 40 km/jam</text></g>
+        <g transform="translate(1165 470)"><rect x="-6" y="-17" width="176" height="26" rx="13" fill="#0B111A" stroke="#E2401B" stroke-opacity=".7"/><text x="6" y="0" fill="#FF8A5C">Tanjakan 8% · 15 km/jam</text></g>
+      </g>
+    </svg>
+</div>
+
+<style>
+.mine-ops { position: relative; width: 100%; height: 100%; }
+.mo-svg { display: block; width: 100%; height: 100%; }
+
+
+.mo-swing{transform-box:fill-box;transform-origin:50% 50%;animation:mo-swing 6s ease-in-out infinite}
+@keyframes mo-swing{0%,18%{transform:rotate(0deg)}38%,58%{transform:rotate(-115deg)}78%,100%{transform:rotate(0deg)}}
+.mo-dozer{transform-box:view-box;transform-origin:0 0;animation:mo-doze 6.0s ease-in-out infinite}
+@keyframes mo-doze{0%,32%{transform:translate(1300px,300px) rotate(-35deg)}42%{transform:translate(1222px,192px) rotate(0deg)}72%{transform:translate(1335px,192px) rotate(0deg)}84%{transform:translate(1320px,250px) rotate(-20deg)}100%{transform:translate(1300px,300px) rotate(-35deg)}}
+.mo-dpile{transform-box:view-box;transform-origin:0 0;animation:mo-dpile 6.0s ease-in-out infinite}
+@keyframes mo-dpile{0%{transform:translate(1262px,192px) scale(.15);opacity:0}9%{transform:translate(1262px,192px) scale(1);opacity:1}42%{transform:translate(1262px,192px) scale(1);opacity:1}72%{transform:translate(1378px,192px) scale(1.25,.8);opacity:.9}82%,100%{transform:translate(1378px,192px) scale(1.4,.6);opacity:0}}
+.mo-blade{animation:mo-blade 6.0s ease-in-out infinite}
+@keyframes mo-blade{0%,40%{opacity:.2}45%,70%{opacity:.9}76%,100%{opacity:.2}}
+.mo-flow{animation:mo-flow 1.6s linear infinite}
+@keyframes mo-flow{to{stroke-dashoffset:-28}}
+.mo-flowback{animation:mo-flowb 1.6s linear infinite}
+@keyframes mo-flowb{to{stroke-dashoffset:28}}
+.mo-pulse{animation:mo-pulse 2.4s ease-in-out infinite}
+@keyframes mo-pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.mo-swing,.mo-dozer,.mo-dpile,.mo-blade,.mo-flow,.mo-flowback,.mo-pulse{animation:none}}
+
+</style>
