@@ -1,7 +1,7 @@
 ---
 // Orbit ekosistem: kartu topik/fitur berputar mengelilingi inti TAMBANGPEDIA (model Minergo).
 // Di layar kecil atau saat "kurangi gerakan" aktif, kartu tampil sebagai daftar biasa.
-interface Item { code: string; name: string; sub: string; href: string; c: string }
+interface Item { code: string; name: string; sub: string; href: string; c: string; img?: string }
 interface Props { items: Item[]; stats: string }
 const { items, stats } = Astro.props;
 ---
@@ -33,8 +33,10 @@ const { items, stats } = Astro.props;
       <ul class="cards">
         {items.map((it) => (
           <li class="oc-li">
-            <a class="ocard" href={it.href} {...(it.href.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>
-              <span class="oic" style={`color:${it.c};border:1px solid ${it.c}66;background:${it.c}1A`}>{it.code}</span>
+            <a class:list={['ocard', { hot: !!it.img }]} href={it.href} {...(it.href.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>
+              {it.img
+                ? <span class="oic oimg" style={`border:1px solid ${it.c}`}><img src={it.img} width="38" height="38" alt="" loading="lazy" /></span>
+                : <span class="oic" style={`color:${it.c};border:1px solid ${it.c}66;background:${it.c}1A`}>{it.code}</span>}
               <span class="otext"><span class="oname">{it.name}</span><span class="osub">{it.sub}</span></span>
               <span class="odot" aria-hidden="true"></span>
             </a>
@@ -118,6 +120,12 @@ const { items, stats } = Astro.props;
   .cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
   .ocard { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; background: linear-gradient(180deg, rgba(22,30,42,.92), rgba(12,17,25,.92)); border: 1px solid rgba(255,255,255,.1); box-shadow: 0 14px 34px rgba(0,0,0,.45); color: #EAF0F6; text-decoration: none; }
   .ocard:hover, .ocard:focus-visible { border-color: rgba(95,227,213,.7); color: #fff; }
+  .ocard.hot { border-color: rgba(255,196,0,.75); background: linear-gradient(180deg, rgba(40,28,10,.95), rgba(14,11,7,.95)); box-shadow: 0 0 22px rgba(255,140,0,.35), 0 14px 34px rgba(0,0,0,.45); }
+  .ocard.hot:hover, .ocard.hot:focus-visible { border-color: #FFC400; }
+  .ocard.hot .oname { color: #FFC400; }
+  .ocard.hot .osub { color: #7FF0B5; }
+  .oimg { overflow: hidden; padding: 0; }
+  .oimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .oic { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; font: 800 11.5px/1 var(--font-brand); letter-spacing: .04em; }
   .otext { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
   .oname { font: 800 13px/1.2 var(--font-brand); letter-spacing: .04em; color: #fff; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

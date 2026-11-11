@@ -36,6 +36,7 @@ const ecoItems = [
   { code: 'KL', name: 'Kalkulator', sub: 'KPI, SR, produktivitas', href: '/alat/', c: '#FFB067' },
   { code: 'SOP', name: 'SOP & IK', sub: `${sopCount} dokumen contoh`, href: '/sop/', c: '#7FF0B5' },
   { code: 'APK', name: 'Aplikasi Android', sub: 'Eng 3D Calculation', href: '/aplikasi/', c: '#B9A4FF' },
+  { code: '', name: 'Eng 3D Calculation', sub: '▶ Unduh di Google Play', href: 'https://play.google.com/store/apps/details?id=com.akoefendi.engcalc', c: '#FFC400', img: '/aplikasi/ikon.webp' },
 ];
 const ecoStats = `${CATEGORIES.length} TOPIK · ${posts.length} ARTIKEL · 3 KALKULATOR`;
 const siteUrl = Astro.site?.toString();
@@ -121,6 +122,9 @@ const jsonLd = {
     <div class="side-wrap"><MineSide /></div>
   </section>
 
+  <!-- ===== PORTAL EKOSISTEM ===== -->
+  <OrbitEco items={ecoItems} stats={ecoStats} />
+
   <div class="container"><AdSlot slot={AD_SLOTS.homeBelowHero} /></div>
 
   <!-- ===== TOPIK ===== -->
@@ -147,9 +151,6 @@ const jsonLd = {
       </div>
     </div>
   </section>
-
-  <!-- ===== ORBIT EKOSISTEM ===== -->
-  <OrbitEco items={ecoItems} stats={ecoStats} />
 
   <!-- ===== KALKULATOR ===== -->
   <section class="section tools-band">
