@@ -1,0 +1,91 @@
+---
+// Animasi tampak samping: excavator memuat, dump truck mengangkut, membuang di disposal.
+---
+<div class="mine-side">
+<svg class="mine-scene" role="img" aria-label="Animasi excavator memuat material ke dump truck yang mengangkut ke disposal" viewBox="0 0 1440 190" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="ms-groundg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1A10" stop-opacity=".9"/><stop offset="1" stop-color="#070B12" stop-opacity="0"/></linearGradient>
+      </defs>
+      <!-- lereng galian (kiri), jalan angkut, disposal (kanan) -->
+      <path d="M0 96 L70 96 L120 160 L1210 160 L1290 112 L1440 112 L1440 190 L0 190 Z" fill="url(#ms-groundg)"/>
+      <path d="M0 96 L70 96 L120 160 L1210 160 L1290 112 L1440 112" fill="none" stroke="#F7A43A" stroke-opacity=".6" stroke-width="1.6"/>
+      <path d="M0 60 L40 60 L70 96" fill="none" stroke="#F7A43A" stroke-opacity=".25" stroke-width="1.2"/>
+      <path d="M40 62 L1440 62" stroke="#F7A43A" stroke-opacity=".18" stroke-width="1" stroke-dasharray="3 9"/>
+      <path d="M120 172 L1210 172" stroke="#FFD08F" stroke-opacity=".25" stroke-width="1" stroke-dasharray="10 12"/>
+      <path class="pile" d="M1300 112 Q1340 86 1385 98 Q1415 92 1440 104 L1440 112 Z" fill="#8A5A2B" stroke="#C88A4A" stroke-width="1"/>
+      <path d="M90 128 Q110 112 135 130 Z" fill="#8A5A2B" fill-opacity=".8"/>
+
+      <!-- truk kecil di jenjang atas (latar belakang) -->
+      <g transform="translate(1500 58) scale(.55)" opacity=".55"><g class="truck2"><g class="eq">
+            <g class="bed"><path d="M0 -40 L64 -40 L70 -14 L0 -14 Z" fill="rgba(247,164,58,.12)" stroke="#FFB067" stroke-width="2" stroke-linejoin="round"/>
+              <path class="load" d="M4 -40 Q20 -56 36 -50 Q52 -58 64 -40 Z" fill="#8A5A2B" stroke="#C88A4A" stroke-width="1.2"/></g>
+            <path d="M70 -36 L92 -36 L100 -22 L100 -12 L70 -12 Z" fill="rgba(95,227,213,.12)" stroke="#5FE3D5" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M80 -32 L90 -32 L95 -24 L80 -24 Z" fill="#5FE3D5" fill-opacity=".45"/>
+            <rect x="-2" y="-14" width="104" height="6" rx="2" fill="#0E1520" stroke="#5FE3D5" stroke-width="1.5"/>
+            <g class="wheel"><circle cx="16" cy="-2" r="9" fill="#070B12" stroke="#5FE3D5" stroke-width="2"/><path d="M16 -9 V5 M9 -2 H23" stroke="#5FE3D5" stroke-width="1.2"/></g>
+            <g class="wheel"><circle cx="84" cy="-2" r="9" fill="#070B12" stroke="#5FE3D5" stroke-width="2"/><path d="M84 -9 V5 M77 -2 H91" stroke="#5FE3D5" stroke-width="1.2"/></g>
+          </g></g></g>
+
+      <!-- excavator -->
+      <g class="eq">
+        <rect x="168" y="140" width="96" height="18" rx="9" fill="#0E1520" stroke="#5FE3D5" stroke-width="2"/>
+        <circle cx="180" cy="149" r="4" fill="#5FE3D5"/><circle cx="216" cy="149" r="4" fill="#5FE3D5"/><circle cx="252" cy="149" r="4" fill="#5FE3D5"/>
+        <path d="M176 140 L176 112 Q176 104 184 104 L246 104 L252 116 L252 140 Z" fill="rgba(247,164,58,.14)" stroke="#F7A43A" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M222 104 L222 86 L242 86 L248 104" fill="rgba(95,227,213,.12)" stroke="#5FE3D5" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M228 90 L240 90 L243 100 L228 100 Z" fill="#5FE3D5" fill-opacity=".45"/>
+        <g class="boom">
+          <path d="M238 104 L300 58 L310 66 L246 112 Z" fill="rgba(247,164,58,.16)" stroke="#F7A43A" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M302 60 L336 108 L328 114 L296 66 Z" fill="rgba(247,164,58,.16)" stroke="#F7A43A" stroke-width="2" stroke-linejoin="round"/>
+          <path class="bucket" d="M326 110 L352 112 L350 132 Q336 138 324 126 Z" fill="rgba(95,227,213,.14)" stroke="#5FE3D5" stroke-width="2" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <!-- dump truck utama: dimuat di excavator, angkut ke disposal, buang, kembali -->
+      <g transform="translate(360 160)"><g class="truck"><g class="eq">
+            <g class="bed"><path d="M0 -40 L64 -40 L70 -14 L0 -14 Z" fill="rgba(247,164,58,.12)" stroke="#FFB067" stroke-width="2" stroke-linejoin="round"/>
+              <path class="load" d="M4 -40 Q20 -56 36 -50 Q52 -58 64 -40 Z" fill="#8A5A2B" stroke="#C88A4A" stroke-width="1.2"/></g>
+            <path d="M70 -36 L92 -36 L100 -22 L100 -12 L70 -12 Z" fill="rgba(95,227,213,.12)" stroke="#5FE3D5" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M80 -32 L90 -32 L95 -24 L80 -24 Z" fill="#5FE3D5" fill-opacity=".45"/>
+            <rect x="-2" y="-14" width="104" height="6" rx="2" fill="#0E1520" stroke="#5FE3D5" stroke-width="1.5"/>
+            <g class="wheel"><circle cx="16" cy="-2" r="9" fill="#070B12" stroke="#5FE3D5" stroke-width="2"/><path d="M16 -9 V5 M9 -2 H23" stroke="#5FE3D5" stroke-width="1.2"/></g>
+            <g class="wheel"><circle cx="84" cy="-2" r="9" fill="#070B12" stroke="#5FE3D5" stroke-width="2"/><path d="M84 -9 V5 M77 -2 H91" stroke="#5FE3D5" stroke-width="1.2"/></g>
+          </g></g></g>
+
+      <!-- debu saat membuang -->
+      <circle class="dust" cx="1268" cy="128" r="10" fill="#C88A4A"/>
+      <circle class="dust d2" cx="1286" cy="120" r="8" fill="#C88A4A"/>
+      <circle class="dust d3" cx="1252" cy="122" r="7" fill="#C88A4A"/>
+
+      <text x="300" y="186" fill="#8C98A7" font-family="Inter, sans-serif" font-size="11" letter-spacing="2">LOADING</text>
+      <text x="700" y="186" fill="#8C98A7" font-family="Inter, sans-serif" font-size="11" letter-spacing="2">HAULING →</text>
+      <text x="1220" y="186" fill="#8C98A7" font-family="Inter, sans-serif" font-size="11" letter-spacing="2">DUMPING</text>
+    </svg>
+</div>
+
+<style>
+.mine-side { position: relative; }
+.mine-scene{display:block;width:100%;height:auto;margin-top:22px}
+.mine-scene .eq{filter:drop-shadow(0 0 6px rgba(95,227,213,.45))}
+.boom{transform-box:view-box;transform-origin:238px 104px;animation:ms-boom 4s ease-in-out infinite}
+@keyframes ms-boom{0%,100%{transform:rotate(14deg)}35%{transform:rotate(14deg)}55%{transform:rotate(-12deg)}80%{transform:rotate(-12deg)}}
+.bucket{transform-box:fill-box;transform-origin:20% 10%;animation:ms-bucket 4s ease-in-out infinite}
+@keyframes ms-bucket{0%,40%{transform:rotate(0)}62%,78%{transform:rotate(-70deg)}100%{transform:rotate(0)}}
+.truck{animation:ms-haultruck 16s ease-in-out infinite}
+@keyframes ms-haultruck{0%,14%{transform:translateX(0) scaleX(1)}44%{transform:translateX(830px) scaleX(1)}57.9%{transform:translateX(830px) scaleX(1)}58%{transform:translateX(830px) scaleX(-1)}92%{transform:translateX(0) scaleX(-1)}92.1%,100%{transform:translateX(0) scaleX(1)}}
+.truck{transform-box:fill-box;transform-origin:center}
+.bed{transform-box:fill-box;transform-origin:0% 100%;animation:ms-dumpbed 16s ease-in-out infinite}
+@keyframes ms-dumpbed{0%,46%{transform:rotate(0)}50%,54%{transform:rotate(-34deg)}57%,100%{transform:rotate(0)}}
+.load{animation:ms-load 16s linear infinite}
+@keyframes ms-load{0%,4%{opacity:0}11%,50%{opacity:1}53%,100%{opacity:0}}
+.wheel{transform-box:fill-box;transform-origin:center;animation:ms-roll 1s linear infinite}
+@keyframes ms-roll{to{transform:rotate(360deg)}}
+.truck2{animation:ms-haultruck2 22s linear infinite}
+@keyframes ms-haultruck2{from{transform:translateX(0)}to{transform:translateX(-1500px)}}
+.dust{transform-box:fill-box;transform-origin:center;animation:ms-dust 16s ease-out infinite;opacity:0}
+.dust.d2{animation-delay:.25s}.dust.d3{animation-delay:.5s}
+@keyframes ms-dust{0%,49%{opacity:0;transform:scale(.3)}53%{opacity:.7}62%{opacity:0;transform:scale(2.2) translateY(-10px)}100%{opacity:0}}
+.pile{animation:ms-pile 16s linear infinite}
+@keyframes ms-pile{0%,50%{opacity:.35}56%,100%{opacity:.85}}
+@media (prefers-reduced-motion:reduce){.boom,.bucket,.truck,.bed,.load,.wheel,.truck2,.dust,.pile{animation:none}.load{opacity:1}}
+
+</style>

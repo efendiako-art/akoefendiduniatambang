@@ -5,6 +5,8 @@ import ArticleCard from '../components/ArticleCard.astro';
 import AdSlot from '../components/AdSlot.astro';
 import AppBanner from '../components/AppBanner.astro';
 import MineOps from '../components/MineOps.astro';
+import MineSide from '../components/MineSide.astro';
+import OrbitEco from '../components/OrbitEco.astro';
 import { SITE, CATEGORIES, AD_SLOTS } from '../consts';
 import { categoryHubs, categoryHref, monogram } from '../lib/nav';
 import { getCollection as getAll } from 'astro:content';
@@ -28,6 +30,14 @@ const stages = [
   { t: '03 Dumping', c: 'st-dump' },
   { t: '04 Dozing', c: 'st-doze' },
 ];
+const ecoColors = ['#5FE3D5', '#FFB067', '#7FF0B5', '#FF7A5C', '#B9A4FF', '#FFC400'];
+const ecoItems = [
+  ...topics.map((c, i) => ({ code: monogram(c.name), name: c.name, sub: c.subs > 0 ? `${c.subs} sub-topik · ${c.count} artikel` : `${c.count} artikel`, href: c.href, c: ecoColors[i % ecoColors.length] })),
+  { code: 'KL', name: 'Kalkulator', sub: 'KPI, SR, produktivitas', href: '/alat/', c: '#FFB067' },
+  { code: 'SOP', name: 'SOP & IK', sub: `${sopCount} dokumen contoh`, href: '/sop/', c: '#7FF0B5' },
+  { code: 'APK', name: 'Aplikasi Android', sub: 'Eng 3D Calculation', href: '/aplikasi/', c: '#B9A4FF' },
+];
+const ecoStats = `${CATEGORIES.length} TOPIK · ${posts.length} ARTIKEL · 3 KALKULATOR`;
 const siteUrl = Astro.site?.toString();
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -70,6 +80,14 @@ const jsonLd = {
         <circle cx="1180" cy="390" r="2" /><circle cx="460" cy="600" r="2" /><circle cx="1380" cy="520" r="2.5" /><circle cx="1220" cy="700" r="2" />
       </g>
     </svg>
+    <svg class="hexbg" aria-hidden="true">
+      <defs>
+        <pattern id="hexp" width="120" height="69.28" patternUnits="userSpaceOnUse">
+          <path d="M20 0 L60 0 L80 34.64 L60 69.28 L20 69.28 L0 34.64 Z M80 34.64 L120 34.64" fill="none" stroke="#5FE3D5" stroke-opacity=".10" stroke-width="1" />
+        </pattern>
+      </defs>
+      <g class="hexmove"><rect x="-240" y="-140" width="200%" height="200%" fill="url(#hexp)" /></g>
+    </svg>
     <div class="container hero-grid">
       <div class="hero-text">
         <span class="pill-badge">
@@ -99,6 +117,7 @@ const jsonLd = {
     <div class="container chips-row">
       {stages.map((st) => <span class:list={['htag', st.c]}>{st.t}</span>)}
     </div>
+    <div class="side-wrap"><MineSide /></div>
   </section>
 
   <div class="container"><AdSlot slot={AD_SLOTS.homeBelowHero} /></div>
@@ -127,6 +146,9 @@ const jsonLd = {
       </div>
     </div>
   </section>
+
+  <!-- ===== ORBIT EKOSISTEM ===== -->
+  <OrbitEco items={ecoItems} stats={ecoStats} />
 
   <!-- ===== KALKULATOR ===== -->
   <section class="section tools-band">
@@ -171,6 +193,11 @@ const jsonLd = {
 
 <style>
   .hero { position: relative; overflow: hidden; color: var(--hero-ink); background: radial-gradient(60% 70% at 85% 30%, rgba(47,184,172,.14), transparent 70%), radial-gradient(50% 60% at 10% 90%, rgba(226,64,27,.16), transparent 70%), var(--hero); padding: 64px 0 56px; }
+  .hexbg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; pointer-events: none; }
+  .hexmove { animation: hexdrift 26s linear infinite; }
+  @keyframes hexdrift { to { transform: translate(-120px, -69.28px); } }
+  @media (prefers-reduced-motion: reduce) { .hexmove { animation: none; } }
+  .side-wrap { position: relative; max-width: 1440px; margin: 8px auto -56px; }
   .net { position: absolute; inset: 0; width: 100%; height: 100%; color: #5FE3D5; opacity: .2; }
   .hero-grid { position: relative; display: grid; gap: 40px; align-items: center; grid-template-columns: minmax(0, 1fr); }
   @media (min-width: 1000px) { .hero-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); } }
