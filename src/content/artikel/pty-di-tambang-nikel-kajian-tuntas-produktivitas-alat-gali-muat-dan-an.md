@@ -6,7 +6,7 @@ category: operasi-produksi
 tags: ['Pty', pdty, 'pty exca', 'pty hauler', 'pentingnya pty', 'pty terhadap cost', 'pty terhadapt produksi', 'pty cycletime']
 image: '/images/artikel/pty-di-tambang-nikel-kajian-tuntas-produktivitas-alat-gali-muat-dan-an/sampul-2.webp'
 imageAlt: 'PTY di Tambang Nikel: Produktivitas Alat Gali-Muat dan Angkut'
-draft: true
+draft: false
 ---
 
 Pentingnya PTY Terhadapa Produksi dan Cost
