@@ -2,10 +2,11 @@
 title: 'PA, UA, MA, dan EU: Arti dan Rumus KPI Alat Tambang'
 description: 'Penjelasan lengkap Physical Availability, Use of Availability, Mechanical Availability, dan Effective Utilization beserta rumus dan contoh hitungan dari lapangan.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-18
 category: operasi-produksi
-tags: ['KPI', 'availability', 'produktivitas', 'alat berat']
+tags: ['KPI', availability, produktivitas, 'alat berat']
 featured: true
+draft: false
 ---
 
 Di rapat produksi tambang, angka **PA, UA, MA, dan EU** hampir selalu muncul di slide pertama. Keempat angka ini menjawab satu pertanyaan sederhana: *dari seluruh jam yang tersedia, berapa jam alat benar-benar bekerja, dan ke mana sisanya hilang?*
@@ -17,7 +18,7 @@ Artikel ini menjelaskan arti masing-masing KPI, rumusnya, contoh hitungan, dan c
 Semua KPI availability dibangun dari pembagian jam kalender alat menjadi tiga kelompok:
 
 | Simbol | Nama | Contoh kejadian |
-| --- | --- | --- |
+| ------ | ---- | --------------- |
 | **W** | Working hours (jam kerja) | Alat memuat, mengangkut, menggusur material |
 | **R** | Repair hours (jam perbaikan) | Breakdown, servis terjadwal, menunggu suku cadang |
 | **S** | Standby hours (jam siaga) | Alat siap pakai tapi tidak bekerja: hujan, istirahat, tidak ada operator, menunggu front |
@@ -26,27 +27,10 @@ Total jam tersedia dalam satu periode adalah **T = W + R + S**. Untuk satu bulan
 
 > Kunci akurasi KPI ada di pencatatan. Jika jam standby tercatat sebagai breakdown (atau sebaliknya), semua angka di bawah ini ikut salah.
 
-<figure class="diagram">
-<svg viewBox="0 0 480 230" role="img" aria-label="Pembagian jam alat menjadi kerja, siaga, dan perbaikan beserta rumus PA, UA, MA, dan EU">
-<text class="b" x="20" y="22">Total jam kalender T = 720 jam</text>
-<rect class="acf" x="20" y="34" width="286" height="38"/>
-<rect class="box" x="306" y="34" width="110" height="38"/>
-<rect x="416" y="34" width="44" height="38" style="fill:var(--ink-2);fill-opacity:.5;stroke:var(--line);stroke-width:1.2"/>
-<text class="b" x="163" y="58" text-anchor="middle">W 468 jam</text>
-<text class="b" x="361" y="58" text-anchor="middle">S 180</text>
-<text class="b s" x="438" y="58" text-anchor="middle">R 72</text>
-<path class="ln" d="M20 82 V88 H416 V82"/>
-<text class="m" x="218" y="108" text-anchor="middle">PA = (W + S) ÷ T = 648 ÷ 720 = 90%</text>
-<path class="ln" d="M20 120 V126 H306 V120"/>
-<text class="m" x="163" y="146" text-anchor="middle">EU = W ÷ T = 65%</text>
-<text class="s m" x="240" y="176" text-anchor="middle">UA = W ÷ (W + S) = 468 ÷ 648 = 72,2%</text>
-<text class="s m" x="240" y="196" text-anchor="middle">MA = W ÷ (W + R) = 468 ÷ 540 = 86,7%</text>
-<text class="s m" x="240" y="218" text-anchor="middle">W = jam kerja · S = jam siaga (standby) · R = jam perbaikan</text>
-</svg>
-<figcaption>Contoh satu excavator selama 720 jam. Semua KPI availability berasal dari pembagian jam kalender ke tiga kelompok ini.</figcaption>
-</figure>
+Total jam kalender T = 720 jam W 468 jam S 180 R 72 PA = (W + S) ÷ T = 648 ÷ 720 = 90% EU = W ÷ T = 65% UA = W ÷ (W + S) = 468 ÷ 648 = 72,2% MA = W ÷ (W + R) = 468 ÷ 540 = 86,7% W = jam kerja · S = jam siaga (standby) · R = jam perbaikan
+Contoh satu excavator selama 720 jam. Semua KPI availability berasal dari pembagian jam kalender ke tiga kelompok ini.
 
-## 1. MA: Mechanical Availability
+## 1\. MA: Mechanical Availability
 
 MA mengukur kinerja **tim maintenance**: dari jam alat dipakai dan diperbaiki, berapa persen alat tidak sedang rusak.
 
@@ -56,7 +40,7 @@ MA = W / (W + R) × 100%
 
 MA mengabaikan jam standby, sehingga tidak terpengaruh hujan atau kurangnya operator. MA rendah berarti masalah ada di keandalan alat atau kecepatan perbaikan.
 
-## 2. PA: Physical Availability
+## 2\. PA: Physical Availability
 
 PA adalah KPI yang paling sering tercantum di kontrak jasa pertambangan. PA mengukur **berapa persen waktu alat siap dipakai**, baik sedang bekerja maupun siaga.
 
@@ -66,7 +50,7 @@ PA = (W + S) / (W + R + S) × 100%
 
 Banyak kontrak menetapkan target PA alat utama di kisaran 85–90%. Jika PA di bawah target, biasanya ada penalti atau kewajiban menambah unit pengganti.
 
-## 3. UA: Use of Availability
+## 3\. UA: Use of Availability
 
 UA menjawab: *dari jam alat siap pakai, berapa persen benar-benar dipakai bekerja?* Ini mengukur kinerja **tim operasi**.
 
@@ -76,7 +60,7 @@ UA = W / (W + S) × 100%
 
 UA rendah sementara PA tinggi berarti alat sehat tetapi menganggur. Penyebab umumnya: hujan dan jalan licin, kekurangan operator, menunggu blasting, front kerja tidak siap, atau jumlah alat berlebih dibanding kebutuhan.
 
-## 4. EU: Effective Utilization
+## 4\. EU: Effective Utilization
 
 EU menggabungkan semuanya: dari total jam, berapa persen alat benar-benar bekerja.
 
@@ -91,7 +75,7 @@ EU juga bisa dihitung sebagai **PA × UA**. Jika PA = 90% dan UA = 75%, maka EU 
 Data satu bulan (720 jam) untuk satu excavator:
 
 | Komponen | Jam |
-| --- | --- |
+| -------- | --- |
 | Working (W) | 468 |
 | Repair (R) | 72 |
 | Standby (S) | 180 |
@@ -100,7 +84,7 @@ Data satu bulan (720 jam) untuk satu excavator:
 Hasilnya:
 
 | KPI | Rumus | Hasil |
-| --- | --- | --- |
+| --- | ----- | ----- |
 | MA | 468 / (468 + 72) | 86,7% |
 | PA | (468 + 180) / 720 | 90,0% |
 | UA | 468 / (468 + 180) | 72,2% |
@@ -129,7 +113,7 @@ Jika produktivitas excavator di contoh di atas 450 bcm/jam, produksi bulannya se
 Angka KPI baru berguna kalau diterjemahkan menjadi tindakan. Cara membacanya:
 
 | Kondisi | Artinya | Tindakan pertama |
-| --- | --- | --- |
+| ------- | ------- | ---------------- |
 | PA rendah, UA normal | Alat sering rusak atau menunggu perbaikan | Periksa kepatuhan periodic service, backlog, dan suku cadang |
 | PA normal, UA rendah | Alat sehat tetapi sering menganggur | Periksa kesiapan front, jalan, jumlah truk, dan pergantian shift |
 | PA dan UA keduanya rendah | Masalah di perawatan dan operasi | Mulai dari yang paling berpengaruh pada produksi |
@@ -140,7 +124,7 @@ Angka KPI baru berguna kalau diterjemahkan menjadi tindakan. Cara membacanya:
 Dua excavator sejenis bulan ini punya data berikut (jam, ilustrasi):
 
 | Unit | Working | Standby | Repair | PA | UA |
-| --- | --- | --- | --- | --- | --- |
+| ---- | ------- | ------- | ------ | --- | --- |
 | EX-01 | 450 | 90 | 180 | 75% | 83% |
 | EX-02 | 380 | 260 | 80 | 89% | 59% |
 
@@ -167,3 +151,4 @@ Tim operasi dan perencanaan, karena UA dipengaruhi kesiapan front, jumlah alat p
 ## Coba kalkulatornya
 
 Hitung PA, UA, MA, dan EU alat Anda sendiri dengan [Kalkulator KPI Alat Tambang](/alat/kpi-alat/). Masukkan jam kerja, perbaikan, dan siaga, lalu hasilnya muncul seketika.
+[Aplikasi Eng 3D Calculation: Alat Tambang | TambangPedia](https://tambangpedia.com/aplikasi/)
