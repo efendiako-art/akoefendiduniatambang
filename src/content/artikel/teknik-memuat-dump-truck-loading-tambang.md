@@ -2,8 +2,12 @@
 title: 'Teknik Memuat Dump Truck di Tambang: Posisi, Siklus, dan Kesalahan yang Sering Terjadi'
 description: 'Cara excavator memuat dump truck dengan aman dan efisien: posisi truk, single dan double side loading, urutan pengisian bak, waktu muat, serta kesalahan yang menurunkan produksi dan membahayakan.'
 pubDate: 2026-10-19
+updatedDate: 2026-11-18
 category: operasi-produksi
-tags: ['loading', 'excavator', 'dump truck', 'produktivitas', 'keselamatan']
+tags: [loading, excavator, 'dump truck', produktivitas, keselamatan]
+image: '/images/artikel/teknik-memuat-dump-truck-loading-tambang/sampul.webp'
+imageAlt: 'Teknik Memuat Dump Truck di Tambang: Posisi, Siklus, dan Kesalahan yang Sering Terjadi'
+draft: false
 ---
 
 Hampir semua tonase atau bcm yang tercatat di laporan harian lahir dari satu kegiatan sederhana: excavator mengisi bak truk. Cara melakukannya sangat memengaruhi produksi, umur ban, dan keselamatan. Artikel ini membahas teknik memuat yang baik berdasarkan praktik di lapangan.

@@ -2,9 +2,12 @@
 title: 'APD Wajib di Tambang dan Cara Memakainya dengan Benar'
 description: 'Daftar alat pelindung diri (APD) di area tambang: helm, sepatu keselamatan, rompi reflektif, kacamata, pelindung telinga, masker, sarung tangan, dan APD khusus.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-18
 category: k3-tambang
 tags: ['APD', 'K3', 'alat pelindung diri', 'keselamatan tambang']
+image: '/images/artikel/apd-wajib-di-tambang/sampul.webp'
+imageAlt: 'APD Wajib di Tambang dan Cara Memakainya dengan Benar'
+draft: false
 ---
 
 Alat pelindung diri (APD) adalah lapisan perlindungan terakhir. Ia tidak mencegah bahaya terjadi, tapi mengurangi akibatnya ketika bahaya mengenai kita. Karena itu APD tidak boleh menjadi satu-satunya pengendalian, namun juga tidak boleh diabaikan.

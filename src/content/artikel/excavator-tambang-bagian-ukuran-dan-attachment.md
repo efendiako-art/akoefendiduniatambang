@@ -1,9 +1,13 @@
 ---
-title: 'Excavator di Tambang: Bagian-Bagiannya, Kelas Ukuran, dan Attachment'
+title: 'Excavator di Tambang:  Kelas Ukuran, dan Attachment'
 description: 'Mengenal excavator di tambang: bagian utama, perbedaan kelas ukuran, jenis bucket dan attachment seperti breaker, serta cara memilih excavator yang serasi dengan dump truck.'
 pubDate: 2026-10-19
+updatedDate: 2026-11-18
 category: alat-berat
-tags: ['excavator', 'bucket', 'attachment', 'alat berat']
+tags: [excavator, bucket, attachment, 'alat berat']
+image: '/images/artikel/excavator-tambang-bagian-ukuran-dan-attachment/sampul.webp'
+imageAlt: 'Excavator di Tambang: Bagian-Bagiannya, Kelas Ukuran, dan Attachment'
+draft: false
 ---
 
 Excavator adalah alat yang paling sering terlihat di foto-foto tambang. Ia menggali, memuat, memecah batu, merapikan lereng, dan mengerjakan banyak hal lain. Karena perannya luas, memahami bagian dan jenis attachment-nya sangat membantu, baik untuk operator, mekanik, maupun perencana.

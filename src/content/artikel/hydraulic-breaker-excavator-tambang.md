@@ -2,8 +2,12 @@
 title: 'Hydraulic Breaker di Tambang: Cara Kerja, Pemakaian, dan Keselamatannya'
 description: 'Penjelasan hydraulic breaker (pemecah batu hidrolik) pada excavator di tambang: cara kerja, kapan dipakai dibanding peledakan, teknik pengoperasian yang benar, perawatan, dan aspek keselamatan.'
 pubDate: 2026-10-19
+updatedDate: 2026-11-18
 category: alat-berat
-tags: ['hydraulic breaker', 'excavator', 'secondary breaking', 'alat berat']
+tags: ['hydraulic breaker', excavator, 'secondary breaking', 'alat berat']
+image: '/images/artikel/hydraulic-breaker-excavator-tambang/sampul.webp'
+imageAlt: 'Hydraulic Breaker di Tambang: Cara Kerja, Pemakaian, dan Keselamatannya'
+draft: false
 ---
 
 Di area tambang batuan keras, kadang excavator tidak membawa bucket, melainkan sebuah palu besar yang terus mengetuk batu. Alat itu disebut **hydraulic breaker**. Fungsinya memecah batu yang terlalu besar atau terlalu keras untuk digali langsung oleh bucket.
