@@ -1,13 +1,17 @@
 ---
 title: 'IBPR dan Hirarki Pengendalian Risiko di Tambang'
-description: 'Cara melakukan identifikasi bahaya dan penilaian risiko (IBPR), matriks risiko kemungkinan dan keparahan, serta hirarki pengendalian dari eliminasi sampai APD, dengan contoh di tambang.'
+description: 'Cara melakukan IBPR di tambang: identifikasi bahaya, matriks risiko kemungkinan × keparahan, hirarki pengendalian dari eliminasi sampai APD, dan contoh kasus.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: k3-tambang
-tags: ['IBPR', 'manajemen risiko', 'hirarki pengendalian', 'JSA', 'K3']
+tags: ['IBPR', 'manajemen risiko', 'hirarki pengendalian', 'JSA', 'K3', 'HIRADC']
+image: '/images/artikel/ibpr-dan-hirarki-pengendalian-risiko/sampul.webp'
+imageAlt: 'Ilustrasi IBPR dan hirarki pengendalian risiko di tambang'
 ---
 
-Setiap pekerjaan di tambang mengandung bahaya. Tujuan K3 bukan menghilangkan semua bahaya, karena itu sering mustahil, melainkan memastikan risikonya terkendali sampai tingkat yang dapat diterima. Alat untuk melakukannya disebut **IBPR**: Identifikasi Bahaya dan Penilaian Risiko. Di beberapa perusahaan dikenal juga dengan istilah HIRA atau HIRADC.
+**IBPR** (Identifikasi Bahaya dan Penilaian Risiko) dan hirarki pengendalian risiko adalah dua alat utama K3 untuk memastikan setiap pekerjaan di tambang punya risiko yang terkendali. Tujuannya bukan menghilangkan semua bahaya, karena itu sering mustahil, melainkan menurunkan risiko sampai tingkat yang dapat diterima. Di beberapa perusahaan IBPR dikenal juga dengan istilah HIRA atau HIRADC.
+
+Artikel ini membahas perbedaan bahaya dan risiko, persiapan, lima langkah IBPR, matriks risiko, hirarki pengendalian, contoh kasus penggantian ban, dan kesalahan yang sering terjadi saat menyusunnya.
 
 ## Bahaya dan risiko itu berbeda
 
@@ -15,6 +19,17 @@ Setiap pekerjaan di tambang mengandung bahaya. Tujuan K3 bukan menghilangkan sem
 - **Risiko (risk)** adalah gabungan antara kemungkinan bahaya itu menimbulkan kejadian dan seberapa parah akibatnya.
 
 Lereng yang curam adalah bahaya. Risikonya bergantung pada seberapa sering orang bekerja di bawahnya dan seberapa besar kemungkinan longsor.
+
+## Persiapan sebelum menyusun IBPR
+
+IBPR yang baik tidak dibuat sendirian di meja kantor. Sebelum mulai, siapkan hal-hal berikut:
+
+- **Tim penilai.** Libatkan orang yang benar-benar mengerjakan pekerjaan itu, pengawasnya, mekanik atau teknisi bila ada alat, dan perwakilan K3.
+- **Data pendukung.** Prosedur kerja yang berlaku, manual alat, catatan insiden dan near miss sebelumnya, serta hasil inspeksi area.
+- **Kunjungan lapangan.** Lihat langsung lokasi dan cara kerja yang sebenarnya, bukan cara kerja yang tertulis saja.
+- **Matriks risiko perusahaan.** Pastikan semua anggota tim memakai skala kemungkinan dan keparahan yang sama.
+
+![Lima langkah melakukan IBPR dari menguraikan pekerjaan sampai peninjauan berkala](/images/artikel/ibpr-dan-hirarki-pengendalian-risiko/diagram-alur-ibpr.webp)
 
 ## Langkah melakukan IBPR
 
@@ -93,8 +108,6 @@ IBPR biasanya disusun untuk proses dan area kerja secara menyeluruh. Untuk peker
 
 Satu prinsip sederhana yang bisa dipegang siapa saja di lapangan: sebelum mulai, tanyakan tiga hal. Apa yang bisa salah? Seberapa parah akibatnya? Apa yang sudah disiapkan untuk mencegahnya? Kalau jawabannya belum jelas, pekerjaan belum siap dimulai.
 
-Pelajari juga [dasar K3 pertambangan](/artikel/dasar-k3-pertambangan/).
-
 ## Contoh IBPR: mengganti ban dump truck
 
 Tabel berikut contoh sederhana (angka dan penilaian ilustrasi, hasil nyata bergantung pada kondisi dan tim penilai).
@@ -108,6 +121,18 @@ Tabel berikut contoh sederhana (angka dan penilaian ilustrasi, hasil nyata berga
 | Memasang dan mengisi angin | Ledakan ban | Cedera berat | Pelindung (cage), berdiri di sisi aman, tekanan terpantau |
 
 Dalam contoh ini terlihat bahwa pengendalian terkuat bukan ada di baris APD, melainkan pada alat bantu angkat dan prosedur yang menjauhkan orang dari sumber bahaya.
+
+## Kesalahan umum saat menyusun IBPR
+
+- **Disalin dari lokasi lain.** IBPR dari tambang lain bisa menjadi titik awal, tetapi bahaya di setiap lokasi berbeda. Tanpa kunjungan lapangan, banyak bahaya yang terlewat.
+- **Langsung lompat ke APD.** Pengendalian yang ditulis hanya "pakai APD lengkap" adalah tanda hirarki pengendalian tidak dipakai.
+- **Risiko sisa tidak dinilai.** Setelah pengendalian ditentukan, risiko harus dinilai ulang. Jika masih tinggi, pekerjaan belum boleh dimulai.
+- **Tidak pernah diperbarui.** Dokumen yang dibuat saat proyek dimulai sering tidak disentuh lagi meski alat, metode, dan area kerja sudah berubah.
+- **Tidak disosialisasikan.** IBPR yang hanya tersimpan di map tidak melindungi siapa pun. Hasilnya harus disampaikan saat briefing dan dipakai sebagai dasar JSA.
+
+## Kesimpulan
+
+IBPR membantu tim tambang melihat bahaya secara terstruktur: uraikan pekerjaan, kenali bahaya di setiap tahap, nilai risiko dengan matriks yang konsisten, tentukan pengendalian, lalu tinjau secara berkala. Saat menentukan pengendalian, gunakan hirarki dari yang paling efektif, yaitu eliminasi, substitusi, rekayasa teknik, administratif, dan terakhir APD. Pengendalian di level atas lebih andal karena tidak bergantung pada perilaku individu. Untuk melengkapi pemahaman, baca juga [APD wajib di tambang](/artikel/apd-wajib-di-tambang/) dan [dasar K3 pertambangan](/artikel/dasar-k3-pertambangan/).
 
 ## Pertanyaan yang sering diajukan
 
@@ -126,3 +151,10 @@ Karena APD tidak menghilangkan bahaya. APD hanya mengurangi dampak jika kejadian
 ### Seberapa sering IBPR ditinjau?
 
 Setidaknya berkala sesuai kebijakan perusahaan, dan segera saat ada perubahan pekerjaan, alat, area, atau setelah terjadi insiden.
+
+## Referensi
+
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik (lampiran Sistem Manajemen Keselamatan Pertambangan).
+- Peraturan Menteri ESDM Nomor 26 Tahun 2018 tentang Pelaksanaan Kaidah Pertambangan yang Baik dan Pengawasan Pertambangan Mineral dan Batubara.
+- ISO 45001:2018 *Occupational health and safety management systems — Requirements with guidance for use*.
+- ISO 31000:2018 *Risk management — Guidelines*.

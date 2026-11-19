@@ -1,13 +1,17 @@
 ---
-title: 'Fungsi Bulldozer di Tambang: Dozing, Ripping, dan Pekerjaan Pendukung'
+title: 'Fungsi Bulldozer di Tambang: Dozing, Ripping, dan Pendukung'
 description: 'Peran bulldozer di tambang terbuka: land clearing, dozing, ripping batuan keras, perapian disposal, dan tips menghitung produktivitas dozer.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: alat-berat
 tags: ['bulldozer', 'ripping', 'dozing', 'disposal', 'alat berat']
+image: '/images/artikel/fungsi-bulldozer-di-tambang/sampul.webp'
+imageAlt: 'Bulldozer menyiapkan lahan timbunan di area tambang terbuka'
 ---
 
-Kalau excavator adalah jantung produksi, bulldozer adalah tangan yang mengurus semua hal di sekitarnya. Hampir tidak ada area tambang yang bisa berjalan baik tanpa dozer: front kerja, disposal, jalan, sump, sampai area reklamasi.
+Fungsi bulldozer di tambang adalah mendorong, membongkar, dan merapikan material di hampir semua area kerja, dari front gali sampai disposal. Kalau excavator adalah jantung produksi, bulldozer adalah tangan yang mengurus semua hal di sekitarnya. Artikel ini membahas bagian dozer, jenis pekerjaannya, cara menghitung produktivitas, dan kesalahan yang sering terjadi.
+
+Hampir tidak ada area tambang yang bisa berjalan baik tanpa dozer: front kerja, disposal, jalan, sump, sampai area reklamasi. Ketika dozer kurang atau rusak, dampaknya cepat terasa dalam bentuk truk antre dan jalan yang memburuk.
 
 ## Bagian utama bulldozer
 
@@ -16,6 +20,8 @@ Kalau excavator adalah jantung produksi, bulldozer adalah tangan yang mengurus s
 - **Undercarriage** berupa track (rantai) yang membuat tekanan ke tanah rendah dan daya dorong besar.
 
 ## Pekerjaan bulldozer di tambang
+
+![Diagram tujuh pekerjaan utama bulldozer di tambang terbuka](/images/artikel/fungsi-bulldozer-di-tambang/diagram-pekerjaan-dozer.webp)
 
 ### 1. Land clearing
 
@@ -52,6 +58,16 @@ Membentuk ulang permukaan timbunan sesuai desain kemiringan, lalu menyebarkan to
 Menarik alat atau truk yang terjebak lumpur, membuka akses saat longsor kecil, dan membantu saat ada genangan.
 
 <figure class="photo"><img src="/images/dokumentasi/dozer-bekerja-di-atas-timbunan.jpg" alt="Dozer bekerja di atas timbunan" width="1280" height="876" loading="lazy" decoding="async"><figcaption>Dozer mendorong material di atas timbunan. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
+## Persiapan sebelum dozer bekerja
+
+Dozer yang langsung bekerja tanpa arahan sering mendorong material ke tempat yang salah. Sebelum mulai, pastikan:
+
+- **Instruksi kerja jelas:** area kerja, arah dorong, elevasi atau patok desain yang harus dicapai.
+- **Jenis blade sesuai pekerjaan:** U blade untuk dorongan jarak jauh material lepas, straight blade untuk material keras dan perataan.
+- **P2H selesai:** undercarriage, ripper shank dan tip, oli, rem, serta ROPS diperiksa.
+- **Batas aman ditandai:** tepi disposal, tepi jenjang, dan jalur truk di sekitar area dozer.
+- **Komunikasi radio** dengan pengawas dan pengemudi truk yang membuang di dekatnya.
 
 ## Menghitung produktivitas dozing secara sederhana
 
@@ -97,12 +113,31 @@ Satu dozer hanya bekerja sekitar 20 jam per hari pada dua shift, jadi dibutuhkan
 
 ## Kapan dozer menjadi hambatan produksi
 
+Dozer jarang menjadi sorotan di laporan produksi, padahal kekurangannya terlihat pada alat lain. Kondisi jalan yang baik juga bergantung pada dozer, sebagaimana dibahas di [standar jalan angkut tambang](/artikel/standar-jalan-angkut-tambang/).
+
+![Diagram pengaruh jarak dorong terhadap produktivitas bulldozer](/images/artikel/fungsi-bulldozer-di-tambang/diagram-jarak-dorong.webp)
+
 | Gejala | Kemungkinan penyebab | Tindakan |
 | --- | --- | --- |
 | Truk antre di disposal | Dozer kurang atau sedang rusak | Tambah dozer, atur titik tumpahan truk |
 | Jalan angkut bergelombang | Dozer dan grader tidak cukup merawat jalan | Atur ulang prioritas perawatan jalan |
 | Front gali becek | Dozer tidak sempat membersihkan dan membuat drainase | Sisihkan dozer khusus penyiapan front |
 | Ban truk cepat rusak | Permukaan disposal atau front kasar dan tajam | Rapikan permukaan sebelum truk masuk |
+
+## Kesalahan umum dalam mengoperasikan dozer
+
+- **Jarak dorong terlalu jauh.** Di atas sekitar 100 meter, produktivitas turun tajam dan biaya per bcm naik. Lebih murah dimuat ke truk.
+- **Blade tidak penuh** karena dorongan dimulai di posisi yang salah. Teknik slot dozing (mendorong di alur yang sama) membantu material tidak tumpah ke samping.
+- **Ripping dengan gigi aus** sehingga penetrasi buruk dan shank cepat rusak.
+- **Mundur dengan kecepatan tinggi** tanpa perlu, mempercepat keausan undercarriage.
+- **Bekerja di tepi disposal tanpa tanggul** atau tanpa memeriksa retakan di tepi timbunan.
+- **Dozer diparkir di jalur truk** saat istirahat atau pergantian shift.
+
+## Kesimpulan
+
+Bulldozer menjalankan pekerjaan yang membuat produksi tetap mengalir: land clearing, dozing jarak pendek, ripping, perapian disposal, penyiapan front dan jalan, reklamasi, serta pekerjaan darurat. Produktivitasnya sangat dipengaruhi jarak dorong, jenis blade, dan kondisi material, sehingga dozer paling efektif untuk dorongan di bawah sekitar 100 meter.
+
+Jumlah dozer di disposal dan front harus dihitung, bukan ditebak, karena kekurangan dozer langsung terlihat sebagai truk antre dan jalan bergelombang. Rawat undercarriage, hindari kebiasaan pivot turn berlebihan, dan pastikan hamparan dozer diikuti [pemadatan dengan compactor](/artikel/compactor-pemadatan-tanah-di-tambang/) bila areanya akan dibebani.
 
 ## Pertanyaan yang sering diajukan
 
@@ -122,4 +157,10 @@ Jika batuan cukup lunak sampai sedang dan bisa dibongkar ripper secara ekonomis,
 
 Karena pekerjaannya membentuk permukaan. Kesalahan kemiringan di disposal atau jalan bisa menimbulkan genangan atau lereng yang tidak stabil.
 
-Baca juga: [compactor dan pemadatan tanah di tambang](/artikel/compactor-pemadatan-tanah-di-tambang/).
+
+## Referensi
+
+- Caterpillar Performance Handbook, bagian Track-Type Tractors (dozing dan ripping).
+- Komatsu Specifications & Application Handbook, bagian Bulldozers.
+- Peurifoy, R. L. dkk. *Construction Planning, Equipment, and Methods*. McGraw-Hill.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.

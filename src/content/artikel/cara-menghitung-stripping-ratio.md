@@ -2,15 +2,27 @@
 title: 'Stripping Ratio: Pengertian, Rumus, dan Cara Menghitungnya'
 description: 'Panduan stripping ratio (SR) tambang batubara: rumus SR, break even stripping ratio (BESR), contoh hitungan, dan faktor yang memengaruhinya.'
 pubDate: 2026-10-03
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: operasi-produksi
 tags: ['stripping ratio', 'BESR', 'batubara', 'perencanaan tambang']
 featured: true
+image: '/images/artikel/cara-menghitung-stripping-ratio/sampul.webp'
+imageAlt: 'Ilustrasi penampang pit tambang batubara dengan overburden dan lapisan batubara untuk menghitung stripping ratio'
 ---
 
-**Stripping ratio (SR)** adalah perbandingan antara jumlah tanah penutup (*overburden*, OB) yang harus dibongkar dengan jumlah batubara atau bijih yang didapat. Angka ini menentukan apakah sebuah tambang terbuka layak secara ekonomi.
+**Stripping ratio (SR)** adalah perbandingan antara jumlah tanah penutup (*overburden*, OB) yang harus dibongkar dengan jumlah batubara atau bijih yang didapat. Angka ini menentukan apakah sebuah tambang terbuka layak secara ekonomi. Artikel ini membahas rumus SR, cara menghitungnya, titik impas BESR, dan kesalahan yang sering terjadi.
 
 Semakin besar SR, semakin banyak tanah yang harus dipindahkan untuk mendapat satu ton batubara, dan semakin mahal biaya penambangannya.
+
+## Persiapan data sebelum menghitung
+
+Sebelum menghitung SR, pastikan tiga data berikut tersedia dan satuannya jelas:
+
+1. **Volume overburden dalam bcm**, dari model geologi untuk rencana atau dari survei topografi untuk realisasi. Jangan memakai volume dari ritase truk tanpa dikonversi, karena volume di bak truk adalah lcm. Cara konversinya dijelaskan di artikel [BCM, LCM, dan ton dengan swell factor](/artikel/konversi-bcm-lcm-ton-swell-factor/).
+2. **Tonase batubara**, dari timbangan atau dari survei stockpile dikali densitas. Sepakati apakah yang dipakai tonase ROM, tonase setelah coal loss, atau tonase terjual.
+3. **Periode dan area yang sama.** OB dan batubara harus berasal dari blok dan rentang waktu yang sama. SR akan kacau jika OB satu bulan dibagi batubara bulan lain.
+
+![Diagram langkah menghitung stripping ratio dari data OB dan batubara sampai perbandingan dengan BESR](/images/artikel/cara-menghitung-stripping-ratio/diagram-langkah-sr.webp)
 
 ## Rumus stripping ratio
 
@@ -126,6 +138,21 @@ Rumusnya sederhana: margin per ton = harga − biaya batubara − (SR × biaya p
 
 Saat membaca angka SR, selalu pastikan jenis dan satuannya, karena angka yang sama bisa berarti hal yang berbeda.
 
+## Kesalahan umum saat menghitung SR
+
+- **Mencampur bcm dan lcm.** Volume OB dari ritase truk masih dalam kondisi lepas, sehingga SR terlihat lebih besar dari sebenarnya.
+- **Membandingkan SR periode dengan SR umur tambang.** Pada awal tambang SR periodik biasanya tinggi karena banyak pembukaan lahan. Itu belum tentu tanda rencana gagal.
+- **Mengabaikan coal loss dan dilusi.** Tonase model geologi tidak sama dengan tonase yang benar-benar sampai di stockpile.
+- **Memakai BESR lama.** Harga dan biaya berubah, sehingga BESR perlu dihitung ulang setiap kali asumsi harga atau tarif kontrak berubah.
+
+![Perbandingan blok A, B, dan C terhadap BESR 12 bcm per ton beserta margin per ton (angka contoh)](/images/artikel/cara-menghitung-stripping-ratio/diagram-blok-vs-besr.webp)
+
+## Kesimpulan
+
+Stripping ratio adalah volume overburden dibagi tonase batubara, umumnya dalam bcm per ton. Nilainya baru bermakna jika dibandingkan dengan BESR, yaitu SR tertinggi yang masih impas pada harga jual dan biaya tertentu. Blok dengan SR jauh di bawah BESR menjadi prioritas, sedangkan blok di atas BESR menunggu kondisi harga atau biaya yang lebih baik.
+
+Kunci hitungan yang benar ada pada data: OB dalam bcm, tonase yang disepakati, serta periode dan area yang sama. SR yang meleset dari rencana juga sebaiknya ditelusuri sampai ke penyebabnya, sama seperti [analisa loss produksi](/artikel/cara-analisa-loss-produksi-tambang/) pada volume produksi.
+
 ## Pertanyaan yang sering diajukan
 
 ### SR berapa yang dianggap tinggi?
@@ -143,3 +170,10 @@ Penyebab umum: seam ternyata lebih tipis dari model geologi, ada kehilangan batu
 ### Apakah BESR sama untuk semua perusahaan?
 
 Tidak. BESR bergantung pada harga yang diterima, biaya penambangan, dan biaya pengupasan masing-masing perusahaan, sehingga angkanya berbeda dan berubah mengikuti kondisi pasar.
+
+## Referensi
+
+- Hartman, H. L. & Mutmansky, J. M. *Introductory Mining Engineering*, edisi ke-2. John Wiley & Sons.
+- Hustrulid, W., Kuchta, M. & Martin, R. *Open Pit Mine Planning and Design*, edisi ke-3. CRC Press.
+- Komite Bersama KCMI. *Kode KCMI 2017: Kode Pelaporan Hasil Eksplorasi, Sumberdaya Mineral, dan Cadangan Mineral Indonesia*.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.

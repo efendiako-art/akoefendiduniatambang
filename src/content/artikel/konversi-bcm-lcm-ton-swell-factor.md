@@ -1,11 +1,15 @@
 ---
-title: 'BCM, LCM, dan Ton: Cara Konversi dengan Swell Factor dan Densitas'
+title: 'Konversi BCM, LCM, dan Ton dengan Swell Factor dan Densitas'
 description: 'Arti bcm, lcm, dan ccm di tambang, cara menghitung swell factor dan persen pengembangan, serta konversi volume ke ton dengan densitas material.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: operasi-produksi
 tags: ['bcm', 'lcm', 'swell factor', 'densitas', 'konversi']
+image: '/images/artikel/konversi-bcm-lcm-ton-swell-factor/sampul.webp'
+imageAlt: 'Excavator memuat material lepas ke dump truck, contoh perubahan volume bcm menjadi lcm'
 ---
+
+Konversi bcm, lcm, dan ton adalah dasar semua hitungan produksi tambang, dari ritase truk sampai tagihan kontraktor. Kuncinya ada pada dua angka: swell factor untuk mengubah volume, dan densitas untuk mengubah volume menjadi berat. Artikel ini menjelaskan arti tiap satuan, rumus konversinya, contoh hitungan, dan kesalahan yang sering terjadi.
 
 Banyak selisih angka produksi di lapangan bukan karena salah hitung, tapi karena satuan yang tercampur. Survei bicara bcm, dispatch menghitung ritase truk yang isinya lcm, sementara batubara ditimbang dalam ton. Kalau tidak dikonversi dengan benar, rekonsiliasi akhir bulan pasti ribut.
 
@@ -45,6 +49,20 @@ Saat tanah digali, butirannya terlepas dan rongga di antaranya bertambah. Akibat
 <figcaption>Contoh angka: 1 bcm tanah menjadi 1,25 lcm setelah digali (swell 25%, swell factor 0,8), lalu sedikit menyusut saat dipadatkan. Nilai sebenarnya berbeda untuk tiap material.</figcaption>
 </figure>
 
+## Persiapan: data yang dibutuhkan
+
+Sebelum mengonversi, kumpulkan data berikut dan catat sumbernya:
+
+1. **Jenis material** per fleet atau per blok, misalnya OB lempung, OB batupasir hasil peledakan, atau batubara.
+2. **Swell factor** per jenis material, sebaiknya dari uji lapangan sendiri.
+3. **Densitas insitu** dari laboratorium atau data geologi, dalam ton per bcm.
+4. **Kapasitas bak truk** dalam lcm dan batas payload pabrikan dalam ton.
+5. **Jumlah ritase** dari dispatch, dan bila ada, data timbangan.
+
+Tanpa data ini, konversi hanya memakai angka buku yang belum tentu cocok dengan kondisi pit Anda.
+
+![Diagram alur konversi dari ritase truk dalam lcm ke bcm lalu ke ton memakai swell factor dan densitas](/images/artikel/konversi-bcm-lcm-ton-swell-factor/diagram-alur-konversi.webp)
+
 ## Swell factor dan persen pengembangan
 
 Ada dua cara menyatakan pengembangan ini, dan keduanya sering tertukar:
@@ -65,7 +83,7 @@ lcm = bcm / SF
 
 ## Contoh: menghitung produksi dari ritase truk
 
-Dalam satu shift, sebuah fleet mencatat 180 ritase. Kapasitas bak truk 29 lcm dan material OB punya SF 0,8.
+Dalam satu shift, sebuah fleet mencatat 180 ritase (angka contoh). Kapasitas bak truk 29 lcm dan material OB punya SF 0,8.
 
 ```
 Volume lepas = 180 × 29 = 5.220 lcm
@@ -110,7 +128,7 @@ Ulangi uji ini secara berkala, terutama saat material berubah. Nilai dari tabel 
 - **Memakai SF satu angka untuk semua material.** Selisih kecil per ritase menjadi besar dalam satu bulan.
 - **Menganggap bak truk selalu penuh.** Padahal kapasitas yang tertulis adalah kapasitas munjung ideal. Pantau payload aktual lewat timbangan atau sistem monitoring kalau ada.
 
-Konsep ini juga dipakai di [kalkulator produktivitas excavator dan truk](/alat/produktivitas/), yang memakai swell factor untuk mengubah hasil lcm menjadi bcm.
+Konsep ini juga dipakai di [kalkulator produktivitas excavator dan truk](/alat/produktivitas/), yang memakai swell factor untuk mengubah hasil lcm menjadi bcm. Cara menghitung produktivitas fleet secara lengkap dibahas di [cara menghitung produktivitas excavator dan dump truck](/artikel/produktivitas-excavator-dan-dump-truck/).
 
 ## Contoh lengkap: dari ritase ke ton batubara
 
@@ -132,6 +150,12 @@ Jika kita memakai kapasitas nominal, hitungannya 45 × 20 = 900 ton, atau 67,5 t
 | lcm | ton | Kali densitas lepas (ton/lcm) |
 | ton | bcm | Bagi densitas insitu |
 
+## Kesimpulan
+
+Material tambang punya tiga kondisi volume: bcm saat masih di tempatnya, lcm setelah digali, dan ccm setelah dipadatkan. Swell factor menghubungkan bcm dan lcm, sedangkan densitas mengubah volume menjadi ton, dengan catatan densitas harus sesuai kondisi volumenya. Kesalahan paling mahal biasanya datang dari mencampur satuan, memakai satu SF untuk semua material, dan menganggap bak truk selalu penuh.
+
+Ukur SF di lapangan secara berkala dan gunakan data timbangan bila tersedia. Konversi yang benar membuat rekonsiliasi survei dan dispatch lebih tenang, dan menjadi dasar yang sama untuk menghitung [stripping ratio](/artikel/cara-menghitung-stripping-ratio/) maupun tagihan kontrak.
+
 ## Pertanyaan yang sering diajukan
 
 ### Apa bedanya densitas insitu dan densitas lepas?
@@ -149,3 +173,10 @@ Umumnya bcm hasil survei, karena itu volume yang sebenarnya dipindahkan dari kon
 ### Apakah SF dari buku bisa langsung dipakai?
 
 Sebaiknya hanya sebagai titik awal. Ukur di lapangan dengan membandingkan hasil survei dan jumlah ritase, lalu sesuaikan.
+
+## Referensi
+
+- Caterpillar Inc. *Caterpillar Performance Handbook*, tabel berat dan pengembangan material (Weights of Materials).
+- Komatsu Ltd. *Specifications & Application Handbook*, bagian sifat material dan perhitungan produksi.
+- Peurifoy, R. L., dkk. *Construction Planning, Equipment, and Methods*. McGraw-Hill.
+- Hartman, H. L. & Mutmansky, J. M. *Introductory Mining Engineering*, edisi ke-2. John Wiley & Sons.

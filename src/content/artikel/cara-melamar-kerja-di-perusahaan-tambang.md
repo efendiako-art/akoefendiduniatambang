@@ -1,13 +1,15 @@
 ---
-title: 'Cara Melamar Kerja di Perusahaan Tambang (dan Menghindari Lowongan Palsu)'
-description: 'Panduan melamar kerja di tambang: posisi yang sering dibuka, dokumen dan sertifikat yang dibutuhkan, tips CV dan wawancara, serta ciri lowongan tambang palsu.'
+title: 'Cara Melamar Kerja di Tambang dan Menghindari Lowongan Palsu'
+description: 'Panduan melamar kerja di tambang: posisi yang sering dibuka, dokumen, tips CV dan wawancara, alur seleksi, kesalahan pelamar, dan ciri lowongan tambang palsu.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: karier-regulasi
-tags: ['lowongan tambang', 'karier', 'CV', 'wawancara', 'SIM operator']
+image: '/images/artikel/cara-melamar-kerja-di-perusahaan-tambang/sampul.webp'
+imageAlt: 'Ilustrasi cara melamar kerja di tambang: CV, dokumen, dan helm keselamatan'
+tags: ['lowongan tambang', 'karier', 'CV', 'wawancara', 'SIM operator', 'lowongan palsu']
 ---
 
-Bekerja di tambang masih menjadi incaran banyak orang, baik lulusan baru maupun pekerja berpengalaman dari sektor lain. Gajinya relatif menarik, ada fasilitas mess dan makan, dan jenjang kariernya jelas. Tapi persaingannya juga ketat, dan sayangnya banyak penipuan yang memanfaatkan minat ini.
+Cara melamar kerja di tambang yang benar dimulai dari memilih posisi yang sesuai, menyiapkan dokumen lengkap, dan mengenali lowongan palsu sejak awal. Pekerjaan tambang masih menjadi incaran banyak orang karena gajinya relatif menarik, ada fasilitas mess dan makan, dan jenjang kariernya jelas. Persaingannya juga ketat, dan sayangnya banyak penipuan yang memanfaatkan minat ini.
 
 ## Posisi yang paling sering dibuka
 
@@ -21,6 +23,17 @@ Bekerja di tambang masih menjadi incaran banyak orang, baik lulusan baru maupun 
 | Pendukung | Admin produksi, logistik, HR, finance | Sesuai bidang masing-masing |
 
 Untuk posisi operator, kebanyakan perusahaan mensyaratkan SIM yang sesuai dengan jenis kendaraan. Setelah diterima, operator biasanya mengikuti pelatihan dan uji di lokasi untuk mendapatkan izin mengoperasikan unit di area tambang tersebut.
+
+## Persiapan sebelum mengirim lamaran
+
+![Alur cara melamar kerja di tambang dari persiapan dokumen sampai induksi](/images/artikel/cara-melamar-kerja-di-perusahaan-tambang/diagram-alur-melamar.webp)
+
+Sebelum mengirim lamaran ke banyak perusahaan sekaligus, luangkan waktu untuk persiapan dasar:
+
+- **Tentukan satu sampai dua posisi sasaran** yang paling sesuai dengan pendidikan dan pengalaman. Lamaran yang fokus lebih meyakinkan daripada melamar semua posisi.
+- **Cek kesehatan dasar.** Tes kesehatan tambang cukup ketat, termasuk penglihatan, pendengaran, dan tes narkoba.
+- **Siapkan folder digital** berisi hasil pindai dokumen dengan nama file yang jelas, misalnya "CV_Nama_OperatorDT.pdf".
+- **Pelajari perusahaan tujuan.** Apakah pemilik tambang atau kontraktor, komoditas apa, dan di mana lokasinya. Perbedaan keduanya dijelaskan di artikel [owner dan kontraktor tambang](/artikel/perbedaan-owner-dan-kontraktor-tambang/).
 
 ## Dokumen yang biasanya diminta
 
@@ -95,6 +108,21 @@ Kalimat yang spesifik lebih mudah dinilai oleh rekruter. Contoh perbaikannya:
 
 Pakai hanya fakta yang benar dan bisa dibuktikan. Wawancara hampir selalu menguji klaim di CV.
 
+## Kesalahan umum pelamar kerja tambang
+
+- **Mengirim CV yang sama untuk semua posisi.** Rekruter mencari kecocokan dengan posisi tertentu; sesuaikan ringkasan dan pengalaman yang ditonjolkan.
+- **Melebih-lebihkan pengalaman unit.** Tes praktik akan langsung membuktikan apakah pelamar benar menguasai unit yang ditulis.
+- **Dokumen tidak konsisten.** Nama, tanggal lahir, atau masa kerja yang berbeda antar dokumen menimbulkan keraguan.
+- **Tidak siap dengan pola roster.** Pelamar yang ragu tinggal lama di lokasi terpencil sering mundur di tengah proses.
+- **Membayar oknum yang menjanjikan "jalur dalam".** Ini pintu masuk penipuan yang paling sering.
+- **Tidak menjawab pertanyaan K3 dengan serius.** Di tambang, sikap terhadap keselamatan sering menjadi penentu kelulusan.
+
+![Perbandingan ciri lowongan tambang asli dan lowongan palsu](/images/artikel/cara-melamar-kerja-di-perusahaan-tambang/diagram-asli-vs-palsu.webp)
+
+## Kesimpulan
+
+Cara melamar kerja di tambang pada dasarnya sederhana: pilih posisi yang sesuai, siapkan dokumen yang lengkap dan konsisten, tulis CV dengan fakta dan angka, lalu persiapkan diri untuk tes kesehatan, praktik, dan pertanyaan K3. Yang tidak boleh dilupakan adalah kewaspadaan terhadap lowongan palsu: perusahaan resmi tidak memungut biaya dari pelamar. Setelah diterima, bangun reputasi lewat kerja yang aman dan konsisten, lalu tingkatkan kompetensi lewat jenjang sertifikasi. Untuk gambaran tanggung jawab di level tertinggi operasional, baca juga [tugas Kepala Teknik Tambang](/artikel/tugas-kepala-teknik-tambang/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Apakah lulusan SMA atau SMK bisa melamar?
@@ -112,3 +140,10 @@ Cek lowongan lewat situs atau akun resmi perusahaan, perhatikan domain email pen
 ### Apakah perempuan bisa bekerja di tambang?
 
 Bisa. Banyak perusahaan membuka kesempatan bagi perempuan di berbagai posisi, termasuk operator, engineer, K3, laboratorium, dan administrasi produksi.
+
+## Referensi
+
+- Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan, sebagaimana diubah melalui Undang-Undang Nomor 6 Tahun 2023.
+- Peraturan Pemerintah Nomor 35 Tahun 2021 tentang Perjanjian Kerja Waktu Tertentu, Alih Daya, Waktu Kerja dan Waktu Istirahat, dan Pemutusan Hubungan Kerja.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.
+- Peraturan Menteri ESDM Nomor 26 Tahun 2018 tentang Pelaksanaan Kaidah Pertambangan yang Baik dan Pengawasan Pertambangan Mineral dan Batubara.

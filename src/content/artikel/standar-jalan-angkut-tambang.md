@@ -1,15 +1,17 @@
 ---
-title: 'Standar Jalan Angkut Tambang: Lebar, Tanjakan, Tanggul, dan Kemiringan Melintang'
-description: 'Ketentuan geometri jalan angkut tambang sesuai Kepmen ESDM 1827 K/30/MEM/2018: lebar jalan, kemiringan maksimum, tinggi tanggul pengaman, cross slope, dan contoh perhitungannya.'
+title: 'Standar Jalan Angkut Tambang: Lebar, Grade, dan Tanggul'
+description: 'Standar jalan angkut tambang menurut Kepmen ESDM 1827 K/30/MEM/2018: lebar jalan, grade maksimum, cross slope, tinggi tanggul pengaman, dan contoh hitungannya.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: k3-tambang
-tags: ['jalan tambang', 'haul road', 'Kepmen 1827', 'tanggul', 'K3']
+tags: ['jalan tambang', 'haul road', 'Kepmen 1827', 'tanggul', 'K3', 'grade jalan']
+image: '/images/artikel/standar-jalan-angkut-tambang/sampul.webp'
+imageAlt: 'Jalan angkut tambang terbuka yang dilalui dozer dan dump truck'
 ---
 
-Jalan angkut adalah tempat sebagian besar pergerakan di tambang terjadi. Truk bermuatan puluhan sampai ratusan ton melintas ratusan kali dalam sehari. Jalan yang terlalu sempit, terlalu curam, atau tanpa tanggul memadai adalah sumber kecelakaan serius. Karena itu geometrinya diatur dalam pedoman kaidah teknik pertambangan yang baik, yaitu Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018.
+Standar jalan angkut tambang adalah ketentuan geometri jalan, seperti lebar, kemiringan, kemiringan melintang, dan tinggi tanggul, yang wajib dipenuhi agar truk bisa melintas dengan aman. Di Indonesia ketentuan pokoknya diatur dalam Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang pedoman kaidah teknik pertambangan yang baik. Artikel ini membahas setiap parameter, contoh hitungannya, langkah pemeriksaan, dan kesalahan yang sering terjadi.
 
-Berikut ketentuan pokok yang paling sering dipakai di lapangan.
+Jalan angkut adalah tempat sebagian besar pergerakan di tambang terjadi. Truk bermuatan puluhan sampai ratusan ton melintas ratusan kali dalam sehari, sehingga jalan yang terlalu sempit, terlalu curam, atau tanpa tanggul memadai menjadi sumber kecelakaan serius. Berikut ketentuan pokok yang paling sering dipakai di lapangan.
 
 ## 1. Lebar jalan lurus
 
@@ -44,7 +46,7 @@ Dalam praktik, banyak tambang memilih kemiringan yang lebih landai untuk jalan u
 
 Permukaan jalan dibuat sedikit miring dari tengah ke tepi agar air hujan cepat mengalir ke saluran. Kemiringan melintang **paling kurang 2%**. Jalan tanpa cross slope akan menahan air, menjadi lunak, berlubang, dan licin.
 
-<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-jalan-tambang.jpg" alt="Jalan tambang di tepi tebing" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Jalan tambang di tepi tebing yang membutuhkan tanggul pengaman. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+<figure class="photo"><img src="/images/dokumentasi/excavator-memuat-dump-truck-jalan-tambang.jpg" alt="Jalan tambang di tepi tebing yang membutuhkan tanggul pengaman" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Jalan tambang di tepi tebing yang membutuhkan tanggul pengaman. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 ## 4. Tanggul pengaman (safety berm)
 
@@ -99,6 +101,8 @@ Sudut belokan pada pertigaan jalan **tidak boleh kurang dari 70 derajat**. Persi
 
 ## Ringkasan
 
+![Tujuh parameter standar jalan angkut tambang dan nilai batasnya](/images/artikel/standar-jalan-angkut-tambang/diagram-parameter-jalan.webp)
+
 | Parameter | Ketentuan |
 | --- | --- |
 | Lebar jalan dua arah | Minimal 3,5 × lebar truk terbesar |
@@ -114,6 +118,19 @@ Sudut belokan pada pertigaan jalan **tidak boleh kurang dari 70 derajat**. Persi
 Jalan yang memenuhi standar saat dibangun bisa cepat rusak jika tidak dirawat. Pemeriksaan jalan setiap shift, perbaikan lubang dan gelombang dengan grader, penyiraman yang terukur, serta perawatan saluran air adalah bagian dari menjaga jalan tetap aman. Ketentuan lengkap dan terbaru selalu merujuk ke dokumen regulasi resmi dan kebijakan KTT di lokasi masing-masing.
 
 Pilihan jenis truk yang menentukan lebar jalan dibahas di artikel [mengenal jenis dump truck tambang](/artikel/mengenal-jenis-dump-truck-tambang/).
+
+## Langkah mengecek kesesuaian jalan angkut
+
+Pemeriksaan geometri jalan sebaiknya dilakukan setiap kali ada unit baru yang lebih besar, saat jalan baru dibuka, dan secara berkala oleh pengawas jalan. Urutannya:
+
+1. **Tentukan unit terbesar** yang melintas di jalan tersebut, lengkap dengan lebar unit dan diameter roda dari lembar spesifikasi pabrikan.
+2. **Hitung nilai minimum**: lebar jalan, tinggi tanggul, dan tinggi pemisah tikungan berdasarkan dimensi unit tadi.
+3. **Ukur kondisi aktual** dengan meteran atau data survei di beberapa titik, terutama tikungan, tanjakan, dan pertigaan.
+4. **Bandingkan dan tandai** ruas yang belum memenuhi standar di peta jalan.
+5. **Susun prioritas perbaikan.** Ruas di tepi lereng tanpa tanggul memadai didahulukan, disusul tanjakan yang terlalu curam dan drainase yang buruk.
+6. **Pasang pengendalian sementara** seperti pembatasan kecepatan atau jalur satu arah sampai perbaikan selesai.
+
+![Enam langkah mengecek kesesuaian jalan angkut terhadap standar](/images/artikel/standar-jalan-angkut-tambang/diagram-langkah-cek-jalan.webp)
 
 ## Contoh menghitung lebar jalan dua jalur
 
@@ -147,6 +164,18 @@ Tanggul yang rendah tidak cukup menahan roda, dan tanggul yang tidak dirawat (ru
 | Rambu dan marka | Jelas, terbaca, cukup penerangan |
 | Debu | Penyiraman rutin |
 
+## Kesalahan umum di lapangan
+
+- **Memakai dimensi truk lama.** Ketika armada diganti dengan truk yang lebih besar, lebar jalan dan tinggi tanggul sering tidak ikut disesuaikan.
+- **Lebar dihitung termasuk tanggul dan saluran.** Lebar minimum adalah lebar efektif untuk lalu lintas, di luar tanggul dan drainase.
+- **Tanggul dipotong untuk akses sementara** lalu tidak ditutup kembali, sehingga ada celah di tepi lereng.
+- **Cross slope hilang** karena grader meratakan jalan tanpa memperhatikan kemiringan melintang. Air menggenang dan jalan cepat rusak.
+- **Tanjakan pendek tapi sangat curam** di ujung ramp, yang tidak terlihat jika grade hanya dihitung rata-rata dari ujung ke ujung.
+
+## Kesimpulan
+
+Standar jalan angkut tambang berpusat pada beberapa angka kunci: lebar jalan dua jalur minimal 3,5 kali lebar truk terbesar, kemiringan maksimal 12%, kemiringan melintang minimal 2%, tanggul pengaman minimal ¾ diameter roda terbesar, dan sudut pertigaan minimal 70°. Angka ini harus dihitung ulang setiap kali unit terbesar berubah dan diperiksa secara berkala, karena jalan yang memenuhi standar saat dibangun bisa cepat menyimpang jika tidak dirawat. Pemadatan lapisan jalan dibahas di artikel [compactor dan pemadatan tanah di tambang](/artikel/compactor-pemadatan-tanah-di-tambang/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Kenapa kemiringan melintang diperlukan?
@@ -160,3 +189,10 @@ Tim jalan dan pemeliharaan, di bawah koordinasi operasi. Setiap orang yang melih
 ### Apakah standar yang sama berlaku di semua tambang?
 
 Aturan pemerintah memberi dasar minimum. Perusahaan boleh menerapkan standar internal yang lebih ketat sesuai kondisi dan jenis unit.
+
+## Referensi
+
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik, lampiran tentang jalan pertambangan.
+- Peraturan Menteri ESDM Nomor 26 Tahun 2018 tentang Pelaksanaan Kaidah Pertambangan yang Baik dan Pengawasan Pertambangan Mineral dan Batubara.
+- Thompson, R. J. *Mine Haul Road Design, Construction and Maintenance Management*. University of Pretoria.
+- Caterpillar. *Caterpillar Performance Handbook*, bagian haul road dan rimpull.

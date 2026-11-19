@@ -2,14 +2,17 @@
 title: 'Cara Menghitung Produktivitas Excavator dan Dump Truck'
 description: 'Rumus produktivitas excavator dan dump truck, cycle time, jumlah truk yang dibutuhkan, dan match factor, lengkap dengan contoh hitungan.'
 pubDate: 2026-10-01
-updatedDate: 2026-10-19
-category: alat-berat
+updatedDate: 2026-11-19
+category: tutorial-analisa-produksi
+subcategory: produktivitas-alat
 tags: ['produktivitas', 'excavator', 'dump truck', 'match factor', 'cycle time']
+image: '/images/artikel/produktivitas-excavator-dan-dump-truck/sampul.webp'
+imageAlt: 'Excavator memuat dump truck di jalan tambang sebagai dasar hitungan produktivitas'
 ---
 
-Excavator dan dump truck adalah pasangan utama di tambang terbuka. Produksi harian ditentukan oleh seberapa cepat excavator memuat dan seberapa banyak truk yang mengangkut. Jika jumlah truk terlalu sedikit, excavator menganggur. Jika terlalu banyak, truk antre di loading point.
+Menghitung produktivitas excavator dan dump truck adalah cara menentukan berapa bcm yang bisa dihasilkan satu fleet per jam dan berapa truk yang dibutuhkan. Produksi harian ditentukan oleh seberapa cepat excavator memuat dan seberapa banyak truk yang mengangkut. Artikel ini membahas rumus, data yang perlu disiapkan, contoh hitungan lengkap, match factor, dan kesalahan umum.
 
-Artikel ini membahas cara menghitung produktivitas keduanya dan menentukan jumlah truk yang pas.
+Excavator dan dump truck adalah pasangan utama di tambang terbuka. Jika jumlah truk terlalu sedikit, excavator menganggur. Jika terlalu banyak, truk antre di loading point.
 
 ## Istilah yang perlu dipahami
 
@@ -21,6 +24,18 @@ Artikel ini membahas cara menghitung produktivitas keduanya dan menentukan jumla
 | **E** | Efisiensi kerja (0,75–0,85 umum di lapangan) |
 | **SF** | Swell factor, konversi volume lepas ke volume asli (bcm = lcm × SF) |
 | **lcm / bcm** | *Loose* dan *bank cubic meter*: volume lepas dan volume asli |
+
+## Persiapan data sebelum menghitung
+
+Rumus hanya sebaik data yang dimasukkan. Sebelum menghitung, kumpulkan:
+
+- **Kapasitas bucket dan bak truk** dari spesifikasi pabrikan, dalam kondisi munjung (heaped).
+- **Cycle time aktual** excavator dan truk, diukur dengan stopwatch atau data dispatch minimal satu shift, bukan hanya angka katalog.
+- **Jarak angkut dan kecepatan rata-rata** bermuatan dan kosong.
+- **Swell factor material** dari survei atau uji lapangan. Lihat [konversi BCM, LCM, dan ton](/artikel/konversi-bcm-lcm-ton-swell-factor/).
+- **Efisiensi kerja** dari data jam efektif per jam kalender.
+
+![Diagram langkah menghitung produktivitas excavator, truk, jumlah truk, dan match factor](/images/artikel/produktivitas-excavator-dan-dump-truck/diagram-langkah-hitung.webp)
 
 ## 1. Produktivitas excavator
 
@@ -135,6 +150,8 @@ MF = (6 × 2,5) / (1 × 15) = 1,0
 
 Di lapangan, MF sedikit di atas 1 sering dipilih agar excavator (alat yang lebih mahal per jam) tidak pernah menunggu.
 
+![Diagram arti nilai match factor: kurang dari 1, sama dengan 1, dan lebih dari 1](/images/artikel/produktivitas-excavator-dan-dump-truck/diagram-match-factor.webp)
+
 ## Tips meningkatkan produktivitas
 
 1. **Jaga kondisi jalan angkut.** Jalan rata dan kering menaikkan kecepatan truk dan menurunkan cycle time.
@@ -175,6 +192,21 @@ Pembulatan ke bawah membuat excavator menunggu, ke atas membuat truk antre. Matc
 | Bucket fill factor rendah | Material keras atau teknik gali kurang tepat | Perbaiki fragmentasi peledakan, latih operator |
 | Cycle time truk membengkak | Jalan buruk, tanjakan, antrean | Perawatan jalan, tata ulang rute |
 
+## Kesalahan umum saat menghitung produktivitas
+
+- **Memakai cycle time katalog,** padahal kondisi front, operator, dan material di lokasi berbeda.
+- **Mencampur lcm dan bcm** sehingga jumlah truk terlihat cukup di atas kertas tetapi produksi survei kurang.
+- **Lupa efisiensi kerja,** seolah alat bekerja penuh 60 menit setiap jam.
+- **Menghitung jarak angkut rata-rata bulanan** padahal front pindah setiap minggu dan jarak berubah.
+- **Membulatkan jumlah truk tanpa melihat match factor,** sehingga excavator menunggu atau truk antre.
+- **Tidak memperbarui hitungan** setelah jalan diperbaiki atau disposal dipindah.
+
+## Kesimpulan
+
+Produktivitas excavator dihitung dari kapasitas bucket, fill factor, cycle time, efisiensi, dan swell factor. Dari situ jumlah pass, waktu muat, cycle time truk, dan produktivitas truk bisa diturunkan, lalu jumlah truk ditentukan dan dicek dengan match factor. Cycle time adalah variabel yang paling besar pengaruhnya, sehingga posisi truk, kondisi jalan, dan disposal yang rapi adalah cara termurah menaikkan produksi.
+
+Gunakan data aktual, pisahkan lcm dan bcm, dan hitung ulang setiap kali jarak atau kondisi jalan berubah. Untuk mengubah produktivitas per jam menjadi produksi harian, lanjutkan ke [KPI alat PA, UA, MA, dan EU](/artikel/kpi-alat-tambang-pa-ua-ma-eu/), dan untuk teknik di front baca [teknik memuat dump truck](/artikel/teknik-memuat-dump-truck-loading-tambang/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Kenapa hasil hitungan berbeda dari produksi aktual?
@@ -189,4 +221,10 @@ Perbandingan volume material yang benar-benar terisi di bucket dengan kapasitas 
 
 Tidak harus. Dalam praktik, perusahaan sering memilih sedikit di bawah atau di atas 1 sesuai prioritas, apakah ingin excavator selalu sibuk atau ingin menghemat jumlah truk.
 
-Baca juga: [teknik memuat dump truck di lapangan](/artikel/teknik-memuat-dump-truck-loading-tambang/).
+
+## Referensi
+
+- Caterpillar Performance Handbook, bagian Hydraulic Excavators dan Off-Highway Trucks.
+- Komatsu Specifications & Application Handbook, bagian Production Estimates.
+- Peurifoy, R. L. dkk. *Construction Planning, Equipment, and Methods*. McGraw-Hill.
+- Hartman, H. L. dan Mutmansky, J. M. *Introductory Mining Engineering*. Wiley.

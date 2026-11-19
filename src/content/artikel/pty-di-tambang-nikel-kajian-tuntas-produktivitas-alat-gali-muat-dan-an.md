@@ -1,19 +1,19 @@
 ---
 title: 'PTY di Tambang Nikel: Produktivitas Alat Gali-Muat dan Angkut'
-description: 'PTY adalah produktivitas alat: laju pemindahan material oleh satu unit per satuan waktu, dengan satuan ton/jam atau bcm/jam.'
+description: 'Kajian PTY (produktivitas alat) di tambang nikel: rumus, cycle time, jalan, loading, payload, match factor, contoh hitungan biaya per ton, dan daftar periksa.'
 pubDate: 2026-11-11
-category: operasi-produksi
-tags: ['Pty', pdty, 'pty exca', 'pty hauler', 'pentingnya pty', 'pty terhadap cost', 'pty terhadapt produksi', 'pty cycletime']
+updatedDate: 2026-11-19
+category: tutorial-analisa-produksi
+subcategory: produktivitas-alat
+tags: ['pty', 'pdty', 'pty excavator', 'pty hauler', 'pty terhadap cost', 'pty terhadap produksi', 'cycle time', 'tambang nikel']
 image: '/images/artikel/pty-di-tambang-nikel-kajian-tuntas-produktivitas-alat-gali-muat-dan-an/sampul-2.webp'
-imageAlt: 'PTY di Tambang Nikel: Produktivitas Alat Gali-Muat dan Angkut'
+imageAlt: 'Excavator memuat dump truck di front tambang nikel laterit, gambaran produktivitas alat gali-muat dan angkut'
 draft: false
 ---
 
-Pentingnya PTY Terhadapa Produksi dan Cost
+PTY di tambang nikel adalah produktivitas alat, yaitu laju pemindahan material oleh satu unit per satuan waktu dalam ton per jam atau bcm per jam. Angka ini menentukan berapa produksi yang tercapai dan berapa biaya per ton yang harus dibayar. Kajian ini membedah PTY alat gali-muat dan angkut dari rumus sampai daftar periksa lapangan.
 
-![gambar01 aktifitas produksi](/images/artikel/pty-di-tambang-nikel-kajian-tuntas-produktivitas-alat-gali-muat-dan-an/screenshot-2026-11-11-135751-2.webp)
-
-Gambar Bersumber Dari AI gnerate
+![Ilustrasi aktivitas produksi tambang nikel: excavator memuat dump truck di front laterit (gambar ilustrasi)](/images/artikel/pty-di-tambang-nikel-kajian-tuntas-produktivitas-alat-gali-muat-dan-an/screenshot-2026-11-11-135751-2.webp)
 
 ## 1\. Pendahuluan
 
@@ -36,18 +36,30 @@ Enam kesalahan yang harus dibersihkan lebih dulu:
 ## 3\. Derivasi rumus dan konsistensi satuan
 
 Bentuk dasarnya adalah pembagian isi dengan waktu:
-PTYangkut=Payload×60CT×EPTYangkut​=Payload×CT60​×E
-PTYgali=(q×K×ρ)×3600CT×EPTYgali​=(q×K×ρ)×CT3600​×E
+
+```
+PTY angkut (t/jam) = Payload (t) × 60 / CT truk (menit) × E
+PTY gali   (t/jam) = (q × K × ρ) × 3600 / CT excavator (detik) × E
+
+q = kapasitas bucket (m³), K = bucket fill factor, ρ = densitas (t/m³)
+E = efisiensi kerja
+```
+
+
 Angka 60 dan 3600 adalah konversi: jika CT dalam menit, satu jam berisi 60/CT siklus; jika dalam detik, 3600/CT siklus. Salah memilih pengali adalah sumber kesalahan hitung paling umum — hasilnya bisa meleset 60 kali lipat.
 
-**Konsistensi satuan wajib dijaga.** ρ harus dalam ton per m³ pada kondisi yang sama dengan q. Jika q diukur pada kondisi lepas (lcm), ρ harus densitas lepas, dan hasilnya ton. Konversi ke bcm memakai swell factor:
-bcm=lcm×SFbcm=lcm×SF
+**Konsistensi satuan wajib dijaga.** ρ harus dalam ton per m³ pada kondisi yang sama dengan q. Jika q diukur pada kondisi lepas (lcm), ρ harus densitas lepas, dan hasilnya ton. Konversi ke bcm memakai swell factor (penjelasan lengkap ada di [konversi BCM, LCM, dan ton dengan swell factor](/artikel/konversi-bcm-lcm-ton-swell-factor/)):
+
+```
+bcm = lcm × SF
+```
+
 Saprolit dengan SF 0,75 berarti 1 bcm setara 1,33 lcm. Mencampur bcm dan lcm dalam satu laporan produksi adalah cara paling rapi untuk membuat tambang terlihat memenuhi target sementara stockpile tidak cocok dengan survey.
 Rumus ini juga menunjukkan hierarki pengaruh. Menambah 10% payload menaikkan PTY 10%. Memangkas CT 10% menaikkan PTY 11,1%. Keduanya sah, tetapi memangkas CT hampir selalu lebih murah daripada membeli truk lebih besar.
 
-untuk perhitungan lebih detail bisa menghitung dari link :
-[Eng 3D Calculation - Aplikasi di Google Play](https://play.google.com/store/apps/details?id=com.akoefendi.engcalc)
-[Kalkulator Tambang Gratis | TambangPedia](https://tambangpedia.com/alat/)
+Untuk perhitungan lebih detail, gunakan [kalkulator tambang gratis TambangPedia](/alat/) atau aplikasi Android [Eng 3D Calculation di Google Play](https://play.google.com/store/apps/details?id=com.akoefendi.engcalc).
+
+![Diagram dua pintu PTY: isi per siklus dan waktu per siklus beserta faktor yang memengaruhinya](/images/artikel/pty-di-tambang-nikel-kajian-tuntas-produktivitas-alat-gali-muat-dan-an/diagram-dua-pintu-pty.webp)
 
 ## 4\. Konteks nikel laterit: mengapa PTY di sini lebih rapuh
 
@@ -62,19 +74,37 @@ Nikel laterit punya profil yang membuat setiap parameter PTY lebih sensitif diba
 
 Konsekuensinya: kontrol PTY di nikel selalu berpasangan dengan kontrol kadar dan kontrol traksi. Menekan PTY tanpa dua itu hanya memindahkan masalah.
 
-## 5\. Model waktu: PA\, UA\, MA\, dan EU
+## 5\. Model waktu dan efisiensi kerja
 
-Efisiensi E bukan angka karangan. Ia dihitung dari model waktu:
-E=PA−(UA+MA)PA×EUE=PAPA−(UA+MA)​×EU
-dengan PA = waktu tersedia, UA = waktu tidak terpakai (mobilisasi, tanpa operator, tanpa front), MA = waktu perbaikan, dan EU = efisiensi operasional yang mencakup delay kecil (spot, antre, tunggu, istirahat, hujan).
-Contoh: PA 720 menit, UA 60, MA 45, EU 0,88.
-E=720−105720×0,88=0,852×0,88=0,750E=720720−105​×0,88=0,852×0,88=0,750
+Efisiensi E bukan angka karangan. Ia dihitung dari pembagian waktu satu shift:
+
+```
+E = (T − S − R) / T × Ek
+
+T  = waktu jadwal satu shift
+S  = waktu tidak terpakai (mobilisasi, tanpa operator, tanpa front)
+R  = waktu perbaikan
+Ek = efisiensi kerja: delay kecil saat bekerja (spot, antre, tunggu, istirahat singkat)
+```
+
+
+Contoh (angka contoh): T 720 menit, S 60 menit, R 45 menit, Ek 0,88.
+
+```
+E = (720 − 105) / 720 × 0,88 = 0,854 × 0,88 ≈ 0,75
+```
+
+Bagian (T − S − R) / T di sini sama dengan EU dalam definisi KPI standar. Penjelasan PA, UA, MA, dan EU yang dipakai di kontrak ada di artikel [KPI alat tambang PA, UA, MA, dan EU](/artikel/kpi-alat-tambang-pa-ua-ma-eu/).
 Angka 0,75 inilah yang masuk rumus, bukan 0,83 asumsi kantor. **Delay harus diklasifikasikan** agar bisa dikelola: delay operasional (antre, spot, tunggu alat lain) diserang dengan perbaikan proses; delay non-operasional (hujan, istirahat, briefing) dikelola dengan penjadwalan; delay mekanis diserang dengan pemeliharaan.
 
 ## 6\. Parameter jalan: yang paling berdampak\, paling sering diabaikan
 
 Kecepatan alat ditentukan total resistance:
-TR=RR+GRTR=RR+GR
+
+```
+TR = RR + GR
+```
+
 dengan RR = rolling resistance dan GR = grade resistance. Kecepatan turun mengikuti naiknya TR, dan CT naik mengikuti turunnya kecepatan.
 **Acuan RR:**
 
@@ -95,8 +125,12 @@ dengan RR = rolling resistance dan GR = grade resistance. Kecepatan turun mengik
 | 10% | ±55% |
 | 12% | ±48% |
 
-**Geometri.** Lebar jalan minimal untuk dua jalur:
-W=2×(L+c)+sW=2×(L+c)+s
+**Geometri.** Lebar jalan minimal untuk dua jalur (pendekatan sederhana; acuan resmi ada di [standar jalan angkut tambang](/artikel/standar-jalan-angkut-tambang/)):
+
+```
+W = 2 × (L + c) + s
+```
+
 dengan L = lebar unit terlebar, c = clearance 0,6–1,0 m per sisi, dan s = bahu/drainase. Superelevasi tikungan 2–5%, camber lurus 2–3%, radius tikungan cukup agar truk tidak memotong jalur berlawanan.
 **Kontrol:** grading harian pada segmen kritis, parit samping bersih, penaburan material keras di tanjakan licin, penutupan segmen gagal, pembatasan kecepatan bertingkat, dan inspeksi jalan tiap shift dengan pengukur kedalaman ruts (ambang intervensi 5 cm).
 **Bila dibiarkan:** CT naik, BBM naik, ban aus, unit tergelincir, dan PTY jatuh lebih cepat daripada yang bisa dikejar dengan menambah truk.
@@ -125,8 +159,13 @@ Metode end dump dipakai untuk ore; pemisahan titik buang ore dan waste wajib aga
 ## 9\. Payload: antara kapasitas dan kehancuran komponen
 
 Target 90–110% rated payload. Aturan 10/10/20 adalah pagar praktis.
-Underload membuang kapasitas gratis dan menaikkan biaya per ton. Overload memberi PTY sesaat tetapi memperpendek umur ban, suspensi, dan frame, serta menaikkan panas ban. Batas panas ban dinyatakan dalam TKPH (ton-km per jam):
-TKPH=Payload×(jarak bermuatan+jarak kosong)jam operasiTKPH=jam operasiPayload×(jarak bermuatan+jarak kosong)​
+Underload membuang kapasitas gratis dan menaikkan biaya per ton. Overload memberi PTY sesaat tetapi memperpendek umur ban, suspensi, dan frame, serta menaikkan panas ban. Batas panas ban dinyatakan dalam TKPH (ton-km per jam). Rumus sederhananya:
+
+```
+TKPH = Beban rata-rata per ban (t) × Kecepatan rata-rata kerja (km/jam)
+Kecepatan rata-rata kerja = Jarak satu siklus (km) × Jumlah siklus / Jam operasi
+```
+
 TKPH aktual yang melewati rating ban adalah penyebab blowout yang tidak muncul di laporan produksi sampai ban meledak di tanjakan.
 **Kontrol:** payload meter terkalibrasi bulanan, pass dikunci per jenis material dan kadar air, audit payload mingguan, dan penyesuaian pass saat hujan (material basah lebih berat per bucket).
 
@@ -141,7 +180,10 @@ Kontrol: matriks kompetensi, coaching berbasis data per operator, penilaian tekn
 
 ## 12\. Match factor dan rasio armada
 
-MF=Jumlah truk×Waktu muatJumlah excavator×CT trukMF=Jumlah excavator×CT trukJumlah truk×Waktu muat​
+```
+MF = (Jumlah truk × Waktu muat satu truk) / (Jumlah excavator × CT truk)
+```
+
 
 | MF | Kondisi | Akibat |
 | --- | ------- | ------ |
@@ -155,13 +197,22 @@ Menambah truk pada MF 1,4 bukan menambah produksi — itu menambah antrean.
 ## 13\. Contoh hitungan dan sensitivitas
 
 **Baseline:** q 2,0 m³; K 0,85; ρ 1,7; CT excavator 28 s; E 0,75; payload 25 t; CT truk 26 menit; 7 truk.
-Isi per pass 2,89 t.
-PTYexca=2,89×360028×0,75=278,7 t/jamPTYexca​=2,89×283600​×0,75=278,7 t/jam
-PTYtruk=25×6026×0,75=43,3 t/jamPTYtruk​=25×2660​×0,75=43,3 t/jam
-Output fleet 303 t/jam. Biaya truk Rp 850.000/unit-jam → Rp 19.637/ton.
+Isi per pass 2,0 × 0,85 × 1,7 = 2,89 t. Semua angka di bagian ini adalah contoh.
+
+```
+PTY excavator = 2,89 × 3600 / 28 × 0,75 = 278,7 t/jam
+PTY truk      = 25 × 60 / 26 × 0,75     = 43,3 t/jam
+Kapasitas angkut 7 truk = 7 × 43,3      = 303 t/jam
+```
+
+
+
+Kapasitas angkut 303 t/jam sedikit di atas kemampuan excavator 278,7 t/jam, jadi produksi nyata baseline dibatasi excavator. Agar skenario mudah dibandingkan, biaya per ton di bawah dihitung dari kapasitas angkut armada truk. Biaya truk Rp 850.000/unit-jam → Rp 19.637/ton.
 **Skenario B — hanya menambah pass ke 10:** payload 28,9 t (overload 15,6%), CT truk 26,5 menit. PTY truk 49,1 t/jam, fleet 343,7 t/jam, Rp 17.312/ton. Naik 13% tetapi ban dan suspensi menanggung risiko.
 **Skenario C — jalan, jenjang, coaching, disiplin delay:** CT truk 21 menit, K 0,95, CT excavator 24 s, E 0,82. PTY truk 58,6, fleet 410 t/jam, Rp 14.512/ton. Naik 35%, biaya turun 26%, tanpa satu unit tambahan.
 **Skenario D — dibiarkan:** CT truk 34 menit, K 0,78, E 0,65. PTY truk 28,7, fleet 200,7 t/jam, Rp 29.646/ton. Turun 34%, biaya naik 51%.
+![Perbandingan skenario kapasitas fleet: baseline, perbaikan jalan dan coaching, serta kondisi dibiarkan (angka contoh)](/images/artikel/pty-di-tambang-nikel-kajian-tuntas-produktivitas-alat-gali-muat-dan-an/diagram-skenario-pty.webp)
+
 **Sensitivitas:** satu detik tambahan CT excavator pada baseline menurunkan PTY 9,6 t/jam (3,4%). Satu persen RR menambah CT truk sekitar 15 detik per siklus 3 km.
 
 ## 14\. Register risiko
@@ -194,25 +245,34 @@ Pengukuran harus jujur: time study, payload meter terkalibrasi, dispatch, CCTV, 
 
 **PTY** produktivitas; **CT** cycle time; **K** bucket fill factor; **RR** rolling resistance; **GR** grade resistance; **TKPH** ton-km per jam (batas panas ban); **MF** match factor; **lcm/bcm** meter kubik lepas/asli; **SF** swell factor; **GET** ground engaging tools.
 
-## 18\. Penutup
-
-PTY adalah cermin disiplin teknis sebuah tambang. Ia tidak naik karena slogan, tetapi hancur oleh satu jalan tanpa grading, satu bucket tanpa kalibrasi, dan satu operator tanpa coaching. Di nikel, dengan jarak panjang, cuaca buruk, dan margin tipis, mengontrol PTY adalah soal apakah operasi ini masih layak dibiayai kuartal depan.
-Mau saya lanjutkan dengan paket dokumen pendamping: formulir time study, kartu audit payload, dan dashboard KPI siap pakai?
 
 ## Kesimpulan
 
-**PTY hanya bergerak lewat dua pintu: isi per siklus dan waktu per siklus.** Payload, bucket fill factor, dan kapasitas bucket menggerakkan pintu pertama; faktor jalan, loading, dumping, dan skill operator menggerakkan pintu kedua. Setiap program perbaikan harus bisa dijawab dengan pertanyaan "pintu mana yang disentuh" — kalau tidak bisa, program itu hanya menambah kegiatan tanpa menambah ton.
-**Jalan dan matching adalah tuas termurah, penambahan armada adalah yang termahal.** Grading, camber, drainase, dan penguncian pass tidak butuh unit baru, tetapi dampaknya pada cycle time lebih besar daripada menambah truk. Menghitung kebutuhan armada dari PTY alat muat dan menjaga MF di 1,0–1,2 mencegah antrean yang membakar BBM tanpa satu ton tambahan.
-**PTY tidak boleh dibeli dengan hal lain.** Overload membeli ton dengan umur ban, kecepatan membeli ton dengan risiko kecelakaan, dan gali tanpa kontrol kontak membeli ton dengan kadar. Karena itu KPI wajib berpasangan — PTY per unit bersama cost per ton, dengan pagar payload dan kadar dan angkanya harus berasal dari pengukuran jujur yang ditinjau setiap shift, bukan asumsi kantor yang ditinjau setiap bulan.
+PTY adalah cermin disiplin teknis sebuah tambang. Ia tidak naik karena slogan, tetapi hancur oleh satu jalan tanpa grading, satu bucket tanpa kalibrasi, dan satu operator tanpa coaching. Di nikel, dengan jarak panjang, cuaca basah, dan margin tipis, mengontrol PTY menentukan apakah operasi masih layak dibiayai kuartal depan.
 
-## FAQ
+**PTY hanya bergerak lewat dua pintu: isi per siklus dan waktu per siklus.** Payload, bucket fill factor, dan kapasitas bucket menggerakkan pintu pertama; jalan, loading, dumping, dan skill operator menggerakkan pintu kedua. Jalan dan matching adalah tuas termurah, sedangkan penambahan armada adalah yang termahal. PTY juga tidak boleh dibeli dengan umur ban, keselamatan, atau kadar, sehingga KPI wajib berpasangan: PTY per unit bersama biaya per ton, dengan pagar payload dan kadar, dari pengukuran jujur yang ditinjau setiap shift.
 
-**Apakah MF harus 1 ?**
+## Pertanyaan yang sering diajukan
 
-**Mengapa hasil hitung beda jauh dari realisasi ?**
+### Apakah match factor harus tepat 1?
 
-**Bisakah PTY dinaikkan tanpa alat baru ?**
+Tidak harus. MF 0,9–1,1 dianggap sepadan, dan banyak tambang sengaja memakai MF sedikit di atas 1 agar excavator, alat yang biayanya paling mahal, tidak menunggu truk. Di atas sekitar 1,3, antrean truk mulai membakar BBM tanpa menambah produksi.
 
-sumber lain :
-[PA, UA, MA, dan EU: Arti dan Rumus KPI Alat Tambang](/artikel/kpi-alat-tambang-pa-ua-ma-eu/)
-[BCM, LCM, dan Ton: Cara Konversi dengan Swell Factor dan Densitas](/artikel/konversi-bcm-lcm-ton-swell-factor/)
+### Mengapa hasil hitung beda jauh dari realisasi?
+
+Biasanya karena asumsi kantor tidak sama dengan kondisi lapangan: efisiensi dipatok tetap, bucket fill factor diambil dari brosur, cycle time tidak diukur dengan time study, atau payload memakai kapasitas nominal. Ukur ulang setiap elemen di lapangan dan perbarui asumsinya per musim.
+
+### Bisakah PTY dinaikkan tanpa alat baru?
+
+Bisa, dan sering kali justru paling efektif. Skenario C di atas menaikkan kapasitas fleet sekitar 35% hanya lewat perbaikan jalan, geometri jenjang, coaching operator, dan disiplin delay, tanpa menambah satu unit pun.
+
+### Apa bedanya PTY dan produksi?
+
+PTY adalah laju per jam kerja efektif, sedangkan produksi adalah PTY dikali jam kerja efektif. Produksi bisa tercapai dengan PTY rendah asal jam atau unit ditambah, tetapi biaya per ton ikut membengkak.
+
+## Referensi
+
+- Caterpillar Inc. *Caterpillar Performance Handbook*, bagian rimpull, rolling resistance, TKPH ban, dan payload policy 10/10/20.
+- Komatsu Ltd. *Specifications & Application Handbook*, bagian perhitungan produksi excavator dan dump truck.
+- Peurifoy, R. L., dkk. *Construction Planning, Equipment, and Methods*. McGraw-Hill.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.

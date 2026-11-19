@@ -1,17 +1,18 @@
 ---
-title: 'PA, UA, MA, dan EU: Arti dan Rumus KPI Alat Tambang'
-description: 'Penjelasan lengkap Physical Availability, Use of Availability, Mechanical Availability, dan Effective Utilization beserta rumus dan contoh hitungan dari lapangan.'
+title: 'KPI Alat Tambang PA, UA, MA, dan EU: Arti dan Rumusnya'
+description: 'Arti dan rumus KPI alat tambang PA, UA, MA, dan EU, contoh hitungan satu excavator, cara membaca angkanya, dan kesalahan pencatatan jam yang sering terjadi.'
 pubDate: 2026-10-05
-updatedDate: 2026-11-18
-category: operasi-produksi
+updatedDate: 2026-11-19
+category: tutorial-analisa-produksi
+subcategory: kpi-alat
 tags: ['KPI', availability, produktivitas, 'alat berat']
 featured: true
+image: '/images/artikel/kpi-alat-tambang-pa-ua-ma-eu/sampul.webp'
+imageAlt: 'Ilustrasi pembagian jam alat tambang menjadi working, standby, dan repair untuk menghitung PA, UA, MA, dan EU'
 draft: false
 ---
 
-Di rapat produksi tambang, angka **PA, UA, MA, dan EU** hampir selalu muncul di slide pertama. Keempat angka ini menjawab satu pertanyaan sederhana: *dari seluruh jam yang tersedia, berapa jam alat benar-benar bekerja, dan ke mana sisanya hilang?*
-
-Artikel ini menjelaskan arti masing-masing KPI, rumusnya, contoh hitungan, dan cara membacanya untuk mencari sumber kehilangan produksi.
+KPI alat tambang **PA, UA, MA, dan EU** hampir selalu muncul di slide pertama rapat produksi. Keempat angka ini menjawab satu pertanyaan sederhana: *dari seluruh jam yang tersedia, berapa jam alat benar-benar bekerja, dan ke mana sisanya hilang?* Artikel ini menjelaskan arti masing-masing KPI, rumusnya, contoh hitungan, dan cara membacanya untuk mencari sumber kehilangan produksi.
 
 ## Dasar: tiga jenis jam alat
 
@@ -27,8 +28,18 @@ Total jam tersedia dalam satu periode adalah **T = W + R + S**. Untuk satu bulan
 
 > Kunci akurasi KPI ada di pencatatan. Jika jam standby tercatat sebagai breakdown (atau sebaliknya), semua angka di bawah ini ikut salah.
 
-Total jam kalender T = 720 jam W 468 jam S 180 R 72 PA = (W + S) ÷ T = 648 ÷ 720 = 90% EU = W ÷ T = 65% UA = W ÷ (W + S) = 468 ÷ 648 = 72,2% MA = W ÷ (W + R) = 468 ÷ 540 = 86,7% W = jam kerja · S = jam siaga (standby) · R = jam perbaikan
-Contoh satu excavator selama 720 jam. Semua KPI availability berasal dari pembagian jam kalender ke tiga kelompok ini.
+![Pembagian 720 jam kalender satu excavator menjadi working 468 jam, standby 180 jam, dan repair 72 jam beserta rumus PA, UA, MA, EU](/images/artikel/kpi-alat-tambang-pa-ua-ma-eu/diagram-jam-alat.webp)
+
+## Persiapan: data jam yang harus dicatat
+
+Sebelum menghitung KPI, pastikan pencatatan jam di lapangan rapi. Yang dibutuhkan:
+
+1. **Timesheet per unit per shift**, diisi saat kejadian, bukan dari ingatan di akhir shift.
+2. **Kode delay yang baku**, misalnya hujan, slippery, istirahat, menunggu blasting, menunggu truk, tidak ada operator.
+3. **Catatan breakdown dari maintenance**, dengan jam mulai rusak dan jam alat diserahkan kembali ke operasi.
+4. **Rekonsiliasi harian**, memastikan jumlah W + R + S sama dengan jam kalender. Selisih jam yang tidak tercatat harus dicari, bukan dibiarkan.
+
+Langkah sederhana ini menentukan apakah KPI yang dihasilkan bisa dipercaya untuk mengambil keputusan.
 
 ## 1\. MA: Mechanical Availability
 
@@ -107,6 +118,8 @@ Jika produktivitas excavator di contoh di atas 450 bcm/jam, produksi bulannya se
 1. **Mencampur standby dan breakdown.** Alat yang menunggu mekanik setelah rusak tetap masuk R, bukan S.
 2. **Tidak membedakan delay kecil.** Antre di loading point biasanya tetap dihitung jam kerja, tetapi menurunkan produktivitas per jam.
 3. **Membandingkan PA antar perusahaan tanpa definisi yang sama.** Selalu cek definisi di kontrak, karena beberapa kontrak memasukkan servis terjadwal secara berbeda.
+4. **Mengisi timesheet di akhir shift.** Jam yang diisi dari ingatan cenderung dibulatkan dan menghilangkan delay pendek yang jika dijumlah bisa berjam-jam dalam sebulan.
+5. **Hanya melaporkan PA.** PA tinggi terlihat bagus di laporan kontrak, padahal UA yang rendah diam-diam menggerus produksi.
 
 ## Membaca KPI untuk mengambil keputusan
 
@@ -130,6 +143,18 @@ Dua excavator sejenis bulan ini punya data berikut (jam, ilustrasi):
 
 Dengan total 720 jam, PA = (working + standby) / total jam dan UA = working / (working + standby). EX-01 lebih bermasalah di sisi kerusakan, sedangkan EX-02 alatnya sehat tetapi banyak menganggur. Satu angka produksi tidak akan memperlihatkan perbedaan ini.
 
+Untuk EX-01, langkah lanjutnya adalah memeriksa riwayat breakdown, kepatuhan servis berkala, dan backlog seperti dibahas di [perawatan alat berat: periodic service dan backlog](/artikel/perawatan-alat-berat-pm-backlog/). Untuk EX-02, lihat kode delay standby-nya, lalu pecah kehilangan produksi dengan metode di [cara menganalisa loss produksi tambang](/artikel/cara-analisa-loss-produksi-tambang/).
+
+## Kesimpulan
+
+Keempat KPI alat tambang berasal dari pembagian jam kalender menjadi working, repair, dan standby. MA menilai kinerja maintenance, PA menilai kesiapan alat dan paling sering tercantum di kontrak, UA menilai seberapa baik jam siap dipakai oleh tim operasi, dan EU menggabungkan keduanya sebagai PA dikali UA. Membaca PA dan UA berdampingan langsung menunjukkan apakah masalah ada di bengkel atau di lapangan.
+
+Akurasi semuanya bergantung pada pencatatan jam yang jujur dan konsisten. Dengan data yang rapi, KPI bisa diterjemahkan menjadi tindakan nyata dan dihubungkan ke produksi lewat produktivitas per jam.
+
+## Coba kalkulatornya
+
+Hitung PA, UA, MA, dan EU alat Anda sendiri dengan [Kalkulator KPI Alat Tambang](/alat/kpi-alat/). Masukkan jam kerja, perbaikan, dan siaga, lalu hasilnya muncul seketika. Versi Android tersedia di [aplikasi Eng 3D Calculation](/aplikasi/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Berapa target PA dan UA yang wajar?
@@ -148,7 +173,9 @@ Karena EU = PA × UA. Selama PA di bawah 100%, EU pasti lebih kecil daripada UA,
 
 Tim operasi dan perencanaan, karena UA dipengaruhi kesiapan front, jumlah alat pendukung, jalan, dan keputusan penugasan.
 
-## Coba kalkulatornya
+## Referensi
 
-Hitung PA, UA, MA, dan EU alat Anda sendiri dengan [Kalkulator KPI Alat Tambang](/alat/kpi-alat/). Masukkan jam kerja, perbaikan, dan siaga, lalu hasilnya muncul seketika.
-[Aplikasi Eng 3D Calculation: Alat Tambang | TambangPedia](https://tambangpedia.com/aplikasi/)
+- Caterpillar Inc. *Caterpillar Performance Handbook*, bagian Owning and Operating Costs dan definisi availability.
+- Komatsu Ltd. *Specifications & Application Handbook*.
+- Hartman, H. L. & Mutmansky, J. M. *Introductory Mining Engineering*, edisi ke-2. John Wiley & Sons.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.

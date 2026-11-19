@@ -2,16 +2,20 @@
 title: 'Perbedaan Sumberdaya dan Cadangan dalam Pertambangan'
 description: 'Penjelasan sumberdaya (tereka, tertunjuk, terukur) dan cadangan (terkira, terbukti) menurut Kode KCMI, faktor pengubah, serta peran Competent Person Indonesia.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: geologi-eksplorasi
-tags: ['sumberdaya', 'cadangan', 'KCMI', 'competent person', 'geologi']
+tags: ['sumberdaya', 'cadangan', 'KCMI', 'competent person', 'geologi', 'faktor pengubah']
+image: '/images/artikel/perbedaan-sumberdaya-dan-cadangan/sampul.webp'
+imageAlt: 'Ilustrasi perbedaan sumberdaya dan cadangan batubara dalam pertambangan'
 ---
 
-Dua kata ini sering dipakai bergantian dalam percakapan sehari-hari, padahal artinya berbeda jauh. Sebuah perusahaan bisa punya sumberdaya ratusan juta ton, tapi cadangannya hanya sebagian kecil. Bagi investor, bank, dan pemerintah, perbedaan ini sangat penting karena cadangan adalah angka yang benar-benar diharapkan bisa ditambang dan dijual.
+Perbedaan sumberdaya dan cadangan dalam pertambangan terletak pada tingkat keyakinan dan kelayakan: sumberdaya adalah endapan yang diperkirakan ada di dalam tanah, sedangkan cadangan adalah bagian yang terbukti bisa ditambang dan dijual secara ekonomis. Sebuah perusahaan bisa punya sumberdaya ratusan juta ton, tetapi cadangannya hanya sebagian kecil. Artikel ini membahas kategori keduanya, faktor pengubah, langkah konversi, contoh kasus, dan kesalahan yang sering terjadi.
+
+Dua kata ini sering dipakai bergantian dalam percakapan sehari-hari, padahal artinya berbeda jauh. Bagi investor, bank, dan pemerintah, perbedaan ini sangat penting karena cadangan adalah angka yang benar-benar diharapkan bisa ditambang dan dijual.
 
 Di Indonesia, pelaporan hasil eksplorasi, sumberdaya, dan cadangan mengacu pada **Kode KCMI** (Komite Cadangan Mineral Indonesia), yang sejalan dengan standar internasional seperti JORC.
 
-## Sumberdaya (resources)
+## Pengertian sumberdaya (resources)
 
 Sumberdaya adalah endapan yang punya prospek wajar untuk akhirnya bisa ditambang secara ekonomis. Jumlah, kualitas, dan sebarannya diperkirakan dari data geologi seperti titik bor dan singkapan.
 
@@ -25,7 +29,7 @@ Berdasarkan tingkat keyakinannya, sumberdaya dibagi tiga:
 
 Keyakinan ini sangat dipengaruhi jarak titik bor dan kemenerusan lapisan yang terlihat dari data.
 
-## Cadangan (reserves)
+## Pengertian cadangan (reserves)
 
 Cadangan adalah bagian dari sumberdaya tertunjuk dan terukur yang **bisa ditambang secara ekonomis**, setelah mempertimbangkan berbagai faktor pengubah. Cadangan dibagi dua:
 
@@ -81,7 +85,20 @@ Inilah yang membuat angka cadangan selalu lebih kecil dari sumberdaya. Faktor-fa
 - **Lingkungan dan sosial**: area yang tidak boleh diganggu, permukiman, dan persetujuan masyarakat.
 - **Infrastruktur**: akses jalan, pelabuhan, dan ketersediaan energi.
 
-Contoh sederhana: dari sumberdaya terukur 50 juta ton, sebagian berada di luar batas pit ekonomis karena stripping ratio-nya terlalu tinggi, sebagian lagi di bawah sungai yang tidak boleh ditambang, dan ada kehilangan saat penggalian. Hasil akhirnya mungkin cadangan terbukti 32 juta ton. Konsep batas ekonomis ini dibahas di artikel [stripping ratio dan BESR](/artikel/cara-menghitung-stripping-ratio/).
+Contoh sederhana: dari sumberdaya terukur 50 juta ton, sebagian berada di luar batas pit ekonomis karena stripping ratio-nya terlalu tinggi, sebagian lagi di bawah sungai yang tidak boleh ditambang, dan ada kehilangan saat penggalian. Hasil akhirnya mungkin cadangan terbukti 32 juta ton (angka contoh). Konsep batas ekonomis ini dibahas di artikel [stripping ratio dan BESR](/artikel/cara-menghitung-stripping-ratio/).
+
+## Langkah mengubah sumberdaya menjadi cadangan
+
+Konversi sumberdaya menjadi cadangan bukan sekadar mengalikan angka dengan persentase. Prosesnya mengikuti urutan kajian berikut:
+
+1. **Pastikan kategori sumberdaya.** Hanya sumberdaya tertunjuk dan terukur yang boleh dipakai. Data bor, model geologi, dan estimasi kualitas harus sudah ditinjau.
+2. **Susun desain tambang.** Tentukan batas pit, sudut lereng dari kajian geoteknik, ketebalan minimum yang bisa ditambang, dan urutan penambangan.
+3. **Terapkan losses dan dilusi.** Kurangi tonase yang hilang saat penggalian dan tambahkan material pengotor yang ikut terbawa.
+4. **Uji keekonomian.** Hitung biaya penambangan, pengangkutan, dan penjualan terhadap asumsi harga. Blok dengan stripping ratio di atas batas impas dikeluarkan.
+5. **Periksa izin, lingkungan, dan sosial.** Area di luar izin, kawasan lindung, sempadan sungai, atau permukiman dikeluarkan dari cadangan.
+6. **Klasifikasikan dan laporkan.** Competent Person menetapkan cadangan terbukti dan terkira, lengkap dengan asumsi yang dipakai.
+
+![Enam langkah mengubah sumberdaya tertunjuk dan terukur menjadi cadangan terkira dan terbukti](/images/artikel/perbedaan-sumberdaya-dan-cadangan/diagram-konversi-cadangan.webp)
 
 ## Cadangan bisa berubah
 
@@ -96,8 +113,6 @@ Laporan sumberdaya dan cadangan untuk keperluan resmi harus disusun atau disetuj
 - **Sumberdaya** menjawab: berapa yang ada di dalam tanah dan seberapa yakin kita?
 - **Cadangan** menjawab: berapa yang benar-benar bisa ditambang dan dijual dengan untung?
 
-Proses pengumpulan data yang mendasari keduanya dijelaskan di artikel [tahapan eksplorasi tambang](/artikel/tahapan-eksplorasi-tambang/).
-
 ## Contoh: sebuah blok berubah dari sumberdaya menjadi cadangan
 
 Bayangkan sebuah blok batubara dengan data bor yang rapat, sehingga masuk kategori sumberdaya terukur. Tim kemudian menyusun rencana tambang, memeriksa harga jual, biaya, kondisi geoteknik, izin, dan lingkungan. Jika semuanya menunjukkan blok itu layak ditambang secara ekonomis dan legal, maka sebagian sumberdaya terukur dapat dikonversi menjadi cadangan terbukti. Bagian yang tidak lolos kajian tetap sebagai sumberdaya.
@@ -111,6 +126,18 @@ Bayangkan sebuah blok batubara dengan data bor yang rapat, sehingga masuk katego
 | Sumberdaya terukur | Tinggi | Belum ada |
 | Cadangan terkira | Sedang | Sudah dikaji dengan faktor pengubah |
 | Cadangan terbukti | Tinggi | Sudah dikaji dengan faktor pengubah |
+
+## Kesalahan umum dalam memahami sumberdaya dan cadangan
+
+- **Menyebut sumberdaya sebagai cadangan** dalam presentasi atau promosi, sehingga nilai tambang terlihat jauh lebih besar dari kenyataan.
+- **Mengonversi sumberdaya tereka menjadi cadangan.** Kode KCMI tidak mengizinkannya karena tingkat keyakinan geologinya belum cukup.
+- **Tidak menyebut asumsi harga dan biaya.** Angka cadangan tanpa asumsi ekonomi tidak bisa dibandingkan atau diperiksa ulang.
+- **Menjumlahkan sumberdaya dan cadangan** tanpa menyebut apakah sumberdaya sudah termasuk cadangan, sehingga terjadi hitungan ganda.
+- **Tidak memperbarui estimasi** setelah ada data bor baru, perubahan desain pit, atau perubahan harga yang signifikan.
+
+## Kesimpulan
+
+Sumberdaya menjawab pertanyaan berapa endapan yang ada di dalam tanah dan seberapa yakin kita, sedangkan cadangan menjawab berapa yang benar-benar bisa ditambang dan dijual dengan untung. Sumberdaya dibagi menjadi tereka, tertunjuk, dan terukur, sementara cadangan dibagi menjadi terkira dan terbukti setelah melewati faktor pengubah. Angka keduanya harus dilaporkan oleh Competent Person dan diperbarui saat data atau asumsi berubah. Data yang mendasari keduanya berasal dari [tahapan eksplorasi tambang](/artikel/tahapan-eksplorasi-tambang/) dan [pemboran coring serta open hole](/artikel/pemboran-eksplorasi-coring-dan-open-hole/).
 
 ## Pertanyaan yang sering diajukan
 
@@ -129,3 +156,10 @@ Harus hati-hati. Praktik pelaporan yang baik menyebut apakah angka sumberdaya su
 ### Siapa yang menandatangani laporan sumberdaya dan cadangan?
 
 Orang yang memenuhi kualifikasi sebagai Competent Person sesuai Kode KCMI.
+
+## Referensi
+
+- Komite Cadangan Mineral Indonesia (KCMI). *Kode Pelaporan Hasil Eksplorasi, Sumberdaya Mineral, dan Cadangan Mineral Indonesia* (Kode KCMI 2017).
+- SNI 5015:2019 *Pedoman pelaporan hasil eksplorasi, sumber daya, dan cadangan batubara*.
+- Joint Ore Reserves Committee. *The JORC Code 2012 Edition*.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik (lampiran pedoman estimasi sumberdaya dan cadangan).

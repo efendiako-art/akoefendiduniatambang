@@ -2,12 +2,16 @@
 title: 'Pemboran Eksplorasi Batubara: Perbedaan Coring dan Open Hole'
 description: 'Perbedaan pemboran coring dan open hole di eksplorasi batubara, fungsi masing-masing, core recovery, logging geofisika, dan tips agar data bor bisa dipercaya.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: geologi-eksplorasi
-tags: ['pemboran', 'eksplorasi', 'coring', 'core recovery', 'logging geofisika']
+tags: ['pemboran', 'eksplorasi', 'coring', 'open hole', 'core recovery', 'logging geofisika']
+image: '/images/artikel/pemboran-eksplorasi-coring-dan-open-hole/sampul.webp'
+imageAlt: 'Ilustrasi pemboran eksplorasi batubara dengan metode coring dan open hole'
 ---
 
-Titik bor adalah mata tim geologi untuk melihat apa yang ada di bawah tanah. Hampir semua angka penting tambang, mulai dari ketebalan seam, kualitas, sampai cadangan, berasal dari data pemboran. Di eksplorasi batubara, ada dua cara pemboran yang paling sering dipakai: **open hole** dan **coring**.
+Pemboran eksplorasi batubara adalah kegiatan membuat lubang bor untuk mengetahui kedalaman, ketebalan, dan kualitas lapisan batubara di bawah permukaan. Dua metode yang paling sering dipakai adalah **open hole** dan **coring**, masing-masing dengan kelebihan, biaya, dan jenis data yang berbeda. Artikel ini membahas perbedaan keduanya, persiapan dan langkah kerja di lokasi bor, core recovery, logging geofisika, contoh keputusan, dan kesalahan yang sering terjadi.
+
+Titik bor adalah mata tim geologi untuk melihat apa yang ada di bawah tanah. Hampir semua angka penting tambang, mulai dari ketebalan seam, kualitas, sampai cadangan, berasal dari data pemboran.
 
 ## Pemboran open hole
 
@@ -48,6 +52,22 @@ Dalam praktik, kedua metode digabung. Pemboran open hole dipakai di banyak titik
 | Data kualitas | Tidak andal | Andal |
 | Data geoteknik | Tidak ada | Ada |
 
+![Perbandingan pemboran open hole dan coring dari sisi hasil, biaya, dan kegunaan data](/images/artikel/pemboran-eksplorasi-coring-dan-open-hole/diagram-open-hole-vs-coring.webp)
+
+## Persiapan dan langkah kerja di titik bor
+
+Data bor yang baik ditentukan sejak sebelum mata bor menyentuh tanah. Urutan kerja yang umum di satu titik pemboran coring:
+
+1. **Persiapan lokasi.** Titik bor dipatok sesuai rencana, akses dan pad bor dibuat rata, kolam lumpur (sump) disiapkan, dan air kerja tersedia.
+2. **Survei collar.** Koordinat dan elevasi mulut lubang diukur dengan alat survei, bukan perkiraan dari peta.
+3. **Pemboran open hole di lapisan penutup.** Bagian atas yang hanya berisi batuan penutup biasanya dibor cepat sambil geolog mencatat cutting.
+4. **Ganti ke coring sebelum target.** Beberapa meter sebelum perkiraan atap seam, pemboran diubah menjadi coring agar kontak atap batubara tertangkap utuh.
+5. **Angkat, ukur, dan foto core.** Setiap run diukur panjangnya untuk menghitung recovery, lalu disusun di core box berlabel kedalaman.
+6. **Deskripsi dan sampling.** Geolog mendeskripsi litologi, menandai batas seam dan parting, lalu batubara dibungkus rapat sebagai sampel laboratorium.
+7. **Logging geofisika.** Setelah lubang selesai, probe diturunkan untuk merekam gamma ray dan densitas sebagai pembanding deskripsi core.
+
+![Tujuh langkah kerja di satu titik pemboran coring dari persiapan lokasi sampai logging geofisika](/images/artikel/pemboran-eksplorasi-coring-dan-open-hole/diagram-langkah-pemboran.webp)
+
 ## Core recovery: ukuran kualitas pemboran
 
 Tidak semua batuan yang dibor berhasil terangkat sebagai core. Persentase yang berhasil diangkat disebut core recovery:
@@ -83,15 +103,17 @@ Data yang rapi dari tahap ini menjadi dasar estimasi [sumberdaya dan cadangan](/
 
 Misalkan ada 40 titik bor rencana pada area eksplorasi. Rancangan yang umum adalah sebagian titik di-coring untuk mendapat sampel batubara dan batuan, sementara titik lain dibuat open hole yang lebih murah dan cepat lalu dilengkapi logging geofisika. Titik coring disebar pada lokasi kunci supaya hasil logging di titik open hole bisa dikoreksi dan dikorelasikan. Proporsi pastinya ditentukan geolog sesuai kompleksitas geologi dan tujuan eksplorasi.
 
-## Perbandingan ringkas
+## Kesalahan umum di lapangan
 
-| Aspek | Open hole | Coring |
-| --- | --- | --- |
-| Hasil | Serbuk dan serpihan (cutting) | Batang inti (core) |
-| Kecepatan dan biaya | Lebih cepat dan murah | Lebih lambat dan mahal |
-| Untuk analisa kualitas | Terbatas | Baik, sampel utuh |
-| Untuk struktur dan ketebalan | Dibantu logging | Langsung dari core |
-| Penggunaan | Mengetahui posisi lapisan, kerapatan titik | Analisa laboratorium dan deskripsi detail |
+- **Terlambat ganti ke coring.** Jika coring baru dimulai setelah mata bor masuk batubara, kontak atap seam hilang dan ketebalan menjadi tidak pasti.
+- **Core dibiarkan terjemur.** Batubara cepat kehilangan air dan retak, sehingga hasil total moisture dan kalori di laboratorium tidak mewakili kondisi sebenarnya.
+- **Label kedalaman tidak konsisten.** Core yang tertukar urutan atau kedalamannya membuat korelasi antar titik bor menjadi salah.
+- **Recovery rendah tetap dipakai.** Sampel dari interval dengan recovery rendah sebaiknya ditandai atau dibor ulang, bukan dipakai langsung untuk estimasi kualitas.
+- **Logging tidak dilakukan karena lubang runtuh.** Lubang yang tidak stabil perlu ditangani dengan casing atau lumpur bor yang sesuai agar probe bisa turun sampai dasar.
+
+## Kesimpulan
+
+Pemboran eksplorasi batubara memakai dua metode yang saling melengkapi: open hole yang cepat dan murah untuk memetakan sebaran lapisan, serta coring yang lebih lambat tetapi memberi sampel utuh untuk kualitas dan geoteknik. Keduanya diperkuat logging geofisika untuk menentukan batas seam secara akurat. Kunci data yang bisa dipercaya adalah survei collar yang benar, pergantian ke coring sebelum target, core recovery yang tinggi, dan sampel yang dibungkus rapat. Rangkaian kegiatan eksplorasi secara utuh dijelaskan di [tahapan eksplorasi tambang](/artikel/tahapan-eksplorasi-tambang/), sedangkan parameter yang diuji dari sampel core dibahas di [parameter kualitas batubara](/artikel/parameter-kualitas-batubara/).
 
 ## Pertanyaan yang sering diajukan
 
@@ -110,3 +132,10 @@ Batubara yang rapuh, rekahan, teknik pemboran yang kurang tepat, atau alat dan l
 ### Siapa yang mendeskripsikan core?
 
 Geolog atau teknisi geologi terlatih, dengan dokumentasi foto dan pengambilan sampel yang rapi.
+
+## Referensi
+
+- Komite Cadangan Mineral Indonesia (KCMI). *Kode Pelaporan Hasil Eksplorasi, Sumberdaya Mineral, dan Cadangan Mineral Indonesia* (Kode KCMI 2017).
+- SNI 5015:2019 *Pedoman pelaporan hasil eksplorasi, sumber daya, dan cadangan batubara*.
+- Thomas, L. *Coal Geology*, edisi ke-2. Wiley-Blackwell.
+- Hartman, H. L. dan Mutmansky, J. M. *Introductory Mining Engineering*, edisi ke-2. John Wiley & Sons.

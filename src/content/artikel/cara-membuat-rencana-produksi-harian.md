@@ -1,13 +1,20 @@
 ---
-title: 'Cara Menyusun Rencana Produksi Harian di Tambang'
+title: 'Rencana Produksi Harian Tambang: Cara Menyusun Daily Plan'
 description: 'Panduan menyusun daily plan tambang terbuka: dari target bulanan, pembagian per fleet, kebutuhan alat, hingga kontrol realisasi per shift.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
-category: operasi-produksi
+updatedDate: 2026-11-19
+category: tutorial-analisa-produksi
+subcategory: laporan-produksi
 tags: ['rencana produksi', 'daily plan', 'short term planning', 'fleet']
+image: '/images/artikel/cara-membuat-rencana-produksi-harian/sampul.webp'
+imageAlt: 'Excavator dan dozer bekerja di front tambang sesuai rencana produksi harian'
 ---
 
-Target bulanan yang besar terasa jauh dan abstrak bagi orang di lapangan. Supervisor shift tidak berpikir "kita harus 1 juta bcm bulan ini". Yang ia butuhkan adalah jawaban sederhana: hari ini fleet saya kerja di mana, berapa targetnya, dan buang ke mana. Rencana produksi harian (daily plan) adalah jembatan antara angka bulanan itu dan pekerjaan nyata di pit.
+Rencana produksi harian tambang (daily plan) adalah jembatan antara target bulanan dan pekerjaan nyata di pit setiap shift. Isinya menjawab tiga hal: fleet bekerja di mana, berapa targetnya, dan material dibuang ke mana. Artikel ini membahas cara menyusunnya langkah demi langkah, lengkap dengan contoh angka dan format satu halaman.
+
+Target bulanan yang besar terasa jauh dan abstrak bagi orang di lapangan. Supervisor shift tidak berpikir "kita harus 1 juta bcm bulan ini". Yang ia butuhkan adalah jawaban sederhana yang bisa langsung dikerjakan dan diawasi per jam.
+
+![Diagram alur menyusun rencana produksi harian dari target bulanan sampai kontrol per jam](/images/artikel/cara-membuat-rencana-produksi-harian/diagram-alur-daily-plan.webp)
 
 ## 1. Mulai dari target bulanan dan hari kerja efektif
 
@@ -17,7 +24,7 @@ Jangan bagi target bulanan rata dengan jumlah hari kalender. Kurangi dulu dengan
 Target harian = Target bulanan / Hari kerja efektif
 ```
 
-Contoh: target OB 900.000 bcm, 30 hari kalender, perkiraan kehilangan setara 4 hari karena hujan dan slippery. Target harian menjadi 900.000 / 26 ≈ 34.600 bcm per hari.
+Contoh (angka contoh): target OB 900.000 bcm, 30 hari kalender, perkiraan kehilangan setara 4 hari karena hujan dan slippery. Target harian menjadi 900.000 / 26 ≈ 34.600 bcm per hari.
 
 ## 2. Bagi ke setiap fleet
 
@@ -109,6 +116,12 @@ Rencana hari itu 34.330 bcm. Di jam ketiga, hujan lebat turun selama dua jam dan
 
 Keselamatan selalu lebih tinggi daripada target produksi. Target yang meleset karena hujan bisa dijelaskan. Kecelakaan di jalan licin tidak bisa dikembalikan.
 
+## Kesimpulan
+
+Rencana produksi harian yang baik dimulai dari target bulanan yang dibagi dengan hari kerja efektif, bukan hari kalender. Target itu dibagi ke setiap fleet sesuai kapasitasnya, dilengkapi lokasi front, disposal, jarak angkut, dan jumlah truk yang seimbang. Urutan penambangan tetap dijaga agar stok batubara siap gali tidak habis.
+
+Rencana lalu dikomunikasikan dalam satu halaman, dibahas di briefing awal shift, dikontrol per jam, dan dievaluasi di akhir shift. Catatan realisasi dan penyebab selisih menjadi bahan [analisa loss produksi](/artikel/cara-analisa-loss-produksi-tambang/), sedangkan jam efektif per fleet bisa dicek ulang dengan [KPI alat PA, UA, MA, dan EU](/artikel/kpi-alat-tambang-pa-ua-ma-eu/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Apa bedanya rencana harian, mingguan, dan bulanan?
@@ -126,3 +139,10 @@ Gunakan data historis PA dan UA pada bulan dengan cuaca serupa, lalu kurangi wak
 ### Apa itu exposed coal dan berapa idealnya?
 
 Exposed coal adalah batubara yang sudah tersingkap dan siap digali. Tidak ada angka ideal yang berlaku umum. Biasanya perencana menentukannya dalam satuan hari atau minggu produksi, sesuai kemampuan alat gali batubara dan risiko hujan.
+
+## Referensi
+
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.
+- Caterpillar Inc. *Caterpillar Performance Handbook*, bagian Mining and Earthmoving.
+- Hartman, H. L. & Mutmansky, J. M. *Introductory Mining Engineering*, edisi ke-2. John Wiley & Sons.
+- Peurifoy, R. L., dkk. *Construction Planning, Equipment, and Methods*. McGraw-Hill.

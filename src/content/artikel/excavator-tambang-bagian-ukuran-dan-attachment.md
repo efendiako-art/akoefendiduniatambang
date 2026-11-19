@@ -1,12 +1,12 @@
 ---
-title: 'Excavator di Tambang:  Kelas Ukuran, dan Attachment'
-description: 'Mengenal excavator di tambang: bagian utama, perbedaan kelas ukuran, jenis bucket dan attachment seperti breaker, serta cara memilih excavator yang serasi dengan dump truck.'
+title: 'Excavator di Tambang: Bagian, Kelas Ukuran, dan Attachment'
+description: 'Mengenal excavator di tambang: bagian utama, kelas ukuran, jenis bucket dan attachment seperti breaker, serta cara memilih excavator yang serasi dengan dump truck.'
 pubDate: 2026-10-19
-updatedDate: 2026-11-18
+updatedDate: 2026-11-19
 category: alat-berat
 tags: [excavator, bucket, attachment, 'alat berat']
 image: '/images/artikel/excavator-tambang-bagian-ukuran-dan-attachment/sampul.webp'
-imageAlt: 'Excavator di Tambang: Bagian-Bagiannya, Kelas Ukuran, dan Attachment'
+imageAlt: 'Excavator tambang memuat material batuan, menampilkan boom, arm, dan bucket'
 draft: false
 ---
 
@@ -25,6 +25,8 @@ Excavator terdiri dari tiga kelompok besar:
 | Bagian bawah (undercarriage) | Rangka, rantai (track), roller, idler, sprocket, motor travel | Menopang dan menggerakkan alat berjalan |
 
 Perputaran bagian atas terhadap bagian bawah disebut swing. Gerakan swing membuat excavator bisa menggali di satu sisi dan memuat ke truk di sisi lain tanpa memindahkan alat.
+
+![Diagram tiga kelompok bagian excavator: upper structure, front, dan undercarriage](/images/artikel/excavator-tambang-bagian-ukuran-dan-attachment/diagram-bagian-excavator.webp)
 
 <figure class="photo"><img src="/images/dokumentasi/excavator-di-area-material-batuan.jpg" alt="Excavator dengan lengan dan bucket di area material batuan" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Excavator pada area material batuan, tampak bagian atas, lengan, dan undercarriage. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
@@ -70,6 +72,17 @@ Pada bucket, bagian yang paling cepat aus adalah gigi (teeth), adapter, dan cutt
 
 Pada undercarriage, komponen yang paling mahal adalah rantai, roller, dan sprocket. Jalan kerja yang kasar dan material abrasif mempercepat keausannya. Pembersihan material yang menempel dan pengaturan ketegangan rantai sesuai petunjuk pabrikan memperpanjang umur komponen.
 
+## Persiapan sebelum memilih excavator untuk sebuah pekerjaan
+
+Sebelum menentukan kelas dan attachment, kumpulkan dulu data dasar pekerjaannya. Tanpa data ini, pemilihan alat sering hanya berdasarkan alat yang kebetulan tersedia.
+
+- **Volume dan target produksi** per hari atau per bulan, dalam bcm atau ton.
+- **Jenis material:** tanah lunak, batuan lapuk, batuan hasil peledakan, atau batubara.
+- **Tinggi jenjang dan posisi gali**, di atas atau di bawah level pijakan alat.
+- **Jenis truk yang tersedia** dan tinggi bak muatnya.
+- **Daya dukung lantai kerja**, terutama saat musim hujan.
+- **Jarak ke workshop dan ketersediaan suku cadang** untuk kelas alat tersebut.
+
 ## Memilih excavator yang serasi dengan truk
 
 Excavator dan dump truck harus dipasangkan dengan benar. Pertimbangan utama:
@@ -83,6 +96,21 @@ Excavator dan dump truck harus dipasangkan dengan benar. Pertimbangan utama:
 <figure class="photo"><img src="/images/dokumentasi/excavator-memuat-batuan-hasil-bongkar.jpg" alt="Excavator memuat batuan hasil bongkar dengan bucket tugas berat" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Bucket tugas berat memuat batuan hasil bongkar. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
 Pembahasan teknik muat tersedia di artikel [teknik memuat dump truck](/artikel/teknik-memuat-dump-truck-loading-tambang/), dan pembahasan jenis truk ada di [mengenal jenis dump truck tambang](/artikel/mengenal-jenis-dump-truck-tambang/).
+
+Hitungan sederhana jumlah pass bisa dipakai sebagai pemeriksaan awal:
+
+```
+Jumlah pass = Kapasitas bak truk (lcm) / (Kapasitas bucket (lcm) × Fill factor)
+Contoh: 30 lcm / (6,5 × 0,85) = 5,4 → dibulatkan 5 atau 6 pass
+```
+
+Angka di atas adalah contoh. Jika hasilnya di atas delapan pass, excavator terlalu kecil untuk truk itu. Jika hanya dua atau tiga pass, muatan cenderung tidak merata dan benturan ke bak lebih keras.
+
+## Contoh kasus: excavator lambat di batuan keras
+
+Sebuah fleet di area batuan lapuk mencatat waktu muat 4,5 menit per truk, padahal target 3 menit (angka contoh). Setelah diamati, excavator kelas menengah itu memakai bucket serbaguna dengan gigi yang sudah tumpul. Operator harus mengulang gerakan menggali dua sampai tiga kali untuk mengisi satu bucket.
+
+Tim produksi dan mekanik mengganti bucket dengan tipe tugas berat, memasang gigi baru, dan meminta dozer membongkar material lebih dulu dengan ripper. Waktu muat turun mendekati target, dan keluhan selang hidrolik bocor ikut berkurang karena beban alat lebih ringan.
 
 ## Pemeriksaan harian operator
 
@@ -105,6 +133,23 @@ Sebelum bekerja, operator memeriksa kondisi unit sesuai [P2H](/artikel/p2h-inspe
 
 <figure class="photo"><img src="/images/dokumentasi/excavator-di-lahan-yang-baru-dibuka.jpg" alt="Excavator diparkir dengan bucket di tanah pada lahan yang baru dibuka" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Excavator diparkir dengan bucket menempel tanah pada lahan yang baru dibuka. Dokumentasi lapangan TambangPedia.</figcaption></figure>
 
+## Kesalahan umum dalam memakai excavator
+
+- **Memakai bucket serbaguna untuk batuan keras**, sehingga bucket cepat retak dan siklus lambat.
+- **Membiarkan gigi bucket aus berlebihan** sampai adapter ikut rusak.
+- **Swing terlalu jauh**, misalnya truk diposisikan di belakang alat sehingga sudut ayun lebih dari 90 derajat.
+- **Menggali sambil berjalan di lantai becek** tanpa matting atau perbaikan lantai kerja.
+- **Memakai bucket untuk memukul batu** sebagai pengganti breaker.
+- **Mengabaikan kebersihan undercarriage**, material menumpuk dan mempercepat keausan rantai.
+
+![Diagram kesalahan umum dan cara benar memakai excavator di tambang](/images/artikel/excavator-tambang-bagian-ukuran-dan-attachment/diagram-salah-vs-benar.webp)
+
+## Kesimpulan
+
+Excavator terdiri dari bagian atas, front, dan undercarriage, dengan konfigurasi backhoe atau front shovel. Kelas ukurannya menentukan kapasitas bucket, jangkauan, dan produksi per jam, sedangkan attachment menentukan jenis pekerjaan yang bisa dikerjakan.
+
+Pilih excavator berdasarkan data pekerjaan: target produksi, jenis material, tinggi jenjang, dan truk yang akan dilayani. Usahakan empat sampai enam pass per truk, pakai bucket yang sesuai material, dan rawat gigi serta undercarriage secara rutin. Untuk menghitung kebutuhan armada, lanjutkan ke [produktivitas excavator dan dump truck](/artikel/produktivitas-excavator-dan-dump-truck/), dan untuk perawatan rutin baca [maintenance alat berat](/artikel/perawatan-alat-berat-pm-backlog/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Apa bedanya boom dan arm?
@@ -126,3 +171,10 @@ Sangat beragam, tergantung merek, kondisi kerja, perawatan, dan beban. Perusahaa
 ### Berapa tinggi gali yang aman?
 
 Ikuti petunjuk pabrikan dan standar desain jenjang di lokasi. Tinggi gali terlalu besar meningkatkan risiko longsoran material di atas alat.
+
+## Referensi
+
+- Caterpillar Performance Handbook, bagian Hydraulic Excavators dan Mining Shovels.
+- Komatsu Specifications & Application Handbook.
+- Hartman, H. L. dan Mutmansky, J. M. *Introductory Mining Engineering*. Wiley.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.

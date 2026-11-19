@@ -2,14 +2,18 @@
 title: 'Jenis Alat Berat di Tambang Batubara dan Fungsinya'
 description: 'Daftar alat berat yang dipakai di tambang batubara terbuka: alat gali, alat angkut, alat dorong, alat bor, dan alat pendukung, beserta fungsi masing-masing.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: alat-berat
 tags: ['alat berat', 'excavator', 'dump truck', 'bulldozer', 'grader']
+image: '/images/artikel/jenis-alat-berat-tambang-batubara/sampul.webp'
+imageAlt: 'Dozer dan dump truck bekerja di area tambang batubara terbuka'
 ---
 
-Masuk ke area tambang pertama kali, kesan yang paling melekat biasanya ukuran alatnya. Ban truk yang lebih tinggi dari orang dewasa, bucket excavator yang muat satu mobil. Tapi di balik ukuran itu, setiap alat punya peran yang jelas dan saling bergantung. Satu alat terlambat, alat lain ikut menunggu.
+Jenis alat berat di tambang batubara terbuka bisa dikelompokkan menjadi alat gali-muat, alat angkut, alat dorong, alat bor, alat perawatan jalan, dan alat pendukung. Setiap kelompok punya peran yang jelas dan saling bergantung, sehingga satu alat terlambat membuat alat lain ikut menunggu. Artikel ini membahas fungsi masing-masing, contoh susunan satu fleet, dan kesalahan umum saat menyusun alat.
 
-Berikut pengelompokan alat berat di tambang batubara terbuka berdasarkan fungsinya.
+Masuk ke area tambang pertama kali, kesan yang paling melekat biasanya ukuran alatnya: ban truk yang lebih tinggi dari orang dewasa, bucket excavator yang muat satu mobil. Berikut pengelompokan alat berat di tambang batubara terbuka berdasarkan fungsinya.
+
+![Diagram enam kelompok alat berat tambang batubara berdasarkan fungsinya](/images/artikel/jenis-alat-berat-tambang-batubara/diagram-kelompok-alat.webp)
 
 ## 1. Alat gali dan muat (loading)
 
@@ -42,7 +46,7 @@ Ukurannya disebut berdasarkan kelas berat operasi, misalnya kelas 20, 40, 70, 10
 
 **Drill rig** membuat lubang ledak untuk peledakan overburden yang keras. Ada juga alat bor eksplorasi yang dipakai tim geologi untuk mengambil sampel dan memetakan lapisan batubara, tapi biasanya dikelola terpisah dari operasi produksi.
 
-<figure class="photo"><img src="/images/dokumentasi/vibratory-roller-memadatkan-jalan-tambang.jpg" alt="Vibratory roller memadatkan jalan" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Vibratory roller memadatkan lapisan jalan tambang. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+Jumlah lubang, diameter, dan kedalaman bor ditentukan oleh rancangan peledakan. Kualitas pengeboran berpengaruh langsung pada ukuran fragmentasi batuan, yang kemudian menentukan kecepatan muat excavator.
 
 ## 5. Alat perawatan jalan
 
@@ -51,6 +55,10 @@ Jalan angkut yang buruk memperlambat semua truk. Karena itu ada satu kelompok al
 - **Motor grader**: meratakan permukaan jalan dan membentuk kemiringan melintang (cross slope) supaya air hujan cepat mengalir keluar.
 - **Compactor (vibro roller)**: memadatkan material jalan dan timbunan.
 - **Water truck**: menyiram jalan untuk mengurangi debu di musim kering. Penyiraman harus terukur, karena terlalu basah justru membuat jalan licin.
+
+<figure class="photo"><img src="/images/dokumentasi/vibratory-roller-memadatkan-jalan-tambang.jpg" alt="Vibratory roller memadatkan lapisan jalan tambang" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Vibratory roller memadatkan lapisan jalan tambang. Dokumentasi lapangan TambangPedia.</figcaption></figure>
+
+Standar lebar, kemiringan, dan tanggul jalan dibahas di artikel [standar jalan angkut tambang](/artikel/standar-jalan-angkut-tambang/).
 
 ## 6. Alat pendukung lainnya
 
@@ -79,6 +87,33 @@ Satu fleet overburden tidak hanya berisi excavator dan truk. Susunan berikut gam
 
 Jika salah satu alat pendukung tidak ada, alat utama ikut terganggu. Itulah sebabnya perencana menghitung fleet sebagai satu sistem.
 
+## Langkah memilih alat untuk sebuah pekerjaan
+
+Pemilihan alat tidak dimulai dari katalog, melainkan dari data pekerjaan. Urutan yang umum dipakai perencana:
+
+1. **Tentukan target produksi** per bulan dan per jam efektif.
+2. **Kenali material:** tanah lunak, batuan lapuk, atau batuan keras yang perlu diledakkan.
+3. **Pilih alat gali** yang kapasitasnya memenuhi target per jam.
+4. **Hitung jumlah truk** dari cycle time dan jarak angkut, lalu cek match factor.
+5. **Lengkapi alat pendukung:** dozer untuk disposal, grader dan water truck untuk jalan, serta penerangan untuk shift malam.
+6. **Uji biaya per bcm atau per ton,** termasuk BBM, perawatan, dan operator.
+
+Contoh sederhana (angka contoh): target 300.000 bcm per bulan dengan 500 jam kerja efektif berarti butuh 600 bcm per jam. Jika satu excavator menghasilkan 650 bcm per jam, satu fleet cukup, tetapi tanpa cadangan saat alat breakdown.
+
+## Kesalahan umum saat menyusun alat
+
+- **Hanya menghitung excavator dan truk,** sementara dozer disposal dan grader jalan dilupakan.
+- **Menambah truk tanpa memperbaiki jalan,** sehingga truk tambahan hanya menambah antrean.
+- **Memaksakan alat kecil di material keras,** produktivitas rendah dan alat cepat rusak.
+- **Tidak menyiapkan cadangan** untuk periodic service dan breakdown.
+- **Mengabaikan alat pendukung malam hari** seperti lighting tower, sehingga produksi shift malam turun.
+
+## Kesimpulan
+
+Alat berat di tambang batubara bekerja sebagai satu sistem: alat gali-muat, alat angkut, alat dorong, alat bor, alat perawatan jalan, dan alat pendukung. Excavator menentukan kapasitas produksi, tetapi produksi nyata baru tercapai bila truk cukup, jalan terawat, disposal rapi, dan penerangan memadai.
+
+Susun alat dari data pekerjaan, hitung keseimbangan antara alat gali dan alat angkut, dan jangan lupakan alat pendukung. Untuk mendalami tiap alat, lanjutkan ke artikel [excavator dan attachment-nya](/artikel/excavator-tambang-bagian-ukuran-dan-attachment/), [hydraulic breaker](/artikel/hydraulic-breaker-excavator-tambang/), dan [compactor](/artikel/compactor-pemadatan-tanah-di-tambang/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Alat apa yang paling mahal di tambang?
@@ -97,4 +132,10 @@ Alat gali yang terlalu besar untuk truk menyebabkan bucket tidak pas dan tumpaha
 
 Tidak. Pilihan alat bergantung pada jenis tambang, kondisi material, produksi yang dituju, jarak angkut, dan anggaran.
 
-Pembahasan lebih dalam: [excavator dan attachment-nya](/artikel/excavator-tambang-bagian-ukuran-dan-attachment/), [hydraulic breaker](/artikel/hydraulic-breaker-excavator-tambang/), dan [compactor](/artikel/compactor-pemadatan-tanah-di-tambang/).
+
+## Referensi
+
+- Caterpillar Performance Handbook.
+- Komatsu Specifications & Application Handbook.
+- Hartman, H. L. dan Mutmansky, J. M. *Introductory Mining Engineering*. Wiley.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.

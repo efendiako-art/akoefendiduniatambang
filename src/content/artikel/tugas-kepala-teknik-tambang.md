@@ -1,13 +1,15 @@
 ---
 title: 'Kepala Teknik Tambang (KTT): Tugas, Tanggung Jawab, dan Syaratnya'
-description: 'Siapa Kepala Teknik Tambang (KTT), tugas dan tanggung jawabnya dalam keselamatan dan kaidah teknik pertambangan yang baik, serta hubungannya dengan pengawas operasional dan kontraktor.'
+description: 'Tugas Kepala Teknik Tambang (KTT): tanggung jawab keselamatan dan kaidah teknik, syarat, hubungan dengan pengawas dan kontraktor, contoh keputusan, dan kesalahan umum.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: karier-regulasi
+image: '/images/artikel/tugas-kepala-teknik-tambang/sampul.webp'
+imageAlt: 'Ilustrasi struktur tanggung jawab Kepala Teknik Tambang di organisasi lapangan'
 tags: ['KTT', 'Kepala Teknik Tambang', 'regulasi', 'kaidah teknik pertambangan']
 ---
 
-Di setiap tambang yang beroperasi di Indonesia, ada satu orang yang memegang tanggung jawab tertinggi atas keselamatan dan penerapan kaidah teknik pertambangan yang baik di lapangan. Orang itu adalah **Kepala Teknik Tambang**, biasa disingkat KTT.
+**Kepala Teknik Tambang** (KTT) adalah orang yang memegang tanggung jawab tertinggi atas keselamatan dan penerapan kaidah teknik pertambangan yang baik di setiap tambang yang beroperasi di Indonesia. Keputusannya menentukan apakah pekerjaan boleh berjalan, harus diubah, atau dihentikan. Artikel ini membahas posisi, tugas, syarat, contoh keputusan, dan kesalahan umum terkait peran KTT.
 
 ## Posisi KTT dalam organisasi
 
@@ -16,6 +18,8 @@ KTT adalah pemimpin tertinggi dalam struktur organisasi lapangan pertambangan. I
 Pengaturan tentang KTT antara lain terdapat dalam Peraturan Menteri ESDM Nomor 26 Tahun 2018 dan pedoman kaidah teknik pertambangan yang baik dalam Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018.
 
 ## Tugas dan tanggung jawab utama
+
+![Struktur tanggung jawab dari Kepala Teknik Tambang sampai pekerja lapangan](/images/artikel/tugas-kepala-teknik-tambang/diagram-struktur-ktt.webp)
 
 Secara garis besar, KTT bertanggung jawab memastikan seluruh kegiatan pertambangan di wilayahnya berjalan aman dan sesuai aturan. Tugasnya antara lain:
 
@@ -64,6 +68,32 @@ KTT jarang terlihat dalam pekerjaan lapangan yang rutin, tetapi keputusannya men
 | Laporan near miss berulang di satu area | Memerintahkan investigasi dan tindakan perbaikan |
 | Rencana tambang tahunan akan diajukan | Memastikan rencana sesuai kaidah teknik dan peraturan |
 
+## Contoh kasus: retakan lereng setelah hujan
+
+Setelah hujan deras semalaman, pengawas geoteknik melaporkan retakan memanjang sekitar 15 meter di crest jenjang di atas front gali aktif (angka contoh). Langkah yang diambil di bawah arahan KTT:
+
+1. **Hentikan pekerjaan** di bawah dan di atas lereng terdampak, pasang batas area terlarang.
+2. **Pindahkan fleet** ke front cadangan agar produksi tidak berhenti total.
+3. **Minta kajian geoteknik**: pemetaan retakan, pemasangan patok pantau, dan pengamatan pergerakan berkala.
+4. **Tetapkan syarat kerja kembali**, misalnya pergerakan stabil selama beberapa kali pengamatan dan desain perbaikan lereng sudah disetujui.
+5. **Catat dan laporkan** kejadian sesuai ketentuan, lalu bagikan pelajarannya di briefing semua shift.
+
+Keputusan ini mengorbankan sebagian produksi hari itu, tetapi jauh lebih murah dibanding risiko longsor yang menimpa excavator dan pekerja. Itulah inti peran KTT: keselamatan di atas target.
+
+![Alur keputusan KTT saat menemukan kondisi berbahaya](/images/artikel/tugas-kepala-teknik-tambang/diagram-alur-keputusan.webp)
+
+## Kesalahan umum terkait peran KTT
+
+- **Menganggap KTT hanya jabatan administratif.** Tanggung jawabnya nyata di lapangan, termasuk atas kecelakaan di wilayah izin.
+- **Kontraktor membuat prosedur sendiri tanpa persetujuan.** Prosedur kerja berisiko tinggi harus selaras dengan aturan yang ditetapkan KTT.
+- **Pengawas takut menghentikan pekerjaan.** Budaya yang sehat justru mendorong pengawas berani berhenti saat kondisi tidak aman.
+- **Laporan kejadian ditunda atau disederhanakan.** Pelaporan yang terlambat menghilangkan kesempatan belajar dan bisa melanggar ketentuan.
+- **Pengawas ditunjuk tanpa kompetensi yang sah.** Penunjukan pengawas operasional harus didukung sertifikasi yang berlaku.
+
+## Kesimpulan
+
+Kepala Teknik Tambang adalah pemimpin tertinggi organisasi lapangan yang bertanggung jawab atas keselamatan dan penerapan kaidah teknik pertambangan yang baik, termasuk atas pekerjaan kontraktor di wilayah izin. Tugasnya meliputi menetapkan aturan internal, menunjuk pengawas yang kompeten, menyetujui rencana dan prosedur, memastikan pemantauan lingkungan, serta melaporkan kejadian. Wewenang menghentikan pekerjaan adalah alat terpenting untuk menempatkan keselamatan di atas produksi. Jalur menuju posisi ini dimulai dari pengalaman lapangan dan jenjang pengawas, seperti dijelaskan di artikel sertifikasi pengawas di atas, serta pemahaman tentang [IBPR dan hirarki pengendalian risiko](/artikel/ibpr-dan-hirarki-pengendalian-risiko/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Apakah KTT sama dengan manajer tambang?
@@ -81,3 +111,10 @@ Tanggung jawab teknis utama berada pada KTT pemegang izin. Kontraktor memiliki p
 ### Bagaimana mempersiapkan diri menjadi KTT?
 
 Bangun pengalaman operasional yang luas, lengkapi sertifikasi pengawas, pahami peraturan secara mendalam, dan latih kemampuan mengambil keputusan di bawah tekanan.
+
+## Referensi
+
+- Peraturan Menteri ESDM Nomor 26 Tahun 2018 tentang Pelaksanaan Kaidah Pertambangan yang Baik dan Pengawasan Pertambangan Mineral dan Batubara.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.
+- Undang-Undang Nomor 3 Tahun 2020 tentang Pertambangan Mineral dan Batubara.
+- Peraturan Pemerintah Nomor 96 Tahun 2021 tentang Pelaksanaan Kegiatan Usaha Pertambangan Mineral dan Batubara.

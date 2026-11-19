@@ -1,13 +1,19 @@
 ---
-title: 'Mengenal Jenis Dump Truck Tambang: On-Highway, ADT, dan Off-Highway Truck'
+title: 'Jenis Dump Truck Tambang: On-Highway, ADT, dan Off-Highway'
 description: 'Perbedaan dump truck on-highway, articulated dump truck (ADT), dan off-highway truck (OHT) di tambang, beserta kelebihan, kekurangan, dan kapan dipakai.'
 pubDate: 2026-10-05
-updatedDate: 2026-10-19
+updatedDate: 2026-11-19
 category: alat-berat
 tags: ['dump truck', 'OHT', 'ADT', 'hauling', 'alat berat']
+image: '/images/artikel/mengenal-jenis-dump-truck-tambang/sampul.webp'
+imageAlt: 'Excavator memuat dump truck dengan material tanah di area tambang'
 ---
 
-Di tambang, dump truck adalah alat yang jumlahnya paling banyak. Satu excavator bisa dilayani lima sampai sepuluh truk, jadi pemilihan jenis truk sangat menentukan biaya produksi. Secara garis besar ada tiga keluarga dump truck yang sering dijumpai.
+Jenis dump truck tambang secara garis besar ada tiga: truk on-highway, articulated dump truck (ADT), dan off-highway truck (OHT). Dump truck adalah alat yang jumlahnya paling banyak di tambang, karena satu excavator bisa dilayani lima sampai sepuluh truk. Karena itu pemilihan jenis truk sangat menentukan biaya produksi per bcm.
+
+Artikel ini membahas ciri, kelebihan, dan kekurangan tiap jenis, cara memilih, contoh kasus, serta kesalahan yang sering terjadi.
+
+![Diagram perbandingan tiga jenis dump truck tambang: on-highway, ADT, dan off-highway](/images/artikel/mengenal-jenis-dump-truck-tambang/diagram-tiga-jenis-truk.webp)
 
 ## 1. Dump truck on-highway (rigid on-road)
 
@@ -78,6 +84,19 @@ Beberapa pertanyaan yang biasanya menentukan:
 
 Hitung kebutuhan jumlah truk per excavator dengan [kalkulator produktivitas](/alat/produktivitas/).
 
+## Langkah menghitung kebutuhan truk
+
+Setelah jenis truk dipilih, jumlahnya dihitung dari cycle time dan produktivitas excavator:
+
+```
+Produktivitas truk (bcm/jam) = Muatan per rit (bcm) × (60 / Cycle time menit)
+Jumlah truk = Produktivitas excavator / Produktivitas truk
+```
+
+Contoh (angka contoh): truk bermuatan 20 bcm dengan cycle time 25 menit menghasilkan 20 × 60/25 = 48 bcm per jam. Jika excavator mampu 400 bcm per jam, dibutuhkan 400/48 = 8,3 atau sekitar 8 sampai 9 truk. Rincian rumusnya ada di artikel [produktivitas excavator dan dump truck](/artikel/produktivitas-excavator-dan-dump-truck/).
+
+![Diagram langkah memilih jenis dan jumlah dump truck untuk satu fleet](/images/artikel/mengenal-jenis-dump-truck-tambang/diagram-langkah-memilih.webp)
+
 ## Contoh pertimbangan memilih: dua situasi berbeda
 
 | Situasi | Pilihan yang masuk akal | Alasan |
@@ -94,6 +113,26 @@ Hitung kebutuhan jumlah truk per excavator dengan [kalkulator produktivitas](/al
 4. **Keserasian dengan alat gali** supaya jumlah pass pas.
 5. **Regulasi dan keselamatan**, termasuk standar jalan dan kesiapan operator.
 
+## Contoh kasus: truk besar yang justru tidak hemat
+
+Sebuah kontraktor menyewa beberapa truk kapasitas besar untuk menurunkan biaya per bcm (angka contoh). Namun jalan angkut lama hanya selebar dua kali lebar truk baru, belum dipadatkan, dan banyak tikungan tajam. Truk harus berjalan pelan, sering berhenti untuk bersimpangan, dan ban cepat sobek karena batu tajam di permukaan jalan.
+
+Setelah dihitung ulang, biaya per bcm justru lebih tinggi daripada armada lama. Perbaikan dilakukan dengan melebarkan jalan sesuai standar, memadatkan permukaan, dan menyediakan grader tetap. Baru setelah itu keunggulan truk besar terlihat. Pelajarannya: jenis truk harus dipilih bersama kondisi jalan, bukan terpisah.
+
+## Kesalahan umum memilih dan memakai dump truck
+
+- **Hanya membandingkan harga sewa atau harga beli,** tanpa menghitung biaya per bcm termasuk ban dan BBM.
+- **Truk tidak serasi dengan excavator,** jumlah pass terlalu sedikit atau terlalu banyak.
+- **Memuat melebihi kapasitas** demi mengejar ritase, sehingga ban, suspensi, dan rangka cepat rusak.
+- **Mengabaikan lebar dan kondisi jalan** saat menambah ukuran truk.
+- **Satu jenis truk untuk semua musim,** padahal di musim hujan ADT bisa menyelamatkan produksi di area lunak.
+
+## Kesimpulan
+
+Tiga jenis dump truck tambang punya tempatnya masing-masing. On-highway murah dan fleksibel untuk tambang kecil sampai menengah, ADT unggul di jalan lunak dan becek, sedangkan off-highway truck memberi biaya per bcm terendah untuk produksi besar dengan jalan lebar dan terawat.
+
+Pilih jenis truk dari volume produksi, lama kontrak, alat gali, kondisi jalan, dan cuaca. Setelah itu hitung jumlahnya dari cycle time dan produktivitas excavator. Teknik pengisian bak yang benar dibahas di artikel [teknik memuat dump truck](/artikel/teknik-memuat-dump-truck-loading-tambang/).
+
 ## Pertanyaan yang sering diajukan
 
 ### Apakah truk yang lebih besar selalu lebih hemat?
@@ -108,4 +147,10 @@ Karena sambungan artikulasinya membuat roda bisa mengikuti kontur dan sering men
 
 Tim perencanaan dan manajemen berdasarkan kajian teknis dan biaya. Dalam kontrak jasa, kontraktor memilih alat yang memenuhi spesifikasi yang disepakati dengan pemilik tambang.
 
-Baca juga: [teknik memuat dump truck](/artikel/teknik-memuat-dump-truck-loading-tambang/).
+
+## Referensi
+
+- Caterpillar Performance Handbook, bagian Off-Highway Trucks dan Articulated Trucks.
+- Komatsu Specifications & Application Handbook, bagian Dump Trucks.
+- Keputusan Menteri ESDM Nomor 1827 K/30/MEM/2018 tentang Pedoman Pelaksanaan Kaidah Teknik Pertambangan yang Baik.
+- Peurifoy, R. L. dkk. *Construction Planning, Equipment, and Methods*. McGraw-Hill.
