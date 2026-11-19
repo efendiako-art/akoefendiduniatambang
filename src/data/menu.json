@@ -28,8 +28,8 @@
       "href": "/sop/"
     },
     {
-      "label": "Tentang",
-      "href": "/tentang/"
+      "label": "Jasa Konsultan",
+      "href": "/jasa-konsultan/"
     },
     {
       "label": "Kontak",
@@ -41,6 +41,10 @@
     {
       "label": "Tentang Kami",
       "href": "/tentang/"
+    },
+    {
+      "label": "Jasa Konsultan",
+      "href": "/jasa-konsultan/"
     },
     {
       "label": "Kontak",

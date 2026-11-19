@@ -1,0 +1,319 @@
+---
+// Halaman Jasa Konsultan Pertambangan.
+// Daftar layanan: src/data/jasa.ts. Formulir mengirim lewat Web3Forms (CONTACT_FORM_KEY) ke email pemilik;
+// alamat Gmail tidak pernah tampil di halaman ini. Koordinasi lanjutan lewat email.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JasaIcon from '../components/JasaIcon.astro';
+import { SITE, CONTACT_FORM_KEY } from '../consts';
+import { JASA, JASA_PILIHAN } from '../data/jasa';
+
+const steps = [
+  { n: '01', t: 'Konsultasi awal', d: 'Ceritakan kebutuhan lewat formulir di bawah. Gratis, tanpa kewajiban.' },
+  { n: '02', t: 'Lingkup & penawaran', d: 'Kami balas lewat email: ruang lingkup, data yang dibutuhkan, jadwal, dan biaya.' },
+  { n: '03', t: 'Pengerjaan', d: 'Data diolah, progres dilaporkan lewat email, revisi sesuai kesepakatan.' },
+  { n: '04', t: 'Serah terima', d: 'File final dikirim, lengkap dengan penjelasan cara memakai dan memperbaruinya.' },
+];
+const models = [
+  { t: 'Per proyek', s: 'Untuk satu pekerjaan dengan hasil jelas.', d: 'proposal tender, analisa harga satu proyek, desain pit.', c: '#FFB067' },
+  { t: 'Pendampingan bulanan', s: 'Untuk perusahaan yang butuh analis rutin.', d: 'analisa produksi & KPI tiap bulan, review budget, laporan manajemen.', c: '#5FE3D5' },
+  { t: 'Pelatihan', s: 'Untuk tim engineering & produksi.', d: 'pelatihan Deswik / Surpac, analisa produksi, penyusunan RAB.', c: '#B9A4FF' },
+];
+const rows = [
+  ['Excavator 30 t + 4 dump truck', '1.250 BCM/hari', 'Rp 9.850', 'Rp 12.300'],
+  ['BBM (solar)', '2,1 L/BCM', 'Rp 4.200', 'Rp 5.040'],
+  ['Man power & overhead', '—', 'Rp 3.100', 'Rp 3.720'],
+];
+const faq = [
+  { q: 'Apakah data perusahaan kami aman?', a: 'Data hanya dipakai untuk pekerjaan yang disepakati dan tidak dipublikasikan. Bisa dengan perjanjian kerahasiaan (NDA).' },
+  { q: 'Bagaimana cara koordinasinya?', a: 'Seluruh koordinasi dilakukan lewat email: pengiriman data, laporan progres, dan serah terima file. Pertemuan online bisa diatur bila perlu.' },
+  { q: 'Berapa biayanya?', a: 'Biaya disesuaikan dengan lingkup pekerjaan, volume data, dan tenggat waktu. Penawaran dikirim setelah konsultasi awal.' },
+  { q: 'Berapa lama pengerjaannya?', a: 'Tergantung lingkup. Analisa harga satu proyek biasanya beberapa hari kerja; proposal tender mengikuti jadwal tender.' },
+  { q: 'Data apa yang perlu disiapkan?', a: 'Dokumen tender/RKS, data produksi atau timesheet alat, dan data biaya yang ada. Daftar lengkap dikirim setelah konsultasi awal.' },
+];
+const siteUrl = Astro.site?.toString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: `Jasa Konsultan Pertambangan — ${SITE.name}`,
+  url: new URL('/jasa-konsultan/', Astro.site).toString(),
+  areaServed: 'ID',
+  provider: { '@id': `${siteUrl}#organization` },
+  hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Layanan konsultan tambang', itemListElement: JASA.map((j) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: j.title, description: j.desc } })) },
+};
+---
+<BaseLayout title="Jasa Konsultan Pertambangan" description="Jasa konsultan tambang oleh praktisi lapangan: proposal tender, analisa harga project (Rp/BCM), analisa produksi & KPI alat, perencanaan tambang, budget, SOP, pelatihan, dan review kontrak." jsonLd={jsonLd}>
+  <section class="jhero">
+    <div class="container jhero-grid">
+      <div>
+        <nav class="crumb" aria-label="Lokasi halaman"><a href="/">Beranda</a> / Jasa Konsultan</nav>
+        <span class="pill-badge">◆ Jasa Konsultan Pertambangan</span>
+        <h1>Dari Tender sampai Produksi, Dihitung dengan Benar.</h1>
+        <p class="jsub">Pengalaman lapangan, hasil siap pakai.</p>
+        <p class="jlead">Kami membantu kontraktor dan pemilik tambang menyusun proposal tender, menghitung harga proyek, menganalisa produksi, dan merencanakan operasi — dikerjakan praktisi yang terbiasa di site.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#ajukan">Ajukan konsultasi gratis <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#layanan">Lihat layanan</a>
+        </div>
+      </div>
+      <div class="scope">
+        <p class="scope-h">CAKUPAN LAYANAN</p>
+        <ul>
+          {JASA.map((j) => <li><JasaIcon icon={j.icon} color={j.color} size={38} /><span>{j.title}</span></li>)}
+        </ul>
+        <p class="scope-n">Komoditas: batubara, nikel, emas, mineral lain, dan galian C.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="layanan">
+    <div class="container">
+      <p class="eyebrow">Layanan</p>
+      <h2>Apa yang bisa kami kerjakan</h2>
+      <p class="intro">Setiap layanan punya hasil yang jelas — Anda tahu apa yang akan diterima sebelum pekerjaan dimulai.</p>
+      <div class="svc-grid">
+        {JASA.map((j) => (
+          <article class="card svc">
+            <div class="svc-top"><JasaIcon icon={j.icon} color={j.color} /><span class="svc-code" style={`color:${j.color}`}>{j.code}</span></div>
+            <h3>{j.title}</h3>
+            <p>{j.desc}</p>
+            <ul>{j.items.map((x) => <li>{x}</li>)}</ul>
+            <p class="svc-out">Hasil: <b>{j.hasil}</b></p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section band">
+    <div class="container ex-grid">
+      <div>
+        <p class="eyebrow">Contoh hasil</p>
+        <h2>Harga satuan yang bisa dipertanggungjawabkan</h2>
+        <p class="intro">Contoh ringkasan dari layanan Analisa Harga Project: biaya langsung dipecah per komponen, lalu dibandingkan dengan harga penawaran yang disarankan.</p>
+        <ul class="tags"><li>Rp/BCM</li><li>Rp/ton</li><li>Rp/ton-km</li><li>Sensitivitas harga BBM</li></ul>
+      </div>
+      <div class="card ex">
+        <div class="ex-head"><span>RINGKASAN HARGA SATUAN — OB REMOVAL</span><em>ANGKA CONTOH</em></div>
+        <div class="ex-scroll">
+          <table>
+            <thead><tr><th>Komponen</th><th>Dasar</th><th class="r">Biaya /BCM</th><th class="r">Harga + margin</th></tr></thead>
+            <tbody>
+              {rows.map((r) => <tr><td>{r[0]}</td><td>{r[1]}</td><td class="r">{r[2]}</td><td class="r">{r[3]}</td></tr>)}
+              <tr class="tot"><td>Total harga satuan</td><td>—</td><td class="r">Rp 17.150</td><td class="r">Rp 21.060</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ex-kpi">
+          <div><b>22,8%</b><span>Margin kotor</span></div>
+          <div><b class="c">0,78</b><span>Match factor</span></div>
+          <div><b class="o">±7%</b><span>Dampak BBM naik 10%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Cara kerja</p>
+      <h2>Empat langkah, jelas dari awal</h2>
+      <ol class="steps">
+        {steps.map((s) => <li class="card"><b>{s.n}</b><h3>{s.t}</h3><p>{s.d}</p></li>)}
+      </ol>
+      <h3 class="sub-h">Pilihan kerja sama</h3>
+      <div class="models">
+        {models.map((m) => (
+          <div class="card model" style={`border-top:3px solid ${m.c}`}>
+            <h4>{m.t}</h4>
+            <p class="m-s" style={`color:${m.c}`}>{m.s}</p>
+            <p>Contoh: {m.d}</p>
+            <p class="m-p">Biaya: disesuaikan dengan lingkup pekerjaan</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="ajukan">
+    <div class="container form-grid">
+      <div>
+        <p class="eyebrow">Pertanyaan umum</p>
+        <h2>Sebelum Anda menghubungi</h2>
+        <div class="faq">
+          {faq.map((f, i) => <details class="card" open={i === 0}><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        </div>
+      </div>
+
+      <form class="card jform" id="jasa-form" data-key={CONTACT_FORM_KEY} data-mail={SITE.email} novalidate>
+        <p class="f-k">AJUKAN KONSULTASI</p>
+        <h2 class="f-h">Ceritakan kebutuhan Anda</h2>
+        <p class="f-d">Kami balas lewat email dalam 1–2 hari kerja, berisi ruang lingkup dan langkah berikutnya.</p>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="row2">
+          <label class="fld"><span>Nama</span><input name="name" required maxlength="80" autocomplete="name" placeholder="Nama Anda" /></label>
+          <label class="fld"><span>Perusahaan <em>opsional</em></span><input name="perusahaan" maxlength="120" autocomplete="organization" placeholder="Nama perusahaan" /></label>
+        </div>
+        <label class="fld"><span>Email <em>untuk koordinasi</em></span><input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="nama@perusahaan.co.id" /></label>
+        <fieldset class="fld">
+          <legend>Jenis jasa yang dibutuhkan <em>boleh lebih dari satu</em></legend>
+          <div class="chips">
+            {JASA_PILIHAN.map((t, i) => <label class="chipr"><input type="checkbox" name="jasa" value={t} checked={i === 0} /><span>{t}</span></label>)}
+          </div>
+        </fieldset>
+        <div class="row2">
+          <label class="fld"><span>Komoditas &amp; lokasi</span><input name="lokasi" maxlength="120" placeholder="Contoh: batubara, Kaltim" /></label>
+          <label class="fld"><span>Tenggat waktu</span><input name="tenggat" maxlength="80" placeholder="Contoh: tender tutup 15 Des" /></label>
+        </div>
+        <label class="fld"><span>Ceritakan singkat pekerjaannya</span><textarea name="message" required rows="5" minlength="10" maxlength="4000" placeholder="Lingkup pekerjaan, volume, durasi kontrak, data yang sudah ada…"></textarea></label>
+        <div class="foot">
+          <button class="btn btn-primary" type="submit" id="jasa-kirim">Kirim permintaan</button>
+          <p class="status" id="jasa-status" role="status" aria-live="polite"></p>
+        </div>
+        <p class="note">Data Anda hanya dipakai untuk menanggapi permintaan ini. Lihat <a href="/kebijakan-privasi/">Kebijakan Privasi</a>.</p>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (function () {
+    var f = document.getElementById('jasa-form');
+    if (!f) return;
+    var st = document.getElementById('jasa-status'), btn = document.getElementById('jasa-kirim');
+    function say(t, kind) { st.textContent = t; st.className = 'status ' + (kind || ''); }
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (f.botcheck.checked) return;
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      var fd = new FormData(f);
+      var jasa = fd.getAll('jasa').join(', ') || '-';
+      var data = {
+        name: fd.get('name'), email: fd.get('email'), replyto: fd.get('email'),
+        perusahaan: fd.get('perusahaan') || '-', jenis_jasa: jasa,
+        lokasi: fd.get('lokasi') || '-', tenggat: fd.get('tenggat') || '-', message: fd.get('message'),
+        from_name: 'Website TambangPedia — Jasa Konsultan',
+        subject: '[Jasa Konsultan] ' + jasa + ' — ' + fd.get('name'),
+      };
+      var key = f.dataset.key;
+      if (!key) {
+        var body = 'Nama: ' + data.name + '\nPerusahaan: ' + data.perusahaan + '\nEmail: ' + data.email + '\nJasa: ' + jasa + '\nLokasi: ' + data.lokasi + '\nTenggat: ' + data.tenggat + '\n\n' + data.message;
+        location.href = 'mailto:' + f.dataset.mail + '?subject=' + encodeURIComponent(data.subject) + '&body=' + encodeURIComponent(body);
+        return;
+      }
+      data.access_key = key;
+      btn.disabled = true; say('Mengirim…');
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data),
+      }).then(function (r) { return r.json().then(function (j) { return { ok: r.status === 200 && j.success !== false, j: j }; }); })
+        .then(function (res) {
+          if (res.ok) { f.reset(); say('Terima kasih! Permintaan Anda sudah terkirim. Kami akan membalas lewat email.', 'ok'); }
+          else { say('Belum terkirim: ' + ((res.j && res.j.message) || 'coba lagi sebentar lagi.'), 'err'); }
+        })
+        .catch(function () { say('Belum terkirim. Periksa koneksi internet lalu coba lagi.', 'err'); })
+        .finally(function () { btn.disabled = false; });
+    });
+  })();
+</script>
+
+<style>
+  .jhero { position: relative; overflow: hidden; color: #EAF0F6; padding: 64px 0 60px;
+    background: radial-gradient(55% 70% at 85% 20%, rgba(247,164,58,.18), transparent 70%), radial-gradient(45% 60% at 5% 90%, rgba(47,184,172,.14), transparent 70%), var(--hero, #05080D); }
+  .jhero-grid { display: grid; gap: 36px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .jhero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; } }
+  .crumb { font-size: 13.5px; color: #7D8896; margin-bottom: 18px; }
+  .crumb a { color: #9AA6B5; text-decoration: none; }
+  .jhero .pill-badge { color: #FFB067; }
+  .jhero h1 { color: #fff; font: 800 clamp(34px, 5vw, 58px)/1.05 var(--font-head); letter-spacing: -0.03em; margin: 20px 0 14px; }
+  .jsub { font: 700 clamp(18px, 2vw, 21px)/1.35 var(--font-head); color: #5FE3D5; margin: 0 0 14px; }
+  .jlead { color: #B4BFCC; font-size: 17px; line-height: 1.65; margin: 0 0 26px; max-width: 580px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .jhero .btn-ghost { color: #fff; border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.04); }
+  .scope { padding: 24px; border-radius: 20px; background: linear-gradient(180deg, rgba(22,30,42,.92), rgba(12,17,25,.92)); border: 1px solid rgba(255,255,255,.1); }
+  .scope-h { margin: 0 0 14px; font: 800 12.5px/1 var(--font-brand); letter-spacing: .08em; color: #8FF0E6; }
+  .scope ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+  .scope li { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 12px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); font: 600 13.5px/1.35 var(--font-body); color: #EAF0F6; }
+  .scope-n { margin: 14px 0 0; font-size: 12.5px; color: #7D8896; }
+
+  .section h2 { margin: 6px 0 10px; }
+  .intro { color: var(--ink-2); font-size: 17px; line-height: 1.65; max-width: 720px; margin: 0 0 28px; }
+  .band { background: linear-gradient(180deg, var(--cyan-soft), transparent 60%); border-top: 1px solid var(--line); }
+  .svc-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+  .svc { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .svc-top { display: flex; align-items: center; justify-content: space-between; }
+  .svc-code { font: 800 12.5px/1 var(--font-brand); letter-spacing: .08em; }
+  .svc h3 { margin: 0; font-size: 20px; }
+  .svc p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+  .svc ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .svc li { position: relative; padding-left: 20px; font-size: 14.5px; line-height: 1.45; color: var(--ink); }
+  .svc li::before { content: ''; position: absolute; left: 2px; top: 7px; width: 8px; height: 8px; border-radius: 2px; background: var(--cyan); opacity: .85; }
+  .svc .svc-out { margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--ink-3); }
+  .svc-out b { color: var(--accent-ink); font-weight: 600; }
+
+  .ex-grid { display: grid; gap: 32px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .ex-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 44px; } }
+  .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); font: 600 12.5px/1 var(--font-body); color: var(--ink-2); }
+  .ex { padding: 22px; }
+  .ex-head { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .ex-head span { font: 800 12px/1.3 var(--font-brand); letter-spacing: .06em; color: var(--accent-ink); }
+  .ex-head em { font-style: normal; padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(226,64,27,.5); color: #FF8A5C; font: 700 11px/1 var(--font-body); }
+  .ex-scroll { overflow-x: auto; }
+  .ex table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 14.5px; }
+  .ex th { text-align: left; padding: 8px 12px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+  .ex td { padding: 11px 12px; border-top: 1px solid var(--line); color: var(--ink-2); }
+  .ex .r { text-align: right; }
+  .ex .tot td { font-weight: 700; color: var(--accent-ink); }
+  .ex-kpi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+  .ex-kpi div { padding: 14px; border-radius: 12px; background: var(--bg-sunk); display: flex; flex-direction: column; gap: 6px; }
+  .ex-kpi b { font: 800 22px/1 var(--font-head); color: var(--ink); }
+  .ex-kpi b.c { color: var(--cyan); } .ex-kpi b.o { color: var(--accent-ink); }
+  .ex-kpi span { font-size: 12.5px; color: var(--ink-3); }
+
+  .steps { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+  .steps li { padding: 22px; }
+  .steps b { font: 800 22px/1 var(--font-brand); color: var(--accent); }
+  .steps h3 { margin: 12px 0 6px; font-size: 18px; }
+  .steps p { margin: 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
+  .sub-h { margin: 52px 0 18px; font-size: 26px; }
+  .models { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+  .model { padding: 24px; }
+  .model h4 { margin: 0; font: 800 20px/1.2 var(--font-head); }
+  .model p { margin: 8px 0 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.6; }
+  .model .m-s { font-weight: 600; margin-bottom: 4px; }
+  .model .m-p { margin-top: 16px; font-weight: 600; color: var(--ink-3); font-size: 13.5px; }
+
+  .form-grid { display: grid; gap: 36px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+  @media (min-width: 1000px) { .form-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 44px; } }
+  .faq { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
+  .faq details { padding: 16px 20px; }
+  .faq summary { cursor: pointer; font: 700 16px/1.4 var(--font-head); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '+'; color: var(--accent); font-size: 20px; line-height: 1; }
+  .faq details[open] summary::after { content: '−'; }
+  .faq p { margin: 10px 0 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+
+  .jform { padding: 26px; display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 90px; }
+  .f-k { margin: 0; font: 800 12.5px/1 var(--font-brand); letter-spacing: .08em; color: var(--accent-ink); }
+  .f-h { margin: 0; font-size: 26px; }
+  .f-d { margin: -6px 0 4px; color: var(--ink-3); font-size: 14.5px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .row2 { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 620px) { .row2 { grid-template-columns: 1fr 1fr; } }
+  .fld { display: flex; flex-direction: column; gap: 6px; border: 0; margin: 0; padding: 0; min-width: 0; }
+  .fld > span, .fld legend { font-weight: 600; font-size: 14.5px; padding: 0; margin-bottom: 6px; }
+  .fld em { font-style: normal; font-weight: 400; color: var(--ink-3); font-size: 13px; }
+  .fld input:not([type=checkbox]), .fld textarea { width: 100%; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: 400 16px/1.5 var(--font-body); }
+  .fld textarea { resize: vertical; min-height: 120px; }
+  .fld input:focus, .fld textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chipr { position: relative; }
+  .chipr input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
+  .chipr span { display: inline-block; padding: 8px 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink-2); font: 500 14px/1 var(--font-body); cursor: pointer; }
+  .chipr input:checked + span { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; }
+  .chipr input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .foot { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .foot .btn:disabled { opacity: .6; cursor: wait; }
+  .status { margin: 0; font-size: 15px; color: var(--ink-2); }
+  .status.ok { color: var(--good); font-weight: 600; }
+  .status.err { color: #c0392b; }
+  .note { margin: 0; font-size: 13.5px; color: var(--ink-3); }
+</style>

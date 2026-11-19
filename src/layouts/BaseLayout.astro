@@ -83,7 +83,7 @@ const year = new Date().getFullYear();
         </a>
         <nav class="nav" aria-label="Navigasi utama">
           {nav.map((n) => n.children.length === 0 ? (
-            <a class="nav-link" href={n.href} aria-current={isActive(n.href) ? 'page' : undefined} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
+            <a class:list={['nav-link', { 'nav-cta': n.href === '/jasa-konsultan/' }]} href={n.href} aria-current={isActive(n.href) ? 'page' : undefined} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
           ) : (
             <div class="nav-dd">
               <a class="nav-link" href={n.href} aria-current={navActive(n) ? 'page' : undefined} aria-haspopup="true">
@@ -121,7 +121,7 @@ const year = new Date().getFullYear();
       </div>
       <nav class="mobile-nav container" id="mobile-nav" aria-label="Navigasi seluler" hidden>
         {nav.map((n, i) => n.children.length === 0 ? (
-          <a class="m-link" href={n.href} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
+          <a class:list={['m-link', { 'm-cta': n.href === '/jasa-konsultan/' }]} href={n.href} target={ext(n.href) ? '_blank' : undefined} rel={ext(n.href) ? 'noopener' : undefined}>{n.label}</a>
         ) : (
           <div class="m-group">
             <div class="m-row">
@@ -221,6 +221,9 @@ const year = new Date().getFullYear();
   .nav-link { display: inline-flex; align-items: center; gap: 5px; padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 500; font-size: 15px; white-space: nowrap; }
   .nav-link:hover, .nav-link[aria-current='page'], .nav-dd:hover > .nav-link, .nav-dd:focus-within > .nav-link, .nav-dd.open > .nav-link { background: var(--bg-sunk); color: var(--ink); }
   .caret { transition: transform .2s; opacity: .7; }
+  .nav-link.nav-cta { border: 1px solid rgba(247,164,58,.6); background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; }
+  .nav-link.nav-cta:hover, .nav-link.nav-cta[aria-current='page'] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .m-link.m-cta { color: var(--accent-ink); font-weight: 700; }
   .nav-dd { position: relative; }
   .nav-dd:hover .caret, .nav-dd:focus-within .caret, .nav-dd.open .caret { transform: rotate(180deg); }
 

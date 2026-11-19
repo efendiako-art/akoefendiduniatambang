@@ -1,0 +1,50 @@
+---
+// Promosi Jasa Konsultan di beranda (setelah portal ekosistem).
+import { JASA } from '../data/jasa';
+import JasaIcon from './JasaIcon.astro';
+const utama = JASA.slice(0, 4);
+---
+<section class="kp" aria-labelledby="kp-title">
+  <div class="container kp-grid">
+    <div>
+      <span class="pill-badge kp-pill">◆ Jasa Konsultan Tambang</span>
+      <h2 id="kp-title">Butuh bantuan untuk proyek tambang Anda?</h2>
+      <p class="kp-lead">Dikerjakan langsung oleh praktisi operasi tambang: proposal tender, analisa harga proyek, analisa produksi, hingga perencanaan tambang. Rapi, berbasis data, dan bisa langsung dipakai.</p>
+      <ul class="kp-tags">
+        <li>✓ Konsultasi awal gratis</li><li>✓ Kerahasiaan data dijaga</li><li>✓ Hasil dalam Excel &amp; Word</li>
+      </ul>
+      <div class="kp-cta">
+        <a class="btn btn-primary" href="/jasa-konsultan/">Lihat layanan konsultan <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="/jasa-konsultan/#ajukan">Ajukan konsultasi</a>
+      </div>
+    </div>
+    <div class="kp-cards">
+      {utama.map((j) => (
+        <a class="kp-card" href="/jasa-konsultan/#layanan">
+          <JasaIcon icon={j.icon} color={j.color} />
+          <span><b>{j.title}</b><span>{j.desc}</span></span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .kp { position: relative; overflow: hidden; padding: 72px 0; color: #EAF0F6; border-top: 1px solid rgba(255,255,255,.06);
+    background: radial-gradient(50% 70% at 90% 20%, rgba(247,164,58,.16), transparent 70%), radial-gradient(40% 60% at 0% 100%, rgba(47,184,172,.12), transparent 70%), #05080D; }
+  .kp-grid { display: grid; gap: 36px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .kp-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 48px; } }
+  .kp-pill { color: #FFB067; }
+  .kp h2 { color: #fff; font: 800 clamp(28px, 3.6vw, 42px)/1.1 var(--font-head); letter-spacing: -0.02em; margin: 16px 0 12px; }
+  .kp-lead { color: #B4BFCC; font-size: 17px; line-height: 1.65; margin: 0; }
+  .kp-tags { list-style: none; padding: 0; margin: 20px 0 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .kp-tags li { padding: 7px 11px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); color: #C7D0DB; font: 600 12.5px/1 var(--font-body); }
+  .kp-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .kp .btn-line { border-color: #2FB8AC; color: #5FE3D5; }
+  .kp-cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+  .kp-card { display: flex; gap: 14px; align-items: flex-start; padding: 20px; border-radius: 18px; text-decoration: none; color: #EAF0F6;
+    background: linear-gradient(180deg, rgba(22,30,42,.92), rgba(12,17,25,.92)); border: 1px solid rgba(255,255,255,.1); transition: transform .2s, border-color .2s; }
+  .kp-card:hover { transform: translateY(-3px); border-color: rgba(247,164,58,.55); color: #fff; }
+  .kp-card b { display: block; font: 700 16.5px/1.3 var(--font-head); color: #fff; }
+  .kp-card span span { display: block; margin-top: 6px; font-size: 13.5px; line-height: 1.55; color: #9AA6B5; }
+</style>
